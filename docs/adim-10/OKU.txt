@@ -1,0 +1,9 @@
+﻿Yürüyom — 10. adım
+
+1) Bu klasörü aç.
+2) index.html dosyasına çift tıkla.
+3) İnternet açık olsun.
+
+Parkurlarda Wikimedia fotoğrafı olanlar üstte. Commons’ta resmi yoksa küçük çiçek altta kalır.
+
+Pin izin değildir. 3D model yok.

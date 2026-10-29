@@ -52,6 +52,7 @@ export function RouteExplorePage() {
   const [sort, setSort] = useState<SortKey>('featured')
   const [menu, setMenu] = useState<Menu>(null)
   const [eyes, setEyes] = useState<Set<string>>(() => new Set())
+  const [failedPhotos, setFailedPhotos] = useState<Set<string>>(() => new Set())
   const barRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -103,7 +104,8 @@ export function RouteExplorePage() {
     })
     return [...list].sort((a, b) => {
       if (HAS_BLOOM) {
-        const photo = Number(Boolean(b.image)) - Number(Boolean(a.image))
+        const shown = (route: (typeof list)[number]) => Boolean(route.image) && !failedPhotos.has(route.id)
+        const photo = Number(shown(b)) - Number(shown(a))
         if (photo !== 0) return photo
       }
       let diff = 0
@@ -114,7 +116,7 @@ export function RouteExplorePage() {
       if (diff !== 0) return diff
       return a.title.localeCompare(b.title, 'tr')
     })
-  }, [routes, query, filters, sort])
+  }, [routes, query, filters, sort, failedPhotos])
 
   const shown = useMemo(
     () => filtered.filter((route) => eyes.has(route.id) && route.track.length > 1),
@@ -131,6 +133,15 @@ export function RouteExplorePage() {
       const next = new Set(prev)
       if (next.has(id)) next.delete(id)
       else next.add(id)
+      return next
+    })
+  }
+
+  function markPhotoFail(id: string) {
+    setFailedPhotos((current) => {
+      if (current.has(id)) return current
+      const next = new Set(current)
+      next.add(id)
       return next
     })
   }
@@ -362,7 +373,13 @@ export function RouteExplorePage() {
             {status === 'ready' && filtered.length > 0 && (
               <ul className="route-list" aria-label="Rota listesi">
                 {filtered.map((route) => (
-                  <RouteCard key={route.id} route={route} onMap={eyes.has(route.id)} onToggleEye={toggleEye} />
+                  <RouteCard
+                    key={route.id}
+                    route={route}
+                    onMap={eyes.has(route.id)}
+                    onToggleEye={toggleEye}
+                    onPhotoFail={HAS_BLOOM ? markPhotoFail : undefined}
+                  />
                 ))}
               </ul>
             )}

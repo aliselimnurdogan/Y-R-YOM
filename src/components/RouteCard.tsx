@@ -7,7 +7,17 @@ import type { RouteItem } from '../types'
 import { TrailThumb } from './Brand'
 import { EyeIcon, UpIcon } from './Icons'
 
-function CardImage({ src, seed, title }: { src: string; seed: string; title: string }) {
+function CardImage({
+  src,
+  seed,
+  title,
+  onFail,
+}: {
+  src: string
+  seed: string
+  title: string
+  onFail?: () => void
+}) {
   const [failed, setFailed] = useState(false)
   useEffect(() => {
     setFailed(false)
@@ -24,7 +34,10 @@ function CardImage({ src, seed, title }: { src: string; seed: string; title: str
       height={82}
       loading="lazy"
       decoding="async"
-      onError={() => setFailed(true)}
+      onError={() => {
+        setFailed(true)
+        onFail?.()
+      }}
     />
   )
 }
@@ -33,16 +46,25 @@ export function RouteCard({
   route,
   onMap,
   onToggleEye,
+  onPhotoFail,
 }: {
   route: RouteItem
   onMap: boolean
   onToggleEye: (id: string) => void
+  onPhotoFail?: (id: string) => void
 }) {
   const canDraw = route.track.length > 1
   return (
     <li className={onMap ? 'card is-on' : 'card'}>
       <Link to={`/rota/${route.id}`} className="card-link">
-        <CardImage src={route.image} seed={route.id} title={route.title} />
+        <div className="thumb-wrap">
+          <CardImage
+            src={route.image}
+            seed={route.id}
+            title={route.title}
+            onFail={onPhotoFail ? () => onPhotoFail(route.id) : undefined}
+          />
+        </div>
         <div className="card-body">
           <h2 className="card-title" title={route.title}>
             {route.title}

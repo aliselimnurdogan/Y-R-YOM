@@ -76,6 +76,14 @@ Klasör: `adim-9`
 
 Fotoğrafı olan kamp alanları listenin üstünde. Fotoğraf yoksa harf yok; küçük bir çiçek çıkar. Stok görsel yok.
 
+## 10. adım — Parkur fotoğrafları
+
+Klasör: `adim-10`
+
+`adim-10/index.html` dosyasına çift tıkla.
+
+Parkurlara Wikimedia Commons’tan telifsiz kapak kondu. Fotoğrafı olan parkurlar üstte, Commons’ta resmi olmayanlar çiçekle altta. Unsplash yok.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -89,5 +97,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 7. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-7/
 - 8. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-8/
 - 9. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-9/
+- 10. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-10/
 
 Harita ve fotoğraf için internet açık olsun.
