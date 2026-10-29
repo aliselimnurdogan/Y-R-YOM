@@ -15,7 +15,7 @@ import {
   ZONE_COLORS,
   type PlaceSortKey,
 } from '../labels'
-import { APP_STEP } from '../step'
+import { APP_STEP, HAS_CATALOG } from '../step'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
 import type { PlaceKind } from '../types'
@@ -25,7 +25,7 @@ import { PlaceCard } from './PlaceCard'
 
 export function ExplorePage() {
   const turkey = APP_STEP !== '2'
-  const catalog = APP_STEP === '3'
+  const catalog = HAS_CATALOG
   const kinds = APP_STEP === '2' ? PLACE_KINDS : CAMP_KINDS
   const basePath = APP_STEP === '2' ? '/yer' : '/kamp'
   const title = catalog

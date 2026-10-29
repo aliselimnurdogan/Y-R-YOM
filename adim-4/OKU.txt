@@ -1,0 +1,6 @@
+4. ADIM - Kamp rehberi: tesis, zorluk, tavsiye
+index.html cift tikla.
+Ustten Kamp alanlari veya Yuruyus parkurları sec.
+Kamp kartina tikla: tuvalet, priz, odun, ates, ne yapmali.
+Giris ve yorum yok.
+Rapor: RAPOR.md

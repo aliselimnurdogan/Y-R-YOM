@@ -5,8 +5,9 @@ import { formatDate, formatFee, formatInt, initials } from '../format'
 import { LEGAL_CAMP_NOTE, PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
-import { APP_STEP } from '../step'
+import { APP_STEP, HAS_CATALOG } from '../step'
 import type { PlaceComment, PlaceItem } from '../types'
+import { CampGuideBlock } from './CampGuideBlock'
 import { DetailMap } from './DetailMap'
 
 export function DetailPage() {
@@ -91,7 +92,7 @@ export function DetailPage() {
         </span>
         <span className="act-name">{place.city}</span>
         <span className="chip">{formatInt(place.elevationM)} m</span>
-        {APP_STEP === '3' && <span className="chip">{formatFee(place.feeTent)}</span>}
+        {HAS_CATALOG && <span className="chip">{formatFee(place.feeTent)}</span>}
         <div className="actions">
           <Link className="btn-ghost" to={homePath}>
             Geri
@@ -99,7 +100,8 @@ export function DetailPage() {
         </div>
       </div>
       <p className="lede place-lede">{place.summary}</p>
-      {APP_STEP === '3' && (
+      {HAS_CATALOG && place.guide && <CampGuideBlock place={place} />}
+      {HAS_CATALOG && (
         <dl className="fact-grid">
           <div>
             <dt>Tür</dt>
@@ -147,10 +149,10 @@ export function DetailPage() {
               </button>
             ))}
           </div>
-          {APP_STEP === '3' && <p className="photo-credit">Fotoğraflar Wikimedia Commons, yerinde çekilmiş kareler.</p>}
+          {HAS_CATALOG && <p className="photo-credit">Fotoğraflar Wikimedia Commons, yerinde çekilmiş kareler.</p>}
         </div>
       ) : (
-        APP_STEP === '3' && (
+        HAS_CATALOG && (
           <p className="empty-photo">Bu park için yerinde Wikimedia fotoğrafı henüz yok; temsili görsel kullanılmadı.</p>
         )
       )}
@@ -175,7 +177,7 @@ export function DetailPage() {
         </section>
       )}
       <DetailMap place={place} />
-      {APP_STEP === '3' ? <p className="legal-note">{LEGAL_CAMP_NOTE}</p> : <Comments place={place} />}
+      {HAS_CATALOG ? <p className="legal-note">{LEGAL_CAMP_NOTE}</p> : <Comments place={place} />}
     </article>
   )
 }

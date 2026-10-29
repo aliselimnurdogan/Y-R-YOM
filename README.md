@@ -28,6 +28,14 @@ Klasör: `adim-3`
 
 Kaynak: kampatesim.com.tr/kamp-alanlari ve `turkiye-kamp-alanlari-listesi.pdf`. Ürün notu: `RAPOR.md`.
 
+## 4. adım — Tesis, zorluk ve tavsiye
+
+Klasör: `adim-4`
+
+`adim-4/index.html` dosyasına çift tıkla.
+
+Kamp alanına tıklayınca tuvalet, priz, su, odun, ateş, market; güzel yanlar, zorluklar ve ne yapmalı çıkar. Parkurlar duruyor. Giriş ve yorum yok.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -35,5 +43,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 1. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-1/
 - 2. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-2/
 - 3. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-3/
+- 4. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-4/
 
 Harita ve fotoğraf için internet açık olsun.

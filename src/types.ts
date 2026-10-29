@@ -5,6 +5,25 @@ export interface PlaceVideo {
   title: string
 }
 
+export type FacilityFlag = 'var' | 'yok' | 'belirsiz'
+export type FirewoodFlag = 'getir' | 'yerinde' | 'yasak' | 'belirsiz'
+export type FireFlag = 'yasak' | 'ocak' | 'belirsiz'
+export type ShopFlag = 'var' | 'yok' | 'yakin' | 'belirsiz'
+
+export interface CampGuide {
+  toilet: FacilityFlag
+  power: FacilityFlag
+  water: FacilityFlag
+  firewood: FirewoodFlag
+  fire: FireFlag
+  shop: ShopFlag
+  difficulty: string
+  pros: string[]
+  cons: string[]
+  tips: string[]
+  advice: string
+}
+
 export interface PlaceItem {
   id: string
   title: string
@@ -21,6 +40,7 @@ export interface PlaceItem {
   areaHa?: number
   feeTent?: number | null
   statusLabel?: string
+  guide?: CampGuide
 }
 
 export interface PlaceComment {

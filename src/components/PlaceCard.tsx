@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { formatFee, formatInt } from '../format'
 import { PLACE_KIND_LABELS } from '../labels'
-import { APP_STEP } from '../step'
+import { HAS_CATALOG } from '../step'
 import type { PlaceItem } from '../types'
 
 function CardImage({ src }: { src: string }) {
@@ -52,7 +52,7 @@ export function PlaceCard({
             {place.title}
           </h2>
           <p className="card-meta">
-            <span>{APP_STEP === '3' ? (place.statusLabel ?? PLACE_KIND_LABELS[place.kind]) : PLACE_KIND_LABELS[place.kind]}</span>
+            <span>{HAS_CATALOG ? (place.statusLabel ?? PLACE_KIND_LABELS[place.kind]) : PLACE_KIND_LABELS[place.kind]}</span>
             <span className="dotsep" aria-hidden="true">
               ·
             </span>
@@ -60,9 +60,9 @@ export function PlaceCard({
             <span className="dotsep" aria-hidden="true">
               ·
             </span>
-            <span>{APP_STEP === '3' ? formatFee(place.feeTent) : `${formatInt(place.elevationM)} m`}</span>
+            <span>{HAS_CATALOG ? formatFee(place.feeTent) : `${formatInt(place.elevationM)} m`}</span>
           </p>
-          <p className="card-sub card-excerpt">{place.summary}</p>
+          <p className="card-sub card-excerpt">{place.guide?.difficulty ?? place.summary}</p>
         </div>
       </Link>
     </li>

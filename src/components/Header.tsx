@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useSearch } from '../search-context'
-import { APP_STEP, HAS_ROUTE_MODE } from '../step'
+import { HAS_CATALOG, HAS_ROUTE_MODE } from '../step'
 import { PinMark, SearchIcon } from './Icons'
 
 export function Header() {
@@ -26,7 +26,7 @@ export function Header() {
   const onCamp = location.pathname.startsWith('/kamp')
   const searchPlaceholder = HAS_ROUTE_MODE
     ? onCamp
-      ? APP_STEP === '3'
+      ? HAS_CATALOG
         ? 'Park, il veya bölge ara'
         : 'Kamp alanı veya il ara'
       : 'Parkur, şehir veya bölge ara'
@@ -76,7 +76,7 @@ export function Header() {
           </button>
         )}
       </form>
-      {APP_STEP === '3' ? null : (
+      {HAS_CATALOG ? null : (
         <div className="header-actions">
           <button type="button" className="btn-text" onClick={() => setAuthOpen(true)}>
             Giriş
@@ -86,7 +86,7 @@ export function Header() {
           </button>
         </div>
       )}
-      {authOpen && APP_STEP !== '3' && <AuthModal onClose={() => setAuthOpen(false)} />}
+      {authOpen && !HAS_CATALOG && <AuthModal onClose={() => setAuthOpen(false)} />}
     </header>
   )
 }

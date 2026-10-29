@@ -1,0 +1,1038 @@
+[
+  {
+    "id": "ayvalik-adalari",
+    "sources": [
+      "https://www.campalow.com/kamp-alani/ayvalik-adalari-tabiat-parki-kamp-alani",
+      "https://kampolog.com/listing/ayvalik-adalari-kamp-alani/",
+      "https://kampatesim.com.tr/tabiat-parki/balikesir/ayvalik-adalari",
+      "https://bolge2.tarimorman.gov.tr/Menu/157/Balikesir-Ayvalik-Adalari-Tabiat-Parki"
+    ],
+    "good": [
+      "Deniz ve çam ormanı bir arada, günbatımı övülüyor",
+      "Geniş arazide yaz kalabalığında bile sakin köşe bulunabiliyor",
+      "Tekne, dalış ve kıyı yürüyüşü için elverişli"
+    ],
+    "hard": [
+      "Yazın kalabalık",
+      "Aileler için tesis yetersiz diye yazılıyor",
+      "Belirlenen yer dışında ateş yasak ve cezalı",
+      "Park içinde resmi tesis yok; geceleme yalnız gösterilen yerde"
+    ],
+    "quotes": [
+      "Bir taraf deniz bir taraf orman",
+      "Yazın kalabalık ama arazi geniş",
+      "Aile için olanaklar yetersiz"
+    ],
+    "found": true
+  },
+  {
+    "id": "kinik-selalesi",
+    "sources": [
+      "https://geziyoo.co/blog/kinik-kamp-alanlari-ve-karavan-alanlari/"
+    ],
+    "good": [
+      "Şelale sesi ve yeşil örtü ücretsiz kamp için çekici yazılıyor"
+    ],
+    "hard": [
+      "İşletme, WC ve duş yok; her şeyi yanına al",
+      "Hazırlıksız gelinmez"
+    ],
+    "quotes": [
+      "Ücretsiz ama tuvalet duş yok",
+      "İhtiyaçları önceden tamamla"
+    ],
+    "found": true
+  },
+  {
+    "id": "kucukelmali",
+    "sources": [
+      "https://www.kampyerleri.org/pazaryeri-kamp-alanlari/"
+    ],
+    "good": [
+      "Çeşme, oyun parkı, piknik masası ve yürüyüş yolu var",
+      "Karavan için düzlük uygun deniyor"
+    ],
+    "hard": [
+      "Giriş ücretli",
+      "Günübirlik piknikçi çoğunlukta"
+    ],
+    "quotes": [
+      "Piknikçiler çoğunlukta",
+      "Çeşme ve yürüyüş yolu var"
+    ],
+    "found": true
+  },
+  {
+    "id": "sadagi-kanyonu",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "suuctu",
+    "sources": [
+      "https://rotavoya.com/bursa/kamp-yuruyus/suuctu-tabiat-parki-kamp-alani/",
+      "https://kampyeri.org/milli-parklar/suuctu-tabiat-parki",
+      "https://visitbursa.org/tr/mekanlar/suuctu-piknik-alani-72",
+      "https://kampatesim.com.tr/tabiat-parki/bursa/suuctu"
+    ],
+    "good": [
+      "Kayın-meşe ormanında şelaleye yakın çadır alanı",
+      "Kır kahvesi, çeşme, tuvalet ve piknik masası var"
+    ],
+    "hard": [
+      "Yerde ateş yasak, tüplü ocak öneriliyor",
+      "Yazın kalabalık günübirlikçi",
+      "Giriş ve çadır yeri ücretli",
+      "Ayı ve yaban için yiyecek açıkta bırakılmamalı"
+    ],
+    "quotes": [
+      "Şelale kenarında orman kampı",
+      "Yerde ateş yasak tüp kullan",
+      "Yazın mesire kalabalık"
+    ],
+    "found": true
+  },
+  {
+    "id": "buyukada-tp",
+    "sources": [
+      "https://adalarvapursaatleri.com.tr/buyukada-kamp-alanlari",
+      "https://kampalanlar.com/alan/buyukada-tabiat-parki/"
+    ],
+    "good": [
+      "Günübirlik çamlık ve ada manzarası övülüyor"
+    ],
+    "hard": [
+      "Ada ormanında izinsiz çadır ve geceleme yasak",
+      "Yangın riski yüksek, resmi kamping yok",
+      "Gece altyapı ve aydınlatma yerleşim dışı yok"
+    ],
+    "quotes": [
+      "Adada resmi çadır kampı yok",
+      "İzinsiz geceleme yangın yüzünden yasak"
+    ],
+    "found": true
+  },
+  {
+    "id": "danamandira",
+    "sources": [
+      "https://eksisozluk.com/cadir-kurulabilecek-kamp-mekanlari-rehberi--4801759"
+    ],
+    "good": [
+      "Sözlük kamp rehberinde kişisel favori çadır yerlerinden sayılıyor"
+    ],
+    "hard": [],
+    "quotes": [
+      "Çatalca Danamandıra çadır listesinde"
+    ],
+    "found": true
+  },
+  {
+    "id": "dilburnu",
+    "sources": [
+      "https://adalarvapursaatleri.com.tr/buyukada-kamp-alanlari",
+      "https://bolge1.tarimorman.gov.tr/Belgeler/menu-dosyalar/Korunan%20Alanlar/Tabiat%20Parklar%C4%B1/%C4%B0stanbul/dilburnu_tp/Dilburnu-tp.pdf"
+    ],
+    "good": [
+      "Deniz manzaralı günübirlik piknik ve kısa yürüyüş",
+      "Belirlenen ocaklarda mangal, kır lokantası var"
+    ],
+    "hard": [
+      "Piknik alanı; gece çadır ve konaklama yasak",
+      "Akşam 19-20 gibi alan kapanıyor, güvenlik çıkarıyor",
+      "Ada yangın yasağı Dilburnu'nu da kapsıyor"
+    ],
+    "quotes": [
+      "Dilburnu piknik yeri kamp değil",
+      "Gece çadır kurmak yasak"
+    ],
+    "found": true
+  },
+  {
+    "id": "hacet-deresi",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "hasdal",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "polonezkoy-tp",
+    "sources": [
+      "https://eksisozluk.com/polonezkoy-tabiat-parki--5372216"
+    ],
+    "good": [
+      "Huzurlu orman, dere sesi, geyik görme umudu",
+      "Bakımlı yürüyüş ve bisiklet parkurları",
+      "Yağmur sonrası çamur yok diye yazılmış"
+    ],
+    "hard": [
+      "Park içinde piknik ve mangal yasak",
+      "Otopark ücretli, pazar günü doluyor",
+      "İlk kilometrelerde gürültülü piknik grupları",
+      "Parkur ring değil, dönüşle 10 km oluyor"
+    ],
+    "quotes": [
+      "İnsan yok gürültü yok huzurlu",
+      "Mangal yasak otopark ücretli",
+      "Pazar günü bağırış çağırış var"
+    ],
+    "found": true
+  },
+  {
+    "id": "beskayalar",
+    "sources": [
+      "https://www.kocaeli.bel.tr/buyuleyici-guzellikler.html",
+      "https://bolge1.tarimorman.gov.tr/Belgeler/menu-dosyalar/Korunan%20Alanlar/Tabiat%20Parklar%C4%B1/Kocaeli/beskayalar_tp/Be%C5%9Fkayalar-tp.pdf"
+    ],
+    "good": [
+      "Vadi, şelale ve mağara ile trekking övülüyor",
+      "Menekşe Yaylası yazın çadır grupları alıyor"
+    ],
+    "hard": [
+      "Aytepe sonrası yaklaşık 2 km toprak orman yolu",
+      "Hafta sonu İstanbul grupları kalabalıklaşıyor"
+    ],
+    "quotes": [
+      "Şelale ve mağara vadisi",
+      "Girişte iki kilometre toprak yol"
+    ],
+    "found": true
+  },
+  {
+    "id": "suadiye-tp",
+    "sources": [
+      "https://www.kampyerleri.org/kartepe-kamp-alanlari/",
+      "https://www.kampyerleri.org/kocaeli-kamp-alanlari/"
+    ],
+    "good": [
+      "Kartepe yolunda manzara, kamelya, mescit ve oyun parkı",
+      "Çadır ve karavan kaydı var"
+    ],
+    "hard": [
+      "Giriş ücretli",
+      "Toplu taşıma belirsiz, özel araç öneriliyor"
+    ],
+    "quotes": [
+      "Kayak yolu üstünde ücretli park",
+      "Özel araçla git"
+    ],
+    "found": true
+  },
+  {
+    "id": "poyrazlar",
+    "sources": [
+      "https://eksisozluk.com/poyrazlar-golu--1815769",
+      "https://eksisozluk.com/poyrazlar-golu--1815769?p=2",
+      "https://www.nihatkasim.net/2022/08/cadr-kamp-deneyimi.html"
+    ],
+    "good": [
+      "Göl, meşe ve çam; kışın sakin kamp",
+      "Çeşme, mescit ve 24 saat güvenlik yazılıyor",
+      "Tenha köşede ay ışığı ve sakin gece"
+    ],
+    "hard": [
+      "Hafta sonu mangalcı, yüksek ses ve müzik",
+      "Tuvaletler hijyenik değil",
+      "Göl kenarına çadır yasak; sivrisinek çok",
+      "Gece çiy ve sağanak, çakal sesi",
+      "Kamp ücreti kapıda tartışmalı yazılıyor"
+    ],
+    "quotes": [
+      "Hafta sonu mangal ve ankara havası",
+      "Göl kenarına çadır yasak",
+      "Sazlıkta sivrisinek bol",
+      "Tuvaletler leş gibi"
+    ],
+    "found": true
+  },
+  {
+    "id": "kartaltepe",
+    "sources": [
+      "https://yegez.com.tr/tekirdag-kamp-alanlari/"
+    ],
+    "good": [
+      "Ganos sırtında Marmara kuşbakışı seyir",
+      "Kamp, yürüyüş ve fotoğraf için durak sayılıyor"
+    ],
+    "hard": [
+      "Hafta sonu çocuklu ailelerle popüler",
+      "Giriş ücretli"
+    ],
+    "quotes": [
+      "Marmara kuşbakışı seyir noktası",
+      "Hafta sonu aile kalabalığı"
+    ],
+    "found": true
+  },
+  {
+    "id": "karlik-yaylasi",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "ortaburun",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "bafa-golu-tp",
+    "sources": [
+      "https://eksisozluk.com/cadir-kurulabilecek-kamp-mekanlari-rehberi--4801759",
+      "https://www.kampp.in/kamp-alani/bafa-golu"
+    ],
+    "good": [
+      "Göl kıyısı kuş alanı, antik kent ve yürüyüş",
+      "Restoran bahçesinde çadır ve şarj imkânı yazılmış"
+    ],
+    "hard": [
+      "Profesyonel kamp değil, duş yok",
+      "İlkbaharda sivrisinek; yaz çok sıcak",
+      "Açık ateş ve mangal yasak",
+      "Göl tabanı çamurlu, yüzme önerilmiyor",
+      "Kuraklıkta su çekilmesi ve koku yazılmış",
+      "Dağlık kesimde sinyal zayıf"
+    ],
+    "quotes": [
+      "Sabah kaz sesiyle uyanırsın",
+      "Duş yok tuvalet var",
+      "İlkbaharda sivrisinek çok",
+      "Göl tabanı çamurlu yüzülmez"
+    ],
+    "found": true
+  },
+  {
+    "id": "spil-dagi-mp",
+    "sources": [
+      "https://eksisozluk.com/spil-dagi--514591",
+      "https://www.kamplist.org/kamp-alani/spil-dagi-kamp-alani/",
+      "https://www.manisa.gov.tr/efsanevi-bir-doga"
+    ],
+    "good": [
+      "Atalanı'nda çadır-karavan ve dağ evi",
+      "Yaban atı ve dağ keçisi gözlemi",
+      "Manisa ve körfez manzarası"
+    ],
+    "hard": [
+      "Arabayla belli noktadan sonra yol zor, 4x4 hissi",
+      "Yazın gölgede bile buz kalabiliyor",
+      "Tuvalet, duş ve market yok; şehire alışveriş",
+      "Ateş kurallarına dikkat"
+    ],
+    "quotes": [
+      "Kamp için güzel ama yol 4x4",
+      "Yazın gölgede bile buz var",
+      "Başıboş atlar Atalanı'nda"
+    ],
+    "found": true
+  },
+  {
+    "id": "karanlikdere",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "belemedik",
+    "sources": [
+      "https://www.kampadana.com.tr/belemedik-tabiat-parki-kamp-alani.html",
+      "https://www.pozanti.gov.tr/belemedik-tabiat-parki",
+      "https://kampyeri.org/milli-parklar/belemedik-tabiat-parki"
+    ],
+    "good": [
+      "Çakıt vadisi, çınar ve sonbahar renkleri övülüyor",
+      "Restoran, WC ve su kaynağı var",
+      "Tren tünelleri ve Alman dönemi yapılar"
+    ],
+    "hard": [
+      "Yerde ateş yasak, ateş kutusu veya tüp",
+      "Alışveriş Pozantı'dan yapılmalı",
+      "Yaban domuzu ve keçi için hazırlıklı gel",
+      "Giriş saatli ve ücretli"
+    ],
+    "quotes": [
+      "El değmemiş vadi ve çınar",
+      "Mangal için kutu kullan",
+      "Alışverişi Pozantı'dan yap"
+    ],
+    "found": true
+  },
+  {
+    "id": "obruk-selalesi",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "kursunlu-selalesi",
+    "sources": [
+      "https://turkeyoutdoor.org/aksu-kursunlu-selalesi-kamp-alani-tanitimi/",
+      "https://www.antalyakorfez.com/kursunlu-selalesi-nerde-kamp-yapilir-mi-yuzulur-mu-2026-giris-ucreti"
+    ],
+    "good": [
+      "Şehir yakınında şelale, kanyon ve gölgeli mesire",
+      "Sincap, kaplumbağa ve yürüyüş tünelleri"
+    ],
+    "hard": [
+      "Park içinde gece çadır ve ateş yasak",
+      "Yalnız günübirlik; 08:30-17:30 giriş",
+      "Şehre yakınlık yüzünden yoğun ziyaretçi",
+      "İşletme fiyatları yüksek olabiliyor",
+      "Mangal yok, hafif yiyecek"
+    ],
+    "quotes": [
+      "İçeride gece kamp yasak",
+      "Piknik var mangal yok",
+      "Şehir yakınlığı kalabalık getiriyor"
+    ],
+    "found": true
+  },
+  {
+    "id": "salda-golu-tp",
+    "sources": [
+      "https://eksisozluk.com/salda-golu--246032",
+      "https://www.hurriyet.com.tr/gundem/turkiyenin-maldivleri-salda-golunde-yeni-yasak-kararlari-41793777",
+      "https://saldagolu.gov.tr/saldagolu/tedbirler.html",
+      "https://geziyoo.co/blog/yesilova-kamp-alanlari-ve-karavan-alanlari/"
+    ],
+    "good": [
+      "Turkuaz su ve beyaz kum hayran bırakıyor",
+      "Sodalı serin su; kıyı ormanında yaban"
+    ],
+    "hard": [
+      "Beyaz Adalar ve halk plajında çadır yasak",
+      "Çamur banyosu, kum alma ve piknik kıyıda yasak",
+      "NASA paylaşımı sonrası aşırı kalabalık ve kirlilik",
+      "Araç kıyıya giremez, otopark 2 km içeride",
+      "Sigara yasak, su çekilmesi şikâyeti",
+      "Kamp yalnız tahsisli belediye/köy alanlarında"
+    ],
+    "quotes": [
+      "Hiçbir göl bu kadar mavi değil",
+      "Beyaz kumda çadır yasak",
+      "NASA sonrası aşırı kalabalık kirlilik",
+      "Yüzmek zor ama su güzel"
+    ],
+    "found": true
+  },
+  {
+    "id": "isparta-golcuk",
+    "sources": [
+      "https://eksisozluk.com/golcuk-tabiat-parki--5081538",
+      "https://www.kampp.in/kamp-alani/golcuk-tabiat-parki",
+      "https://ispartapark.com.tr/isletme.php?id=aFVUUGRnd284TGZtd2d2dlRwZUxaQT09"
+    ],
+    "good": [
+      "Merkeze yakın krater gölü, çam-sedir, serin hava",
+      "Yürüyüş, bisiklet, kuş kulesi, tuvalet ve mescit"
+    ],
+    "hard": [
+      "Gölde yüzmek yasak",
+      "Yaz hafta sonu çok kalabalık",
+      "Işıklandırma doğayı bozar diye eleştirilmiş",
+      "Çadır alanı hazırlığı teyit edilmeli"
+    ],
+    "quotes": [
+      "Merkeze yakın krater gölü",
+      "Gölde yüzmek yasak",
+      "Hafta sonu çok kalabalık"
+    ],
+    "found": true
+  },
+  {
+    "id": "yazili-kanyon",
+    "sources": [
+      "https://dogadakiler.com/Kamp-Alanlari/Isparta-Kamp-Alanlari/yazili-kanyon-tabiat-parki-ve-kamp-alani/",
+      "https://sutculermyo.isparta.edu.tr/tr/haber/doga-sporlari-kulubunden-kamp-etkinligi-27488h.html"
+    ],
+    "good": [
+      "Antik yazıt, sarp kanyon ve Göksu yürüyüşü",
+      "Okul kamplarında çadır ve trekking yapılmış"
+    ],
+    "hard": [
+      "Çadırlı kamp geçici yasak diye not düşülmüş",
+      "Gitmeden işletmeye teyit şart",
+      "Giriş ücretli"
+    ],
+    "quotes": [
+      "Çadır kampı geçici yasak",
+      "Kanyon ve antik yazıt güzel"
+    ],
+    "found": true
+  },
+  {
+    "id": "geben-vadisi",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "karamanastir",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "yerkopru",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "karatepe-aslantas",
+    "sources": [
+      "https://www.kampp.in/kamp-alani/karatepe-aslantas-milli-parki",
+      "https://www.kampyerleri.org/karatepe-aslantas-milli-parki-kamp-alani-ve-giris-ucretleri-2025-listesi/"
+    ],
+    "good": [
+      "Açık hava müzesi, kızılçam ve baraj kıyısı piknik",
+      "Tuvalet, çeşme, kamelya ve olta imkânı"
+    ],
+    "hard": [
+      "Çadır yalnız görevlinin gösterdiği yerde",
+      "Göl kenarına rastgele çadır yok",
+      "Alışveriş sınırlı, Kadirli'den gel",
+      "Ateş için izin al",
+      "Toplu taşıma yok"
+    ],
+    "quotes": [
+      "Girişte kampa yer gösteriyorlar",
+      "Göl kenarına rastgele çadır yok",
+      "Alışverişi dışarıdan tamamla"
+    ],
+    "found": true
+  },
+  {
+    "id": "altiparmak-tp",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "karagol-sahara",
+    "sources": [
+      "https://yakmangali.com/karagol-sahara-milli-parki/",
+      "https://www.kampp.in/kamp-alani/savsat-karagol",
+      "https://www.kulturportali.gov.tr/turkiye/artvin/turizmaktiviteleri/savsat-karagol"
+    ],
+    "good": [
+      "Ladin-çam içinde kalp biçimli sakin göl",
+      "Sonbahar renkleri ve sandal turu övülüyor",
+      "Akşam sonrası alan kampçıya kalıyor"
+    ],
+    "hard": [
+      "Son kilometre dar, taşlı, virajlı yol; kış kapanır",
+      "Tuvalet bakımsız, çöp şikâyeti, elektrik yok",
+      "Kamp aracı genelde 18.00'den sonra içeri",
+      "Yazın bile soğuk, kene ve sinek",
+      "Ayı-domuz; yiyecek açıkta bırakma",
+      "Market yok, tesis pahalı, giriş artı çadır ücreti"
+    ],
+    "quotes": [
+      "Yol dar taşlı virajlı",
+      "Tuvalet bakımsız elektrik yok",
+      "Yazın bile mont al",
+      "Kamp aracı akşam içeri"
+    ],
+    "found": true
+  },
+  {
+    "id": "yakupabdal",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "abant-mp",
+    "sources": [
+      "https://eksisozluk.com/abant-golu-milli-parki--7347441",
+      "https://eksisozluk.com/kamp-yeri-tavsiyesi--5760024",
+      "https://www.milliyet.com.tr/gundem/guzelligiyle-buyuleyen-abant-ta-mutlaka-gormeniz-gereken-yerler-2659936"
+    ],
+    "good": [
+      "Tel örgülü güvenli çadır-karavan alanı, yeşil göl",
+      "Tuvalet, ılık duş, çeşme ve priz var",
+      "Göl çevresi yürüyüş ve olta"
+    ],
+    "hard": [
+      "Ağustosta bile gece dondurucu soğuk",
+      "Parkta ateşli mangal yasak, kamp ücreti yüksek",
+      "Ertesi gün 14.00'e kadar boşaltın deniyor",
+      "Priz-duş yakını kalabalık ekipler kapıyor",
+      "Toplu taşıma kamp yerine uygun değil",
+      "Kuru odun az, market parkta yok"
+    ],
+    "quotes": [
+      "Ağustosta bile gece donuyorsun",
+      "Tel örgü içinde güvenli kamp",
+      "Parkta mangal yasak kampta serbest",
+      "Çadıra yüksek ücret alındı"
+    ],
+    "found": true
+  },
+  {
+    "id": "arkutdagi",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "ayikayasi",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "bolu-golcuk",
+    "sources": [
+      "https://eksisozluk.com/golcuk-tabiat-parki--5081538",
+      "https://kampingo.com/kamp-alanlari/bolu/golcuk-tabiat-parki",
+      "https://turkeyoutdoor.org/bolu-kamp-alanlari-golcuk-tabiat-parki-kamp-alani/",
+      "https://www.bolu.gov.tr/golcuk-ormanici-dinlenme-yeri"
+    ],
+    "good": [
+      "Şehre 13 km, küçük göl ve çam-göknar sessizliği",
+      "Bungalov, kır gazinosu, tuvalet ve çeşme"
+    ],
+    "hard": [
+      "Yere ateş yasak; ocaklı masa hafta sonu doluyor",
+      "Göl çevresine araç ve serbest çadır yasak",
+      "Giriş ücretli, alan küçük ve günübirlik yoğun"
+    ],
+    "quotes": [
+      "Kartpostal gibi küçük göl",
+      "Yere ateş yasak masa kapa",
+      "Göl kenarına araç giremez"
+    ],
+    "found": true
+  },
+  {
+    "id": "deregol",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "karaca-tp",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "kargali-golcuk",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "sunnet-golu",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "yedigoller-mp",
+    "sources": [
+      "https://eksisozluk.com/yedigoller-milli-parki--2650768?p=6",
+      "https://eksisozluk.com/yedigoller-milli-parki--2650768?p=11",
+      "https://eksisozluk.com/yedigoller-milli-parki--2650768?p=17",
+      "https://www.bizevdeyokuz.com/yedigoller",
+      "https://yolgunlukleri.net/yedigoller-hakkinda-her-sey/",
+      "https://www.hurriyet.com.tr/seyahat/yedigoller-milli-parki-nerede-ve-nasil-gidilir-yedigoller-milli-parki-konaklama-kamp-giris-ucreti-ve-ozellikleri-hakkinda-bilgi-41748893",
+      "https://www.milliyet.com.tr/galeri/gunluk-50-tlye-burada-uyanmak-mumkun-turkiyenin-cennet-kosesi-6643393"
+    ],
+    "good": [
+      "Sonbahar gölleri ve sisli Nazlıgöl manzarası",
+      "İki kamp: Deringöl sakin, Nazlıgöl daha büyük",
+      "Çeşme, tuvalet, mescit; sonbahar yürüyüşü"
+    ],
+    "hard": [
+      "Hafta sonu ve sonbahar aşırı kalabalık, alan dar",
+      "Gündüz ateş-tüp-mangal yasak; yağmurda çamur",
+      "Sivrisinek, kurbağa sesi, gece soğuk",
+      "Tuvaletler kirli ve kuyruklu, kâğıt yok, duş yok",
+      "Virajlı yol, Bartın çıkışı bozuk, anons gürültüsü",
+      "Karavan yasağı dönemsel; ücret ve rezervasyon değişiyor"
+    ],
+    "quotes": [
+      "Kamp alanları dar kalabalık",
+      "Tuvalette sivrisinek hediye",
+      "Yağmurda her yer çamur",
+      "Gündüz ateş tüp yasak",
+      "Sonbahar güzel ama insan seli"
+    ],
+    "found": true
+  },
+  {
+    "id": "aksu-tp",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "catak-corum",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "kuzalan",
+    "sources": [
+      "https://www.dereli.gov.tr/kuzalan-tabiat-parki",
+      "https://dogadakiler.com/Kamp-Alanlari/giresun-Kamp-Alanlari/kuzalan-tabiat-parki/",
+      "https://takoz.net/kamp-alani/kuzalan-selalesi-tabiat-parki-kamp-alani"
+    ],
+    "good": [
+      "Şelale, traverten, değirmen ve mağara vadisi",
+      "Tuvalet, çeşme, restoran, seyir terası var"
+    ],
+    "hard": [
+      "Giriş ücretli",
+      "Travertenlere stabilize yol",
+      "Bol su kış ve mayısa kadar"
+    ],
+    "quotes": [
+      "Şelale ve pamukkale gibi traverten",
+      "Giriş ücretli vadi kampı"
+    ],
+    "found": true
+  },
+  {
+    "id": "artabel",
+    "sources": [
+      "https://www.gumuskoza.com.tr/haber/15118794/gumushanede-kamp-yapilacak-en-iyi-yerler",
+      "http://gumushane.gov.tr/artabel-golleri-doga-sporlari-ve-kamp-etkinligine-ev-sahipligi-yapti"
+    ],
+    "good": [
+      "Buzul gölleri, şelale ve yüksek yayla manzarası",
+      "Dağcılık ve fotosafari için bakir"
+    ],
+    "hard": [
+      "Toplu taşıma yok; araç sonrası trekking",
+      "Market, restoran, tuvalet ve duş yok",
+      "Yiyecek suyu yanına al, giriş ücretli",
+      "Yüksek rakım, soğuk ve yorucu parkur"
+    ],
+    "quotes": [
+      "Market tuvalet duş yok",
+      "Arabadan sonra yürüyerek çık",
+      "Yüksekte buzul gölleri"
+    ],
+    "found": true
+  },
+  {
+    "id": "limni-golu",
+    "sources": [
+      "https://kampalanlari.tr/gumushane/torul/limni-golu",
+      "https://gumushane.bel.tr/tarihi-merkez/limni-golu-tabiat-parki/8"
+    ],
+    "good": [
+      "2010 m civarı sarıçam ve krater gölü serinliği",
+      "Restoran, bungalov, çeşme ve belirlenmiş çadır yeri"
+    ],
+    "hard": [
+      "Giriş ve kamp ücretli",
+      "Son kesim stabilize olabiliyor",
+      "Yüksek rakımda gece soğuk"
+    ],
+    "quotes": [
+      "Yüksekte sarıçam gölü",
+      "Yazın serin yayla havası"
+    ],
+    "found": true
+  },
+  {
+    "id": "handuzu",
+    "sources": [
+      "https://haritane.com/handuzu-tabiat-parki-detay270758/",
+      "https://www.kampyerleri.org/rize-kamp-alanlari/"
+    ],
+    "good": [
+      "Sisli yayla, gün batımı ve sessizlik övülüyor",
+      "Lokanta, çeşme, bungalov ve trekking"
+    ],
+    "hard": [
+      "Yollar bozuk, safari hissi",
+      "Karşılama küçük: birkaç çardak, park, ufak şelale",
+      "Hava serin puslu; bungalov rezervasyonlu"
+    ],
+    "quotes": [
+      "Yolları bozuk manzara güzel",
+      "Sisli serin yayla günbatımı",
+      "Üç çardak bir şelale"
+    ],
+    "found": true
+  },
+  {
+    "id": "tunca-vadisi",
+    "sources": [
+      "https://dogadakiler.com/Kamp-Alanlari/rize-Kamp-Alanlari/Tunca-Vadisi-Tabiat-Parki/",
+      "https://www.kampyerleri.org/rize-kamp-alanlari/"
+    ],
+    "good": [
+      "Kaçkar eteği yayla, üç vadi, uzun trekking",
+      "Ziyaretçi merkezi, ahşap köprü, kamelya"
+    ],
+    "hard": [
+      "Toplu taşıma yok",
+      "Yeni keşfedilen sapa konum"
+    ],
+    "quotes": [
+      "Kaçkar eteğinde üç vadi",
+      "Toplu taşıma yok özel araç"
+    ],
+    "found": true
+  },
+  {
+    "id": "akgol-sinop",
+    "sources": [
+      "https://turkeyoutdoor.org/sinop-kamp-ve-karavan-alanlari-tam-liste/",
+      "https://www.milligazete.com.tr/haber/20291594/sinoptaki-en-iyi-8-kamp-alani",
+      "https://sinopotel.com/bilgi/sinop-kamp-alanlari-rehberi/"
+    ],
+    "good": [
+      "Köknar içinde bakir küçük göl, kuş sesi",
+      "Kalabalıktan uzak sakin kamp"
+    ],
+    "hard": [
+      "Market ve yeme-içme yok, hazırlıklı gel",
+      "Tuvalet bilgisi kaynaklarda çelişkili",
+      "Toplu taşıma zor, yaban hayvanı uyarısı",
+      "Şehre uzak"
+    ],
+    "quotes": [
+      "Bakir göl kuş sesi yeter",
+      "Yiyeceği yanına al",
+      "Yaban hayvanına dikkat"
+    ],
+    "found": true
+  },
+  {
+    "id": "catak-kanyonu-sinop",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "zinav-golu",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "calcamili",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "uzungol-tp",
+    "sources": [
+      "https://eksisozluk.com/uzungol--127671?p=14",
+      "https://eksisozluk.com/uzungol--127671?p=15",
+      "https://karadenizturlari.com.tr/aktivite-spor/uzungoldeki-kamp-alanlari",
+      "https://www.kampyerleri.org/trabzon-kamp-alanlari/"
+    ],
+    "good": [
+      "Göl-orman manzarası ve dağ üstü sessizlik aranıyor",
+      "Parkta ücretli çadır, duş ve piknik masası yazılmış"
+    ],
+    "hard": [
+      "Göl çevresi otel, beton ve araç-insan sıkışıklığı",
+      "Yozlaşma ve rant şikâyeti çok",
+      "Karadeniz yağış ve serinlik; izin dönemsel değişir",
+      "Yukarı göllere kış-heyelan yolu kapanabiliyor",
+      "Giriş ücretli"
+    ],
+    "quotes": [
+      "Göl kenarı beton ve kalabalık",
+      "Keşke gelmeseydim deniyor",
+      "Dağın yukarısı daha doğal"
+    ],
+    "found": true
+  },
+  {
+    "id": "danaagzi",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "harmankaya",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "kayalidere",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "saricali",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "soguksu",
+    "sources": [
+      "https://bolge9.tarimorman.gov.tr/Menu/51/Ankara-Soguksu-Milli-Parki",
+      "https://eksisozluk.com/kizilcahamam--88202",
+      "https://kampatesim.com.tr/milli-park/ankara/soguksu"
+    ],
+    "good": [
+      "Ankara'ya yakın orman-su peyzajı, piknik masası ve çeşme",
+      "Yürüyüş, kuş ve lale-mantar gözlemi"
+    ],
+    "hard": [
+      "Hafta sonu piknik kalabalığı ve mangal dumanı",
+      "Çadır yalnız belirlenmiş alanda, ücretli",
+      "Yüksekte gece serin"
+    ],
+    "quotes": [
+      "Hafta sonu piknikle doluyor",
+      "Ankara'ya yakın orman kampı"
+    ],
+    "found": true
+  },
+  {
+    "id": "sorgun-goleti",
+    "sources": [
+      "https://eksisozluk.com/kamp-yapmak-icin-en-iyi-yerler--7331876"
+    ],
+    "good": [],
+    "hard": [
+      "Ayı çıkabilir uyarısı; yürürken sesli ol deniyor"
+    ],
+    "quotes": [
+      "Ayı çıkabilir sesli yürüyün"
+    ],
+    "found": true
+  },
+  {
+    "id": "dumanli-tp",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "huzurlu-tp",
+    "sources": [],
+    "good": [],
+    "hard": [],
+    "quotes": [],
+    "found": false
+  },
+  {
+    "id": "goynuk-comaklar",
+    "sources": [
+      "https://www.kemer.gov.tr/goynuk-kanyonu",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://www.antalyagezirehberi.net/antalya-karavan-park-rehberi.html"
+    ],
+    "good": [
+      "Likya Yolu üzerinde kanyon, havuz ve mola-kamp noktası"
+    ],
+    "hard": [
+      "Kanyona giriş ücretli, güvenlikli tur",
+      "Resmi çadır yeri 2. kategori ücretli",
+      "Yangın sezonunda ateş kuralı sıkı"
+    ],
+    "quotes": [
+      "Likya yolunun kamp mola yeri",
+      "Kanyon girişi ücretli"
+    ],
+    "found": true
+  },
+  {
+    "id": "uludag-sarialan",
+    "sources": [
+      "https://takoz.net/kamp-alani/uludag-milli-parki-sarialan-kamp-alani",
+      "https://rotavoya.com/bursa/kamp-yuruyus/uludag-sarialan-kamp-alani/",
+      "https://bolge2.tarimorman.gov.tr/Menu/125/Milli-Parklar"
+    ],
+    "good": [
+      "Teleferikle çıkılan göknar, sıcak duş, market ve kafe",
+      "Yazın 300 çadırlık resmi alan"
+    ],
+    "hard": [
+      "Hafta sonu piknik kalabalığı, çöp ve kirli tuvalet",
+      "Park girişi ile çadır ayrı ücret; kayıt şart",
+      "Gece 10-12 derece, kalın tulum",
+      "Yamaçlı orman, karavan için düzlük Çobankaya'da",
+      "Yerde ateş yasak; ayı için yiyecek konteynerde",
+      "Elektrik yalnız uzun konaklamada, geç gelince karanlık"
+    ],
+    "quotes": [
+      "Teleferikle orman kampı",
+      "Hafta sonu piknik ve çöp",
+      "Yaz gecesi bile soğuk",
+      "Kayıtsız kalmak kaçak kamp"
+    ],
+    "found": true
+  }
+]

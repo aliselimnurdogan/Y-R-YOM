@@ -18,7 +18,37 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Ayval%C4%B1k_Islands_Nature_Park.jpg/1920px-Ayval%C4%B1k_Islands_Nature_Park.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/%C5%9Eeytan_Sofras%C4%B1%27ndan_G%C3%BCnbat%C4%B1m%C4%B1nda_Ayval%C4%B1k_Adalar%C4%B1_Milli_Park%C4%B1_G%C3%B6r%C3%BCn%C3%BCm%C3%BC.jpg/1920px-%C5%9Eeytan_Sofras%C4%B1%27ndan_G%C3%BCnbat%C4%B1m%C4%B1nda_Ayval%C4%B1k_Adalar%C4%B1_Milli_Park%C4%B1_G%C3%B6r%C3%BCn%C3%BCm%C3%BC.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "yakin",
+      "difficulty": "Ada ve kıyı, yazın kalabalık",
+      "pros": [
+        "Deniz ve çam ormanı aynı çerçevede",
+        "Günbatımı ve kıyı yürüyüşü güçlü",
+        "Arazi geniş; kalabalıkta sakin köşe bulunabiliyor",
+        "Tekne ve dalış için elverişli körfez"
+      ],
+      "cons": [
+        "Yazın ada ve Sarımsaklı hattı çok dolu",
+        "Araçla ada içine girilmez; ulaşım vapur ve yaya",
+        "Park tesisi resmi kayıtta net değil",
+        "Ateş kuralı sıkı; valilik 20:30 sonrası mangalı kısıtlar",
+        "Aile için duş-elektrik belirsiz"
+      ],
+      "tips": [
+        "Geceleme yalnız idarenin gösterdiği yerde; orman içi serbest kamp yok.",
+        "Tuvalet-su-elektriği gitmeden 2. Bölge’den sorun.",
+        "Erzak, su ve odunu Ayvalık veya Cunda’dan alın; odun kesmek yasak.",
+        "Ateşi yalnızca izinli ocakta yakın; yazın yangın kararını gişede teyit edin.",
+        "Vapur saatini ve dönüşü planlayın; gece ulaşım seyrek."
+      ],
+      "advice": "Bu gece Ayvalık Adaları’nda kalacaksanız önce idareye yer gösterin; vapurla inip arabasız ilerleyeceksiniz. Market ve suyu iskele civarında bitirin, çadır bedeli tarifede 225 TL, tesis belirsiz. Ateşi ocağa sıkıştırın, odunu yanınıza alın ve 20:30 sonrası mangalı unutun."
+    }
   },
   {
     "id": "kinik-selalesi",
@@ -35,7 +65,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Bilecik’te şelale ve orman tabiat parkı. Çadırlı kamp kaydı vardır; şelale çevresi ıslak ve kaygandır.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Şelale kenarı, her şeyi yanına al",
+      "pros": [
+        "Şelale sesi ve yeşil örtü",
+        "Küçük orman parkı, kısa yürüyüş",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Şelale çevresi ıslak ve kaygan",
+        "Tuvalet, duş ve elektrik resmi kayıtta yok sayılıyor",
+        "Market belirsiz; hazırlıksız gelinmez",
+        "Geceleme yalnız tahsisli alanda"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; tesis teyidi alın.",
+        "Su, yemek, tuvalet kâğıdı ve feneri yanınıza alın.",
+        "Çadırı şelale kenarına değil gösterilen düzlüğe kurun.",
+        "Odun kesmeyin; ateş yalnız izinli ocakta, yangın döneminde sorun.",
+        "Zemin ıslak: branda ve sağlam kazık şart."
+      ],
+      "advice": "Kınık Şelalesi’ne bu gece geliyorsanız her şeyi Osmaneli’nden tamamlayın; parkta market beklemeyin. Çadır bedeli tarifede 150 TL, geceleme yalnızca gösterilen yerde, tuvalet-elektrik belirsiz. Şelale tabanı kaygan; çadırı ıslak zeminden uzak tutun, odun kesmeyin."
+    }
   },
   {
     "id": "kucukelmali",
@@ -55,7 +113,36 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Bilecik%2C_K%C3%BC%C3%A7%C3%BCkelmal%C4%B1_tabiat_park%C4%B1_g%C3%B6leti.jpg/1920px-Bilecik%2C_K%C3%BC%C3%A7%C3%BCkelmal%C4%B1_tabiat_park%C4%B1_g%C3%B6leti.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg/1920px-K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Yayla ormanı, tesis teyidi şart",
+      "pros": [
+        "Pazaryeri yayla ormanı ve gölet manzarası",
+        "Yürüyüş yolu ve piknik düzlüğü",
+        "Karavan için düzlük anlatılıyor",
+        "870 m; yazın serin"
+      ],
+      "cons": [
+        "Giriş ücretli; günübirlik piknikçi ağır basar",
+        "Tuvalet-elektrik resmi kayıtta net değil",
+        "Suyun yerini idareden sormak gerekir",
+        "Hafta sonu mesire kalabalığı"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; çeşme ve WC’yi teyit edin.",
+        "Erzakı Pazaryeri’nden alın; odun kesmek yasak.",
+        "Geceleme yalnız belirlenmiş yerde (Orman Kanunu 76-a).",
+        "Ateş izinli ocakta; yazın yangın kararına bakın.",
+        "Piknik masalarını günübirlikçilerle paylaşmayı göze alın."
+      ],
+      "advice": "Küçükelmalı’ya bu gece inecekseniz gişede kamp yerini sorun; serbest ormana çadır kurulmaz. Çadır bedeli tarifede 195 TL; açık kaynaklarda çeşme yazılıyor ama resmi kayıt net değil, suyu yedekleyin. Odunu ve yemeği Pazaryeri’nden getirin, ateşi ocağa alın."
+    }
   },
   {
     "id": "sadagi-kanyonu",
@@ -76,7 +163,35 @@
       "https://upload.wikimedia.org/wikipedia/commons/0/08/Sadagi.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Sada%C4%9F%C4%B1_k%C3%B6pr%C3%BC.jpg/1920px-Sada%C4%9F%C4%B1_k%C3%B6pr%C3%BC.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Kanyon tabanı geceleme yeri değil",
+      "pros": [
+        "Orhaneli kanyonu ve kısa trekking",
+        "Orman ve su sesi bir arada",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Kanyon tabanı kamp alanı değildir",
+        "Tesis belirsiz; saha kaydı az",
+        "Kayalık ve nemli zemin",
+        "Market ve elektrik belirsiz"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; tahsisli düzlüğü sorun.",
+        "Çadırı kanyon yatağına ve taşlı tabana kurmayın.",
+        "Su, yemek ve tuvalet planını Orhaneli’nden çözün.",
+        "Odun kesmeyin; ateş yalnız izinli ocakta.",
+        "Fener ve yedek su şart; gece kanyon karanlık."
+      ],
+      "advice": "Sadağı’na bu gece geliyorsanız kanyonun içine değil idarenin gösterdiği alana inin. Çadır bedeli tarifede 150 TL, tesis belirsiz; suyu, yemeği ve tuvalet çözümünü Orhaneli’nden alın. Odun kesmeyin, ateşi ocağa sıkıştırın, kaygan tabanda kazığı sağlam çakın."
+    }
   },
   {
     "id": "suuctu",
@@ -97,7 +212,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/SUU%C3%87TU_%C5%9EELALES%C4%B0_FOTO%C4%9ERAFLARI_-_panoramio.jpg/1920px-SUU%C3%87TU_%C5%9EELALES%C4%B0_FOTO%C4%9ERAFLARI_-_panoramio.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Suu%C3%A7tu_%C5%9Felalesi.jpg/1920px-Suu%C3%A7tu_%C5%9Felalesi.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "var",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "var",
+      "difficulty": "Mesire yoğun, tahsisli yer dar",
+      "pros": [
+        "Kayın-meşe ormanında şelaleye yakın çadır",
+        "Çeşme, büfe ve kır kahvesi anlatılıyor",
+        "Piknik masası ve kısa yürüyüş",
+        "Resmi çadır kaydı net"
+      ],
+      "cons": [
+        "Yazın günübirlikçi kalabalık",
+        "Yerde ateş yasak; elektrik belirsiz",
+        "Giriş ve çadır yeri ücretli",
+        "Ayı ve yaban için yiyecek açıkta bırakılmamalı",
+        "Geceleme yeri sınırlı"
+      ],
+      "tips": [
+        "Yalnız belirlenmiş çadır alanında kalın.",
+        "Yerde ateş yakmayın; tüplü ocak veya izinli mangal.",
+        "Odun kesmeyin; yakacağı yanınıza alın.",
+        "Yiyeceği kapalı tutun; yaban için.",
+        "Bursa yangın döneminde gişede mangal kuralını sorun.",
+        "Şelale kenarı ıslak; çadırı düz ve kuru yere kurun."
+      ],
+      "advice": "Suuçtu’ya bu gece gelirseniz gişede tahsisli çadır yerini alın; şelale dibine inmeyin. Çadır bedeli tarifede 150 TL, çeşme ve büfe yazılı, WC’yi gişede sorun, elektrik beklemeyin. Yerde ateş yok, tüp veya ocak kullanın; odun kesmeyin ve yiyeceği açık bırakmayın."
+    }
   },
   {
     "id": "buyukada-tp",
@@ -117,7 +263,36 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/B%C3%BCy%C3%BCkada_Ayayorgi_Hill.jpg/1920px-B%C3%BCy%C3%BCkada_Ayayorgi_Hill.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/B%C3%BCy%C3%BCkada_Nature_Park.jpg/1920px-B%C3%BCy%C3%BCkada_Nature_Park.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "yakin",
+      "difficulty": "Adada araç yok, yangın sıkı",
+      "pros": [
+        "Çamlık ve ada manzarası",
+        "İskele civarında market yakın",
+        "Kısa günübirlik yürüyüş"
+      ],
+      "cons": [
+        "Park yalnızca 3 ha; pratikte günübirlik ağır basar",
+        "Ada ormanında izinsiz geceleme yangın yüzünden yasak",
+        "Araç yok; malzeme vapur ve fayton/bisikletle taşınır",
+        "Tesis resmi kayıtta net değil",
+        "Yazın ada turist dolu"
+      ],
+      "tips": [
+        "Geceleme kaydını idareden teyit etmeden çadır kurmayın.",
+        "Suyu, yemeği ve tuvalet planını iskele marketlerinden çözün.",
+        "Ateş yalnız izinli ocakta; yazın ada yangın yasağı sıkıdır.",
+        "Odun kesmek ve orman içi serbest kamp yasak.",
+        "Son vapuru kaçırmayın; gece dönüş seçeneği dar."
+      ],
+      "advice": "Büyükada Tabiat Parkı küçük bir çamlık; bu gece kalacaksanız idareden yer ve izin sorun, aksi halde pratikte günübirlik alandır. Çadır bedeli tarifede 225 TL; arabasız ineceksiniz, suyu ve erzakı iskelede alın. Ateşi sıkı tutun, odun kesmeyin, tesis beklemeyin — fener ve tuvalet planı size kalır."
+    }
   },
   {
     "id": "danamandira",
@@ -138,7 +313,35 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Danamand%C4%B1raNP_%282%29.jpg/1920px-Danamand%C4%B1raNP_%282%29.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Danamand%C4%B1raNP_%283%29.jpg/1920px-Danamand%C4%B1raNP_%283%29.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "İstanbul yakını, hafta sonu dolu",
+      "pros": [
+        "Çatalca ormanı, kente yakın kaçış",
+        "Sözlükte çadır listelerinde geçer",
+        "Gölet ve yürüyüş düzlüğü"
+      ],
+      "cons": [
+        "Hafta sonu İstanbul kalabalığı",
+        "Tuvalet-su-elektrik resmi kayıtta yok sayılıyor",
+        "Market belirsiz",
+        "Geceleme yalnız tahsisli yerde"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; kamp yerini teyit edin.",
+        "Erzak ve suyu Çatalca’dan alın.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Hafta sonu erken gelin; düz yer çabuk dolar.",
+        "Yazın yangın yasağını gişede sorun."
+      ],
+      "advice": "Danamandıra’ya bu gece geliyorsanız önce idareye yer sorun; orman içi serbest kamp yok. Çadır bedeli tarifede 225 TL, tesis belirsiz, suyu ve yemeği Çatalca’dan getirin. Odun kesmeyin, ateşi ocağa alın; İstanbul’a yakın olduğu için gece gürültü olabilir."
+    }
   },
   {
     "id": "dilburnu",
@@ -159,7 +362,36 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg/1920px-Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Dilburnu_tabiat_park%C4%B1.jpg/1920px-Dilburnu_tabiat_park%C4%B1.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Ada burnu, araç yok",
+      "pros": [
+        "Heybeliada deniz manzarası",
+        "Kısa yürüyüş ve günübirlik piknik",
+        "Belirlenen ocaklarda mangal anlatılıyor"
+      ],
+      "cons": [
+        "Yalnız 7 ha; kapasite çok dar",
+        "Açık kaynaklarda piknik yeri, gece çadır tartışmalı",
+        "Ada yangın yasağı sıkı; araç yok",
+        "Akşam kapanış saati anlatılıyor",
+        "Tesis belirsiz"
+      ],
+      "tips": [
+        "Bu gece kalmadan idareye mutlaka sorun; bazı kaynaklar gecelemeyi yasak sayıyor.",
+        "Malzemeyi vapurla taşıyın; araba yok.",
+        "Ateş yalnız izinli ocakta, yazın çoğu zaman yasak.",
+        "Erzakı ada iskelesinden alın.",
+        "Odun kesmek ve orman içi kamp yasak."
+      ],
+      "advice": "Dilburnu küçük bir burun parkı; bu gece çadır için mutlaka idareyi arayın, açık kaynaklar gecelemeyi sık sık yasak yazıyor. Çadır bedeli tarifede 225 TL. Arabasız, yangın kuralı sıkı, tesis belirsiz; suyu iskelede alın, ateşi ocağa bile sormadan yakmayın."
+    }
   },
   {
     "id": "hacet-deresi",
@@ -178,7 +410,35 @@
     "images": [
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Hacet_Deresi.jpg/1920px-Hacet_Deresi.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Dere kenarı ıslak, yangına dikkat",
+      "pros": [
+        "Şile deresi ve küçük orman",
+        "Kısa kaçış, düşük rakım",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Alan 16 ha; dar",
+        "Dere kenarı ıslak, sivrisinek olabilir",
+        "Tesis belirsiz",
+        "Yangın riski kıyı ormanında yüksek"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Çadırı dere yatağına değil tahsisli düzlüğe kurun.",
+        "Suyu ve erzakı Şile’den alın.",
+        "Odun kesmeyin; ateş izinli ocakta, yazın sorun.",
+        "Islak zemin için branda alın."
+      ],
+      "advice": "Hacet Deresi’ne bu gece inecekseniz gişede veya idarede tahsisli yeri sorun. Çadır bedeli tarifede 150 TL; dere kenarı ıslak, çadırı suya yaklaştırmayın. Tesis belirsiz, suyu Şile’den getirin; odun kesmeyin, ateşi ocağa alın."
+    }
   },
   {
     "id": "hasdal",
@@ -195,7 +455,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Kent içi orman parkı. Çadırlı kamp kaydı vardır; şehir gürültüsü yakındır.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "yakin",
+      "difficulty": "Kent içi orman, gece gürültü",
+      "pros": [
+        "Kağıthane’de kente yakın orman",
+        "Market ilçe içinde yakın",
+        "Kısa yürüyüş ve günübirlik gölge"
+      ],
+      "cons": [
+        "Şehir gürültüsü ve ışık",
+        "Günübirlik kullanım ağır basabilir",
+        "Tesis belirsiz",
+        "Geceleme tahsisli yer dışında yasak"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; geceleme yerini teyit edin.",
+        "Erzakı ilçeden alın; odun kesmek yasak.",
+        "Ateş izinli ocakta; kent ormanında yangın kuralı sıkı.",
+        "Gece gürültüye hazır olun.",
+        "Değerli eşyayı çadırda açık bırakmayın."
+      ],
+      "advice": "Hasdal kent içi bir orman; bu gece kalacaksanız idareden tahsisli yeri sorun, serbest çadır yok. Çadır bedeli tarifede 105 TL, market yakın ama tesis belirsiz. Ateşi ocağa alın, odun kesmeyin; gece şehir sesi kesilmez."
+    }
   },
   {
     "id": "polonezkoy-tp",
@@ -216,7 +504,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Polenezk%C3%B6y_Tabiat_Park%C4%B1%2C_%C4%B0stanbul%2C_EOS_60D.jpg/1920px-Polenezk%C3%B6y_Tabiat_Park%C4%B1%2C_%C4%B0stanbul%2C_EOS_60D.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Polonezk%C3%B6y_tabiat_park%C4%B1_y%C3%BCr%C3%BCy%C3%BC%C5%9F_yolu_09.jpg/1920px-Polonezk%C3%B6y_tabiat_park%C4%B1_y%C3%BCr%C3%BCy%C3%BC%C5%9F_yolu_09.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "var",
+      "power": "yok",
+      "water": "var",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "var",
+      "difficulty": "Hafta sonu piknikçi, giriş saatli",
+      "pros": [
+        "Bakımlı orman, dere sesi, yürüyüş ve bisiklet",
+        "WC, çeşme ve büfe var",
+        "Köyde pansiyon ve market yakın",
+        "Geyik görme umudu"
+      ],
+      "cons": [
+        "Elektrik, sıcak su ve duş yok",
+        "Hafta sonu otopark doluyor; giriş 09:00–19:00",
+        "Park içinde piknik-mangal kısıtlı anlatılıyor",
+        "İlk kilometrelerde gürültülü gruplar",
+        "Çadır yalnız belirlenmiş yerde"
+      ],
+      "tips": [
+        "Çadırı yalnız kamp yerine kurun; orman içi yasak.",
+        "Ateş yalnız idare ocağında; 1 Haziran–31 Ekim gişede sorun.",
+        "Odun kesmeyin; yakacağı köyden alın.",
+        "Pazar günü erken gelin, otopark ücretini hesap edin.",
+        "Şarjı evde bitirin; priz yok.",
+        "Köy marketinden su ve ekmek alın."
+      ],
+      "advice": "Polonezköy’e bu gece geliyorsanız kapı saatini kaçırmayın ve çadırı gösterilen yere kurun. Çadır bedeli tarifede 225 TL; WC ve çeşme var, elektrik ve duş yok, market köyde. Ateşi ocağa sorun, yazın yangın dönemi sıkı; odun kesmeyin, şarjı önceden yapın."
+    }
   },
   {
     "id": "beskayalar",
@@ -237,7 +556,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Ocak_2020_DSC08558_hamdigumus.jpg/1920px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Ocak_2020_DSC08558_hamdigumus.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Kocaeli_Ocak_2020_DSC08558_hamdigumus.jpg/1920px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Kocaeli_Ocak_2020_DSC08558_hamdigumus.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "var",
+      "power": "yok",
+      "water": "var",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "yok",
+      "difficulty": "Son 2 km toprak, vadi trekking",
+      "pros": [
+        "Kanyon, şelale ve mağara vadisi",
+        "Çeşme ve tuvalet kaydı var",
+        "Menekşe Yaylası yazın çadır düzlüğü",
+        "950 m; yazın serin"
+      ],
+      "cons": [
+        "İçeride yiyecek tesisi yok",
+        "Elektrik yok; WC’nin açık olduğu teyit edilmeli",
+        "Son 2 km toprak, yağmurda çamur",
+        "Hafta sonu İstanbul grubu dolu",
+        "Düz çadır yeri sınırlı"
+      ],
+      "tips": [
+        "Erzakı Yuvacık’tan alın; içeride market yok.",
+        "Giriş 08:00–18:00; kapı saatini sorun.",
+        "Kanyon ve şelale geceleme yeri değildir.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Yağmurda lastik ve çekme halatı düşünün.",
+        "Gişede WC’nin açık olup olmadığını sorun."
+      ],
+      "advice": "Beşkayalar’a bu gece geliyorsanız Yuvacık’ta yemek ve suyu bitirin; içeride büfe yok. Çadır bedeli tarifede 195 TL, son iki kilometre toprak, yağmurda çamur. Çeşme ve tuvalet yazılı, elektrik yok; çadırı kanyona değil gösterilen düzlüğe kurun."
+    }
   },
   {
     "id": "suadiye-tp",
@@ -256,7 +606,36 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/0/01/Suad%C4%B0ye_Tab%C4%B0at_Park%C4%B1.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Kartepe eteği, özel araç",
+      "pros": [
+        "Kartepe yolunda manzara",
+        "Kamelya, mescit ve oyun parkı anlatılıyor",
+        "Çadır ve karavan kaydı var",
+        "1050 m; yazın serin"
+      ],
+      "cons": [
+        "Giriş ücretli",
+        "Toplu taşıma belirsiz",
+        "Tesis resmi kayıtta net değil",
+        "Kayak yolu üstü; kış erişimi ayrı"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; WC ve suyu teyit edin.",
+        "Özel araçla gidin; erzakı Kartepe–Maşukiye hattından alın.",
+        "Geceleme tahsisli alanda; odun kesmek yasak.",
+        "Ateş izinli ocakta; yazın yangın kararına bakın.",
+        "Gece 1050 m’de serin; üç mevsim tulum iyi olur."
+      ],
+      "advice": "Suadiye Tabiat Parkı’na bu gece özel araçla çıkın; çadır bedeli tarifede 195 TL. Tesis belirsiz, suyu ve yemeği yolda alın, çadırı gösterilen yere kurun. Rakım 1050 m, gece üşütür; kalın bir kat, fener ve ocak şart."
+    }
   },
   {
     "id": "poyrazlar",
@@ -277,7 +656,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Recreational_areas_of_the_Lake_Poyrazlar_Nature_Park.jpg/1920px-Recreational_areas_of_the_Lake_Poyrazlar_Nature_Park.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/6/65/Sakarya_Poyrazlar_G%C3%B6l%C3%BC.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "var",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "var",
+      "difficulty": "Göl kenarı yasak, sivrisinek bol",
+      "pros": [
+        "Göl, meşe ve çam; kuş gözlemi",
+        "Kır lokantası, büfe, WC ve mescit var",
+        "Adapazarı’na 8 km",
+        "Kışın sakin kamp anlatılıyor"
+      ],
+      "cons": [
+        "Hafta sonu mangal, müzik ve kalabalık",
+        "Tuvalet hijyeni şikâyeti var",
+        "Göl kenarına çadır yasak; sivrisinek çok",
+        "Elektrik ve içme suyu musluğu resmi kayıtta net değil",
+        "Giriş 08:30–23:00"
+      ],
+      "tips": [
+        "Çadırı göl kıyısına değil gösterilen alana kurun.",
+        "Sivrisinek ilacı ve kapalı çadır şart.",
+        "İçme suyunu yedekleyin; çeşmeyi teyit edin.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Hafta içi veya kış sakin; hafta sonu erken gelin.",
+        "Kapı saatini kaçırmayın."
+      ],
+      "advice": "Poyrazlar’a bu gece gelirseniz göl kenarına çadır kurmayın; gişede yeri sorun. Çadır bedeli tarifede 195 TL; büfe ve WC var, içme suyu ve elektrik belirsiz, sivrisinek yoğun. Hafta sonu gürültülü olabilir; odun kesmeyin, ateşi ocağa alın."
+    }
   },
   {
     "id": "kartaltepe",
@@ -298,7 +708,35 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg/1920px-Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/7/76/Kartaltepe_Tabiat_Park%C4%B1.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Açık sırt, rüzgâr sert",
+      "pros": [
+        "Ganos sırtında Marmara kuşbakışı",
+        "Fotoğraf ve kısa yürüyüş",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Hafta sonu aile kalabalığı",
+        "Giriş ücretli",
+        "Tesis belirsiz",
+        "Açık sırtta rüzgâr çadırı zorlar"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Rüzgâr kazığı ve gergi ipi alın; açık tepe.",
+        "Erzakı Tekirdağ’dan tamamlayın.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Geceleme yalnız belirlenmiş yerde."
+      ],
+      "advice": "Kartaltepe’ye bu gece çıkıyorsanız idareden yer teyidi alın. Çadır bedeli tarifede 195 TL, tesis belirsiz; suyu ve yemeği şehirden getirin. Sırt rüzgârlı, kazığı sağlam çakın; odun kesmeyin, ateşi ocağa alın."
+    }
   },
   {
     "id": "karlik-yaylasi",
@@ -315,7 +753,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Çınarcık yayla tabiat parkı. Çadırlı kamp kaydı vardır; tarife satırı boşsa ücretsiz demek değildir.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Yayla serinliği, tesis belirsiz",
+      "pros": [
+        "Çınarcık yaylası, 845 m serinlik",
+        "Kısa kaçış, orman kenarı",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Tesis resmi kayıtta net değil",
+        "Tarife satırı boş; ücretsiz demek değildir",
+        "Market belirsiz",
+        "Gece yayla soğuğu"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; ücret ve yeri sorun.",
+        "Erzakı Çınarcık–Yalova’dan alın.",
+        "Gece için kalın tulum alın.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Serbest orman kampı yasak."
+      ],
+      "advice": "Karlık Yaylası’na bu gece geliyorsanız ücreti ve tahsisli yeri idareden sorun; tarife boş olsa da bedelsiz saymayın. Tesis belirsiz, suyu Yalova–Çınarcık’tan getirin. 845 m’de gece serin, üç mevsim tulum iyi olur; odun kesmeyin, ateşi ocağa alın."
+    }
   },
   {
     "id": "ortaburun",
@@ -332,7 +798,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Yalova orman tabiat parkı. Çadırlı kamp kaydı vardır; geceleme idarenin gösterdiği düzlükte.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Orman düzlüğü, idare teyidi şart",
+      "pros": [
+        "Yalova orman tabiat parkı",
+        "Çadır kaydı var",
+        "Kente görece yakın"
+      ],
+      "cons": [
+        "Tesis belirsiz",
+        "Tarife satırı boş; ücreti sorun",
+        "Saha deneyimi az",
+        "Geceleme yalnız tahsisli düzlükte"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Suyu ve yemeği Çınarcık’tan alın.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Yazın yangın kararını sorun.",
+        "Fener ve yedek su şart."
+      ],
+      "advice": "Ortaburun’a bu gece inecekseniz önce idareyi arayın; yer ve ücret net değil. Tesis beklemeyin, suyu Çınarcık’tan getirin, çadırı gösterilen düzlüğe kurun. Odun kesmeyin, ateşi ocağa alın, kapı ve yangın kuralını gişede teyit edin."
+    }
   },
   {
     "id": "bafa-golu-tp",
@@ -353,7 +847,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Bafa_Lake.jpg/1920px-Bafa_Lake.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Bafa_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_%28bilgekorkmaz%29.jpg/1920px-Bafa_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_%28bilgekorkmaz%29.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "yakin",
+      "difficulty": "Sulak alan hassas, sivrisinek",
+      "pros": [
+        "Göl, kuş alanı, Latmos ve antik kent yürüyüşü",
+        "Kapıkırı–Serçin’de pansiyon ve köy marketi",
+        "Sabah kuş sesi övülüyor",
+        "Geniş kıyı düzlüğü"
+      ],
+      "cons": [
+        "Parkın kendi tuvalet-elektriği kayıtsız; özel kamp park tesisi değildir",
+        "İlkbaharda sivrisinek; yaz çok sıcak",
+        "Göl tabanı çamurlu, yüzme önerilmiyor",
+        "Göle deterjan dökmek yasak",
+        "Giriş 07:00–20:30"
+      ],
+      "tips": [
+        "Geceleme yalnız gösterilen yerde; kıyıya rastgele çadır yok.",
+        "Market köyde; park tesisine güvenmeyin.",
+        "Sivrisinek ilacı ve bol su alın.",
+        "Odun kesmeyin; yazın orman giriş yasağına bakın.",
+        "Bulaşığı göle dökmeyin.",
+        "Özel kampinglerin duş-prizini park imkânı sanmayın."
+      ],
+      "advice": "Bafa’ya bu gece geliyorsanız kapı saatini (07:00–20:30) kaçırmayın ve yeri görevliye sorun. Çadır bedeli tarifede 255 TL; park WC-elektriği belirsiz, köy marketinden su ve yemek alın, sivrisinek bekleyin. Göle sabun dökmeyin, odun kesmeyin, ateşi ocağa sorun."
+    }
   },
   {
     "id": "spil-dagi-mp",
@@ -374,7 +899,38 @@
       "https://upload.wikimedia.org/wikipedia/commons/3/35/Spil_Da%C4%9F%C4%B1_Zirvesi.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Spil_Da%C4%9F%C4%B1_%2820220803%29.jpg/1920px-Spil_Da%C4%9F%C4%B1_%2820220803%29.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "var",
+      "power": "belirsiz",
+      "water": "var",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Dağ yolu zor, gece serin",
+      "pros": [
+        "Atalanı çadır-karavan ve dağ evi",
+        "Yaban atı ve dağ keçisi",
+        "Tuvalet, çeşme, piknik ünitesi var",
+        "1300 m; yazın serin, körfez manzarası"
+      ],
+      "cons": [
+        "Yol son kesimde zor; 4x4 hissi",
+        "Çadır elektriği belirsiz; market yok",
+        "Hafta sonu piknik yoğun",
+        "Giriş 09:00–18:00",
+        "Yazın gölgede bile serinlik, kışın kar"
+      ],
+      "tips": [
+        "Erzakı Manisa’dan alın.",
+        "Ateş yalnız mangal/ocak yerinde; yazın orman yasağına bakın.",
+        "Odun kesmeyin.",
+        "Orman evi ayrı rezervasyon; çadır yeri elektriği beklemeyin.",
+        "Gece 1300 m soğuk; üç-dört mevsim tulum.",
+        "Kapı saatini sorun."
+      ],
+      "advice": "Spil’e bu gece çıkıyorsanız Manisa’da erzakı bitirin ve kapı saatini (09:00–18:00) sorun. Çadır bedeli tarifede 225 TL; tuvalet ve çeşme var, çadır prizi belirsiz, yol sonu bozulabilir. Ateşi ocakta yakın, odun kesmeyin; 1300 m gece serin, kalın tulum alın."
+    }
   },
   {
     "id": "karanlikdere",
@@ -391,7 +947,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Muğla kanyon tabiat parkı. Çadırlı kamp kaydı vardır; kanyon içi geceleme yeri değildir.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Kanyon içi geceleme yok",
+      "pros": [
+        "Muğla kanyon ormanı",
+        "1079 m; yazın görece serin",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Kanyon tabanı geceleme yeri değildir",
+        "Tesis belirsiz",
+        "Yazın yangın yasağı sıkı",
+        "Market belirsiz"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Çadırı kanyon yatağına kurmayın.",
+        "Erzakı Ula–Muğla’dan alın.",
+        "Yazın ateşi gişede sorun; çoğu dönem yasak.",
+        "Odun kesmek yasak."
+      ],
+      "advice": "Karanlıkdere’ye bu gece geliyorsanız kanyonun içine inmeyin; tahsisli düzlüğü idareden sorun. Çadır bedeli tarifede 105 TL, tesis yok sayılıyor, suyu Muğla–Ula’dan getirin. Yazın yangın yasağı sıkı, ateşi sormadan yakmayın, odun kesmeyin."
+    }
   },
   {
     "id": "belemedik",
@@ -412,7 +996,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/D%C3%B6rt_duvar_Belemedik.jpg/1920px-D%C3%B6rt_duvar_Belemedik.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/1.Belemedik_Nature_Park.jpg/1920px-1.Belemedik_Nature_Park.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Vadi ormanı, yaban hayvanı",
+      "pros": [
+        "Çakıt vadisi, çınar ve sonbahar renkleri",
+        "Tarihi tünel ve istasyon çevresi",
+        "Açık kaynaklarda restoran ve su anlatılıyor",
+        "1277 m; yazın serin"
+      ],
+      "cons": [
+        "Tesis resmi kayıtta net değil; teyit şart",
+        "Yerde ateş yasak",
+        "Alışveriş Pozantı’dan",
+        "Yaban domuzu ve keçi",
+        "Giriş saatli ve ücretli"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; WC ve suyu teyit edin.",
+        "Erzakı Pozantı’dan alın.",
+        "Yerde ateş yakmayın; kutu veya tüp.",
+        "Tarihi tünel-istasyon geceleme yeri olmayabilir.",
+        "Yiyeceği kapalı tutun.",
+        "Odun kesmek yasak."
+      ],
+      "advice": "Belemedik’e bu gece inecekseniz Pozantı’da erzakı bitirin ve idareden tahsisli yeri sorun. Çadır bedeli tarifede 195 TL; resmi kayıtta WC-elektrik net değil, açık kaynaklara güvenip boş gelmeyin. Yerde ateş yok; yiyeceği kapatın, yaban dolaşır."
+    }
   },
   {
     "id": "obruk-selalesi",
@@ -433,7 +1048,35 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_02.JPG/1920px-Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_02.JPG",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_01.JPG/1920px-Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_01.JPG"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Yüksek şelale, ıslak zemin",
+      "pros": [
+        "Saimbeyli yüksek rakım şelalesi",
+        "1646 m serinlik ve orman",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Tesis belirsiz",
+        "Şelale kenarı ıslak ve kaygan",
+        "Market yok sayılıyor",
+        "Gece soğuk"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Suyu ve yemeği Saimbeyli’den alın.",
+        "Çadırı şelale sıçrama alanına kurmayın.",
+        "Kalın tulum alın; 1646 m gece üşütür.",
+        "Odun kesmeyin; ateş izinli ocakta."
+      ],
+      "advice": "Obruk Şelalesi’ne bu gece çıkıyorsanız her şeyi Saimbeyli’den tamamlayın. Çadır bedeli tarifede 105 TL, tesis belirsiz; şelale kenarı ıslak, çadırı tahsisli kuru düzlüğe kurun. 1646 m’de gece soğuk, üç-dört mevsim tulum alın, odun kesmeyin."
+    }
   },
   {
     "id": "kursunlu-selalesi",
@@ -454,7 +1097,37 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Kur%C5%9Funlu_%C5%9Eelalesi_Manzara_Foto%C4%9Fraf%C4%B1.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_Manzara_Foto%C4%9Fraf%C4%B1.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Kur%C5%9Funlu_%C5%9Eelalesi_-_%C5%9Eelalesi_B%C3%B6lgesi_-_Manzara_Foto%C4%9Fraf%C4%B1.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_-_%C5%9Eelalesi_B%C3%B6lgesi_-_Manzara_Foto%C4%9Fraf%C4%B1.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "var",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "var",
+      "difficulty": "Tur otobüsü, geceleme teyidi şart",
+      "pros": [
+        "Antalya’ya yakın şelale, kanyon ve gölge",
+        "WC, mescit, kır lokantası ve büfe var",
+        "Sincap ve kısa yürüyüş tünelleri",
+        "Piknik masası"
+      ],
+      "cons": [
+        "Günübirlik tur parkı; geceleme gişede teyit edilmeli",
+        "08:30–17:30 giriş; içeride gece kampı tartışmalı",
+        "Yazın aşırı kalabalık",
+        "Elektrik belirsiz; mangal kısıtlı anlatılıyor",
+        "İşletme fiyatları yüksek olabilir"
+      ],
+      "tips": [
+        "Bu gece kalacaksanız gişede mutlaka sorun; birçok kaynak günübirlik diyor.",
+        "Su ve yiyeceği büfeden veya Aksu’dan alın.",
+        "Odun kesmeyin; yazın Antalya orman yasağına bakın.",
+        "Şelale gezisini sabah erken yapın.",
+        "Çadır elektriği beklemeyin."
+      ],
+      "advice": "Kurşunlu’ya bu gece çadır için geliyorsanız önce gişeyi arayın; alan günübirlik şelale parkı, geceleme kaydı tartışmalı. Çadır bedeli tarifede 285 TL; WC ve büfe var, elektrik belirsiz, tur otobüsü bekleyin. Ateşi sormadan yakmayın, odun kesmeyin."
+    }
   },
   {
     "id": "salda-golu-tp",
@@ -475,7 +1148,38 @@
       "https://upload.wikimedia.org/wikipedia/commons/5/5c/Lake_Salda_Nature_Park_1.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/e/eb/Salda_G%C3%B6l%C3%BC_T%C3%BCrkiye_2022.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "yakin",
+      "difficulty": "Kıyı koruması sıkı, yalnız tahsisli yer",
+      "pros": [
+        "Turkuaz su ve beyaz kıyı",
+        "1160 m; yazın serin göl",
+        "Market Yeşilova ve Salda köyünde",
+        "Kıyı ormanında yaban"
+      ],
+      "cons": [
+        "Beyaz kumsal ve kıyıda çadır-ateş yasak",
+        "Çamur banyosu, kum alma, göle sabun yasak",
+        "Yazın Beyaz Adalar aşırı kalabalık",
+        "Park tesisi resmi kayıtta yok",
+        "Araç kıyıya giremez"
+      ],
+      "tips": [
+        "Kamp yalnız tabiat parkındaki tahsisli yerde; kumsala çadır yok.",
+        "Gitmeden 6. Bölge’ye WC-su sorun.",
+        "Erzakı Yeşilova veya Salda köyünden alın.",
+        "Ateş yalnız piknik ocağında; odun kesmek yasak.",
+        "Göle deterjan dökmeyin, kum almayın.",
+        "Sigara ve kıyı pikniği yasağına uyun."
+      ],
+      "advice": "Salda’ya bu gece geliyorsanız çadırı beyaz kumsala değil yalnızca gösterilen alana kurun. Çadır bedeli tarifede 195 TL, tesis belirsiz; suyu köyden alın. Göle sabun dökmek, çamur banyosu ve kum almak yasak; ateşi ocağa sorun, kıyı koruması cezalı."
+    }
   },
   {
     "id": "isparta-golcuk",
@@ -495,7 +1199,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Isparta_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1.jpg/1920px-Isparta_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_01.jpg/1920px-ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_01.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "yakin",
+      "difficulty": "Şehre 6 km, hafta sonu dolu",
+      "pros": [
+        "Krater gölü, çam-sedir, serin hava",
+        "Isparta’ya çok yakın",
+        "Yürüyüş, bisiklet, kuş kulesi anlatılıyor",
+        "1350 m yaz serinliği"
+      ],
+      "cons": [
+        "Tuvalet-su-elektrik resmi kayıtta net değil",
+        "Yaz hafta sonu piknikçi dolu",
+        "Gölde yüzmek yasak",
+        "Göl kenarı serbest kamp yasak",
+        "Giriş 08:30–23:00"
+      ],
+      "tips": [
+        "Marketi Isparta’dan alın.",
+        "Çadırı göl kıyısına değil tahsisli yere kurun.",
+        "Gitmeden WC’yi teyit edin.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Gece 1350 m soğuk; kalın kat alın.",
+        "Kapı saatini kaçırmayın."
+      ],
+      "advice": "Isparta Gölcük’e bu gece şehirden 6 km’desiniz; erzakı merkezden alın. Çadır bedeli tarifede 165 TL, tesis resmi kayıtta net değil, suyu yedekleyin. Gölde yüzülmez, kıyıya serbest çadır yok; 1350 m gece üşütür, odun kesmeyin."
+    }
   },
   {
     "id": "yazili-kanyon",
@@ -516,7 +1251,35 @@
       "https://upload.wikimedia.org/wikipedia/commons/2/26/Yazili_Kanyon.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/9/9e/Yazili_kanyon_2.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Kanyon tabanı kamp değil",
+      "pros": [
+        "Antik yazıt, sarp kanyon, Göksu yürüyüşü",
+        "Trekking ve gölge vadi",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Kanyon içi geceleme yeri değildir",
+        "Açık kaynaklarda çadır yasağı notu var; teyit şart",
+        "Tesis belirsiz",
+        "Giriş ücretli"
+      ],
+      "tips": [
+        "Gitmeden işletmeye ve idareye sorun; dönemsel yasak olmuş.",
+        "Çadırı kanyon yatağına kurmayın.",
+        "Erzakı Sütçüler’den alın.",
+        "Yazın yangın kararına bakın.",
+        "Odun kesmek yasak; kaygan tabanda dikkat."
+      ],
+      "advice": "Yazılı Kanyon’a bu gece çadır için geliyorsanız mutlaka idareyi arayın; kanyon içi kamp yeri değil ve dönemsel yasak notu düşülmüş. Çadır bedeli tarifede 165 TL, tesis belirsiz, suyu Sütçüler’den getirin. Odun kesmeyin, ateşi sorun, feneri alın."
+    }
   },
   {
     "id": "geben-vadisi",
@@ -533,7 +1296,35 @@
     "statusLabel": "Milli park",
     "summary": "Andırın–Göksun koridoru milli park. Kampçılık kaydı vardır; orman kanunu konak yeri kuralı geçerlidir.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "2000 m milli park, dört mevsim tulum",
+      "pros": [
+        "Andırın–Göksun koridoru geniş milli park",
+        "Yüksek orman ve vadi",
+        "Kampçılık kaydı var"
+      ],
+      "cons": [
+        "Yüksek rakım; gece donabilir",
+        "Tesis belirsiz",
+        "Market yok sayılıyor",
+        "Az bilinen, yol ve işaret belirsiz olabilir"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Dört mevsim tulum ve kış matı alın.",
+        "Erzakı Andırın veya Göksun’dan bitirin.",
+        "Geceleme yalnız tahsisli yerde; odun kesmek yasak.",
+        "Yazın yangın, kışın yol kapanması riski."
+      ],
+      "advice": "Geben Vadisi’ne bu gece çıkıyorsanız 2000 m’ye hazırlanın: dört mevsim tulum, bere, yedek su. Çadır bedeli tarifede 105 TL, tesis belirsiz; erzakı Andırın–Göksun’dan alın ve gitmeden idareyi arayın. Tahsisli yer dışında geceleme yok, odun kesmeyin."
+    }
   },
   {
     "id": "karamanastir",
@@ -550,7 +1341,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Erdemli şelale tabiat parkı. Çadırlı kamp kaydı vardır; tarife boşsa ücretsiz değildir.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Şelale çevresi ıslak",
+      "pros": [
+        "Erdemli şelale ve orman",
+        "870 m gölge vadi",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Tesis belirsiz",
+        "Tarife satırı boş; ücreti sorun",
+        "Şelale çevresi ıslak",
+        "Market belirsiz"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; ücret ücretsiz demek değildir.",
+        "Erzakı Erdemli’den alın.",
+        "Çadırı ıslak şelale tabanına kurmayın.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Yazın Mersin yangın yasağına bakın."
+      ],
+      "advice": "Karamanastır’a bu gece geliyorsanız ücreti ve yeri idareden sorun; tarife boş olsa da bedelsiz saymayın. Tesis belirsiz, suyu Erdemli’den getirin. Şelale kenarı kaygan, çadırı tahsisli düzlüğe kurun; odun kesmeyin, ateşi ocağa alın."
+    }
   },
   {
     "id": "yerkopru",
@@ -571,7 +1390,35 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/196-Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi_Tabiat_Park%C4%B1_Mersin.jpg/1920px-196-Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi_Tabiat_Park%C4%B1_Mersin.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Mut_Yerk%C3%B6pr%C3%BC_Canyon.jpg/1920px-Mut_Yerk%C3%B6pr%C3%BC_Canyon.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Doğal köprü geceleme yeri değil",
+      "pros": [
+        "Mut doğal köprü ve şelale",
+        "Kısa kanyon yürüyüşü",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Doğal köprü ve şelale kamp yeri değildir",
+        "Tesis belirsiz",
+        "Kayalık ıslak zemin",
+        "Tarife boş; ücreti sorun"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Çadırı köprü ve şelale üzerine kurmayın.",
+        "Erzakı Mut’tan alın.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Kaygan taşta kafa lambası şart."
+      ],
+      "advice": "Yerköprü’ye bu gece inecekseniz doğal köprüyü gezilecek yer sayın, çadır yeri değil; ücreti idareden sorun. Tesis belirsiz, suyu Mut’tan getirin, tahsisli düzlükte kalın. Odun kesmeyin, ateşi ocağa alın; zemin ıslak, kazığı ve feneri unutmayın."
+    }
   },
   {
     "id": "karatepe-aslantas",
@@ -592,7 +1439,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Pine_in_Karatepe-Aslanta%C5%9F_National_Park.jpg/1920px-Pine_in_Karatepe-Aslanta%C5%9F_National_Park.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/9/9d/Karatepe_Stadtmauer.JPG"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Açık hava müzesi kamp yeri değil",
+      "pros": [
+        "Hitit açık hava müzesi, kızılçam, baraj kıyısı",
+        "Piknik ve çadır kaydı var",
+        "Açık kaynaklarda çeşme-kamelya anlatılıyor",
+        "Olta imkânı yazılıyor"
+      ],
+      "cons": [
+        "Tuvalet-su-elektrik resmi kayıtta net değil",
+        "Müze alanı ve göl kenarı rastgele çadır değil",
+        "Alışveriş sınırlı; Kadirli’den gelin",
+        "Toplu taşıma yok",
+        "Giriş 08:00–19:00"
+      ],
+      "tips": [
+        "Girişte görevliden kamp yeri isteyin.",
+        "Erzakı Kadirli’den alın.",
+        "Hitit ören yerine çadır kurmayın.",
+        "Ateş için izin alın; yazın Osmaniye orman yasağına bakın.",
+        "Odun kesmek yasak.",
+        "Gitmeden WC’yi teyit edin."
+      ],
+      "advice": "Karatepe-Aslantaş’a bu gece geliyorsanız gişede yer gösterilmesini isteyin; müze ve baraj kıyısı serbest kamp değil. Çadır bedeli tarifede 195 TL, resmi tesis kaydı net değil, suyu Kadirli’den getirin. Ateşi sorun, odun kesmeyin; kapı 08:00–19:00, geç kalmayın."
+    }
   },
   {
     "id": "altiparmak-tp",
@@ -613,7 +1491,35 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Alt%C4%B1parmak_Nature_Park_08.jpg/1920px-Alt%C4%B1parmak_Nature_Park_08.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Alt%C4%B1parmak_Nature_Park_20.jpg/1920px-Alt%C4%B1parmak_Nature_Park_20.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "2230 m, gece donabilir",
+      "pros": [
+        "Yusufeli yüksek yayla ve Kaçkar eteği",
+        "Sis, yaban ve açık gökyüzü",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "2230 m; gece don, gündüz rüzgâr",
+        "Tesis belirsiz; kışın yol kapanır",
+        "Market yok sayılıyor",
+        "Hazırlıksız gidilmez"
+      ],
+      "tips": [
+        "Dört mevsim tulum, kış matı ve bere alın.",
+        "Erzakı Yusufeli veya köyden bitirin.",
+        "Gitmeden idareyi arayın; yol durumunu sorun.",
+        "Odun kesmeyin; geceleme tahsisli alanda.",
+        "Sis ve yön kaybına karşı GPS ve fener."
+      ],
+      "advice": "Altıparmak’a bu gece çıkıyorsanız 2230 m’ye kış gibi bakın: dört mevsim tulum, yedek kat, dolu matara. Çadır bedeli tarifede 150 TL, tesis yok sayılıyor; erzakı Yusufeli’nden alın. Tahsisli yer dışında geceleme yok, odun kesmeyin; kışın yolu teyit edin."
+    }
   },
   {
     "id": "karagol-sahara",
@@ -634,7 +1540,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Karag%C3%B6l-Sahara_National_Park.jpg/1920px-Karag%C3%B6l-Sahara_National_Park.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/2/27/Karag%C3%B6l_Sahara_Milli_Park%C4%B1.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "var",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "var",
+      "difficulty": "Virajlı yol, yazın bile soğuk",
+      "pros": [
+        "Ladin-çam içinde sakin göl, sonbahar renkleri",
+        "Karagöl’de WC, cafe-restaurant yazılı",
+        "İki bölüm: Sahara ve Karagöl",
+        "Akşam sonrası alan kampçıya kalıyor"
+      ],
+      "cons": [
+        "Son kilometre dar, taşlı, virajlı; kış kapanır",
+        "Çadır elektriği belirsiz; tuvalet bakımsız şikâyeti",
+        "Yazın bile soğuk; kene ve sinek",
+        "Ayı-domuz; market sınırlı, tesis pahalı",
+        "Giriş artı çadır ücreti"
+      ],
+      "tips": [
+        "Yazın bile mont ve dört mevsim tulum alın; 2500 m bandı.",
+        "Yiyeceği açık bırakmayın.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "İçme suyunu yedekleyin.",
+        "Kış ve erken baharda yol durumunu sorun.",
+        "Sahara tesisinin Karagöl kadar olmadığını bilin."
+      ],
+      "advice": "Karagöl-Sahara’ya bu gece geliyorsanız virajlı son kilometreye gündüz çıkın. Çadır bedeli tarifede 195 TL; WC ve restoran Karagöl’de yazılı, çadır prizi belirsiz, yaz gecesi bile donar. Dört mevsim tulum alın, ayı için yiyeceği kapatın, odun kesmeyin."
+    }
   },
   {
     "id": "yakupabdal",
@@ -651,7 +1588,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Bayburt yüksek tabiat parkı. Çadırlı kamp kaydı vardır; rüzgâr sert.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "2017 m, rüzgâr ve don",
+      "pros": [
+        "Bayburt yüksek yayla parkı",
+        "Açık gökyüzü ve rüzgârlı sessizlik",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "2017 m; kış sert, gece don",
+        "Tesis belirsiz",
+        "Market yok sayılıyor",
+        "Rüzgâr çadırı zorlar"
+      ],
+      "tips": [
+        "Dört mevsim tulum ve sağlam kazık alın.",
+        "Erzakı Bayburt’tan bitirin.",
+        "Gitmeden idareyi arayın.",
+        "Odun kesmeyin; serbest kamp yasak.",
+        "Rüzgâr siperi ve yedek ip şart."
+      ],
+      "advice": "Yakupabdal’a bu gece çıkıyorsanız 2017 m’ye kış ekipmanı ile gidin: dört mevsim tulum, bere, rüzgâr kazığı. Çadır bedeli tarifede 150 TL, tesis belirsiz; suyu ve yemeği Bayburt’tan alın. Tahsisli yer dışında geceleme yok, odun kesmeyin, ateşi ocağa sorun."
+    }
   },
   {
     "id": "abant-mp",
@@ -672,7 +1637,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Abant_lake_snowy.jpg/1920px-Abant_lake_snowy.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Abant_G%C3%B6l%C3%BC_-_2024_Ocak.jpg/1920px-Abant_G%C3%B6l%C3%BC_-_2024_Ocak.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "var",
+      "power": "belirsiz",
+      "water": "var",
+      "firewood": "yasak",
+      "fire": "yasak",
+      "shop": "var",
+      "difficulty": "Mangal yasak, gece soğuk",
+      "pros": [
+        "Göl, yürüyüş halkası ve olta",
+        "Çeşme, WC, restoran ve yöresel satış var",
+        "Tel örgülü güvenli çadır alanı anlatılıyor",
+        "1330 m orman gölü"
+      ],
+      "cons": [
+        "Odun-kömür-mangal yasak; yalnız gazlı/elektrikli ocak",
+        "Ağustosta bile gece dondurucu",
+        "Hafta sonu göl çevresi çok kalabalık",
+        "Çadır elektriği resmi kayıtta net değil",
+        "Kamp ücreti yüksek şikâyeti; market parkta sınırlı"
+      ],
+      "tips": [
+        "Yalnız belirlenmiş kamp alanında kalın; göl kenarına serbest çadır yok.",
+        "Mangal ve odun getirmeyin; tüplü ocak şart.",
+        "Kalın tulum alın; 1330 m gece üşütür.",
+        "Şarjı yedekleyin; priz teyitsiz.",
+        "Erzakı Bolu’dan alın; park içi satış pahalı olabilir.",
+        "Boşaltma saatini gişede sorun."
+      ],
+      "advice": "Abant’a bu gece geliyorsanız çadırı yalnız resmi kamp yerine kurun; göl kıyısı serbest değil. Çadır bedeli tarifede 225 TL; WC ve çeşme var, mangal ve odun yasak — tüp ocak getirin, elektrik net değil. Ağustos gecesi bile soğuk, kalın tulum alın; marketi Bolu’da bitirin."
+    }
   },
   {
     "id": "arkutdagi",
@@ -689,7 +1685,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Gerede orman tabiat parkı. Çadırlı kamp kaydı vardır.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "2023 ilan, valilik kararı",
+      "pros": [
+        "Gerede orman tabiat parkı",
+        "1760 m serinlik",
+        "Çadır kaydı var"
+      ],
+      "cons": [
+        "Yeni ilan; tesis belirsiz",
+        "Valilik dönemsel orman yasağı çıkarır",
+        "Market belirsiz",
+        "Ziyaretçi deneyimi az"
+      ],
+      "tips": [
+        "Gitmeden idareyi ve Bolu valilik kararını sorun.",
+        "Erzakı Gerede’den alın.",
+        "Odun kesmeyin; 76-a dışı geceleme yasak.",
+        "1760 m gece soğuk; kalın tulum.",
+        "Ateşi gişede teyit edin."
+      ],
+      "advice": "Arkutdağı 2023 ilanı; bu gece kalmadan idareyi arayın, tesis yok sayılıyor. Çadır bedeli tarifede 150 TL, suyu Gerede’den getirin, valilik orman yasağı çıkarmış olabilir. Odun kesmeyin, ateşi sorun; 1760 m gece üşütür."
+    }
   },
   {
     "id": "ayikayasi",
@@ -708,7 +1732,35 @@
     "images": [
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg/1920px-Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Ayı uyarısı, orman kampı",
+      "pros": [
+        "Mengen orman tabiat parkı",
+        "1479 m sessizlik",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Ayı uyarısı geçerli",
+        "Tesis belirsiz",
+        "Market belirsiz",
+        "Tahsisli alan dışında geceleme yasak"
+      ],
+      "tips": [
+        "Yiyeceği konteyner veya araçta kapatın; çadırda kokutmayın.",
+        "Gitmeden idareyi arayın.",
+        "Erzakı Mengen’den alın.",
+        "Odun kesmeyin; ateş izinli ocakta, yangın döneminde sorun.",
+        "Gece ses çıkarmadan dolaşmayın."
+      ],
+      "advice": "Ayıkayası’na bu gece geliyorsanız adı gibi ayı uyarısını ciddiye alın; yiyeceği çadır dışında kapalı tutun. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu Mengen’den getirin. Tahsisli yerde kalın, odun kesmeyin, ateşi ocağa sorun."
+    }
   },
   {
     "id": "bolu-golcuk",
@@ -729,7 +1781,37 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6l_manzaras%C4%B1.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6l_manzaras%C4%B1.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_ve_g%C3%B6l_evi.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_ve_g%C3%B6l_evi.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "var",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "var",
+      "difficulty": "Dönemsel çadır yasağı olabilir",
+      "pros": [
+        "Şehre 10 km, küçük krater gölü",
+        "Kır lokantası, büfe, WC, cami ve çocuk alanı",
+        "Çam-göknar sessizliği",
+        "1210 m serinlik"
+      ],
+      "cons": [
+        "Bolu valiliği dönemsel çadır yasağı duyurmuş; güncel karar şart",
+        "Yere ateş yasak; ocaklı masa hafta sonu doluyor",
+        "Göl kıyısına araç ve serbest çadır yasak olabilir",
+        "Elektrik belirsiz; alan küçük ve günübirlik yoğun"
+      ],
+      "tips": [
+        "Bu gece kalmadan gişeyi veya valiliği arayın.",
+        "Çadırı göl kenarına değil gösterilen yere kurun.",
+        "Yerde ateş yakmayın; masa ocağı veya tüp.",
+        "İçme suyunu yedekleyin.",
+        "Odun kesmek yasak.",
+        "Hafta sonu erken gelin."
+      ],
+      "advice": "Bolu Gölcük’e bu gece çadır için geliyorsanız önce güncel yasağı sorun; valilik dönemsel çadır yasağı çıkarmış. Çadır bedeli tarifede 225 TL; WC ve büfe var, elektrik belirsiz. Göl kıyısına araç ve serbest çadır yok, yerde ateş yasak, suyu yedekleyin."
+    }
   },
   {
     "id": "deregol",
@@ -746,7 +1828,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Kıbrıscık göl tabiat parkı. Çadırlı kamp kaydı vardır.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Küçük göl, 2023 ilan",
+      "pros": [
+        "Kıbrıscık göl tabiat parkı",
+        "1220 m serin orman",
+        "Çadır kaydı var"
+      ],
+      "cons": [
+        "Yeni ilan; tesis belirsiz",
+        "Valilik kararına bakmak gerekir",
+        "Market belirsiz",
+        "Saha kaydı yok"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Erzakı Kıbrıscık veya Bolu’dan alın.",
+        "Geceleme yalnız belirlenmiş yerde.",
+        "Odun kesmeyin; ateşi sorun.",
+        "1220 m gece soğuk; kalın kat."
+      ],
+      "advice": "Deregöl 2023 ilanı; bu gece kalmadan idareyi arayın. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu Kıbrıscık’tan getirin. Göl kenarı serbest kamp sayılmaz; odun kesmeyin, 1220 m gece üşütür."
+    }
   },
   {
     "id": "karaca-tp",
@@ -763,7 +1873,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Bolu orman tabiat parkı. Çadırlı kamp kaydı vardır.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Orman parkı, serbest kamp yok",
+      "pros": [
+        "Bolu orman tabiat parkı",
+        "960 m gölge",
+        "Çadır kaydı var"
+      ],
+      "cons": [
+        "Tesis belirsiz",
+        "Serbest orman kampı yasak",
+        "Market belirsiz",
+        "Deneyim az"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Erzakı Bolu’dan alın.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Yangın döneminde görevliye sorun.",
+        "Fener ve yedek su şart."
+      ],
+      "advice": "Karaca Tabiat Parkı’na bu gece geliyorsanız idareden tahsisli yeri sorun; orman içi serbest kamp yok. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu Bolu’dan getirin. Odun kesmeyin, ateşi ocağa alın; Bolu yangın kararını gişede teyit edin."
+    }
   },
   {
     "id": "kargali-golcuk",
@@ -780,7 +1918,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Seben gölcük tabiat parkı. Çadırlı kamp kaydı vardır; yüksek ve serin.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "1533 m gölcük, kış soğuk",
+      "pros": [
+        "Seben yüksek gölcük",
+        "1533 m yaz serinliği",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Tesis belirsiz",
+        "Kış soğuk, yol kapanabilir",
+        "Market belirsiz",
+        "Gece don riski"
+      ],
+      "tips": [
+        "Kalın tulum alın; 1533 m gece üşütür.",
+        "Gitmeden idareyi arayın.",
+        "Erzakı Seben’den alın.",
+        "Odun kesmeyin; 76-a dışı geceleme yasak.",
+        "Göl kenarına serbest çadır kurmayın."
+      ],
+      "advice": "Kargalı Gölcük’e bu gece çıkıyorsanız 1533 m soğuğuna hazırlanın. Çadır bedeli tarifede 105 TL, tesis belirsiz; suyu Seben’den getirin, tahsisli yerde kalın, göl kıyısına inmeyin. Odun kesmeyin, ateşi sorun; kışın yolu teyit edin."
+    }
   },
   {
     "id": "sunnet-golu",
@@ -801,7 +1967,35 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/S%C3%BCnnet_G%C3%B6l%C3%BC.jpg/1920px-S%C3%BCnnet_G%C3%B6l%C3%BC.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/S%C3%BCnnet_G%C3%B6l%C3%BC2.jpg/1920px-S%C3%BCnnet_G%C3%B6l%C3%BC2.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Valilik yasağına bak, tesis belirsiz",
+      "pros": [
+        "Göynük (Bolu) göl tabiat parkı",
+        "Çadır, konaklama ve günübirlik kayıtlı",
+        "1060 m göl çevresi"
+      ],
+      "cons": [
+        "Somut WC-elektrik listesi yok",
+        "Bolu valiliği dönemsel yasak çıkarır",
+        "Market belirsiz",
+        "Göl kenarı serbest kamp yasak sayılır"
+      ],
+      "tips": [
+        "Gitmeden idareyi ve güncel valilik kararını sorun.",
+        "Erzakı Göynük’ten alın.",
+        "Odun kesmeyin.",
+        "Çadırı göl kıyısına değil gösterilen yere kurun.",
+        "İçme suyunu yedekleyin."
+      ],
+      "advice": "Sünnet Gölü’ne bu gece geliyorsanız idareyi ve Bolu valilik kararını arayın; dönemsel yasak çıkabiliyor. Çadır bedeli tarifede 150 TL, tesis listesi yok, suyu Göynük’ten getirin. Göl kenarı serbest çadır değil; odun kesmeyin, ateşi ocağa sorun."
+    }
   },
   {
     "id": "yedigoller-mp",
@@ -822,7 +2016,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/TR_Yedig%C3%B6ller_asv2021-10_img16.jpg/1920px-TR_Yedig%C3%B6ller_asv2021-10_img16.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Yedig%C3%B6ller_Yans%C4%B1ma.jpg/1920px-Yedig%C3%B6ller_Yans%C4%B1ma.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "var",
+      "power": "yok",
+      "water": "belirsiz",
+      "firewood": "yerinde",
+      "fire": "ocak",
+      "shop": "yok",
+      "difficulty": "Rezervasyon ve hafta sonu 2 gece şart",
+      "pros": [
+        "Sonbahar gölleri ve sisli Nazlıgöl",
+        "Ortak WC, mescit, kafe ve restoran (Habitat)",
+        "Deringöl sakin, Nazlıgöl daha büyük kamp",
+        "Kayın ormanı yürüyüşü"
+      ],
+      "cons": [
+        "Elektrik, mutfak ve duş yok; karavan yasak",
+        "Hafta sonu 2 gece ve rezervasyon şart",
+        "Yerde ateş 2026’da yasak; tüp kısıtlı",
+        "Yağmurda çamur, sivrisinek, tuvalet kuyruğu",
+        "Parkta market yok; erzak yolda alınır"
+      ],
+      "tips": [
+        "Yalnız rezervasyonla gelin; kapıda yer beklemeyin.",
+        "Karavan ve çadırlı kasanızı bırakın; alınmıyor.",
+        "Odunu Habitat Restoran’dan alın; ormandan kesmeyin.",
+        "Yerde ateş 2026’da yasak; tüp saatini gişede sorun.",
+        "Şarjı evde bitirin; priz yok.",
+        "Erzakı yolda (Mengen–Bolu) alın; parkta market yok."
+      ],
+      "advice": "Yedigöller’e rezervasyonsuz gelmeyin; hafta sonu 2 gece kuralı var, karavan ve duş yok. Çadır bedeli tarifede 225 TL; ortak WC, mescit ve kafe var, odunu restorandan alın. Elektriği evde bitirin, erzakı yolda alın; 2026’da yerde ateş yasak."
+    }
   },
   {
     "id": "aksu-tp",
@@ -839,7 +2064,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Çorum orman tabiat parkı. Çadırlı kamp kaydı vardır.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Küçük orman, tesis belirsiz",
+      "pros": [
+        "Çorum orman tabiat parkı",
+        "1450 m yaz serinliği",
+        "Çadır kaydı var"
+      ],
+      "cons": [
+        "Yalnız 68 ha; dar",
+        "Tesis belirsiz",
+        "Market belirsiz",
+        "Gece soğuk"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Erzakı Çorum’dan alın.",
+        "Geceleme tahsisli alanda.",
+        "Odun kesmeyin.",
+        "1450 m için kalın tulum."
+      ],
+      "advice": "Aksu Tabiat Parkı küçük bir orman; bu gece kalmadan idareyi arayın. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu Çorum’dan getirin. Tahsisli yerde kalın, odun kesmeyin; 1450 m gece üşütür."
+    }
   },
   {
     "id": "catak-corum",
@@ -860,7 +2113,35 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/%C3%87atak_tabiat_park%C4%B1%2C_park_giri%C5%9Fi.jpg/1920px-%C3%87atak_tabiat_park%C4%B1%2C_park_giri%C5%9Fi.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/%C3%87atak_Tabiat_Park%C4%B1%2C_giri%C5%9F_tabelas%C4%B1.jpg/1920px-%C3%87atak_Tabiat_Park%C4%B1%2C_giri%C5%9F_tabelas%C4%B1.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Yüksek orman, hazırlıklı git",
+      "pros": [
+        "Çorum Çatak ormanı",
+        "1500 m serinlik",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Tesis belirsiz",
+        "Serbest orman kampı yasak",
+        "Market belirsiz",
+        "Gece soğuk"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Erzakı Çorum’dan alın.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Kalın tulum alın.",
+        "Yangın döneminde görevliye sorun."
+      ],
+      "advice": "Çatak’a (Çorum) bu gece geliyorsanız idareden yeri sorun; orman içi serbest kamp yok. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu şehirden getirin. 1500 m gece soğuk; odun kesmeyin, ateşi ocağa alın."
+    }
   },
   {
     "id": "kuzalan",
@@ -881,7 +2162,35 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-1.jpg/1920px-Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-1.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-2.jpg/1920px-Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-2.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Islak vadi, kanyon tabanı kamp değil",
+      "pros": [
+        "Şelale, traverten, değirmen ve mağara vadisi",
+        "Açık kaynaklarda restoran ve seyir terası anlatılıyor",
+        "1440 m yeşil vadi"
+      ],
+      "cons": [
+        "Tesis resmi kayıtta net değil",
+        "Kanyon tabanı geceleme yeri değildir",
+        "Giriş ücretli; zemin ıslak",
+        "Travertene stabilize yol"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; WC ve suyu teyit edin.",
+        "Çadırı şelale ve kanyon yatağına kurmayın.",
+        "Erzakı Dereli–Giresun’dan alın.",
+        "Islak zemin için branda.",
+        "Odun kesmek yasak."
+      ],
+      "advice": "Kuzalan’a bu gece inecekseniz vadinin ıslak tabanına değil tahsisli düzlüğe bakın. Çadır bedeli tarifede 195 TL; resmi WC-elektrik kaydı net değil, açık kaynaklara güvenip susuz gelmeyin, Dereli’den su alın. Odun kesmeyin, ateşi sorun."
+    }
   },
   {
     "id": "artabel",
@@ -902,7 +2211,37 @@
       "https://upload.wikimedia.org/wikipedia/commons/d/dc/Artabel_%C5%9Eelalesi..._-_panoramio.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Artabel_Da%C4%9Flar%C4%B1..._-_panoramio.jpg/1920px-Artabel_Da%C4%9Flar%C4%B1..._-_panoramio.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "yok",
+      "difficulty": "3000 m, kendi kendine yeterli",
+      "pros": [
+        "Krater ve buzul gölleri, bakir yayla",
+        "Dağcılık ve fotosafari",
+        "Yazın dağcı-yürüyüşçü; kalabalık değil"
+      ],
+      "cons": [
+        "Ort. 3000 m; gece don, gündüz rüzgâr",
+        "Market, restoran, tuvalet, duş yok",
+        "Toplu taşıma yok; araç sonrası trekking",
+        "Kış fiilen kapalı",
+        "Giriş 06:00–20:00"
+      ],
+      "tips": [
+        "Dört mevsim tulum, kış matı, ocak ve 2+ litre su/kişi.",
+        "Erzakı Torul veya Gümüşhane’de bitirin.",
+        "Tesis beklemeyin; çöpü geri götürün.",
+        "Odun kesmek yasak; ateşi sorun, çoğu zaman tüp.",
+        "İrtifa hastalığına yavaş çıkın.",
+        "Kapı saatini kaçırmayın."
+      ],
+      "advice": "Artabel’e bu gece çıkıyorsanız dağ kampı paketi şart: dört mevsim tulum, yedek kat, su, ocak, fener. Çadır bedeli tarifede 150 TL, tesisi yok, market Torul’da biter, 3000 m gece donar. Odun kesmeyin; giriş 06:00–20:00, geç kalırsanız kapı kapanır."
+    }
   },
   {
     "id": "limni-golu",
@@ -923,7 +2262,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Limni_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_-_A%C4%9Fustos_2014_IMG_8923_hamdigumus.jpg/1920px-Limni_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_-_A%C4%9Fustos_2014_IMG_8923_hamdigumus.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Limni_G%C3%B6l%C3%BC_2014-1.jpg/1920px-Limni_G%C3%B6l%C3%BC_2014-1.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "var",
+      "difficulty": "2010 m, gece buz gibi",
+      "pros": [
+        "Sarıçam ve krater gölü serinliği",
+        "Orman köşkü, kır lokantası, büfe ve mescit yazılı",
+        "Belirlenmiş çadır yeri",
+        "Zigana yolunda durak"
+      ],
+      "cons": [
+        "2010 m; gece soğuk",
+        "Çadır elektriği belirsiz",
+        "Giriş ve kamp ücretli",
+        "Son kesim stabilize olabiliyor",
+        "Giriş 06:00–20:00"
+      ],
+      "tips": [
+        "Dört mevsim tulum alın; yaz gecesi bile üşütür.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Yalnız belirlenmiş yerde kalın.",
+        "İçme suyunu yedekleyin; çeşmeyi teyit edin.",
+        "Kapı saatini kaçırmayın.",
+        "Büfe fiyatına güvenmeyin; Gümüşhane’den ekmek alın."
+      ],
+      "advice": "Limni’ye bu gece 2010 m’ye çıkıyorsunuz; dört mevsim tulum ve bere şart. Çadır bedeli tarifede 195 TL; büfe ve lokanta yazılı, WC teyit şart, çadır prizi belirsiz. Yalnız işaretli yerde kalın, odun kesmeyin, suyu yedekleyin; kapı 06:00–20:00."
+    }
   },
   {
     "id": "handuzu",
@@ -940,7 +2310,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "İkizdere yayla tabiat parkı. Çadırlı kamp kaydı vardır; yağmur sık.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Yağışlı yayla, bozuk yol",
+      "pros": [
+        "İkizdere sisli yayla ve günbatımı",
+        "Açık kaynaklarda lokanta, çeşme, bungalov anlatılıyor",
+        "Trekking ve sessizlik"
+      ],
+      "cons": [
+        "Yollar bozuk; yağışlı iklim, zemin ıslak",
+        "Tesis resmi kayıtta net değil",
+        "Karşılama küçük anlatılıyor",
+        "Bungalov rezervasyonlu; çadır teyidi şart"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; WC ve suyu teyit edin.",
+        "Yağmur branda ve çamur lastiği alın.",
+        "Erzakı İkizdere’den alın.",
+        "Odun kesmeyin; serbest kamp yasak.",
+        "1351 m gece serin; kalın kat."
+      ],
+      "advice": "Handüzü’ne bu gece çıkıyorsanız bozuk yola ve yağmura hazırlanın. Çadır bedeli tarifede 195 TL, resmi tesis kaydı net değil; suyu İkizdere’den getirin, çadırı tahsisli yere kurun. Odun kesmeyin; sis ve çamur bekleyin, feneri alın."
+    }
   },
   {
     "id": "tunca-vadisi",
@@ -957,7 +2355,36 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Ardeşen yüksek vadi. Çadırlı kamp kaydı vardır; nemli orman ve sis.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Kaçkar eteği, dört mevsim tulum",
+      "pros": [
+        "Ardeşen yüksek vadi, üç vadi trekking",
+        "Kaçkar eteği, ahşap köprü ve kamelya anlatılıyor",
+        "Geniş park, sapa sessizlik"
+      ],
+      "cons": [
+        "2240 m; gece don, nemli sis",
+        "Tesis belirsiz",
+        "Toplu taşıma yok",
+        "Yeni keşfedilen sapa konum"
+      ],
+      "tips": [
+        "Dört mevsim tulum ve yağmur seti alın.",
+        "Erzakı Ardeşen’den bitirin.",
+        "Gitmeden idareyi arayın.",
+        "Tahsisli alan dışında geceleme yasak.",
+        "Odun kesmeyin.",
+        "Özel araç şart."
+      ],
+      "advice": "Tunca Vadisi’ne bu gece 2240 m’ye çıkıyorsunuz; dört mevsim tulum, yağmurluk ve yedek su şart. Çadır bedeli tarifede 150 TL, tesis belirsiz, erzakı Ardeşen’den alın, toplu taşıma yok. Tahsisli yerde kalın, odun kesmeyin; sis ve çamur bekleyin."
+    }
   },
   {
     "id": "akgol-sinop",
@@ -978,7 +2405,36 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Akg%C3%B6l-2.jpg/1920px-Akg%C3%B6l-2.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Akg%C3%B6l-1.jpg/1920px-Akg%C3%B6l-1.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Bakir göl, erzak şart",
+      "pros": [
+        "Köknar içinde bakir küçük göl",
+        "Kalabalıktan uzak, kuş sesi",
+        "1204 m sakin kamp"
+      ],
+      "cons": [
+        "Market ve yeme-içme yok",
+        "Tuvalet bilgisi kaynaklarda çelişkili",
+        "Toplu taşıma zor; şehre uzak",
+        "Yaban hayvanı uyarısı",
+        "Göl kenarı serbest kamp yasak"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; WC’yi teyit edin.",
+        "Bütün erzakı Türkeli veya Sinop’tan alın.",
+        "Çadırı göl kıyısına kurmayın.",
+        "Yiyeceği kapatın; yaban için.",
+        "Odun kesmeyin; ateş izinli ocakta."
+      ],
+      "advice": "Akgöl’e (Sinop) bu gece geliyorsanız her şeyi Türkeli’den tamamlayın; içeride market yok. Çadır bedeli tarifede 150 TL; WC kaynaklarda çelişkili, resmi kayıt belirsiz, göl kenarına çadır yok. Yiyeceği kapatın, odun kesmeyin, ateşi ocağa alın."
+    }
   },
   {
     "id": "catak-kanyonu-sinop",
@@ -995,7 +2451,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Erfelek kanyonu. Çadırlı kamp kaydı vardır; kanyon içi geceleme yeri değildir.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Kanyon tabanı geceleme yok",
+      "pros": [
+        "Erfelek kanyonu ve orman",
+        "Kısa trekking",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Kanyon tabanı geceleme yeri değildir",
+        "Tesis belirsiz",
+        "Tarife satırı boş; ücreti sorun",
+        "Market belirsiz"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; ücret ücretsiz demek değildir.",
+        "Çadırı kanyon yatağına kurmayın.",
+        "Erzakı Erfelek–Sinop’tan alın.",
+        "Odun kesmeyin.",
+        "Kaygan tabanda kafa lambası."
+      ],
+      "advice": "Çatak Kanyonu’na (Sinop) bu gece çadır için geliyorsanız kanyonun içine inmeyin; tahsisli düzlüğü ve ücreti idareden sorun. Tesis belirsiz, suyu Erfelek’ten getirin. Odun kesmeyin, ateşi ocağa alın; zemin ıslak, fener şart."
+    }
   },
   {
     "id": "zinav-golu",
@@ -1015,7 +2499,35 @@
       "https://upload.wikimedia.org/wikipedia/commons/0/05/Zinav_g%C3%B6l%C3%BC_ben_ve_babam.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/a/a2/Zinav_Lake.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Heyelan gölü, tahsisli yer",
+      "pros": [
+        "Reşadiye heyelan gölü",
+        "950 m orman kıyısı",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Tesis belirsiz",
+        "Market belirsiz",
+        "Göl kenarı serbest kamp yasak sayılır",
+        "Deneyim az"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Erzakı Reşadiye’den alın.",
+        "Çadırı göl kıyısına değil gösterilen yere kurun.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Fener ve yedek su."
+      ],
+      "advice": "Zinav’a bu gece geliyorsanız idareden tahsisli yeri sorun; heyelan gölünün kıyısı serbest kamp değil. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu Reşadiye’den getirin. Odun kesmeyin, ateşi ocağa alın."
+    }
   },
   {
     "id": "calcamili",
@@ -1034,7 +2546,35 @@
     "images": [
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/CalcamiliNaturePark3.jpg/1920px-CalcamiliNaturePark3.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "9 hektar, kapasite çok dar",
+      "pros": [
+        "Tonya küçük orman parkı",
+        "1270 m serinlik",
+        "Çadır kaydı var"
+      ],
+      "cons": [
+        "Yalnız 9 ha; kapasite çok dar",
+        "Tesis belirsiz",
+        "Market belirsiz",
+        "Geceleme yeri fiilen sınırlı"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; yer kalmış mı sorun.",
+        "Erzakı Tonya’dan alın.",
+        "Odun kesmeyin; serbest kamp yasak.",
+        "1270 m gece serin; kalın kat.",
+        "Küçük alanda sessiz kalın."
+      ],
+      "advice": "Çalcamili 9 hektarlık küçük bir park; bu gece yer var mı diye idareyi arayın. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu Tonya’dan getirin. Odun kesmeyin, ateşi ocağa alın; kapasite dar, komşuya saygılı olun."
+    }
   },
   {
     "id": "uzungol-tp",
@@ -1055,7 +2595,37 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Uzung%C3%B6l_112020.jpg/1920px-Uzung%C3%B6l_112020.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Uzung%C3%B6l%2C_Trabzon_2014.jpg/1920px-Uzung%C3%B6l%2C_Trabzon_2014.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "yakin",
+      "difficulty": "Aşırı kalabalık yerleşim, resmi kamp dar",
+      "pros": [
+        "Göl-orman manzarası; yukarı yaylalar daha sakin",
+        "Market ve yemek Uzungöl mahallesinde bol",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Göl çevresi otel, beton ve araç sıkışıklığı",
+        "Resmi çadır yerinin WC-elektriği net değil",
+        "Yazın ve bayramda aşırı kalabalık",
+        "Göl kıyısına serbest çadır yasak",
+        "Yağış ve serinlik; yukarı yol kışın kapanır"
+      ],
+      "tips": [
+        "Resmi kamp yerini gişede sorun; kıyıya rastgele çadır yok.",
+        "Erzakı mahalleden alın; park tesisi köy işletmesiyle karışmasın.",
+        "Odun kesmeyin; ateş yalnız izinli ocakta.",
+        "Kalabalıktan kaçınmak için hafta içi veya üst yaylayı (izinle) düşünün.",
+        "Yağmur seti ve sivrisinek ilacı.",
+        "Gitmeden WC-elektriği teyit edin."
+      ],
+      "advice": "Uzungöl’e bu gece çadır için geliyorsanız göl kenarı yerleşimini kamp sanmayın; aşırı kalabalık, resmi alan sınırlı. Çadır bedeli tarifede 195 TL; market mahallede bol, park WC-elektriği belirsiz, kıyıya serbest çadır yok. Odun kesmeyin, ateşi ocağa alın; kalabalık ve yağmur bekleyin."
+    }
   },
   {
     "id": "danaagzi",
@@ -1072,7 +2642,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Ereğli kıyı tabiat parkı. Çadırlı kamp kaydı vardır; Karadeniz rüzgârı sert.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Karadeniz rüzgârı, kıyı kampı",
+      "pros": [
+        "Ereğli kıyı tabiat parkı",
+        "Deniz ve orman kenarı",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Karadeniz rüzgârı sert",
+        "Tesis belirsiz",
+        "Market belirsiz",
+        "89 ha; kapasite sınırlı"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Rüzgâr kazığı ve alçak çadır alın.",
+        "Erzakı Ereğli’den alın.",
+        "Odun kesmeyin; tahsisli alanda kalın.",
+        "Tuzlu rüzgâr için çadırı deniz spreyinden koruyun."
+      ],
+      "advice": "Danaağzı’na bu gece geliyorsanız Karadeniz rüzgârına hazırlanın; kazığı sağlam çakın. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu Ereğli’den getirin. Tahsisli yerde kalın, odun kesmeyin, ateşi ocağa sorun; fener ve yedek ip alın."
+    }
   },
   {
     "id": "harmankaya",
@@ -1089,7 +2687,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Zonguldak şelale tabiat parkı. Çadırlı kamp kaydı vardır.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Şelale ıslak, tesis belirsiz",
+      "pros": [
+        "Zonguldak şelale parkı",
+        "Kısa vadi yürüyüşü",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Şelale çevresi ıslak",
+        "Tesis belirsiz",
+        "Tarife boş; ücreti sorun",
+        "Market belirsiz"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın; ücret ücretsiz demek değildir.",
+        "Çadırı şelale sıçrama alanına kurmayın.",
+        "Erzakı Zonguldak’tan alın.",
+        "Odun kesmeyin; serbest kamp yasak.",
+        "Islak zemin için branda."
+      ],
+      "advice": "Harmankaya’ya bu gece inecekseniz ücreti ve tahsisli yeri idareden sorun. Tesis belirsiz, suyu şehirden getirin; şelale kenarı kaygan, çadırı kuru düzlüğe alın. Odun kesmeyin, ateşi ocağa sorun, feneri unutmayın."
+    }
   },
   {
     "id": "kayalidere",
@@ -1106,7 +2732,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Devrek orman tabiat parkı. Çadırlı kamp kaydı vardır.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Küçük orman, idare teyidi",
+      "pros": [
+        "Devrek orman tabiat parkı",
+        "54 ha gölge",
+        "Çadır kaydı var"
+      ],
+      "cons": [
+        "Tesis belirsiz",
+        "Market belirsiz",
+        "Kapasite dar",
+        "Deneyim az"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Erzakı Devrek’ten alın.",
+        "Odun kesmeyin; ateş izinli ocakta.",
+        "Geceleme tahsisli yerde.",
+        "Fener ve yedek su."
+      ],
+      "advice": "Kayalıdere küçük bir orman parkı; bu gece kalmadan idareyi arayın. Çadır bedeli tarifede 105 TL, tesis belirsiz, suyu Devrek’ten getirin. Odun kesmeyin, ateşi ocağa alın, tahsisli düzlükte kalın."
+    }
   },
   {
     "id": "saricali",
@@ -1123,7 +2777,35 @@
     "statusLabel": "Milli park",
     "summary": "Beypazarı milli parkı. Kamp kaydı vardır; tarife satırı boşsa ücretsiz değildir.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Az bilinen milli park, ara",
+      "pros": [
+        "Beypazarı milli parkı, 1350 m",
+        "DKMP’de kamp kaydı var",
+        "Sakin, az ziyaretçi"
+      ],
+      "cons": [
+        "Yeni/az bilinen; tesis belirsiz",
+        "Tarife satırı boş; ücreti sorun",
+        "Market belirsiz",
+        "Yol ve işaret teyidi gerekir"
+      ],
+      "tips": [
+        "Gitmeden 9. Bölge’yi arayın; yer ve ücret sorun.",
+        "Erzakı Beypazarı’ndan alın.",
+        "Odun kesmeyin; 76-a dışı geceleme yasak.",
+        "1350 m gece soğuk; kalın tulum.",
+        "Yangın döneminde ateşi sorun."
+      ],
+      "advice": "Sarıçalı az bilinen bir milli park; bu gece mutlaka DKMP 9.Bölge’yi arayın, tarife boş olsa da bedelsiz saymayın. Tesis belirsiz, suyu Beypazarı’ndan getirin. Tahsisli yerde kalın, odun kesmeyin; 1350 m gece üşütür."
+    }
   },
   {
     "id": "soguksu",
@@ -1144,7 +2826,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/TR_K%C4%B1z%C4%B1lcahamam_asv2021-10_img01.jpg/1920px-TR_K%C4%B1z%C4%B1lcahamam_asv2021-10_img01.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/So%C4%9Fuksu_Milli_Park%C4%B1.jpg/1920px-So%C4%9Fuksu_Milli_Park%C4%B1.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "var",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "var",
+      "difficulty": "Başkent yakını, hafta sonu dolu",
+      "pros": [
+        "Ankara’ya yakın çam milli parkı",
+        "WC, kır lokantası, piknik masası",
+        "Yürüyüş, kuş ve lale-mantar gözlemi",
+        "Kızılcahamam’a 4 km market"
+      ],
+      "cons": [
+        "Hafta sonu piknik kalabalığı ve mangal dumanı",
+        "Çadır elektriği ve içme suyu musluğu net değil",
+        "Çadır yalnız belirlenmiş alanda, ücretli",
+        "1400 m gece serin",
+        "Giriş 07:00–00:00"
+      ],
+      "tips": [
+        "Marketi Kızılcahamam’dan alın.",
+        "Çadırı tahsisli yere kurun; orman içi yasak.",
+        "İçme suyunu yedekleyin.",
+        "Odun kesmeyin; ateş izinli ocakta, yazın Ankara orman yasağına bakın.",
+        "Hafta sonu erken gelin.",
+        "Gece 1400 m için kalın kat."
+      ],
+      "advice": "Soğuksu’ya bu gece geliyorsanız çadırı gösterilen alana kurun; park ormanı serbest kamp değil. Çadır bedeli tarifede 225 TL; WC ve lokanta var, çadır prizi ve içme suyu net değil — suyu ilçeden alın. Hafta sonu dolu, odun kesmeyin, gece serin."
+    }
   },
   {
     "id": "sorgun-goleti",
@@ -1165,7 +2878,35 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Sorgun-G%C3%B6leti_Tabiat_Park%C4%B1.jpg/1920px-Sorgun-G%C3%B6leti_Tabiat_Park%C4%B1.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/A%C4%9Fa%C3%A7lar%C4%B1n_ortas%C4%B1ndan_Sorgun_G%C3%B6leti.jpg/1920px-A%C4%9Fa%C3%A7lar%C4%B1n_ortas%C4%B1ndan_Sorgun_G%C3%B6leti.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Ayı uyarısı, gölet kenarı yasak",
+      "pros": [
+        "Kızılcahamam gölet ve orman",
+        "1290 m serinlik",
+        "DKMP’de çadır kaydı var"
+      ],
+      "cons": [
+        "Ayı çıkabilir uyarısı",
+        "Tesis belirsiz",
+        "Gölet kenarı serbest kamp yasak",
+        "54 ha; dar"
+      ],
+      "tips": [
+        "Yiyeceği kapatın; yürürken sesli olun.",
+        "Gitmeden idareyi arayın.",
+        "Erzakı Kızılcahamam’dan alın.",
+        "Çadırı gölet kıyısına kurmayın.",
+        "Odun kesmeyin."
+      ],
+      "advice": "Sorgun Göleti’ne bu gece geliyorsanız ayı uyarısını ciddiye alın; yiyeceği çadırda kokutmayın, patikada sesli yürüyün. Çadır bedeli tarifede 225 TL, tesis belirsiz, suyu ilçeden getirin. Gölet kenarı serbest çadır değil; odun kesmeyin, ateşi ocağa sorun."
+    }
   },
   {
     "id": "dumanli-tp",
@@ -1182,7 +2923,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Erzincan tabiat parkı. PDF’de çadırlı kamp kaydı vardır; gitmeden idareyi arayın.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Tesis kaydı yok, idareyi ara",
+      "pros": [
+        "Erzincan tabiat parkı, 1400 m",
+        "PDF’de çadır kaydı var",
+        "Sakin, az ziyaretçi"
+      ],
+      "cons": [
+        "Tuvalet-su-elektrik resmi kayıtta yok",
+        "Tarife boş; ücreti sorun",
+        "Market belirsiz",
+        "Alan bilgisi zayıf"
+      ],
+      "tips": [
+        "Gitmeden idareyi mutlaka arayın.",
+        "Erzakı Erzincan’dan alın.",
+        "Odun kesmeyin; belirlenmiş yer dışında geceleme yasak.",
+        "1400 m gece soğuk; kalın tulum.",
+        "Ateşi yangın döneminde sorun."
+      ],
+      "advice": "Dumanlı’ya bu gece gelmeden idareyi arayın; tesis kaydı yok, tarife boş olsa da bedelsiz saymayın. Suyu ve yemeği Erzincan’dan getirin, tahsisli yerde kalın, odun kesmeyin. 1400 m gece üşütür; fener ve yedek su şart."
+    }
   },
   {
     "id": "huzurlu-tp",
@@ -1199,7 +2968,35 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Gaziantep tabiat parkı. PDF’de çadırlı kamp kaydı vardır; geceleme tahsisli alanda.",
     "images": [],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "belirsiz",
+      "difficulty": "Yazın sıcak, yangın riski yüksek",
+      "pros": [
+        "Gaziantep yayla parkı",
+        "900 m gölge arayışı",
+        "PDF’de çadır kaydı var"
+      ],
+      "cons": [
+        "Tesis belirsiz",
+        "Yazın sıcak ve yangın riski yüksek",
+        "Tarife boş; ücreti sorun",
+        "Dönemsel ateş yasağı sık"
+      ],
+      "tips": [
+        "Gitmeden idareyi arayın.",
+        "Erzakı Gaziantep’ten alın; bol su.",
+        "Yazın ateşi gişede sorun; çoğu zaman yasak.",
+        "Odun kesmeyin; geceleme tahsisli alanda.",
+        "Gölge ve havalandırmalı çadır."
+      ],
+      "advice": "Huzurlu’ya bu gece geliyorsanız idareyi arayın; tesis ve ücret net değil. Yazın Antep sıcağı ve yangın riski yüksek, ateşi sormadan yakmayın, suyu şehirden bol getirin. Tahsisli yerde kalın, odun kesmeyin."
+    }
   },
   {
     "id": "goynuk-comaklar",
@@ -1220,7 +3017,38 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/G%C3%B6yn%C3%BCk_Kanyon_Kemer_Antalya_Turkey.jpg/1920px-G%C3%B6yn%C3%BCk_Kanyon_Kemer_Antalya_Turkey.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/G%C3%B6yn%C3%BCk_Kanyonu.jpg/1920px-G%C3%B6yn%C3%BCk_Kanyonu.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "belirsiz",
+      "power": "belirsiz",
+      "water": "belirsiz",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "yakin",
+      "difficulty": "Kemer sahili, yazın yangın riski",
+      "pros": [
+        "Beydağları Sahil MP içinde resmi çadır alanı",
+        "Likya Yolu, kanyon ve deniz molası",
+        "Market Göynük’te yakın",
+        "2026 tarifesinde adı geçen 2. kategori yer"
+      ],
+      "cons": [
+        "Tuvalet-su-elektrik bu taramada resmi kayıtta yok",
+        "Özel kampinglerle karıştırmayın",
+        "Yazın Kemer–Göynük kalabalık",
+        "Yangın sezonunda ateş kuralı sıkı",
+        "Çomaklar dışında geceleme yok sayılır"
+      ],
+      "tips": [
+        "Yalnız Çomaklar tahsisli alanında kalın.",
+        "Erzakı Göynük’ten alın.",
+        "Özel kamping duşunu park tesisi sanmayın.",
+        "Yazın Antalya orman yasağına bakın; odun kesmek yasak.",
+        "Gitmeden WC-suyu teyit edin.",
+        "Kanyon girişi ayrı ücretli tur olabilir."
+      ],
+      "advice": "Göynük Çomaklar Kemer sahilindeki resmi çadır yeridir; parkın geri kalanında geceleme yok. Çadır bedeli tarifede 225 TL, tesis belirsiz; suyu Göynük’ten alın, özel kampingle karıştırmayın. Yazın yangın riski yüksek, ateş sıkı yasak; odun kesmeyin, gişede yeri sorun."
+    }
   },
   {
     "id": "uludag-sarialan",
@@ -1241,6 +3069,37 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Uluda%C4%9F_Sar%C4%B1alan_region.jpg/1920px-Uluda%C4%9F_Sar%C4%B1alan_region.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Uluda%C4%9F_Sar%C4%B1alan_view.jpg/1920px-Uluda%C4%9F_Sar%C4%B1alan_view.jpg"
     ],
-    "videos": []
+    "videos": [],
+    "guide": {
+      "toilet": "var",
+      "power": "belirsiz",
+      "water": "var",
+      "firewood": "getir",
+      "fire": "ocak",
+      "shop": "var",
+      "difficulty": "Alp soğuğu, işletmeci kampı",
+      "pros": [
+        "Teleferikle çıkılan göknar, resmi 300 çadırlık alan",
+        "Büfe, kır kahvesi, çeşme ve tuvalet",
+        "Market ve kafe anlatılıyor",
+        "1620 m yaz serinliği"
+      ],
+      "cons": [
+        "Hafta sonu piknik, çöp ve kirli tuvalet şikâyeti",
+        "Park girişi ile çadır ayrı ücret; kayıt şart",
+        "Gece 10–12 derece; yerde ateş yasak",
+        "Çadır elektriği belirsiz; ayı için yiyecek açıkta bırakılmamalı",
+        "Karavan düzlüğü Sarıalan’da sınırlı"
+      ],
+      "tips": [
+        "Kayıtsız kalmak kaçak kamp sayılır; gişede yer alın.",
+        "Yerde ateş yakmayın; yalnız ocak/mangal yeri, yazın Bursa yasağına bakın.",
+        "Kalın tulum alın; yaz gecesi bile soğuk.",
+        "Yiyeceği konteynerde tutun.",
+        "Odun kesmeyin.",
+        "Ahşap baraka 4 kişilik çadır bedelinden (2026 dipnotu); elektriği teyit edin."
+      ],
+      "advice": "Sarıalan işletmeci kampıdır; bu gece kayıt yaptırın, kayıtsız kalmak kaçak sayılır. Çadır bedeli tarifede 225 TL, baraka ayrı; tuvalet, çeşme ve büfe var, çadır prizi belirsiz. 1620 m alp soğuğu, yerde ateş yok; ayı için yiyeceği kapatın, odun kesmeyin."
+    }
   }
 ]

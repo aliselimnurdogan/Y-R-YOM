@@ -272,6 +272,157 @@ img {
   color: #1c1c1c;
 }
 
+.guide-block {
+  margin-top: 18px;
+}
+
+.guide-kicker {
+  display: inline-block;
+  background: #e7f6df;
+  color: #246b12;
+  font-weight: 800;
+  font-size: 13px;
+  border-radius: 999px;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+}
+
+.guide-advice {
+  font-size: 16.5px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: #1c1c1c;
+  background: #f7faf3;
+  border: 1px solid #dce8d2;
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+
+.amenity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0 8px;
+}
+
+.amenity {
+  border-radius: 14px;
+  padding: 12px 12px 11px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+}
+
+.amenity dt {
+  font-size: 12px;
+  font-weight: 800;
+  color: #6b7280;
+}
+
+.amenity dd {
+  margin: 4px 0 0;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.amenity.is-yes {
+  background: #f3faeb;
+  border-color: #cfe8b8;
+}
+
+.amenity.is-yes dd {
+  color: #246b12;
+}
+
+.amenity.is-no {
+  background: #faf4f2;
+  border-color: #ead7d1;
+}
+
+.amenity.is-no dd {
+  color: #9a3412;
+}
+
+.amenity.is-warn {
+  background: #fff8e8;
+  border-color: #f1e0b0;
+}
+
+.amenity.is-warn dd {
+  color: #92400e;
+}
+
+.amenity.is-unknown {
+  background: #f7f7f8;
+}
+
+.amenity.is-unknown dd {
+  color: #4b5563;
+}
+
+.guide-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 22px 0 8px;
+}
+
+.guide-list {
+  margin-top: 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.guide-list li {
+  font-weight: 700;
+  line-height: 1.45;
+  color: #374151;
+  padding-left: 18px;
+  position: relative;
+}
+
+.guide-list li::before {
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+}
+
+.guide-list.is-good li::before {
+  content: '+';
+  color: #246b12;
+}
+
+.guide-list.is-hard li::before {
+  content: '!';
+  color: #9a3412;
+}
+
+.guide-steps {
+  margin: 10px 0 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 8px;
+}
+
+.guide-steps li {
+  font-weight: 700;
+  line-height: 1.45;
+  color: #1c1c1c;
+}
+
+.guide-link,
+.guide-disclaimer {
+  margin-top: 14px;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+.guide-link a {
+  color: #246b12;
+  font-weight: 800;
+}
+
 .btn-text {
   background: transparent;
   border: 0;
@@ -1554,5 +1705,10 @@ img {
   .split {
     grid-template-columns: 1fr;
     gap: 22px;
+  }
+
+  .amenity-grid,
+  .guide-split {
+    grid-template-columns: 1fr 1fr;
   }
 }

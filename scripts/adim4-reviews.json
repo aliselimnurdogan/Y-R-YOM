@@ -1,0 +1,1376 @@
+[
+  {
+    "id": "ayvalik-adalari",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/balikesir/ayvalik-adalari",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://www.tarimorman.gov.tr/DKMP/Menu/28/Tabiat-Parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "yakin",
+    "crowd": "Yazın ada ve sahil çok dolu; Cunda–Sarımsaklı hattı turistik.",
+    "notes": [
+      "DKMP kaydında çadırlı kamp ve konaklama var; geceleme yalnız idarenin gösterdiği yerde.",
+      "Tuvalet, su ve elektrik resmi kayıtta net değil; gitmeden 2. Bölge’ye sorun.",
+      "Valilik: mesire/tabiat parkı günübirlik alanlarında 20:30 sonrası mangal-ateş yasak olmuş.",
+      "Odun kesmek yasak. Market ve fırın Ayvalık/Cunda’da."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "kinik-selalesi",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "DKMP kaydında çadırlı kamp var; şelale çevresi ıslak ve kaygan, geceleme tahsisli alanda.",
+      "Tuvalet-su-elektrik resmi kayıtta net değil.",
+      "Odun kesmek yasak; ateş yalnızca izinli ocakta, yangın döneminde görevliye sorun.",
+      "Orman Kanunu 76-a: belirlenmiş konak yeri dışında geceleme yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "kucukelmali",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Pazaryeri yayla ormanı; DKMP’de çadırlı kamp kaydı var.",
+      "Tesis bilgisi resmi kayıtta yok; suyun yerini idareden sorun.",
+      "Odun kesmek yasak. Geceleme yalnız belirlenmiş yerde (Orman Kanunu 76-a)."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "sadagi-kanyonu",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Orhaneli kanyonu; çadır kaydı var ama kanyon tabanı geceleme yeri değildir.",
+      "Tuvalet-elektrik belirsiz. Odun kesmek yasak.",
+      "Ateş yalnız izinli ocakta; yangın döneminde valilik kararına bakın."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "suuctu",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/bursa/suuctu",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "belirsiz",
+    "water": "var",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "var",
+    "crowd": "Şelale günübirlik yoğun; geceleme yeri sınırlı.",
+    "notes": [
+      "DKMP: bir tuvalet, üç çeşme, büfe, kır kahvesi ve piknik masaları.",
+      "Çadırlı kamp kaydı var; yalnız belirlenmiş alanda kalın.",
+      "Elektrik resmi kayıtta yok. Odun kesmek yasak; ateş izinli ocakta.",
+      "Bursa valiliği yangın döneminde ormanlık alanda mangalı kısıtlar; gişede sorun."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "buyukada-tp",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "yakin",
+    "crowd": "Yazın ada turist dolu; park alanı küçük (3 ha).",
+    "notes": [
+      "DKMP’de çadır kaydı var ama alan çok küçük; pratikte günübirlik ağır basar.",
+      "Tesis resmi kayıtta net değil. Market adanın iskele civarında.",
+      "Orman içi serbest kamp yasak. Ateş yalnız izinli ocakta."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "danamandira",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Çatalca ormanı; DKMP’de çadırlı kamp kaydı var.",
+      "Tuvalet-su-elektrik resmi kayıtta yok sayılıyor; gitmeden sorun.",
+      "Odun kesmek ve belirlenmiş yer dışında geceleme yasak (76-a)."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "dilburnu",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Küçük burun tabiat parkı (7 ha); çadır kaydı var, kapasite sınırlı.",
+      "Tesis belirsiz. Serbest orman kampı yasak.",
+      "Ateş yalnız izinli ocakta; yazın yangın yasağına bakın."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "hacet-deresi",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Şile/İstanbul; DKMP’de çadır kaydı var.",
+      "Tesis resmi kayıtta net değil. Geceleme tahsisli alanda.",
+      "Odun kesmek yasak; ateş izinli ocakta."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "hasdal",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "yakin",
+    "crowd": "Kent içi orman; günübirlik kullanımı ağır basabilir.",
+    "notes": [
+      "Kağıthane Hasdal; DKMP’de çadır kaydı var.",
+      "Tesis belirsiz. Market ilçe içinde yakın.",
+      "Belirlenmiş yer dışında geceleme ve odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "polonezkoy-tp",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/istanbul/polonezkoy-tabiat-parki-dogal-yasam-parki",
+      "https://www.obania.com/yer/polonezkoy-tabiat-parki",
+      "https://www.kolaykal.com/yer/polonezkoy-tabiat-parki-istanbulda-doga-ile-ic-ice-gunubirlik-kacis",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "yok",
+    "water": "var",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "var",
+    "crowd": "İstanbul hafta sonu piknikçi dolu; 09:00–19:00 giriş saati.",
+    "notes": [
+      "DKMP: alanda WC ve büfe var. Çadır yalnız belirlenmiş kamp yerinde.",
+      "Açık kaynaklarda elektrik, sıcak su ve duş yok deniyor; çeşme var.",
+      "Ateş yalnız idare ocağında; 1 Haziran–31 Ekim yangın döneminde gişede sorun.",
+      "Köyde pansiyon ve market yakın. Odun kesmek yasak."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "beskayalar",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/kocaeli/beskayalar",
+      "https://www.kampp.in/kamp-alani/beskayalar-tabiat-parki",
+      "https://ekapveri.com/ihale/ekap-2021-161580/",
+      "https://kafa1milyon.com/yazi/beskayalar-kamp/",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "yok",
+    "water": "var",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "yok",
+    "crowd": "Hafta sonu yürüyüşçü yoğun; düz çadır yeri sınırlı.",
+    "notes": [
+      "DKMP çadır kaydı var; giriş 08:00–18:00. Son 2 km toprak, yağmurda çamur.",
+      "Kampp ve 2021 DKMP ihalesi tuvalet/kamelya yazıyor; elektrik yok, çeşme var.",
+      "İçeride yiyecek tesisi yok; Yuvacık’tan erzak alın. Odun kesmek yasak.",
+      "Kanyon/şelale geceleme yeri değildir. WC’nin açık olup olmadığını gişede teyit edin."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "suadiye-tp",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Kocaeli Kartepe; DKMP’de çadır ve bisiklet yolu kaydı var.",
+      "Tesis belirsiz. Geceleme tahsisli alanda.",
+      "Odun kesmek yasak; ateş izinli ocakta."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "poyrazlar",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/sakarya/poyrazlar-golu",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "var",
+    "crowd": "Adapazarı’na 8 km; akşam ve hafta sonu piknik yoğun.",
+    "notes": [
+      "DKMP: kır lokantası, büfe, iskele, WC ve mescit var. Çadır kaydı var.",
+      "Giriş 08:30–23:00. Elektrik ve içme suyu musluğu resmi kayıtta net değil.",
+      "Odun kesmek yasak. Ateş yalnız izinli ocakta; yangın döneminde valiliğe bakın."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "kartaltepe",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Tekirdağ Kartaltepe; DKMP’de çadır kaydı var.",
+      "Tesis belirsiz. Belirlenmiş yer dışında geceleme yasak.",
+      "Odun kesmek yasak; ateş izinli ocakta."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "karlik-yaylasi",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Yalova yaylası (~845 m); DKMP’de çadır kaydı var.",
+      "Tesis resmi kayıtta net değil.",
+      "Odun kesmek ve serbest orman kampı yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "ortaburun",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Yalova tabiat parkı; çadır kaydı var.",
+      "Tesis belirsiz. Geceleme tahsisli alanda.",
+      "Ateş yalnız izinli ocakta; odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "bafa-golu-tp",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/aydin/bafa-golu",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari",
+      "https://www.tarimorman.gov.tr/DKMP/Menu/28/Tabiat-Parklari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "yakin",
+    "crowd": "Kapıkırı–Serçin pansiyon ve kamp yazın dolu.",
+    "notes": [
+      "DKMP’de çadır kaydı var; giriş 07:00–20:30. Geceleme yalnız gösterilen yerde.",
+      "Parkın kendi tuvalet-elektrik kaydı yok; göl kenarı özel kampları park tesisi değildir.",
+      "Market köyde. Odun kesmek yasak. Yazın orman giriş yasağına bakın.",
+      "Göle deterjanlı su dökmeyin; sulak alan hassas."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "spil-dagi-mp",
+    "sources": [
+      "https://kampatesim.com.tr/milli-park/manisa/spil-dagi",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "belirsiz",
+    "water": "var",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "Hafta sonu piknik yoğun; orman evleri rezervasyonlu.",
+    "notes": [
+      "DKMP: tuvalet, çeşme, piknik ünitesi ve mangal yerleri var. Çadır/gençlik kampı kaydı var.",
+      "Giriş 09:00–18:00. Elektrik kamp yerinde belirsiz; orman evi ayrı rezervasyon.",
+      "Ateş yalnız mangal/ocak yerinde. Yazın Manisa orman giriş yasağına bakın.",
+      "Odun kesmek yasak. Marketi Manisa’dan alın."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "karanlikdere",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Muğla kanyon tabiat parkı; DKMP’de çadır kaydı var.",
+      "Kanyon tabanı geceleme yeri değildir. Tesis belirsiz.",
+      "Yazın yangın yasağı sıkı; ateş yalnız izinli ocakta, odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "belemedik",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Pozantı/Adana; DKMP’de çadır kaydı var.",
+      "Tesis belirsiz. Tarihi tünel-istasyon çevresi geceleme yeri olmayabilir.",
+      "Odun kesmek yasak. Yangın döneminde görevliye sorun."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "obruk-selalesi",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Adana yüksek rakım şelalesi; çadır kaydı var.",
+      "Tesis belirsiz. Şelale kenarı ıslak; tahsisli alanda kalın.",
+      "Odun kesmek ve serbest kamp yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "kursunlu-selalesi",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/antalya/kursunlu-selalesi",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "var",
+    "crowd": "Antalya tur otobüsü ve günübirlik çok kalabalık.",
+    "notes": [
+      "DKMP: WC, mescit, kır lokantası, büfe, kır kahvesi ve piknik masaları var.",
+      "Çadır kaydı var ama alan günübirlik şelale parkı; gecelemeyi gişede teyit edin (08:30–17:30).",
+      "Elektrik kamp yeri için belirsiz. Odun kesmek yasak.",
+      "Yazın Antalya orman giriş yasağına bakın."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "salda-golu-tp",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/burdur/salda-golu",
+      "https://www.saldagolu.com/salda-golundeki-yasaklar/",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "yakin",
+    "crowd": "Yazın Beyaz Adalar ve Halk Plajı aşırı kalabalık.",
+    "notes": [
+      "57 ha’lık tabiat parkında çadır kaydı var; beyaz kumsal ve kıyıda çadır-ateş yasak.",
+      "Tuvalet-su-elektrik resmi kayıtta yok; gitmeden 6. Bölge’ye sorun.",
+      "Ateş yalnız tabiat parkındaki piknik ocağında. Odun kesmek yasak.",
+      "Göle sabun dökmek, çamur banyosu ve kum almak yasak. Market Yeşilova/Salda köyünde."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "isparta-golcuk",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/isparta/isparta-golcuk",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "yakin",
+    "crowd": "Şehre ~6 km; akşam piknikçi gelir.",
+    "notes": [
+      "DKMP’de çadır kaydı var; giriş 08:30–23:00.",
+      "Tuvalet-su-elektrik resmi kayıtta net değil.",
+      "Market Isparta’da. Odun kesmek yasak; ateş izinli ocakta.",
+      "Göl kenarı serbest kamp yasak."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "yazili-kanyon",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Sütçüler kanyonu; DKMP’de çadır kaydı var.",
+      "Kanyon içi geceleme yeri değildir. Tesis belirsiz.",
+      "Odun kesmek yasak. Yazın yangın kararına bakın."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "geben-vadisi",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Kahramanmaraş milli parkı; DKMP’de kampçılık kaydı var.",
+      "Yüksek rakım, tesis belirsiz. Tahsisli alan dışında geceleme yasak.",
+      "Odun kesmek yasak; ateş izinli ocakta."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "karamanastir",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Mersin şelale parkı; çadır kaydı var.",
+      "Tesis belirsiz. Şelale çevresi ıslak.",
+      "Odun kesmek ve serbest kamp yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "yerkopru",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Mut Yerköprü Şelalesi; çadır kaydı var.",
+      "Tesis belirsiz. Doğal köprü/şelale geceleme yeri değildir.",
+      "Odun kesmek yasak; ateş izinli ocakta."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "karatepe-aslantas",
+    "sources": [
+      "https://kampatesim.com.tr/milli-park/osmaniye/karatepe-aslantas",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "Açık hava müzesi günübirlik ziyaretçi alır.",
+    "notes": [
+      "DKMP kaydı: piknik alanı ve çadırlı kamp. Giriş 08:00–19:00.",
+      "Tuvalet-su-elektrik resmi kayıtta net değil; gitmeden sorun.",
+      "Hitit açık hava müzesi kamp yeri değildir. Odun kesmek yasak.",
+      "Yazın Osmaniye orman giriş yasağına bakın."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "altiparmak-tp",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Artvin yüksek yayla parkı (~2230 m); çadır kaydı var.",
+      "Tesis belirsiz; kışın yol kapanır. Erzak köyden alın.",
+      "Odun kesmek yasak. Geceleme tahsisli alanda."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "karagol-sahara",
+    "sources": [
+      "https://kampatesim.com.tr/milli-park/artvin/karagol-sahara",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "var",
+    "crowd": "Yazın Şavşat yayla kalabalığı; iki ayrı bölüm var.",
+    "notes": [
+      "Sahara ve Karagöl bölümlerinde çadırlı kamp kaydı var.",
+      "Karagöl’de WC, otel ve cafe-restaurant yazılı; Sahara tesisleri daha sınırlı olabilir.",
+      "Elektrik çadır yeri için belirsiz. Odun kesmek yasak.",
+      "Ateş yalnız izinli ocakta. Yüksek rakım, gece soğuk."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "yakupabdal",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Bayburt yüksek park (~2017 m); çadır kaydı var.",
+      "Tesis belirsiz. Kış sert.",
+      "Odun kesmek ve serbest kamp yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "abant-mp",
+    "sources": [
+      "https://kampatesim.com.tr/milli-park/bolu/abant-golu",
+      "https://bolge9.tarimorman.gov.tr/Menu/53/Bolu-Abant-Golu-Milli-Parki",
+      "https://bolu.ktb.gov.tr/TR-354568/abant-golu-milli-parki.html",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "belirsiz",
+    "water": "var",
+    "firewood": "yasak",
+    "fire": "yasak",
+    "shop": "var",
+    "crowd": "Hafta sonu ve tatilde göl çevresi çok kalabalık.",
+    "notes": [
+      "9. Bölge: çeşme-WC, restoran, kafeterya, yöresel ürün satışı ve çadırlı kamp alanı var.",
+      "Odun-kömür-mangal gibi dumanlı ateş yasak; yalnızca gazlı/elektrikli ocak.",
+      "Çadır yeri elektriği resmi kayıtta net değil; otel ve dağ evi ayrı.",
+      "Yalnız belirlenmiş kamp alanında kalın. Göl kenarına serbest çadır yasak."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "arkutdagi",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/bolu-gol-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Bolu 2023 ilan; çadır kaydı var, tesis belirsiz.",
+      "Valilik dönemsel orman yasağı çıkarır; güncel kararı sorun.",
+      "Odun kesmek ve serbest kamp yasak (76-a)."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "ayikayasi",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/bolu-gol-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Bolu tabiat parkı; çadır kaydı var.",
+      "Tesis belirsiz. Tahsisli alan dışında geceleme yasak.",
+      "Odun kesmek yasak; yangın döneminde görevliye sorun."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "bolu-golcuk",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/bolu/bolu-golcuk",
+      "https://kampatesim.com.tr/rehber/bolu-gol-parklari",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "var",
+    "crowd": "Bolu merkeze ~10 km; hafta sonu göl çevresi dolu.",
+    "notes": [
+      "DKMP: kır lokantası, büfe, kır evi, cami, mescit, WC ve çocuk alanı var.",
+      "Çadır kaydı var ama Bolu valiliği dönemsel çadır yasağı duyurmuş; güncel kararı sorun.",
+      "Elektrik çadır yeri için belirsiz. Odun kesmek yasak.",
+      "Göl kıyısına araç ve serbest çadır yasak olabilir."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "deregol",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/bolu-gol-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Bolu 2023 ilan; çadır kaydı var, tesis belirsiz.",
+      "Valilik kararına bakın. Odun kesmek yasak.",
+      "Geceleme yalnız belirlenmiş yerde."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "karaca-tp",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/bolu-gol-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Bolu tabiat parkı; çadır kaydı var.",
+      "Tesis belirsiz. Serbest orman kampı yasak.",
+      "Ateş izinli ocakta; odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "kargali-golcuk",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/bolu-gol-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Bolu yüksek gölcük (~1533 m); çadır kaydı var.",
+      "Tesis belirsiz. Kış soğuk.",
+      "Odun kesmek ve 76-a dışı geceleme yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "sunnet-golu",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/bolu-gol-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "DKMP’de çadır, konaklama ve günübirlik kayıtlı.",
+      "Somut WC-elektrik listesi bu taramada yok; gitmeden sorun.",
+      "Bolu valiliği dönemsel yasak çıkarır. Odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "yedigoller-mp",
+    "sources": [
+      "https://kampatesim.com.tr/milli-park/bolu/yedigoller",
+      "https://www.yedigollermillipark.com/ev-turu/kamp-alani/",
+      "https://tr.wikipedia.org/wiki/Yedig%C3%B6ller_Milli_Park%C4%B1",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "yok",
+    "water": "belirsiz",
+    "firewood": "yerinde",
+    "fire": "ocak",
+    "shop": "var",
+    "crowd": "Sonbahar renkleri ve hafta sonu rezervasyonsuz yer kalmaz.",
+    "notes": [
+      "İşletmeci Habitat: ortak WC, mescit, kafe ve restoran var; elektrik, mutfak ve duş yok.",
+      "Karavan, çekme karavan ve araç üstü çadır giriş-konaklama yasak. Yalnız rezervasyon.",
+      "Yerde ateş yasak. Odun Habitat Restoran’dan; tüp 20:00–07:00 arası (güncel yasağı sorun).",
+      "DKMP kaydı bungalov, çadır ve karavan der; saha karavanı almamaktadır.",
+      "Kışın Bolu güzergâhı kapanır; Mengen üzerinden gidilir."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "aksu-tp",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Çorum tabiat parkı; çadır kaydı var.",
+      "Tesis belirsiz. Geceleme tahsisli alanda.",
+      "Odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "catak-corum",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Çorum Çatak; çadır kaydı var.",
+      "Tesis belirsiz. Serbest orman kampı yasak.",
+      "Ateş izinli ocakta; odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "kuzalan",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Giresun şelale-kanyon parkı; çadır kaydı var.",
+      "Tesis belirsiz. Kanyon tabanı geceleme yeri değildir.",
+      "Odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "artabel",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/gumushane/artabel-golleri",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "yok",
+    "crowd": "Yazın dağcı-yürüyüşçü; kış fiilen kapalı.",
+    "notes": [
+      "Ort. 3000 m krater gölleri; çadır ve dağcılık kaydı var, tesis resmi kayıtta yok.",
+      "Giriş 06:00–20:00. Tamamen kendi kendine yeterli gidin.",
+      "Odun kesmek yasak. Yüksek irtifa, gece don olabilir.",
+      "Market Torul/Gümüşhane’de bitirin."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "limni-golu",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/gumushane/limni-golu",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "var",
+    "crowd": "Yazın Zigana yolunda durak; 2010 m, gece serin.",
+    "notes": [
+      "DKMP: orman köşkü, kır lokantası, büfe, mescit, tuvalet ve kamp alanı yazılı.",
+      "Giriş 06:00–20:00. Çadır elektriği belirsiz.",
+      "Odun kesmek yasak; ateş izinli ocakta.",
+      "Yalnız belirlenmiş yerde kalın."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "handuzu",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Rize yayla parkı; çadır kaydı var.",
+      "Tesis belirsiz. Yağışlı iklim, zemin ıslak.",
+      "Odun kesmek ve serbest kamp yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "tunca-vadisi",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Rize geniş vadi parkı; çadır kaydı var.",
+      "Tesis belirsiz. Tahsisli alan dışında geceleme yasak.",
+      "Odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "akgol-sinop",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Sinop göl parkı (40 ha); çadır kaydı var.",
+      "Tesis belirsiz. Göl kenarı serbest kamp yasak.",
+      "Odun kesmek yasak; ateş izinli ocakta."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "catak-kanyonu-sinop",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Sinop kanyonu; çadır kaydı var.",
+      "Kanyon tabanı geceleme yeri değildir. Tesis belirsiz.",
+      "Odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "zinav-golu",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Tokat Reşadiye gölü; çadır kaydı var.",
+      "Tesis belirsiz. Tahsisli alanda kalın.",
+      "Odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "calcamili",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Trabzon küçük park (9 ha); çadır kaydı var, kapasite dar.",
+      "Tesis belirsiz.",
+      "Odun kesmek ve serbest kamp yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "uzungol-tp",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/trabzon/uzungol",
+      "https://www.kampyerleri.org/trabzon-kamp-alanlari/",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "yakin",
+    "crowd": "Yazın ve bayramda göl çevresi aşırı kalabalık.",
+    "notes": [
+      "DKMP: konaklama, günübirlik ve çadır kaydı var; ziyaretçi çoğu günübirlik.",
+      "Park tesisi (büfe, lokanta) köyde bol; resmi çadır yerinin WC-elektriği net değil.",
+      "Göl kıyısına serbest çadır yasak. Odun kesmek yasak.",
+      "Market ve yemek Uzungöl mahallesinde. Ateş yalnız izinli ocakta."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "danaagzi",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Zonguldak kıyı parkı; çadır kaydı var.",
+      "Tesis belirsiz. Tahsisli alanda kalın.",
+      "Odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "harmankaya",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Zonguldak şelale parkı; çadır kaydı var.",
+      "Şelale çevresi ıslak. Tesis belirsiz.",
+      "Odun kesmek ve serbest kamp yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "kayalidere",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Zonguldak küçük park (54 ha); çadır kaydı var.",
+      "Tesis belirsiz.",
+      "Odun kesmek yasak; ateş izinli ocakta."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "saricali",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Ankara milli parkı; DKMP’de kamp kaydı var.",
+      "Tesis belirsiz. Yeni/az bilinen alan; gitmeden 9. Bölge’ye sorun.",
+      "Odun kesmek ve 76-a dışı geceleme yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "soguksu",
+    "sources": [
+      "https://kampatesim.com.tr/milli-park/ankara/soguksu",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "var",
+    "crowd": "Kızılcahamam’a bitişik; hafta sonu dolu.",
+    "notes": [
+      "DKMP: WC, kır lokantası ve günübirlik alan var. Çadır kaydı var.",
+      "Giriş 07:00–00:00. Çadır elektriği ve içme suyu musluğu net değil.",
+      "Odun kesmek yasak. Ateş izinli ocakta; yazın Ankara orman yasağına bakın.",
+      "Market ilçe merkezinde 4 km."
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "sorgun-goleti",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Ankara gölet parkı (54 ha); çadır kaydı var.",
+      "Tesis belirsiz. Gölet kenarı serbest kamp yasak.",
+      "Odun kesmek yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "dumanli-tp",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/erzincan/dumanli",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Erzincan Dumanlı; DKMP’de çadır kaydı var.",
+      "Tuvalet-su-elektrik resmi kayıtta yok.",
+      "Odun kesmek ve belirlenmiş yer dışında geceleme yasak."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "huzurlu-tp",
+    "sources": [
+      "https://kampatesim.com.tr/tabiat-parki/gaziantep/huzurlu",
+      "https://kampatesim.com.tr/liste/cadir-kurulabilen-tabiat-parklari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "belirsiz",
+    "crowd": "",
+    "notes": [
+      "Gaziantep yayla parkı; çadır kaydı var.",
+      "Tesis belirsiz. Yazın sıcak ve yangın riski yüksek.",
+      "Odun kesmek yasak; ateş izinli ocakta, dönemsel yasak sık."
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "goynuk-comaklar",
+    "sources": [
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/milli-park/antalya/beydaglari-sahil",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "belirsiz",
+    "power": "belirsiz",
+    "water": "belirsiz",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "yakin",
+    "crowd": "Yazın Kemer–Göynük sahil ve kanyon kalabalık.",
+    "notes": [
+      "Beydağları Sahil MP içinde, 2026 tarifesinde adı geçen resmi çadır alanı (2. kategori).",
+      "Parkın genel kaydı günübirlik; Çomaklar dışında geceleme yok sayılır.",
+      "Tuvalet-su-elektrik bu taramada resmi kayıtta yok; özel kampinglerle karıştırmayın.",
+      "Market Göynük’te. Yazın Antalya orman yasağına bakın. Odun kesmek yasak."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "uludag-sarialan",
+    "sources": [
+      "https://kampatesim.com.tr/milli-park/bursa/uludag",
+      "https://kampatesim.com.tr/kamp-alanlari",
+      "https://kampatesim.com.tr/rehber/milli-park-kurallari"
+    ],
+    "toilet": "var",
+    "power": "belirsiz",
+    "water": "var",
+    "firewood": "getir",
+    "fire": "ocak",
+    "shop": "var",
+    "crowd": "Yazın teleferik ve piknikçi; kışın kayak dönemi ayrı kalabalık.",
+    "notes": [
+      "DKMP: Sarıalan kamp-günübirlikte büfe, kır kahvesi ve iki tuvalet; park genelinde 18 tuvalet, 17 çeşme, 8 bulaşık yeri, 5 ateşli piknik ünitesi.",
+      "Teleferikle 20–25 dk. 2026 dipnotu: ahşap baraka 4 kişilik çadır bedelinden.",
+      "Çadır elektriği belirsiz. Ateş yalnız ocak/mangal yerinde; yazın Bursa orman yasağına bakın.",
+      "Odun kesmek yasak. Karavan kaydı parkta var; Sarıalan’a uygunluğunu sorun."
+    ],
+    "confidence": "high"
+  }
+]

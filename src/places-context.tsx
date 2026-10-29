@@ -3,8 +3,17 @@ import bundledCamps from './data/camps.json'
 import bundledCatalog from './data/catalog.json'
 import bundledPlaces from './data/places.json'
 import { ALL_PLACE_KINDS } from './labels'
-import { APP_STEP } from './step'
-import type { PlaceItem, PlaceKind, PlaceVideo } from './types'
+import { APP_STEP, HAS_CATALOG } from './step'
+import type {
+  CampGuide,
+  FacilityFlag,
+  FireFlag,
+  FirewoodFlag,
+  PlaceItem,
+  PlaceKind,
+  PlaceVideo,
+  ShopFlag,
+} from './types'
 
 type Status = 'loading' | 'error' | 'ready'
 
@@ -51,7 +60,7 @@ function normalizePlace(raw: unknown): PlaceItem | null {
   if (Math.abs(lat) > 90 || Math.abs(lng) > 180) return null
   if (typeof record.summary !== 'string') return null
   const images = parseImages(record.images)
-  if (images.length === 0 && APP_STEP !== '3') return null
+  if (images.length === 0 && !HAS_CATALOG) return null
   const areaHa = finiteNumber(record.areaHa)
   const feeRaw = record.feeTent
   const feeTent = feeRaw === null ? null : finiteNumber(feeRaw)
@@ -71,6 +80,47 @@ function normalizePlace(raw: unknown): PlaceItem | null {
     areaHa: areaHa ?? undefined,
     feeTent: feeTent === null && feeRaw !== null ? undefined : feeTent,
     statusLabel: typeof record.statusLabel === 'string' ? record.statusLabel : undefined,
+    guide: parseGuide(record.guide),
+  }
+}
+
+const FLAGS = ['var', 'yok', 'belirsiz'] as const
+const WOOD = ['getir', 'yerinde', 'yasak', 'belirsiz'] as const
+const FIRE = ['yasak', 'ocak', 'belirsiz'] as const
+const SHOP = ['var', 'yok', 'yakin', 'belirsiz'] as const
+
+function asFlag<T extends string>(value: unknown, allowed: readonly T[]): T | null {
+  return typeof value === 'string' && (allowed as readonly string[]).includes(value) ? (value as T) : null
+}
+
+function stringList(raw: unknown): string[] {
+  if (!Array.isArray(raw)) return []
+  return raw.filter((item): item is string => typeof item === 'string' && item.trim().length > 0)
+}
+
+function parseGuide(raw: unknown): CampGuide | undefined {
+  if (!raw || typeof raw !== 'object') return undefined
+  const record = raw as Record<string, unknown>
+  const toilet = asFlag<FacilityFlag>(record.toilet, FLAGS)
+  const power = asFlag<FacilityFlag>(record.power, FLAGS)
+  const water = asFlag<FacilityFlag>(record.water, FLAGS)
+  const firewood = asFlag<FirewoodFlag>(record.firewood, WOOD)
+  const fire = asFlag<FireFlag>(record.fire, FIRE)
+  const shop = asFlag<ShopFlag>(record.shop, SHOP)
+  if (!toilet || !power || !water || !firewood || !fire || !shop) return undefined
+  if (typeof record.difficulty !== 'string' || typeof record.advice !== 'string') return undefined
+  return {
+    toilet,
+    power,
+    water,
+    firewood,
+    fire,
+    shop,
+    difficulty: record.difficulty,
+    pros: stringList(record.pros),
+    cons: stringList(record.cons),
+    tips: stringList(record.tips),
+    advice: record.advice,
   }
 }
 
@@ -82,7 +132,7 @@ export function PlacesProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     setStatus('loading')
     try {
-      const bundled = APP_STEP === '3' ? bundledCatalog : APP_STEP === '1' ? bundledCamps : bundledPlaces
+      const bundled = HAS_CATALOG ? bundledCatalog : APP_STEP === '1' ? bundledCamps : bundledPlaces
       if (!Array.isArray(bundled) || bundled.length === 0) throw new Error('empty')
       const parsed = bundled.map(normalizePlace).filter((place): place is PlaceItem => place !== null)
       if (parsed.length === 0) throw new Error('empty')
