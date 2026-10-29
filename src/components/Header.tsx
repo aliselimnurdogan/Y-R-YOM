@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useSearch } from '../search-context'
-import { HAS_CATALOG, HAS_LIVE, HAS_POLISH, HAS_ROUTE_MODE } from '../step'
+import { HAS_CATALOG, HAS_HOME, HAS_LIVE, HAS_POLISH, HAS_ROUTE_MODE, ROUTES_PATH } from '../step'
 import { BrandLockup } from './Brand'
 import { PinMark, SearchIcon } from './Icons'
 
@@ -17,7 +17,8 @@ export function Header() {
     const onCamp = location.pathname.startsWith('/kamp')
     const onRoute = location.pathname.startsWith('/rota')
     if (HAS_ROUTE_MODE) {
-      if (onRoute) navigate('/')
+      if (HAS_HOME && location.pathname === '/') navigate(ROUTES_PATH)
+      else if (onRoute) navigate(ROUTES_PATH)
       else if (onCamp && location.pathname !== '/kamp') navigate('/kamp')
       return
     }
@@ -25,8 +26,13 @@ export function Header() {
   }
 
   const onCamp = location.pathname.startsWith('/kamp')
+  const onHome = HAS_HOME && location.pathname === '/'
+  const onRoutes =
+    location.pathname === ROUTES_PATH || location.pathname.startsWith('/rota')
   const searchPlaceholder = HAS_ROUTE_MODE
-    ? onCamp
+    ? onHome
+      ? 'Parkur, kamp veya yer ara'
+      : onCamp
       ? HAS_LIVE
         ? 'Park, il, yayla veya kanyon ara'
         : HAS_CATALOG
@@ -55,13 +61,7 @@ export function Header() {
       )}
       {HAS_ROUTE_MODE && (
         <nav className="mode-nav" aria-label="Bölüm">
-          <NavLink
-            to="/"
-            end
-            className={() =>
-              location.pathname === '/' || location.pathname.startsWith('/rota') ? 'is-on' : undefined
-            }
-          >
+          <NavLink to={ROUTES_PATH} className={() => (onRoutes ? 'is-on' : undefined)}>
             {HAS_POLISH ? 'Parkurlar' : 'Yürüyüş parkurları'}
           </NavLink>
           <NavLink

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { formatFee, formatInt } from '../format'
+import { formatFee, formatInt, placeCover } from '../format'
 import { PLACE_KIND_LABELS } from '../labels'
 import { srcSet, sharpUrl } from '../media'
 import { HAS_CATALOG, HAS_FEEL } from '../step'
@@ -65,7 +65,7 @@ export function PlaceCard({
       >
         <div className="thumb-wrap">
           <CardImage
-            src={place.images[0] ?? place.pano?.preview ?? ''}
+            src={placeCover(place)}
             seed={place.id}
             onFail={onPhotoFail ? () => onPhotoFail(place.id) : undefined}
           />

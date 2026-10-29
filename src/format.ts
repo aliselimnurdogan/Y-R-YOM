@@ -93,8 +93,12 @@ export function initials(name: string): string {
   return (first + last).toLocaleUpperCase('tr')
 }
 
+export function placeCover(place: PlaceItem): string {
+  return place.images[0] || place.pano?.preview || place.pano?.url || ''
+}
+
 export function hasPlacePhoto(place: PlaceItem): boolean {
-  return Boolean(place.images[0] || place.pano?.preview)
+  return Boolean(placeCover(place))
 }
 
 export function difficultyClass(difficulty: Difficulty): string {

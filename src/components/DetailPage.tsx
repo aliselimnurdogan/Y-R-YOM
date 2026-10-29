@@ -1,7 +1,7 @@
 import { useEffect, useId, useState, type FormEvent } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { compressPhoto, loadComments, saveComment } from '../community'
-import { formatDate, formatFee, formatInt, initials } from '../format'
+import { formatDate, formatFee, formatInt, initials, placeCover } from '../format'
 import { LEGAL_CAMP_NOTE, PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
 import { srcSet, sharpUrl } from '../media'
 import { appleDir, googleDir, googlePano, yandexDir } from '../nav'
@@ -66,7 +66,9 @@ export function DetailPage() {
     )
   }
 
-  const currentImage = place.images[photoIndex] ?? place.images[0]
+  const cover = placeCover(place)
+  const gallery = place.images.length > 0 ? place.images : cover ? [cover] : []
+  const currentImage = gallery[photoIndex] ?? gallery[0]
 
   return (
     <article className="detail">
@@ -149,7 +151,7 @@ export function DetailPage() {
             alt={place.title}
           />
           <div className="gallery-thumbs" role="list">
-            {place.images.map((image, index) => (
+            {gallery.map((image, index) => (
               <button
                 key={image}
                 type="button"

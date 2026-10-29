@@ -84,6 +84,14 @@ Klasör: `adim-10`
 
 Parkurlara Wikimedia Commons’tan telifsiz kapak kondu. Fotoğrafı olan parkurlar üstte, Commons’ta resmi olmayanlar çiçekle altta. Unsplash yok.
 
+## 11. adım — Sabit giriş, aynı fotoğraf
+
+Klasör: `adim-11`
+
+`adim-11/index.html` dosyasına çift tıkla.
+
+Ana sayfada hareketli harita yok; parkur, kamp ve site hakkında sabit kareler var. Karttaki fotoğrafa girince aynı kare açılır.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -98,5 +106,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 8. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-8/
 - 9. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-9/
 - 10. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-10/
+- 11. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-11/
 
 Harita ve fotoğraf için internet açık olsun.

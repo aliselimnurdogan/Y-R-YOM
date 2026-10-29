@@ -3,12 +3,13 @@ import { Link, Route, Routes } from 'react-router-dom'
 import { Header } from './components/Header'
 import { DetailPage } from './components/DetailPage'
 import { ExplorePage } from './components/ExplorePage'
+import { HomePage } from './components/HomePage'
 import { RouteDetailPage } from './components/RouteDetailPage'
 import { RouteExplorePage } from './components/RouteExplorePage'
 import { PlacesProvider } from './places-context'
 import { RoutesProvider } from './routes-context'
 import { SearchProvider } from './search-context'
-import { HAS_LIVE, HAS_LOOK, HAS_POLISH, HAS_ROUTE_MODE } from './step'
+import { HAS_HOME, HAS_LIVE, HAS_LOOK, HAS_POLISH, HAS_ROUTE_MODE, ROUTES_PATH } from './step'
 
 interface BoundaryProps {
   children: ReactNode
@@ -41,8 +42,8 @@ class AppErrorBoundary extends Component<BoundaryProps, BoundaryState> {
 }
 
 function NotFound() {
-  const home = '/'
-  const label = HAS_ROUTE_MODE ? 'Parkurlara dön' : 'Alanlara dön'
+  const home = HAS_HOME ? '/' : ROUTES_PATH
+  const label = HAS_ROUTE_MODE ? (HAS_HOME ? 'Ana sayfaya dön' : 'Parkurlara dön') : 'Alanlara dön'
   return (
     <div className="detail">
       <h1>Sayfa bulunamadı</h1>
@@ -104,7 +105,8 @@ export function App() {
         <PlacesProvider>
           <Shell>
             <Routes>
-              <Route path="/" element={<RouteExplorePage />} />
+              <Route path="/" element={HAS_HOME ? <HomePage /> : <RouteExplorePage />} />
+              {HAS_HOME && <Route path="/parkurlar" element={<RouteExplorePage />} />}
               <Route path="/rota/:id" element={<RouteDetailPage />} />
               <Route path="/kamp" element={<ExplorePage />} />
               <Route path="/kamp/:id" element={<DetailPage />} />

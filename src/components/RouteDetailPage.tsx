@@ -9,7 +9,7 @@ import { useSearch } from '../search-context'
 import { TrailThumb } from './Brand'
 import { ElevationChart } from './ElevationChart'
 import { RouteDetailMap, type WaypointFocus } from './RouteDetailMap'
-import { HAS_POLISH } from '../step'
+import { HAS_POLISH, ROUTES_PATH } from '../step'
 
 export function RouteDetailPage() {
   const { id = '' } = useParams()
@@ -57,7 +57,7 @@ export function RouteDetailPage() {
       <div className="detail">
         <h1>Rota bulunamadı</h1>
         <p className="lede">Bu rota listede yok.</p>
-        <Link className="btn-ghost stack-gap" to="/">
+        <Link className="btn-ghost stack-gap" to={ROUTES_PATH}>
           Rotalara dön
         </Link>
       </div>
@@ -77,19 +77,19 @@ export function RouteDetailPage() {
     <article className="detail">
       <nav className="crumb" aria-label="Konum">
         <Link
-          to="/"
+          to={ROUTES_PATH}
           onClick={() => {
             setQuery('')
           }}
         >
-          Türkiye
+          Parkurlar
         </Link>
         <span aria-hidden="true">/</span>
         <button
           type="button"
           onClick={() => {
             setQuery(route.region)
-            navigate('/')
+            navigate(ROUTES_PATH)
           }}
         >
           {route.region}
@@ -99,7 +99,7 @@ export function RouteDetailPage() {
           type="button"
           onClick={() => {
             setQuery(route.city)
-            navigate('/')
+            navigate(ROUTES_PATH)
           }}
         >
           {route.city}
@@ -121,7 +121,7 @@ export function RouteDetailPage() {
           >
             GPX indir
           </button>
-          <Link className="btn-ghost" to="/">
+          <Link className="btn-ghost" to={ROUTES_PATH}>
             Geri
           </Link>
         </div>

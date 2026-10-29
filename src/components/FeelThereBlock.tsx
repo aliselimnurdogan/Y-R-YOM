@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type PointerEvent } from 'react'
 import { createPortal } from 'react-dom'
-import { sharpUrl } from '../media'
+import { placeCover } from '../format'
+import { sameMedia, sharpUrl } from '../media'
 import { HAS_FEEL } from '../step'
 import type { PlaceItem, PlacePano, PlaceVideo } from '../types'
 import { EyeIcon } from './Icons'
@@ -83,10 +84,14 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
   const clip = firstClip(place.videos)
   const [open, setOpen] = useState(false)
   if (!HAS_FEEL) return null
-  const preview = place.images[0] || pano?.preview || pano?.url
-  const cardPhoto = preview ? sharpUrl(preview, 1600) : ''
-  const canOpen = Boolean(pano || clip)
-  const badge = clip ? 'Video' : pano?.kind === '360' ? '360°' : pano?.kind === 'pano' ? 'Panorama' : 'Bakış'
+  const cover = placeCover(place)
+  const cardPhoto = cover ? sharpUrl(cover, 1600) : ''
+  const sameSphere =
+    pano?.kind === '360' &&
+    Boolean(cover) &&
+    (sameMedia(pano.url, cover) || (pano.preview ? sameMedia(pano.preview, cover) : false))
+  const canOpen = Boolean(cover || pano || clip)
+  const badge = sameSphere ? '360°' : cover ? 'Bakış' : clip ? 'Video' : 'Bakış'
   const embed = clip ? clipSrc(clip) : undefined
 
   return (
@@ -99,25 +104,14 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
         ) : (
           <span className="feel-empty-bg" />
         )}
-        {clip?.src && cardPhoto && <video className="feel-card-pip" src={clip.src} muted loop autoPlay playsInline />}
-        {clip?.youtubeId && cardPhoto && (
-          <iframe
-            className="feel-card-pip"
-            src={embed}
-            title={clip.title}
-            allow="autoplay; encrypted-media"
-          />
-        )}
         <span className="feel-shade" />
         <span className="feel-copy">
           <span className="feel-badge">{canOpen ? badge : 'Yakında'}</span>
           <span className="feel-title">Orada gibi hisset</span>
           <span className="feel-sub">
             {canOpen
-              ? clip
-                ? 'Küçük video ve bakış. Açınca sola-sağa döner; sürükle veya telefonu çevir.'
-                : 'Sola-sağa kendi kendine döner. Sürükle, parmağınla gez, telefonda çevir.'
-              : 'Bu parkta henüz yerinde 360 veya video yok; uydurma görüntü konmadı.'}
+              ? 'Açınca gördüğün kareye girersin. Sola-sağa sürükle veya telefonu çevir.'
+              : 'Bu parkta henüz yerinde bakış yok; uydurma görüntü konmadı.'}
           </span>
           {canOpen && (
             <span className="feel-cta">
@@ -127,11 +121,12 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
           )}
         </span>
       </button>
-      {open && (pano || clip) && (
+      {open && canOpen && (
         <FeelViewer
           placeTitle={place.title}
-          pano={pano}
-          clip={clip}
+          cover={cover}
+          pano={sameSphere ? pano : undefined}
+          clip={cover ? undefined : clip}
           onClose={() => setOpen(false)}
         />
       )}
@@ -141,11 +136,13 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
 
 function FeelViewer({
   placeTitle,
+  cover,
   pano,
   clip,
   onClose,
 }: {
   placeTitle: string
+  cover: string
   pano?: PlacePano
   clip?: PlaceVideo
   onClose: () => void
@@ -222,7 +219,7 @@ function FeelViewer({
       aria-modal="true"
       aria-label={`${placeTitle} bakış`}
     >
-      {useSphere ? <div ref={hostRef} className="feel-stage" /> : <LookPan pano={pano} clip={clip} />}
+      {useSphere ? <div ref={hostRef} className="feel-stage" /> : <LookPan cover={cover} clip={clip} />}
       {status && <p className="feel-status">{status}</p>}
       {pano && clip && <ClipPip clip={clip} />}
       <div className="feel-bar">
@@ -266,13 +263,13 @@ function ClipPip({ clip }: { clip: PlaceVideo }) {
   )
 }
 
-function LookPan({ pano, clip }: { pano?: PlacePano; clip?: PlaceVideo }) {
+function LookPan({ cover, clip }: { cover: string; clip?: PlaceVideo }) {
   const stageRef = useRef<HTMLDivElement>(null)
   const xRef = useRef(0)
   const dirRef = useRef(1)
   const dragRef = useRef<{ x: number; start: number; pausedUntil: number } | null>(null)
   const [shift, setShift] = useState(0)
-  const photo = pano ? sharpUrl(pano.preview || pano.url, 2048) : ''
+  const photo = cover ? sharpUrl(cover, 2048) : ''
 
   useEffect(() => {
     let frame = 0

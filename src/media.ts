@@ -35,6 +35,25 @@ export function sharpUrl(url: string, width: number): string {
   return url
 }
 
+export function mediaFileName(url: string): string {
+  try {
+    const path = decodeURIComponent(new URL(url).pathname)
+    const base = path.split('/').pop() || path
+    return base.replace(/^\d+px-/i, '').toLowerCase()
+  } catch {
+    return url.toLowerCase()
+  }
+}
+
+export function sameMedia(a: string, b: string): boolean {
+  if (!a || !b) return false
+  if (a === b) return true
+  const left = mediaFileName(a)
+  const right = mediaFileName(b)
+  if (left.length < 8 || right.length < 8) return false
+  return left === right
+}
+
 export function srcSet(url: string, widths: number[]): string | undefined {
   if (url.includes('wikimedia.org')) return undefined
   const value = widths.map((item) => `${sharpUrl(url, item)} ${item}w`).join(', ')
