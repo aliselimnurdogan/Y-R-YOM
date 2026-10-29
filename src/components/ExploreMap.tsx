@@ -1,20 +1,20 @@
-import { Fragment, useEffect, useMemo, useRef } from 'react'
-import { CircleMarker, MapContainer, Polyline, Popup, TileLayer, useMap } from 'react-leaflet'
+import { useEffect, useRef } from 'react'
+import { CircleMarker, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
 import { Link } from 'react-router-dom'
-import { formatKm } from '../format'
-import { ACTIVITY_COLORS } from '../labels'
+import { formatInt } from '../format'
+import { MARAS_CENTER, MARAS_ZOOM, PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
 import { TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL } from '../tiles'
-import type { RouteItem } from '../types'
+import type { PlaceItem } from '../types'
 
 function MapController({
   active,
-  idsKey,
-  tracks,
+  hoveredId,
+  places,
   mapRef,
 }: {
   active: boolean
-  idsKey: string
-  tracks: [number, number][][]
+  hoveredId: string | null
+  places: PlaceItem[]
   mapRef: { current: ReturnType<typeof useMap> | null }
 }) {
   const map = useMap()
@@ -28,93 +28,82 @@ function MapController({
     if (!active) return
     const handle = window.setTimeout(() => {
       map.invalidateSize()
-      if (!idsKey || tracks.length === 0) return
-      const points: [number, number][] = []
-      for (const track of tracks) {
-        for (const point of track) points.push(point)
+      if (places.length === 0) {
+        map.setView(MARAS_CENTER, MARAS_ZOOM)
+        return
       }
-      if (points.length > 0) map.fitBounds(points, { padding: [40, 40], maxZoom: 16 })
+      map.fitBounds(
+        places.map((place) => [place.lat, place.lng] as [number, number]),
+        { padding: [40, 40], maxZoom: 11 },
+      )
     }, 50)
     return () => window.clearTimeout(handle)
-  }, [active, idsKey, map, tracks])
+  }, [active, map, places])
+
+  useEffect(() => {
+    if (!hoveredId) return
+    const place = places.find((item) => item.id === hoveredId)
+    if (!place) return
+    map.panTo([place.lat, place.lng])
+  }, [hoveredId, map, places])
 
   return null
 }
 
 export function ExploreMap({
-  routes,
-  shown,
+  places,
+  hoveredId,
   active,
 }: {
-  routes: RouteItem[]
-  shown: RouteItem[]
+  places: PlaceItem[]
+  hoveredId: string | null
   active: boolean
 }) {
   const mapRef = useRef<ReturnType<typeof useMap> | null>(null)
-  const tracks = useMemo(
-    () => shown.map((route) => route.track.map((point) => [point[0], point[1]] as [number, number])),
-    [shown],
-  )
-  const idsKey = shown.map((route) => route.id).join('|')
 
   return (
-    <div className="map-wrap" role="region" aria-label="Türkiye haritası">
+    <div className="map-wrap" role="region" aria-label="Kahramanmaraş haritası">
       <MapContainer
-        center={[39.1, 35.2]}
-        zoom={6}
+        center={MARAS_CENTER}
+        zoom={MARAS_ZOOM}
         className="map-canvas"
         style={{ height: '100%', width: '100%' }}
         scrollWheelZoom
         zoomControl
       >
         <TileLayer url={TILE_URL} attribution={TILE_ATTRIBUTION} maxZoom={TILE_MAX_ZOOM} />
-        <MapController active={active} idsKey={idsKey} tracks={tracks} mapRef={mapRef} />
-        {shown.map((route) => {
-          const color = ACTIVITY_COLORS[route.activity]
-          const positions = route.track.map((point) => [point[0], point[1]] as [number, number])
-          return (
-            <Fragment key={route.id}>
-              <Polyline
-                positions={positions}
-                pathOptions={{ color: '#ffffff', weight: 7, opacity: 0.85, lineCap: 'round', lineJoin: 'round' }}
-                interactive={false}
-              />
-              <Polyline
-                positions={positions}
-                pathOptions={{ color, weight: 4, opacity: 0.95, lineCap: 'round', lineJoin: 'round' }}
-                interactive={false}
-              />
-            </Fragment>
-          )
-        })}
-        {routes.map((route) => {
-          const start = route.track[0]
-          if (!start) return null
-          const color = ACTIVITY_COLORS[route.activity]
+        <MapController active={active} hoveredId={hoveredId} places={places} mapRef={mapRef} />
+        {places.map((place) => {
+          const color = PLACE_KIND_COLORS[place.kind]
+          const selected = hoveredId === place.id
           return (
             <CircleMarker
-              key={route.id}
-              center={[start[0], start[1]]}
-              radius={6}
-              pathOptions={{ color: '#ffffff', weight: 2, fillColor: color, fillOpacity: 1, opacity: 1 }}
+              key={place.id}
+              center={[place.lat, place.lng]}
+              radius={selected ? 10 : 7}
+              pathOptions={{
+                color: '#ffffff',
+                weight: 2,
+                fillColor: color,
+                fillOpacity: 1,
+                opacity: 1,
+              }}
             >
               <Popup className="route-popup" maxWidth={240}>
-                <div className="popup-title">{route.title}</div>
-                <div className="popup-meta">{formatKm(route.distanceKm)} km</div>
-                <Link className="popup-link" to={`/rota/${route.id}`}>
-                  Rotayı aç
+                <div className="popup-title">{place.title}</div>
+                <div className="popup-meta">
+                  {PLACE_KIND_LABELS[place.kind]} · {place.city} · {formatInt(place.elevationM)} m
+                </div>
+                <Link className="popup-link" to={`/yer/${place.id}`}>
+                  Yeri aç
                 </Link>
               </Popup>
             </CircleMarker>
           )
         })}
       </MapContainer>
-      <button
-        type="button"
-        className="map-reset"
-        onClick={() => mapRef.current?.setView([39.1, 35.2], 6)}
-      >
-        Türkiye
+      <button type="button" className="map-reset" onClick={() => mapRef.current?.setView(MARAS_CENTER, MARAS_ZOOM)}>
+        Kahramanmaraş
       </button>
     </div>
   )

@@ -28,8 +28,8 @@ export function Header() {
         <input
           type="search"
           value={query}
-          placeholder="Rota, şehir veya bölge ara"
-          aria-label="Rota, şehir veya bölge ara"
+          placeholder="Kamp, yayla veya doğal alan ara"
+          aria-label="Kamp, yayla veya doğal alan ara"
           autoComplete="off"
           enterKeyHint="search"
           onChange={(event) => updateQuery(event.target.value)}

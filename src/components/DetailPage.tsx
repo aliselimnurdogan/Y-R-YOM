@@ -1,37 +1,33 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useId, useState, type FormEvent } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { difficultyClass, formatDate, formatDuration, formatInt, formatKm, initials } from '../format'
-import { downloadGpx } from '../geo'
-import { ACTIVITY_COLORS, ACTIVITY_LABELS } from '../labels'
-import { useRoutes } from '../routes-context'
+import { compressPhoto, loadComments, saveComment } from '../community'
+import { formatDate, formatInt, initials } from '../format'
+import { PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
+import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
-import { DetailMap, type WaypointFocus } from './DetailMap'
-import { ElevationChart } from './ElevationChart'
+import type { PlaceComment, PlaceItem } from '../types'
+import { DetailMap } from './DetailMap'
 
 export function DetailPage() {
   const { id = '' } = useParams()
   const navigate = useNavigate()
-  const { status, routes, reload } = useRoutes()
+  const { status, places, reload } = usePlaces()
   const { setQuery } = useSearch()
-  const route = routes.find((item) => item.id === id) ?? null
-  const [hoverIndex, setHoverIndex] = useState<number | null>(null)
-  const [waypoint, setWaypoint] = useState<WaypointFocus | null>(null)
-  const [coverOn, setCoverOn] = useState(true)
+  const place = places.find((item) => item.id === id) ?? null
+  const [photoIndex, setPhotoIndex] = useState(0)
 
   useEffect(() => {
-    setHoverIndex(null)
-    setWaypoint(null)
-    setCoverOn(true)
+    setPhotoIndex(0)
   }, [id])
 
   useEffect(() => {
-    document.title = route ? `${route.title} · Yürüyom` : 'Yürüyom'
-  }, [route])
+    document.title = place ? `${place.title} · Yürüyom` : 'Yürüyom'
+  }, [place])
 
   if (status === 'loading') {
     return (
       <div className="detail">
-        <p className="empty-note">Rota yükleniyor…</p>
+        <p className="empty-note">Alan yükleniyor…</p>
       </div>
     )
   }
@@ -40,7 +36,7 @@ export function DetailPage() {
     return (
       <div className="detail">
         <div className="empty-note">
-          <p>Rotalar yüklenemedi</p>
+          <p>Alanlar yüklenemedi</p>
           <button type="button" className="btn-ghost" onClick={reload}>
             Tekrar dene
           </button>
@@ -49,26 +45,19 @@ export function DetailPage() {
     )
   }
 
-  if (!route) {
+  if (!place) {
     return (
       <div className="detail">
-        <h1>Rota bulunamadı</h1>
-        <p className="lede">Bu rota listede yok.</p>
+        <h1>Alan bulunamadı</h1>
+        <p className="lede">Bu yer listede yok.</p>
         <Link className="btn-ghost stack-gap" to="/">
-          Rotalara dön
+          Alanlara dön
         </Link>
       </div>
     )
   }
 
-  const stats: Array<{ value: string; label: string; compact?: boolean }> = [
-    { value: formatKm(route.distanceKm), label: 'Mesafe km' },
-    { value: formatInt(route.elevationGainM), label: 'Tırmanış m' },
-    { value: formatInt(route.elevationLossM), label: 'İniş m' },
-    { value: formatDuration(route.durationMin), label: 'Süre (saat/dk)', compact: true },
-    { value: route.difficulty, label: 'Zorluk', compact: true },
-    { value: formatInt(route.maxElevationM), label: 'En yüksek m' },
-  ]
+  const currentImage = place.images[photoIndex] ?? place.images[0]
 
   return (
     <article className="detail">
@@ -79,97 +68,211 @@ export function DetailPage() {
             setQuery('')
           }}
         >
-          Türkiye
+          Kahramanmaraş
         </Link>
         <span aria-hidden="true">/</span>
         <button
           type="button"
           onClick={() => {
-            setQuery(route.region)
+            setQuery(place.city)
             navigate('/')
           }}
         >
-          {route.region}
-        </button>
-        <span aria-hidden="true">/</span>
-        <button
-          type="button"
-          onClick={() => {
-            setQuery(route.city)
-            navigate('/')
-          }}
-        >
-          {route.city}
+          {place.city}
         </button>
       </nav>
-      <h1>{route.title}</h1>
+      <h1>{place.title}</h1>
       <div className="author-row">
-        <span className="avatar" style={{ background: ACTIVITY_COLORS[route.activity] }} aria-hidden="true">
-          {initials(route.author)}
+        <span className="chip" style={{ background: `${PLACE_KIND_COLORS[place.kind]}22`, color: PLACE_KIND_COLORS[place.kind] }}>
+          {PLACE_KIND_LABELS[place.kind]}
         </span>
-        <span className="who-block">
-          <span className="who-name">{route.author}</span>
-          <span className="who-date">{formatDate(route.recordedAt)}</span>
-        </span>
-        <span className="act-name" style={{ color: ACTIVITY_COLORS[route.activity] }}>
-          {ACTIVITY_LABELS[route.activity]}
-        </span>
-        <span className={`chip ${difficultyClass(route.difficulty)}`}>{route.difficulty}</span>
-        {route.loop && <span className="chip loop">Halka rota</span>}
+        <span className="act-name">{place.city}</span>
+        <span className="chip">{formatInt(place.elevationM)} m</span>
         <div className="actions">
-          <button
-            type="button"
-            className="btn-fill btn-lg"
-            disabled={route.track.length === 0}
-            onClick={() => downloadGpx(route)}
-          >
-            GPX indir
-          </button>
           <Link className="btn-ghost" to="/">
             Geri
           </Link>
         </div>
       </div>
-      {coverOn && route.image && (
-        <img className="cover" src={route.image} alt="" onError={() => setCoverOn(false)} />
-      )}
-      <DetailMap route={route} hoverIndex={hoverIndex} waypoint={waypoint} />
-      <ElevationChart track={route.track} onHover={setHoverIndex} />
-      <div className="stats">
-        {stats.map((stat) => (
-          <div className="stat" key={stat.label}>
-            <b className={stat.compact || stat.value.length > 8 ? 'compact' : undefined}>{stat.value}</b>
-            <span>{stat.label}</span>
+      <p className="lede place-lede">{place.summary}</p>
+      {currentImage && (
+        <div className="gallery">
+          <img className="gallery-main" src={currentImage} alt={place.title} />
+          <div className="gallery-thumbs" role="list">
+            {place.images.map((image, index) => (
+              <button
+                key={image}
+                type="button"
+                className={index === photoIndex ? 'is-on' : undefined}
+                aria-label={`${index + 1}. fotoğraf`}
+                aria-current={index === photoIndex ? 'true' : undefined}
+                onClick={() => setPhotoIndex(index)}
+              >
+                <img src={image} alt="" width={96} height={68} />
+              </button>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="split">
-        <section>
-          <h2 className="section-title">Açıklama</h2>
-          <p className="desc">{route.description.trim() ? route.description : 'Açıklama eklenmemiş.'}</p>
+        </div>
+      )}
+      {place.videos.length > 0 && (
+        <section className="video-block">
+          <h2 className="section-title">Kısa videolar</h2>
+          <div className="video-grid">
+            {place.videos.map((video) => (
+              <figure key={video.youtubeId} className="video-card">
+                <div className="video-frame">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <figcaption>{video.title}</figcaption>
+              </figure>
+            ))}
+          </div>
         </section>
-        <section>
-          <h2 className="section-title">Geçiş noktaları</h2>
-          {route.waypoints.length === 0 ? (
-            <p className="muted">Bu rota için geçiş noktası yok.</p>
-          ) : (
-            <ul className="wp-list">
-              {route.waypoints.map((point, index) => (
-                <li key={`${point.name}-${index}`}>
-                  <button
-                    type="button"
-                    aria-current={waypoint?.i === index ? 'true' : undefined}
-                    onClick={() => setWaypoint({ lat: point.lat, lng: point.lng, i: index, n: Date.now() })}
-                  >
-                    <span className="wp-num">{index + 1}</span>
-                    {point.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )}
-        </section>
-      </div>
+      )}
+      <DetailMap place={place} />
+      <Comments place={place} />
     </article>
+  )
+}
+
+function Comments({ place }: { place: PlaceItem }) {
+  const photoId = useId()
+  const [comments, setComments] = useState<PlaceComment[]>(() => loadComments(place.id))
+  const [name, setName] = useState('')
+  const [text, setText] = useState('')
+  const [photo, setPhoto] = useState<string | undefined>()
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    setComments(loadComments(place.id))
+    setName('')
+    setText('')
+    setPhoto(undefined)
+    setError('')
+  }, [place.id])
+
+  async function onPhoto(file: File | undefined) {
+    setError('')
+    if (!file) {
+      setPhoto(undefined)
+      return
+    }
+    try {
+      setBusy(true)
+      setPhoto(await compressPhoto(file))
+    } catch (caught) {
+      setPhoto(undefined)
+      setError(caught instanceof Error ? caught.message : 'Fotoğraf yüklenemedi.')
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  function onSubmit(event: FormEvent) {
+    event.preventDefault()
+    const trimmedName = name.trim()
+    const trimmedText = text.trim()
+    if (trimmedName.length < 2) {
+      setError('İsim en az 2 karakter olsun.')
+      return
+    }
+    if (trimmedText.length < 3) {
+      setError('Yorum biraz daha uzun olsun.')
+      return
+    }
+    const comment: PlaceComment = {
+      id: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
+      placeId: place.id,
+      name: trimmedName.slice(0, 40),
+      text: trimmedText.slice(0, 600),
+      photo,
+      createdAt: new Date().toISOString(),
+    }
+    setComments(saveComment(comment))
+    setText('')
+    setPhoto(undefined)
+    setError('')
+  }
+
+  return (
+    <section className="comments">
+      <h2 className="section-title">Yorumlar ve fotoğraflar</h2>
+      <p className="muted comment-hint">
+        Bu tarayıcıda kalır. Sunucuya gönderilmez; fotoğrafını ve notunu buradan paylaşabilirsin.
+      </p>
+      <form className="comment-form" onSubmit={onSubmit}>
+        <label>
+          İsmin
+          <input
+            value={name}
+            maxLength={40}
+            autoComplete="nickname"
+            onChange={(event) => setName(event.target.value)}
+          />
+        </label>
+        <label>
+          Yorumun
+          <textarea
+            value={text}
+            maxLength={600}
+            rows={4}
+            placeholder={`${place.title} nasıl bir yerdi?`}
+            onChange={(event) => setText(event.target.value)}
+          />
+        </label>
+        <div className="comment-tools">
+          <label className="photo-pick" htmlFor={photoId}>
+            Fotoğraf ekle
+            <input
+              id={photoId}
+              type="file"
+              accept="image/*"
+              onChange={(event) => void onPhoto(event.target.files?.[0])}
+            />
+          </label>
+          {photo && (
+            <button type="button" className="linkish" onClick={() => setPhoto(undefined)}>
+              Fotoğrafı kaldır
+            </button>
+          )}
+          <button type="submit" className="btn-fill" disabled={busy}>
+            Paylaş
+          </button>
+        </div>
+        {photo && <img className="comment-preview" src={photo} alt="Yüklenecek fotoğraf" />}
+        {error && (
+          <p className="form-error" role="alert">
+            {error}
+          </p>
+        )}
+      </form>
+      {comments.length === 0 ? (
+        <p className="muted">İlk yorumu sen yaz, bir de fotoğrafını bırak.</p>
+      ) : (
+        <ul className="comment-list">
+          {comments.map((comment) => (
+            <li key={comment.id} className="comment">
+              <span className="avatar" style={{ background: PLACE_KIND_COLORS[place.kind] }} aria-hidden="true">
+                {initials(comment.name)}
+              </span>
+              <div>
+                <p className="comment-head">
+                  <strong>{comment.name}</strong>
+                  <span>{formatDate(comment.createdAt)}</span>
+                </p>
+                <p className="comment-text">{comment.text}</p>
+                {comment.photo && <img className="comment-photo" src={comment.photo} alt="" />}
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
   )
 }

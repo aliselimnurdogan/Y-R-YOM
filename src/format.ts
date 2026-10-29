@@ -1,4 +1,4 @@
-import type { Difficulty, RouteItem } from './types'
+import type { Difficulty, PlaceItem } from './types'
 
 export function cx(...parts: Array<string | false | null | undefined>): string {
   return parts.filter(Boolean).join(' ')
@@ -21,38 +21,19 @@ export function trIncludes(haystack: string, needle: string): boolean {
   return haystack.toLocaleLowerCase('tr').includes(q.toLocaleLowerCase('tr')) || foldTr(haystack).includes(foldTr(q))
 }
 
-export function matchesQuery(route: RouteItem, query: string): boolean {
+export function matchesQuery(place: PlaceItem, query: string): boolean {
   const q = query.trim()
   if (!q) return true
   return (
-    trIncludes(route.title, q) ||
-    trIncludes(route.city, q) ||
-    trIncludes(route.region, q) ||
-    trIncludes(route.author, q)
+    trIncludes(place.title, q) ||
+    trIncludes(place.city, q) ||
+    trIncludes(place.summary, q) ||
+    trIncludes(place.kind, q)
   )
-}
-
-export function formatKm(n: number): string {
-  const rounded = Math.round(n * 10) / 10
-  const digits = Number.isInteger(rounded) ? 0 : 1
-  return rounded.toLocaleString('tr-TR', {
-    minimumFractionDigits: digits,
-    maximumFractionDigits: 1,
-  })
 }
 
 export function formatInt(n: number): string {
   return Math.round(n).toLocaleString('tr-TR')
-}
-
-export function formatDuration(min: number): string {
-  if (!Number.isFinite(min) || min < 0) return '—'
-  const total = Math.round(min)
-  const hours = Math.floor(total / 60)
-  const minutes = total % 60
-  if (hours <= 0) return `${minutes} dk`
-  if (minutes === 0) return `${hours} sa`
-  return `${hours} sa ${minutes} dk`
 }
 
 export function formatDate(iso: string): string {
@@ -75,9 +56,4 @@ export function difficultyClass(difficulty: Difficulty): string {
   if (difficulty === 'Orta') return 'orta'
   if (difficulty === 'Zor') return 'zor'
   return 'cok'
-}
-
-export function featuredScore(route: RouteItem): number {
-  const count = Math.max(0, route.ratingCount)
-  return route.rating * Math.log10(count + 1)
 }

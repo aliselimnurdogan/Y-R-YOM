@@ -3,7 +3,7 @@ import { Link, Route, Routes } from 'react-router-dom'
 import { Header } from './components/Header'
 import { DetailPage } from './components/DetailPage'
 import { ExplorePage } from './components/ExplorePage'
-import { RoutesProvider } from './routes-context'
+import { PlacesProvider } from './places-context'
 import { SearchProvider } from './search-context'
 
 interface BoundaryProps {
@@ -42,7 +42,7 @@ function NotFound() {
       <h1>Sayfa bulunamadı</h1>
       <p className="lede">Aradığın sayfa yok.</p>
       <Link className="btn-ghost stack-gap" to="/">
-        Rotalara dön
+        Alanlara dön
       </Link>
     </div>
   )
@@ -50,7 +50,7 @@ function NotFound() {
 
 export function App() {
   return (
-    <RoutesProvider>
+    <PlacesProvider>
       <SearchProvider>
         <div className="app-shell">
           <a className="skip" href="#icerik">
@@ -61,13 +61,13 @@ export function App() {
             <AppErrorBoundary>
               <Routes>
                 <Route path="/" element={<ExplorePage />} />
-                <Route path="/rota/:id" element={<DetailPage />} />
+                <Route path="/yer/:id" element={<DetailPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </AppErrorBoundary>
           </main>
         </div>
       </SearchProvider>
-    </RoutesProvider>
+    </PlacesProvider>
   )
 }
