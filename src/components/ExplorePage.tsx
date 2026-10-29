@@ -15,10 +15,12 @@ import {
   ZONE_COLORS,
   type PlaceSortKey,
 } from '../labels'
-import { APP_STEP, HAS_CATALOG, HAS_FEEL, HAS_LOOK } from '../step'
+import { fetchOsmCamps, mergePlaces } from '../overpass'
+import { isWaterPlace, PROVINCES } from '../provinces'
+import { APP_STEP, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_LOOK } from '../step'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
-import type { PlaceKind } from '../types'
+import type { PlaceItem, PlaceKind } from '../types'
 import { useMediaQuery } from '../use-media'
 import { ExploreMap } from './ExploreMap'
 import { PlaceCard } from './PlaceCard'
@@ -26,40 +28,90 @@ import { PlaceCard } from './PlaceCard'
 export function ExplorePage() {
   const turkey = APP_STEP !== '2'
   const catalog = HAS_CATALOG
-  const kinds = APP_STEP === '2' ? PLACE_KINDS : CAMP_KINDS
+  const kinds: PlaceKind[] = HAS_LIVE
+    ? [...CAMP_KINDS, 'kamp', 'doga', 'manzara']
+    : APP_STEP === '2'
+      ? PLACE_KINDS
+      : CAMP_KINDS
   const basePath = APP_STEP === '2' ? '/yer' : '/kamp'
-  const title = catalog
-    ? 'Türkiye korunan kamp alanları'
-    : turkey
-      ? 'Türkiye’deki kamp alanları'
-      : 'Kahramanmaraş kamp ve doğa'
+  const title = HAS_LIVE
+    ? 'Türkiye kamp, yayla ve doğa'
+    : catalog
+      ? 'Türkiye korunan kamp alanları'
+      : turkey
+        ? 'Türkiye’deki kamp alanları'
+        : 'Kahramanmaraş kamp ve doğa'
   const { status, places, reload } = usePlaces()
   const { query, setQuery } = useSearch()
   const mobile = useMediaQuery('(max-width: 860px)')
   const [mode, setMode] = useState<'list' | 'map'>('list')
   const [kind, setKind] = useState<PlaceKind | null>(null)
   const [zone, setZone] = useState<string | null>(null)
+  const [province, setProvince] = useState('')
+  const [only360, setOnly360] = useState(false)
+  const [onlyWater, setOnlyWater] = useState(false)
   const [sort, setSort] = useState<PlaceSortKey>('featured')
   const [hoveredId, setHoveredId] = useState<string | null>(null)
+  const [osm, setOsm] = useState<PlaceItem[]>([])
+  const [osmStatus, setOsmStatus] = useState<'idle' | 'loading' | 'error' | 'ready'>('idle')
 
   useEffect(() => {
-    document.title = HAS_LOOK
-      ? 'Yürüyom — Net bakış'
-      : HAS_FEEL
-        ? 'Yürüyom — Orada gibi hisset'
-        : catalog
-        ? 'Yürüyom — Kamp rehberi'
-        : turkey
-          ? 'Yürüyom — Kamp alanları'
-          : 'Yürüyom — Kahramanmaraş kamp ve doğa'
+    document.title = HAS_LIVE
+      ? 'Yürüyom — 81 il'
+      : HAS_LOOK
+        ? 'Yürüyom — Net bakış'
+        : HAS_FEEL
+          ? 'Yürüyom — Orada gibi hisset'
+          : catalog
+            ? 'Yürüyom — Kamp rehberi'
+            : turkey
+              ? 'Yürüyom — Kamp alanları'
+              : 'Yürüyom — Kahramanmaraş kamp ve doğa'
   }, [catalog, turkey])
 
+  useEffect(() => {
+    if (!HAS_LIVE || !province) {
+      setOsm([])
+      setOsmStatus('idle')
+      return
+    }
+    let alive = true
+    setOsmStatus('loading')
+    void fetchOsmCamps(province)
+      .then((items) => {
+        if (!alive) return
+        setOsm(items)
+        setOsmStatus('ready')
+      })
+      .catch(() => {
+        if (!alive) return
+        setOsm([])
+        setOsmStatus('error')
+      })
+    return () => {
+      alive = false
+    }
+  }, [province])
+
+  const merged = useMemo(() => (HAS_LIVE ? mergePlaces(places, osm) : places), [places, osm])
+
+  const provinceOptions = useMemo(
+    () => (zone ? PROVINCES.filter((item) => item.zone === zone) : PROVINCES),
+    [zone],
+  )
+
   const filtered = useMemo(() => {
-    const list = places.filter((place) => {
+    const list = merged.filter((place) => {
       if (catalog) {
         if (zone && place.zone !== zone) return false
       } else if (kind && place.kind !== kind) {
         return false
+      }
+      if (HAS_LIVE) {
+        if (kind && place.kind !== kind) return false
+        if (province && place.region !== province) return false
+        if (only360 && !place.pano) return false
+        if (onlyWater && !isWaterPlace(place.title, place.kind)) return false
       }
       return matchesPlace(place, query)
     })
@@ -77,10 +129,19 @@ export function ExplorePage() {
       if (diff !== 0) return diff
       return a.title.localeCompare(b.title, 'tr')
     })
-  }, [places, query, kind, zone, sort, kinds, catalog])
+  }, [merged, query, kind, zone, sort, kinds, catalog, province, only360, onlyWater])
 
   const mapActive = !mobile || mode === 'map'
-  const filtersOn = Boolean((catalog ? zone : kind) || query)
+  const filtersOn = Boolean((catalog ? zone : kind) || query || province || only360 || onlyWater)
+
+  function clearFilters() {
+    setKind(null)
+    setZone(null)
+    setProvince('')
+    setOnly360(false)
+    setOnlyWater(false)
+    setQuery('')
+  }
 
   return (
     <section className="explore">
@@ -99,9 +160,18 @@ export function ExplorePage() {
             {status === 'ready' && (
               <p className="count" aria-live="polite">
                 {formatInt(filtered.length)} alan
+                {HAS_LIVE && osmStatus === 'loading' ? ' · OSM yükleniyor' : ''}
+                {HAS_LIVE && osmStatus === 'error' ? ' · OSM alınamadı' : ''}
+                {HAS_LIVE && osmStatus === 'ready' ? ` · ${formatInt(osm.length)} OSM` : ''}
               </p>
             )}
             {catalog && <p className="catalog-banner">{LEGAL_CAMP_NOTE}</p>}
+            {HAS_LIVE && (
+              <p className="catalog-banner">
+                81 il filtresi ve OpenStreetMap canlı kamp katmanı. Pin izin değildir. İl seçince o ilin OSM kampları
+                gelir.
+              </p>
+            )}
             <div className="kind-row" role="group" aria-label={catalog ? 'Bölge' : 'Alan türü'}>
               <button
                 type="button"
@@ -119,7 +189,12 @@ export function ExplorePage() {
                       key={item}
                       type="button"
                       className={cx('kind-pill', zone === item && 'is-on')}
-                      onClick={() => setZone(item)}
+                      onClick={() => {
+                        setZone(item)
+                        if (province && !PROVINCES.some((row) => row.name === province && row.zone === item)) {
+                          setProvince('')
+                        }
+                      }}
                     >
                       <span className="swatch" style={{ background: ZONE_COLORS[item] }} />
                       {item}
@@ -137,17 +212,55 @@ export function ExplorePage() {
                     </button>
                   ))}
             </div>
+            {HAS_LIVE && (
+              <>
+                <label className="live-select">
+                  <span>İl</span>
+                  <select
+                    value={province}
+                    onChange={(event) => setProvince(event.target.value)}
+                    aria-label="81 il"
+                  >
+                    <option value="">81 il — OSM için seç</option>
+                    {provinceOptions.map((item) => (
+                      <option key={item.name} value={item.name}>
+                        {item.name}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <div className="kind-row" role="group" aria-label="Hızlı filtre">
+                  {kinds.map((item) => (
+                    <button
+                      key={item}
+                      type="button"
+                      className={cx('kind-pill', kind === item && 'is-on')}
+                      onClick={() => setKind(kind === item ? null : item)}
+                    >
+                      <span className="swatch" style={{ background: PLACE_KIND_COLORS[item] }} />
+                      {PLACE_KIND_LABELS[item]}
+                    </button>
+                  ))}
+                  <button
+                    type="button"
+                    className={cx('kind-pill', only360 && 'is-on')}
+                    onClick={() => setOnly360((value) => !value)}
+                  >
+                    360° olanlar
+                  </button>
+                  <button
+                    type="button"
+                    className={cx('kind-pill', onlyWater && 'is-on')}
+                    onClick={() => setOnlyWater((value) => !value)}
+                  >
+                    Su kenarı
+                  </button>
+                </div>
+              </>
+            )}
             <div className="subbar">
               {filtersOn ? (
-                <button
-                  type="button"
-                  className="linkish"
-                  onClick={() => {
-                    setKind(null)
-                    setZone(null)
-                    setQuery('')
-                  }}
-                >
+                <button type="button" className="linkish" onClick={clearFilters}>
                   Temizle
                 </button>
               ) : (
@@ -182,15 +295,7 @@ export function ExplorePage() {
             {status === 'ready' && filtered.length === 0 && (
               <div className="empty-note" role="status">
                 <p>Bu aramaya uygun alan yok.</p>
-                <button
-                  type="button"
-                  className="linkish"
-                  onClick={() => {
-                    setKind(null)
-                    setZone(null)
-                    setQuery('')
-                  }}
-                >
+                <button type="button" className="linkish" onClick={clearFilters}>
                   Temizle
                 </button>
               </div>

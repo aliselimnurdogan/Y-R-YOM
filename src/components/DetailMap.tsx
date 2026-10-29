@@ -1,7 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
 import { MARAS_CENTER, MARAS_ZOOM, PLACE_KIND_COLORS } from '../labels'
-import { TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL } from '../tiles'
+import { HAS_LIVE } from '../step'
+import { BASEMAPS, TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL, type BasemapId } from '../tiles'
 import type { PlaceItem } from '../types'
 
 function DetailController({ place }: { place: PlaceItem }) {
@@ -24,6 +25,8 @@ function DetailController({ place }: { place: PlaceItem }) {
 
 export function DetailMap({ place }: { place: PlaceItem }) {
   const color = PLACE_KIND_COLORS[place.kind]
+  const [basemap, setBasemap] = useState<BasemapId>('topo')
+  const layer = HAS_LIVE ? BASEMAPS[basemap] : { url: TILE_URL, attribution: TILE_ATTRIBUTION }
 
   return (
     <div className="detail-map" role="region" aria-label="Yer haritası">
@@ -35,7 +38,7 @@ export function DetailMap({ place }: { place: PlaceItem }) {
         scrollWheelZoom
         zoomControl
       >
-        <TileLayer url={TILE_URL} attribution={TILE_ATTRIBUTION} maxZoom={TILE_MAX_ZOOM} />
+        <TileLayer key={layer.url} url={layer.url} attribution={layer.attribution} maxZoom={TILE_MAX_ZOOM} />
         <DetailController place={place} />
         <CircleMarker
           center={[place.lat, place.lng]}
@@ -47,6 +50,20 @@ export function DetailMap({ place }: { place: PlaceItem }) {
           </Popup>
         </CircleMarker>
       </MapContainer>
+      {HAS_LIVE && (
+        <div className="basemap-switch on-detail" role="group" aria-label="Harita katmanı">
+          {(Object.keys(BASEMAPS) as BasemapId[]).map((id) => (
+            <button
+              key={id}
+              type="button"
+              className={basemap === id ? 'is-on' : undefined}
+              onClick={() => setBasemap(id)}
+            >
+              {BASEMAPS[id].label}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

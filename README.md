@@ -52,6 +52,14 @@ Klasör: `adim-6`
 
 Aynı kamp rehberi ve 360 bakış; yumuşak doğa arka planı, keskin fotoğraflar, tam ekran 360.
 
+## 7. adım — 81 il, canlı OSM ve Ultra-HD 360
+
+Klasör: `adim-7`
+
+`adim-7/index.html` dosyasına çift tıkla.
+
+DKMP katalog + 81 il doğa noktaları. İl seçince OpenStreetMap kamp/piknik gelir. Topo/uydu/OpenTopo, hava, yol tarifi, yorum ve puan. 360 bakış 70° FOV. 3D model yok.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -62,5 +70,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 4. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-4/
 - 5. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-5/
 - 6. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-6/
+- 7. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-7/
 
 Harita ve fotoğraf için internet açık olsun.

@@ -1,6 +1,7 @@
-import type { PlaceComment } from './types'
+import type { PlaceComment, PlaceScores } from './types'
 
-const STORAGE_KEY = 'yuruyom-adim2-community-v1'
+const STORAGE_KEY = 'yuruyom-community-v2'
+const LEGACY_KEY = 'yuruyom-adim2-community-v1'
 const MAX_COMMENTS = 40
 const MAX_PHOTO_CHARS = 900_000
 
@@ -20,12 +21,25 @@ function asComment(raw: unknown): PlaceComment | null {
   if (typeof record.photo === 'string' && record.photo.startsWith('data:image/')) {
     comment.photo = record.photo
   }
+  const scores = parseScores(record.scores)
+  if (scores) comment.scores = scores
   return comment
+}
+
+function parseScores(raw: unknown): PlaceScores | undefined {
+  if (!raw || typeof raw !== 'object') return undefined
+  const record = raw as Record<string, unknown>
+  const nature = Number(record.nature)
+  const clean = Number(record.clean)
+  const access = Number(record.access)
+  const safety = Number(record.safety)
+  if (![nature, clean, access, safety].every((value) => value >= 1 && value <= 5)) return undefined
+  return { nature, clean, access, safety }
 }
 
 export function loadComments(placeId: string): PlaceComment[] {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY)
+    const raw = localStorage.getItem(STORAGE_KEY) ?? localStorage.getItem(LEGACY_KEY)
     if (!raw) return []
     const parsed = JSON.parse(raw) as unknown
     if (!Array.isArray(parsed)) return []
@@ -40,7 +54,7 @@ export function loadComments(placeId: string): PlaceComment[] {
 
 function loadAll(): PlaceComment[] {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY)
+    const raw = localStorage.getItem(STORAGE_KEY) ?? localStorage.getItem(LEGACY_KEY)
     if (!raw) return []
     const parsed = JSON.parse(raw) as unknown
     if (!Array.isArray(parsed)) return []

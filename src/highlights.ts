@@ -1,0 +1,116 @@
+import { zoneOfProvince } from './provinces'
+import type { PlaceItem, PlaceKind } from './types'
+
+interface Highlight {
+  id: string
+  title: string
+  city: string
+  region: string
+  lat: number
+  lng: number
+  elevationM: number
+  kind: PlaceKind
+  summary: string
+}
+
+const RAW: Highlight[] = [
+  { id: 'sile-agva', title: 'Şile Ağva kıyı kampı', city: 'Şile', region: 'İstanbul', lat: 41.137, lng: 29.855, elevationM: 20, kind: 'sahil', summary: 'Karadeniz kıyısı; resmi tahsisli yerde kalın.' },
+  { id: 'polonezkoy', title: 'Polonezköy orman kenarı', city: 'Beykoz', region: 'İstanbul', lat: 41.108, lng: 29.208, elevationM: 160, kind: 'orman', summary: 'İstanbul orman parkı; serbest kamp yok.' },
+  { id: 'uludag', title: 'Uludağ Sarıalan', city: 'Osmangazi', region: 'Bursa', lat: 40.105, lng: 29.127, elevationM: 1620, kind: 'yayla', summary: 'Uludağ milli parkı yayla hattı.' },
+  { id: 'kazdaglari', title: 'Kazdağları milli parkı', city: 'Edremit', region: 'Balıkesir', lat: 39.704, lng: 26.84, elevationM: 900, kind: 'orman', summary: 'Kazdağı orman ve yayla; yangın döneminde dikkat.' },
+  { id: 'gokceada', title: 'Gökçeada Aydıncık', city: 'Gökçeada', region: 'Çanakkale', lat: 40.227, lng: 25.944, elevationM: 10, kind: 'sahil', summary: 'Ada kıyısı; rüzgarlı.' },
+  { id: 'igneada-longoz', title: 'İğneada Longoz ormanları', city: 'Demirköy', region: 'Kırklareli', lat: 41.875, lng: 27.985, elevationM: 10, kind: 'orman', summary: 'Longoz milli parkı; sulak orman.' },
+  { id: 'erikli-yalova', title: 'Erikli Yaylası', city: 'Termal', region: 'Yalova', lat: 40.589, lng: 29.148, elevationM: 900, kind: 'yayla', summary: 'Yalova yaylası; hafta sonu kalabalık.' },
+  { id: 'kabak-koyu', title: 'Kabak Koyu', city: 'Fethiye', region: 'Muğla', lat: 36.465, lng: 29.123, elevationM: 80, kind: 'sahil', summary: 'Likya koyu; yürüyüşle inilir.' },
+  { id: 'kelebekler', title: 'Kelebekler Vadisi', city: 'Fethiye', region: 'Muğla', lat: 36.494, lng: 29.134, elevationM: 20, kind: 'sahil', summary: 'Tekne veya patika; koruma alanı.' },
+  { id: 'akyaka', title: 'Akyaka Azmak', city: 'Ula', region: 'Muğla', lat: 37.053, lng: 28.325, elevationM: 10, kind: 'sahil', summary: 'Azmak ve çam; ücretli kamplar.' },
+  { id: 'dilek-yarimadasi', title: 'Dilek Yarımadası', city: 'Kuşadası', region: 'Aydın', lat: 37.676, lng: 27.155, elevationM: 50, kind: 'sahil', summary: 'Milli park; geceleme kuralı sıkı.' },
+  { id: 'honaz', title: 'Honaz Dağı', city: 'Honaz', region: 'Denizli', lat: 37.677, lng: 29.287, elevationM: 1800, kind: 'orman', summary: 'Milli park zirve ve orman.' },
+  { id: 'frig-vadisi', title: 'Frig Vadisi', city: 'İhsaniye', region: 'Afyonkarahisar', lat: 39.041, lng: 30.499, elevationM: 1100, kind: 'doga', summary: 'Kaya yerleşimleri; serbest kamp yok.' },
+  { id: 'ulubey-kanyon', title: 'Ulubey Kanyonu', city: 'Ulubey', region: 'Uşak', lat: 38.419, lng: 29.291, elevationM: 700, kind: 'doga', summary: 'Türkiye’nin uzun kanyonlarından.' },
+  { id: 'olimpos', title: 'Olimpos Çıralı', city: 'Kemer', region: 'Antalya', lat: 36.398, lng: 30.474, elevationM: 20, kind: 'sahil', summary: 'Antik kent ve kıyı kampı; rezervasyon.' },
+  { id: 'koprulu', title: 'Köprülü Kanyon', city: 'Manavgat', region: 'Antalya', lat: 37.191, lng: 31.182, elevationM: 300, kind: 'doga', summary: 'Rafting ve kanyon milli parkı.' },
+  { id: 'tazi-kanyon', title: 'Tazı Kanyonu', city: 'Manavgat', region: 'Antalya', lat: 37.223, lng: 31.18, elevationM: 450, kind: 'doga', summary: 'Seyir terası; geceleme yok.' },
+  { id: 'bogsak', title: 'Boğsak koyu', city: 'Silifke', region: 'Mersin', lat: 36.272, lng: 33.82, elevationM: 15, kind: 'sahil', summary: 'Mersin kıyısı.' },
+  { id: 'kapikaya', title: 'Kapıkaya Kanyonu', city: 'Karaisalı', region: 'Adana', lat: 37.269, lng: 35.062, elevationM: 250, kind: 'doga', summary: 'Adana kanyonu; yazın kalabalık.' },
+  { id: 'baskonus', title: 'Başkonuş Yaylası', city: 'Andırın', region: 'Kahramanmaraş', lat: 37.593, lng: 36.581, elevationM: 1300, kind: 'yayla', summary: 'Maraş yaylası; orman içi serbest kamp yok.' },
+  { id: 'yavsan', title: 'Yavşan Yaylası', city: 'Onikişubat', region: 'Kahramanmaraş', lat: 37.72, lng: 36.72, elevationM: 1450, kind: 'yayla', summary: 'Kahramanmaraş yayla kampı.' },
+  { id: 'yesilgoz', title: 'Yeşilgöz', city: 'Andırın', region: 'Kahramanmaraş', lat: 37.52, lng: 36.48, elevationM: 700, kind: 'gol', summary: 'Turkuaz gölet; günübirlik yoğun.' },
+  { id: 'ayder', title: 'Ayder Yaylası', city: 'Çamlıhemşin', region: 'Rize', lat: 40.953, lng: 41.104, elevationM: 1350, kind: 'yayla', summary: 'Kaçkar etekleri; otel yoğun, çadır sınırlı.' },
+  { id: 'pokut', title: 'Pokut Yaylası', city: 'Çamlıhemşin', region: 'Rize', lat: 40.921, lng: 41.145, elevationM: 2000, kind: 'yayla', summary: 'Bulut üstü yayla; yürüyüşle.' },
+  { id: 'uzungol', title: 'Uzungöl', city: 'Çaykara', region: 'Trabzon', lat: 40.619, lng: 40.295, elevationM: 1090, kind: 'gol', summary: 'Turistik göl; resmi kamp yerini sorun.' },
+  { id: 'borcka-karagol', title: 'Borçka Karagöl', city: 'Borçka', region: 'Artvin', lat: 41.41, lng: 41.89, elevationM: 1540, kind: 'gol', summary: 'Artvin heyelan gölü.' },
+  { id: 'valla', title: 'Valla Kanyonu', city: 'Pınarbaşı', region: 'Kastamonu', lat: 41.64, lng: 33.06, elevationM: 600, kind: 'doga', summary: 'Horma-Valla hattı; geceleme kanyon tabanında yok.' },
+  { id: 'yenice', title: 'Yenice ormanları', city: 'Yenice', region: 'Karabük', lat: 41.2, lng: 32.33, elevationM: 500, kind: 'orman', summary: 'Karabük orman kampı.' },
+  { id: 'hamsilos', title: 'Hamsilos Koyu', city: 'Sinop', region: 'Sinop', lat: 42.06, lng: 35.04, elevationM: 10, kind: 'sahil', summary: 'Fiyort koyu; milli park.' },
+  { id: 'cambasi', title: 'Çambaşı Yaylası', city: 'Kabadüz', region: 'Ordu', lat: 40.64, lng: 37.97, elevationM: 1850, kind: 'yayla', summary: 'Ordu yaylası.' },
+  { id: 'kumbet', title: 'Kümbet Yaylası', city: 'Dereli', region: 'Giresun', lat: 40.55, lng: 38.4, elevationM: 1600, kind: 'yayla', summary: 'Giresun yaylası.' },
+  { id: 'soguksu', title: 'Soğuksu Milli Parkı', city: 'Kızılcahamam', region: 'Ankara', lat: 40.454, lng: 32.546, elevationM: 1050, kind: 'orman', summary: 'Ankara orman milli parkı.' },
+  { id: 'ihlara', title: 'Ihlara Vadisi', city: 'Güzelyurt', region: 'Aksaray', lat: 38.29, lng: 34.28, elevationM: 1200, kind: 'doga', summary: 'Vadi yürüyüşü; geceleme vadide yok.' },
+  { id: 'kizilcukur', title: 'Kızılçukur', city: 'Ürgüp', region: 'Nevşehir', lat: 38.64, lng: 34.9, elevationM: 1200, kind: 'doga', summary: 'Kapadokya vadi; kamp kuralı sıkı.' },
+  { id: 'beysehir', title: 'Beyşehir Gölü', city: 'Beyşehir', region: 'Konya', lat: 37.68, lng: 31.72, elevationM: 1120, kind: 'gol', summary: 'Göl milli parkı.' },
+  { id: 'kapuzbasi', title: 'Kapuzbaşı Şelaleleri', city: 'Yahyalı', region: 'Kayseri', lat: 37.76, lng: 35.37, elevationM: 700, kind: 'doga', summary: 'Aladağlar etek şelalesi.' },
+  { id: 'camlik-yozgat', title: 'Çamlık Milli Parkı', city: 'Yozgat', region: 'Yozgat', lat: 39.8, lng: 34.81, elevationM: 1350, kind: 'orman', summary: 'Yozgat çamlığı.' },
+  { id: 'ilgaz', title: 'Ilgaz Kadınçayırı', city: 'Ilgaz', region: 'Çankırı', lat: 41.0, lng: 33.67, elevationM: 1800, kind: 'yayla', summary: 'Ilgaz dağ milli parkı.' },
+  { id: 'munzur', title: 'Munzur Vadisi', city: 'Ovacık', region: 'Tunceli', lat: 39.36, lng: 39.22, elevationM: 1300, kind: 'doga', summary: 'Milli park vadi ve gözeler.' },
+  { id: 'nemrut-bitlis', title: 'Nemrut Krater Gölü', city: 'Tatvan', region: 'Bitlis', lat: 38.62, lng: 42.24, elevationM: 2293, kind: 'gol', summary: 'Krater gölü; yüksek ve soğuk.' },
+  { id: 'cildir', title: 'Çıldır Gölü', city: 'Çıldır', region: 'Kars', lat: 41.04, lng: 43.22, elevationM: 1959, kind: 'gol', summary: 'Kışın buz, yazın rüzgar.' },
+  { id: 'tortum', title: 'Tortum Şelalesi', city: 'Uzundere', region: 'Erzurum', lat: 40.67, lng: 41.67, elevationM: 1000, kind: 'doga', summary: 'Şelale ve göl.' },
+  { id: 'hazar', title: 'Hazar Gölü', city: 'Sivrice', region: 'Elazığ', lat: 38.48, lng: 39.3, elevationM: 1248, kind: 'gol', summary: 'Tektonik göl.' },
+  { id: 'levent', title: 'Levent Vadisi', city: 'Akçadağ', region: 'Malatya', lat: 38.45, lng: 37.82, elevationM: 1400, kind: 'doga', summary: 'Peri bacası vadi.' },
+  { id: 'halfeti', title: 'Halfeti', city: 'Halfeti', region: 'Şanlıurfa', lat: 37.245, lng: 37.945, elevationM: 400, kind: 'doga', summary: 'Batık köy ve Fırat; kamp sınırlı.' },
+  { id: 'nemrut-adıyaman', title: 'Nemrut Dağı', city: 'Kahta', region: 'Adıyaman', lat: 37.98, lng: 38.74, elevationM: 2150, kind: 'doga', summary: 'Milli park zirve; gece soğuk.' },
+  { id: 'hasankeyf', title: 'Hasankeyf', city: 'Hasankeyf', region: 'Batman', lat: 37.71, lng: 41.41, elevationM: 500, kind: 'doga', summary: 'Dicle kenarı; yeni yerleşim.' },
+  { id: 'beyazsu', title: 'Beyazsu', city: 'Artuklu', region: 'Mardin', lat: 37.35, lng: 40.88, elevationM: 900, kind: 'doga', summary: 'Mardin mesire ve su.' },
+  { id: 'rumkale', title: 'Rumkale', city: 'Yavuzeli', region: 'Gaziantep', lat: 37.28, lng: 37.84, elevationM: 500, kind: 'doga', summary: 'Fırat kalesi; tekne ile.' },
+  { id: 'ballikayalar', title: 'Ballıkayalar', city: 'Gebze', region: 'Kocaeli', lat: 40.825, lng: 29.517, elevationM: 180, kind: 'doga', summary: 'Kanyon tabiat parkı.' },
+  { id: 'poyrazlar', title: 'Poyrazlar Gölü', city: 'Adapazarı', region: 'Sakarya', lat: 40.838, lng: 30.468, elevationM: 40, kind: 'gol', summary: 'Sakarya gölü; resmi kamp yerini sorun.' },
+  { id: 'ucmakdere', title: 'Uçmakdere', city: 'Şarköy', region: 'Tekirdağ', lat: 40.795, lng: 27.365, elevationM: 120, kind: 'orman', summary: 'Tekirdağ orman köyü.' },
+  { id: 'gokcetepe', title: 'Gökçetepe', city: 'Keşan', region: 'Edirne', lat: 40.645, lng: 26.78, elevationM: 80, kind: 'orman', summary: 'Edirne orman kampı.' },
+  { id: 'kucukelmali', title: 'Küçükelmalı', city: 'Pazaryeri', region: 'Bilecik', lat: 39.98, lng: 29.9, elevationM: 1100, kind: 'yayla', summary: 'Bilecik yaylası.' },
+  { id: 'izmir-karagol', title: 'Karagöl tabiat parkı', city: 'Bornova', region: 'İzmir', lat: 38.558, lng: 27.225, elevationM: 820, kind: 'gol', summary: 'Yamanlar Karagöl; geceleme kuralı sıkı.' },
+  { id: 'spil', title: 'Spil Dağı', city: 'Yunusemre', region: 'Manisa', lat: 38.567, lng: 27.43, elevationM: 1400, kind: 'orman', summary: 'Milli park; yazın kalabalık.' },
+  { id: 'domanic', title: 'Domaniç ormanları', city: 'Domaniç', region: 'Kütahya', lat: 39.8, lng: 29.61, elevationM: 1100, kind: 'orman', summary: 'Kütahya orman kuşağı.' },
+  { id: 'salda', title: 'Salda Gölü', city: 'Yeşilova', region: 'Burdur', lat: 37.55, lng: 29.68, elevationM: 1150, kind: 'gol', summary: 'Turkuaz göl; koruma alanı, serbest kamp yok.' },
+  { id: 'kovada', title: 'Kovada Gölü', city: 'Eğirdir', region: 'Isparta', lat: 37.63, lng: 30.88, elevationM: 900, kind: 'gol', summary: 'Milli park gölü.' },
+  { id: 'arsuz', title: 'Arsuz kıyısı', city: 'Arsuz', region: 'Hatay', lat: 36.41, lng: 35.89, elevationM: 10, kind: 'sahil', summary: 'Hatay kıyısı; resmi tesisi sorun.' },
+  { id: 'zorkun', title: 'Zorkun Yaylası', city: 'Osmaniye', region: 'Osmaniye', lat: 37.02, lng: 36.3, elevationM: 1600, kind: 'yayla', summary: 'Osmaniye yaylası.' },
+  { id: 'yedigoller', title: 'Yedigöller', city: 'Yenice', region: 'Bolu', lat: 40.943, lng: 31.745, elevationM: 900, kind: 'gol', summary: 'Milli park; konak yalnızca tahsisli yerde.' },
+  { id: 'purenli', title: 'Pürenli Yaylası', city: 'Yığılca', region: 'Düzce', lat: 40.95, lng: 31.52, elevationM: 1250, kind: 'yayla', summary: 'Düzce yaylası.' },
+  { id: 'gumeli', title: 'Gümeli sedirleri', city: 'Alaplı', region: 'Zonguldak', lat: 41.12, lng: 31.52, elevationM: 700, kind: 'orman', summary: 'Zonguldak anıt sedir.' },
+  { id: 'guzelcehisar', title: 'Güzelcehisar lav sütunları', city: 'Bartın', region: 'Bartın', lat: 41.67, lng: 32.22, elevationM: 20, kind: 'sahil', summary: 'Bartın kıyısı; kamp sınırlı.' },
+  { id: 'sahinkaya', title: 'Şahinkaya Kanyonu', city: 'Vezirköprü', region: 'Samsun', lat: 41.22, lng: 35.37, elevationM: 250, kind: 'doga', summary: 'Kızılırmak kanyonu.' },
+  { id: 'limni', title: 'Limni Gölü', city: 'Kürtün', region: 'Gümüşhane', lat: 40.7, lng: 39.12, elevationM: 1900, kind: 'gol', summary: 'Gümüşhane yayla gölü.' },
+  { id: 'boraboy', title: 'Boraboy Gölü', city: 'Taşova', region: 'Amasya', lat: 40.8, lng: 36.19, elevationM: 1050, kind: 'gol', summary: 'Amasya heyelan gölü.' },
+  { id: 'incesu-corum', title: 'İncesu Kanyonu', city: 'Ortaköy', region: 'Çorum', lat: 40.27, lng: 35.22, elevationM: 700, kind: 'doga', summary: 'Çorum kanyonu.' },
+  { id: 'zinav', title: 'Zinav Gölü', city: 'Reşadiye', region: 'Tokat', lat: 40.48, lng: 37.18, elevationM: 900, kind: 'gol', summary: 'Tokat gölü.' },
+  { id: 'gurleyik', title: 'Gürleyik Şelalesi', city: 'Mihalıçcık', region: 'Eskişehir', lat: 39.9, lng: 31.4, elevationM: 900, kind: 'doga', summary: 'Eskişehir şelalesi.' },
+  { id: 'emli', title: 'Emli Vadisi', city: 'Çamardı', region: 'Niğde', lat: 37.8, lng: 35.12, elevationM: 1800, kind: 'doga', summary: 'Aladağlar vadisi.' },
+  { id: 'gokpinar', title: 'Gökpınar Gölü', city: 'Gürün', region: 'Sivas', lat: 38.72, lng: 37.27, elevationM: 1500, kind: 'gol', summary: 'Sivas turkuaz göl.' },
+  { id: 'seyfe', title: 'Seyfe Gölü', city: 'Mucur', region: 'Kırşehir', lat: 39.2, lng: 34.37, elevationM: 1100, kind: 'gol', summary: 'Kuş cenneti; kamp yok.' },
+  { id: 'karanlik-kemaliye', title: 'Kemaliye Karanlık Kanyon', city: 'Kemaliye', region: 'Erzincan', lat: 39.26, lng: 38.5, elevationM: 900, kind: 'doga', summary: 'Fırat kanyonu.' },
+  { id: 'van-akdamar', title: 'Akdamar Adası', city: 'Gevaş', region: 'Van', lat: 38.34, lng: 43.04, elevationM: 1650, kind: 'gol', summary: 'Van Gölü adası; geceleme yok.' },
+  { id: 'cilik-golleri', title: 'Cilo buzul gölleri', city: 'Yüksekova', region: 'Hakkari', lat: 37.48, lng: 44.0, elevationM: 2800, kind: 'gol', summary: 'Yüksek dağ; kış kapalı.' },
+  { id: 'yuzen-adalar', title: 'Yüzen Adalar', city: 'Solhan', region: 'Bingöl', lat: 38.97, lng: 41.05, elevationM: 1700, kind: 'gol', summary: 'Bingöl gölü.' },
+  { id: 'balikgolu', title: 'Balık Gölü', city: 'Taşlıçay', region: 'Ağrı', lat: 39.78, lng: 43.53, elevationM: 2250, kind: 'gol', summary: 'Ağrı yüksek göl.' },
+  { id: 'karagol-ardahan', title: 'Karagöl Sahara', city: 'Çıldır', region: 'Ardahan', lat: 41.2, lng: 42.77, elevationM: 1800, kind: 'gol', summary: 'Ardahan yayla gölü.' },
+  { id: 'tuzluca-igdir', title: 'Tuzluca vadisi', city: 'Tuzluca', region: 'Iğdır', lat: 40.05, lng: 43.66, elevationM: 900, kind: 'doga', summary: 'Iğdır tuz ve vadi.' },
+  { id: 'cermik-selale', title: 'Çermik Şeyhandede', city: 'Çermik', region: 'Diyarbakır', lat: 38.14, lng: 39.45, elevationM: 700, kind: 'doga', summary: 'Diyarbakır şelalesi.' },
+  { id: 'botan', title: 'Botan Vadisi', city: 'Siirt', region: 'Siirt', lat: 37.93, lng: 41.94, elevationM: 600, kind: 'doga', summary: 'Milli park vadi.' },
+  { id: 'cehennem-dere', title: 'Cehennem Deresi Kanyonu', city: 'Şırnak', region: 'Şırnak', lat: 37.42, lng: 42.45, elevationM: 800, kind: 'doga', summary: 'Şırnak kanyonu.' },
+  { id: 'hisar-camlik', title: 'Hisar Çamlığı', city: 'Kilis', region: 'Kilis', lat: 36.72, lng: 37.12, elevationM: 700, kind: 'orman', summary: 'Kilis mesire ormanı.' },
+  { id: 'sarikamis', title: 'Sarıkamış ormanları', city: 'Sarıkamış', region: 'Kars', lat: 40.33, lng: 42.59, elevationM: 2100, kind: 'orman', summary: 'Sarıçam ormanı; kış soğuk.' },
+  { id: 'abad-golcuk', title: 'Gölcük', city: 'Bolu', region: 'Bolu', lat: 40.7, lng: 31.63, elevationM: 1100, kind: 'gol', summary: 'Bolu krater gölü; günübirlik.' },
+]
+
+export function highlightPlaces(): PlaceItem[] {
+  return RAW.map((item) => ({
+    ...item,
+    zone: zoneOfProvince(item.region),
+    images: [],
+    videos: [],
+    statusLabel: 'Doğa noktası',
+    feeTent: null,
+    summary: `${item.summary} 81 il katmanından; pin izin değildir.`,
+  }))
+}

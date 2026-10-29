@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useSearch } from '../search-context'
-import { HAS_CATALOG, HAS_ROUTE_MODE } from '../step'
+import { HAS_CATALOG, HAS_LIVE, HAS_ROUTE_MODE } from '../step'
 import { PinMark, SearchIcon } from './Icons'
 
 export function Header() {
@@ -26,9 +26,11 @@ export function Header() {
   const onCamp = location.pathname.startsWith('/kamp')
   const searchPlaceholder = HAS_ROUTE_MODE
     ? onCamp
-      ? HAS_CATALOG
-        ? 'Park, il veya bölge ara'
-        : 'Kamp alanı veya il ara'
+      ? HAS_LIVE
+        ? 'Park, il, yayla veya kanyon ara'
+        : HAS_CATALOG
+          ? 'Park, il veya bölge ara'
+          : 'Kamp alanı veya il ara'
       : 'Parkur, şehir veya bölge ara'
     : 'Kamp, yayla veya doğal alan ara'
 

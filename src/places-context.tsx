@@ -2,8 +2,10 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from '
 import bundledCamps from './data/camps.json'
 import bundledCatalog from './data/catalog.json'
 import bundledPlaces from './data/places.json'
+import { highlightPlaces } from './highlights'
 import { ALL_PLACE_KINDS } from './labels'
-import { APP_STEP, HAS_CATALOG } from './step'
+import { mergePlaces } from './overpass'
+import { APP_STEP, HAS_CATALOG, HAS_LIVE } from './step'
 import type {
   CampGuide,
   FacilityFlag,
@@ -46,7 +48,11 @@ function parseVideos(raw: unknown): PlaceVideo[] {
 
 function parseImages(raw: unknown): string[] {
   if (!Array.isArray(raw)) return []
-  return raw.filter((item): item is string => typeof item === 'string' && item.startsWith('https://'))
+  return raw.filter((item): item is string => {
+    if (typeof item !== 'string' || !item.startsWith('https://')) return false
+    if (HAS_LIVE && item.includes('unsplash.com')) return false
+    return true
+  })
 }
 
 function normalizePlace(raw: unknown): PlaceItem | null {
@@ -154,7 +160,11 @@ export function PlacesProvider({ children }: { children: ReactNode }) {
     try {
       const bundled = HAS_CATALOG ? bundledCatalog : APP_STEP === '1' ? bundledCamps : bundledPlaces
       if (!Array.isArray(bundled) || bundled.length === 0) throw new Error('empty')
-      const parsed = bundled.map(normalizePlace).filter((place): place is PlaceItem => place !== null)
+      let parsed = bundled.map(normalizePlace).filter((place): place is PlaceItem => place !== null)
+      if (HAS_LIVE) {
+        const maras = bundledPlaces.map(normalizePlace).filter((place): place is PlaceItem => place !== null)
+        parsed = mergePlaces(parsed, [...highlightPlaces(), ...maras])
+      }
       if (parsed.length === 0) throw new Error('empty')
       setPlaces(parsed)
       setStatus('ready')

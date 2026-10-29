@@ -8,7 +8,7 @@ import { RouteExplorePage } from './components/RouteExplorePage'
 import { PlacesProvider } from './places-context'
 import { RoutesProvider } from './routes-context'
 import { SearchProvider } from './search-context'
-import { HAS_LOOK, HAS_ROUTE_MODE } from './step'
+import { HAS_LIVE, HAS_LOOK, HAS_ROUTE_MODE } from './step'
 
 interface BoundaryProps {
   children: ReactNode
@@ -57,7 +57,19 @@ function NotFound() {
 function Shell({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.body.classList.toggle('is-look', HAS_LOOK)
-    return () => document.body.classList.remove('is-look')
+    document.body.classList.toggle('is-live', HAS_LIVE)
+    if (HAS_LIVE) {
+      document
+        .querySelector('meta[name="description"]')
+        ?.setAttribute(
+          'content',
+          'Yürüyom ile Türkiye’nin 81 ilindeki kamp, yayla, kanyon ve doğal alanları Ultra-HD 360° ve gerçek doğa videolarıyla keşfet',
+        )
+    }
+    return () => {
+      document.body.classList.remove('is-look')
+      document.body.classList.remove('is-live')
+    }
   }, [])
   return (
     <SearchProvider>

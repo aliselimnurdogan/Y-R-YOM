@@ -1,0 +1,13 @@
+Yürüyom — 7. adım
+
+index.html dosyasına çift tıkla. İnternet açık olsun (harita, OSM, hava, 360).
+
+Üstten Yürüyüş parkurları veya Kamp alanları.
+
+Kamp: DKMP parkları + 81 ilden doğa noktaları. İl seçince OpenStreetMap kamp/piknik gelir. Pin izin değildir.
+
+Haritada Topoğrafya / Uydu / OpenTopo. 360 varsa yeşil halka.
+
+Alana girince: hava, Google/Yandex/Apple yol tarifi, sokak görünümü (Google’da açılır), 360 bakış, varsa POV video, yorum ve puan.
+
+3D model yok. Uydurma 360 veya video yok.

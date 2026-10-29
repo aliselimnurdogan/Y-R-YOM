@@ -4,10 +4,12 @@ import { compressPhoto, loadComments, saveComment } from '../community'
 import { formatDate, formatFee, formatInt, initials } from '../format'
 import { LEGAL_CAMP_NOTE, PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
 import { srcSet, sharpUrl } from '../media'
+import { appleDir, googleDir, googlePano, yandexDir } from '../nav'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
-import { APP_STEP, HAS_CATALOG, HAS_FEEL } from '../step'
-import type { PlaceComment, PlaceItem } from '../types'
+import { APP_STEP, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_SOCIAL } from '../step'
+import type { PlaceComment, PlaceItem, PlaceScores } from '../types'
+import { fetchWeather, type PlaceWeather } from '../weather'
 import { CampGuideBlock } from './CampGuideBlock'
 import { DetailMap } from './DetailMap'
 import { FeelThereBlock } from './FeelThereBlock'
@@ -103,6 +105,7 @@ export function DetailPage() {
       </div>
       <p className="lede place-lede">{place.summary}</p>
       {HAS_FEEL && <FeelThereBlock place={place} />}
+      {HAS_LIVE && <WeatherNavBlock place={place} />}
       {HAS_CATALOG && place.guide && <CampGuideBlock place={place} />}
       {HAS_CATALOG && (
         <dl className="fact-grid">
@@ -172,7 +175,8 @@ export function DetailPage() {
           <p className="empty-photo">Bu park için yerinde Wikimedia fotoğrafı henüz yok; temsili görsel kullanılmadı.</p>
         )
       )}
-      {place.videos.length > 0 && (
+      {HAS_LIVE && <PovBlock place={place} />}
+      {!HAS_LIVE && place.videos.length > 0 && (
         <section className="video-block">
           <h2 className="section-title">Kısa videolar</h2>
           <div className="video-grid">
@@ -193,8 +197,110 @@ export function DetailPage() {
         </section>
       )}
       <DetailMap place={place} />
-      {HAS_CATALOG ? <p className="legal-note">{LEGAL_CAMP_NOTE}</p> : <Comments place={place} />}
+      {HAS_CATALOG && <p className="legal-note">{LEGAL_CAMP_NOTE}</p>}
+      {HAS_SOCIAL && <Comments place={place} />}
     </article>
+  )
+}
+
+function WeatherNavBlock({ place }: { place: PlaceItem }) {
+  const [weather, setWeather] = useState<PlaceWeather | null>(null)
+  const [weatherError, setWeatherError] = useState(false)
+
+  useEffect(() => {
+    let alive = true
+    setWeather(null)
+    setWeatherError(false)
+    void fetchWeather(place.lat, place.lng)
+      .then((item) => {
+        if (alive) setWeather(item)
+      })
+      .catch(() => {
+        if (alive) setWeatherError(true)
+      })
+    return () => {
+      alive = false
+    }
+  }, [place.id, place.lat, place.lng])
+
+  return (
+    <section className="live-tools">
+      <div className="weather-card">
+        <h2 className="section-title">Canlı hava</h2>
+        {weatherError && <p className="muted">Hava alınamadı; Open-Meteo’yu sonra dene.</p>}
+        {!weatherError && !weather && <p className="muted">Hava yükleniyor…</p>}
+        {weather && (
+          <dl className="fact-grid weather-grid">
+            <div>
+              <dt>Sıcaklık</dt>
+              <dd>{Math.round(weather.temp)}°</dd>
+            </div>
+            <div>
+              <dt>Hissedilen</dt>
+              <dd>{Math.round(weather.feels)}°</dd>
+            </div>
+            <div>
+              <dt>Rüzgar</dt>
+              <dd>{Math.round(weather.wind)} km/s</dd>
+            </div>
+            <div>
+              <dt>Yağış</dt>
+              <dd>%{Math.round(weather.rain)}</dd>
+            </div>
+            <div>
+              <dt>Bulut</dt>
+              <dd>%{Math.round(weather.cloud)}</dd>
+            </div>
+            <div>
+              <dt>Gece gökyüzü</dt>
+              <dd>{weather.label}</dd>
+            </div>
+          </dl>
+        )}
+      </div>
+      <div className="nav-links">
+        <a className="btn-fill" href={googleDir(place.lat, place.lng)} target="_blank" rel="noreferrer">
+          Google yol tarifi
+        </a>
+        <a className="btn-ghost" href={yandexDir(place.lat, place.lng)} target="_blank" rel="noreferrer">
+          Yandex
+        </a>
+        <a className="btn-ghost" href={appleDir(place.lat, place.lng)} target="_blank" rel="noreferrer">
+          Apple Haritalar
+        </a>
+        <a className="btn-ghost" href={googlePano(place.lat, place.lng)} target="_blank" rel="noreferrer">
+          Sokak görünümü
+        </a>
+      </div>
+      <p className="muted">Sokak görünümü Google Haritalar’da açılır; içerik çekilmez.</p>
+    </section>
+  )
+}
+
+function PovBlock({ place }: { place: PlaceItem }) {
+  return (
+    <section className="video-block">
+      <h2 className="section-title">Canlı doğa atmosferi (HD / POV)</h2>
+      {place.videos.length > 0 ? (
+        <div className="video-grid">
+          {place.videos.map((video) => (
+            <figure key={video.youtubeId} className="video-card">
+              <div className="video-frame">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <figcaption>{video.title}</figcaption>
+            </figure>
+          ))}
+        </div>
+      ) : (
+        <p className="empty-photo">Bu yer için kayıtlı POV video henüz yok; uydurma film konmadı.</p>
+      )}
+    </section>
   )
 }
 
@@ -206,6 +312,7 @@ function Comments({ place }: { place: PlaceItem }) {
   const [photo, setPhoto] = useState<string | undefined>()
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
+  const [scores, setScores] = useState<PlaceScores>({ nature: 4, clean: 3, access: 3, safety: 4 })
 
   useEffect(() => {
     setComments(loadComments(place.id))
@@ -251,6 +358,7 @@ function Comments({ place }: { place: PlaceItem }) {
       text: trimmedText.slice(0, 600),
       photo,
       createdAt: new Date().toISOString(),
+      scores: HAS_LIVE ? { ...scores } : undefined,
     }
     setComments(saveComment(comment))
     setText('')
@@ -284,6 +392,32 @@ function Comments({ place }: { place: PlaceItem }) {
             onChange={(event) => setText(event.target.value)}
           />
         </label>
+        {HAS_LIVE && (
+          <div className="score-row">
+            {(
+              [
+                ['nature', 'Doğa'],
+                ['clean', 'Temizlik'],
+                ['access', 'Ulaşım'],
+                ['safety', 'Güvenlik'],
+              ] as const
+            ).map(([key, label]) => (
+              <label key={key}>
+                {label}
+                <select
+                  value={scores[key]}
+                  onChange={(event) => setScores((current) => ({ ...current, [key]: Number(event.target.value) }))}
+                >
+                  {[1, 2, 3, 4, 5].map((value) => (
+                    <option key={value} value={value}>
+                      {value}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            ))}
+          </div>
+        )}
         <div className="comment-tools">
           <label className="photo-pick" htmlFor={photoId}>
             Fotoğraf ekle
@@ -325,6 +459,12 @@ function Comments({ place }: { place: PlaceItem }) {
                   <span>{formatDate(comment.createdAt)}</span>
                 </p>
                 <p className="comment-text">{comment.text}</p>
+                {comment.scores && (
+                  <p className="comment-scores">
+                    Doğa {comment.scores.nature} · Temizlik {comment.scores.clean} · Ulaşım {comment.scores.access} ·
+                    Güvenlik {comment.scores.safety}
+                  </p>
+                )}
                 {comment.photo && <img className="comment-photo" src={comment.photo} alt="" />}
               </div>
             </li>

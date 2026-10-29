@@ -55,6 +55,13 @@ export interface PlaceItem {
   pano?: PlacePano
 }
 
+export interface PlaceScores {
+  nature: number
+  clean: number
+  access: number
+  safety: number
+}
+
 export interface PlaceComment {
   id: string
   placeId: string
@@ -62,6 +69,7 @@ export interface PlaceComment {
   text: string
   photo?: string
   createdAt: string
+  scores?: PlaceScores
 }
 
 export type Activity = 'hiking' | 'mtb' | 'running' | 'kayak' | 'camping' | 'cycling'
