@@ -943,7 +943,12 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Bafa_Lake.jpg/1920px-Bafa_Lake.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Bafa_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_%28bilgekorkmaz%29.jpg/1920px-Bafa_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_%28bilgekorkmaz%29.jpg"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Lake_Bafa_Turkey_2015.webm",
+        "title": "Bafa Gölü — Wikimedia video"
+      }
+    ],
     "guide": {
       "toilet": "belirsiz",
       "power": "belirsiz",
@@ -1003,7 +1008,12 @@
       "https://upload.wikimedia.org/wikipedia/commons/3/35/Spil_Da%C4%9F%C4%B1_Zirvesi.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Spil_Da%C4%9F%C4%B1_%2820220803%29.jpg/1920px-Spil_Da%C4%9F%C4%B1_%2820220803%29.jpg"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "youtubeId": "_NSPZHac7P4",
+        "title": "Spil Dağı manzara"
+      }
+    ],
     "guide": {
       "toilet": "var",
       "power": "belirsiz",
@@ -2230,7 +2240,12 @@
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/TR_Yedig%C3%B6ller_asv2021-10_img16.jpg/1920px-TR_Yedig%C3%B6ller_asv2021-10_img16.jpg",
       "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Yedig%C3%B6ller_Yans%C4%B1ma.jpg/1920px-Yedig%C3%B6ller_Yans%C4%B1ma.jpg"
     ],
-    "videos": [],
+    "videos": [
+      {
+        "youtubeId": "R6cz1XMXaOc",
+        "title": "Yedigöller Milli Parkı — yerinde gezi"
+      }
+    ],
     "guide": {
       "toilet": "var",
       "power": "yok",

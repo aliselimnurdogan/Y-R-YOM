@@ -39,9 +39,17 @@ function parseVideos(raw: unknown): PlaceVideo[] {
   for (const item of raw) {
     if (!item || typeof item !== 'object') continue
     const record = item as Record<string, unknown>
-    if (typeof record.youtubeId !== 'string' || record.youtubeId.length !== 11) continue
     if (typeof record.title !== 'string') continue
-    videos.push({ youtubeId: record.youtubeId, title: record.title })
+    const youtubeId =
+      typeof record.youtubeId === 'string' && record.youtubeId.length === 11 ? record.youtubeId : undefined
+    const src =
+      typeof record.src === 'string' &&
+      record.src.startsWith('https://') &&
+      /\.(webm|mp4)(\?|$)/i.test(record.src)
+        ? record.src
+        : undefined
+    if (!youtubeId && !src) continue
+    videos.push({ title: record.title, youtubeId, src })
   }
   return videos
 }

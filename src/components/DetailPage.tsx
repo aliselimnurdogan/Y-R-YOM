@@ -284,14 +284,18 @@ function PovBlock({ place }: { place: PlaceItem }) {
       {place.videos.length > 0 ? (
         <div className="video-grid">
           {place.videos.map((video) => (
-            <figure key={video.youtubeId} className="video-card">
+            <figure key={video.youtubeId || video.src} className="video-card">
               <div className="video-frame">
-                <iframe
-                  src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                {video.src ? (
+                  <video src={video.src} controls playsInline />
+                ) : video.youtubeId ? (
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : null}
               </div>
               <figcaption>{video.title}</figcaption>
             </figure>

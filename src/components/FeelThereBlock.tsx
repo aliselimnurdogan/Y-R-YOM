@@ -1,13 +1,14 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type PointerEvent } from 'react'
 import { createPortal } from 'react-dom'
 import { sharpUrl } from '../media'
 import { HAS_FEEL } from '../step'
-import type { PlaceItem, PlacePano } from '../types'
+import type { PlaceItem, PlacePano, PlaceVideo } from '../types'
 import { EyeIcon } from './Icons'
 
 interface ViewerHandle {
   destroy: () => void
   startOrientation?: () => void
+  startAutoRotate?: (speed?: number) => void
   toggleFullscreen?: () => void
   resize?: () => void
 }
@@ -39,11 +40,22 @@ function loadPannellum() {
   return pannellumWait
 }
 
+function firstClip(videos: PlaceVideo[]): PlaceVideo | undefined {
+  return videos.find((item) => item.src || item.youtubeId)
+}
+
+function clipSrc(video: PlaceVideo): string | undefined {
+  if (video.src) return video.src
+  if (video.youtubeId) {
+    return `https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&mute=1&loop=1&playsinline=1&controls=0&playlist=${video.youtubeId}`
+  }
+  return undefined
+}
+
 function viewerConfig(pano: PlacePano) {
-  const ratio = pano.width && pano.height ? pano.width / pano.height : 1.6
   const panorama = sharpUrl(pano.url, 2048)
   const preview = sharpUrl(pano.preview || pano.url, 1280)
-  const base = {
+  return {
     type: 'equirectangular',
     panorama,
     preview,
@@ -61,61 +73,53 @@ function viewerConfig(pano: PlacePano) {
     doubleClickZoom: true,
     crossOrigin: 'anonymous',
     backgroundColor: [8, 12, 10],
-    autoRotate: pano.kind === '360' ? 3 : 1.6,
-    autoRotateInactivityDelay: 14000,
-  }
-  if (pano.kind === '360') return base
-  if (pano.kind === 'pano') {
-    const haov = Math.min(300, Math.max(150, ratio * 70))
-    const vaov = Math.min(120, Math.max(70, haov / Math.max(ratio, 1.2)))
-    return {
-      ...base,
-      haov,
-      vaov,
-      minYaw: -(haov / 2) + 12,
-      maxYaw: haov / 2 - 12,
-      minPitch: -(vaov / 2) + 8,
-      maxPitch: vaov / 2 - 8,
-    }
-  }
-  return {
-    ...base,
-    haov: 100,
-    vaov: 72,
-    minYaw: -32,
-    maxYaw: 32,
-    minPitch: -20,
-    maxPitch: 20,
-    maxHfov: 90,
+    autoRotate: 9,
+    autoRotateInactivityDelay: 1200,
   }
 }
 
 export function FeelThereBlock({ place }: { place: PlaceItem }) {
   const pano = place.pano
+  const clip = firstClip(place.videos)
   const [open, setOpen] = useState(false)
   if (!HAS_FEEL) return null
   const preview = place.images[0] || pano?.preview || pano?.url
   const cardPhoto = preview ? sharpUrl(preview, 1600) : ''
-  const badge = pano?.kind === '360' ? '360°' : pano?.kind === 'pano' ? 'Panorama' : 'Bakış'
+  const canOpen = Boolean(pano || clip)
+  const badge = clip ? 'Video' : pano?.kind === '360' ? '360°' : pano?.kind === 'pano' ? 'Panorama' : 'Bakış'
+  const embed = clip ? clipSrc(clip) : undefined
 
   return (
     <section className="feel-block">
-      <button type="button" className="feel-card" onClick={() => setOpen(true)} disabled={!pano}>
+      <button type="button" className="feel-card" onClick={() => setOpen(true)} disabled={!canOpen}>
         {cardPhoto ? (
-          <img src={cardPhoto} alt="" />
+          <img className="feel-pan" src={cardPhoto} alt="" />
+        ) : embed && clip?.src ? (
+          <video className="feel-pan" src={clip.src} muted loop autoPlay playsInline />
         ) : (
           <span className="feel-empty-bg" />
         )}
+        {clip?.src && cardPhoto && <video className="feel-card-pip" src={clip.src} muted loop autoPlay playsInline />}
+        {clip?.youtubeId && cardPhoto && (
+          <iframe
+            className="feel-card-pip"
+            src={embed}
+            title={clip.title}
+            allow="autoplay; encrypted-media"
+          />
+        )}
         <span className="feel-shade" />
         <span className="feel-copy">
-          <span className="feel-badge">{pano ? badge : 'Yakında'}</span>
+          <span className="feel-badge">{canOpen ? badge : 'Yakında'}</span>
           <span className="feel-title">Orada gibi hisset</span>
           <span className="feel-sub">
-            {pano
-              ? 'Kendi gözünden bak. Sürükle, parmağınla gez, telefonda çevir.'
-              : 'Bu parkta henüz yerinde 360 çekim yok; uydurma görüntü konmadı.'}
+            {canOpen
+              ? clip
+                ? 'Küçük video ve bakış. Açınca sola-sağa döner; sürükle veya telefonu çevir.'
+                : 'Sola-sağa kendi kendine döner. Sürükle, parmağınla gez, telefonda çevir.'
+              : 'Bu parkta henüz yerinde 360 veya video yok; uydurma görüntü konmadı.'}
           </span>
-          {pano && (
+          {canOpen && (
             <span className="feel-cta">
               <EyeIcon />
               İçeri gir
@@ -123,7 +127,14 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
           )}
         </span>
       </button>
-      {open && pano && <FeelViewer placeTitle={place.title} pano={pano} onClose={() => setOpen(false)} />}
+      {open && (pano || clip) && (
+        <FeelViewer
+          placeTitle={place.title}
+          pano={pano}
+          clip={clip}
+          onClose={() => setOpen(false)}
+        />
+      )}
     </section>
   )
 }
@@ -131,16 +142,19 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
 function FeelViewer({
   placeTitle,
   pano,
+  clip,
   onClose,
 }: {
   placeTitle: string
-  pano: PlacePano
+  pano?: PlacePano
+  clip?: PlaceVideo
   onClose: () => void
 }) {
+  const useSphere = pano?.kind === '360'
   const hostRef = useRef<HTMLDivElement>(null)
   const overlayRef = useRef<HTMLDivElement>(null)
   const viewerRef = useRef<ViewerHandle | null>(null)
-  const [status, setStatus] = useState('Görüntü hazırlanıyor…')
+  const [status, setStatus] = useState(useSphere ? 'Görüntü hazırlanıyor…' : '')
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow
@@ -152,17 +166,19 @@ function FeelViewer({
     document.addEventListener('keydown', onKey)
     document.addEventListener('fullscreenchange', onFs)
     let alive = true
-    void loadPannellum()
-      .then(() => {
-        if (!alive || !hostRef.current || !window.pannellum) return
-        viewerRef.current = window.pannellum.viewer(hostRef.current, {
-          ...viewerConfig(pano),
+    if (useSphere && pano) {
+      void loadPannellum()
+        .then(() => {
+          if (!alive || !hostRef.current || !window.pannellum) return
+          const viewer = window.pannellum.viewer(hostRef.current, viewerConfig(pano))
+          viewerRef.current = viewer
+          viewer.startAutoRotate?.(9)
+          setStatus('')
         })
-        setStatus('')
-      })
-      .catch(() => {
-        if (alive) setStatus('360 görüntü yüklenemedi. İnterneti kontrol et.')
-      })
+        .catch(() => {
+          if (alive) setStatus('360 görüntü yüklenemedi. İnterneti kontrol et.')
+        })
+    }
     return () => {
       alive = false
       document.removeEventListener('keydown', onKey)
@@ -171,7 +187,7 @@ function FeelViewer({
       viewerRef.current?.destroy()
       viewerRef.current = null
     }
-  }, [onClose, pano])
+  }, [onClose, pano, useSphere])
 
   async function goFullscreen() {
     const node = overlayRef.current
@@ -206,17 +222,20 @@ function FeelViewer({
       aria-modal="true"
       aria-label={`${placeTitle} bakış`}
     >
-      <div ref={hostRef} className="feel-stage" />
+      {useSphere ? <div ref={hostRef} className="feel-stage" /> : <LookPan pano={pano} clip={clip} />}
       {status && <p className="feel-status">{status}</p>}
+      {pano && clip && <ClipPip clip={clip} />}
       <div className="feel-bar">
         <p>
           <strong>{placeTitle}</strong>
-          <span>Sürükle · yakınlaş · telefonu çevir</span>
+          <span>Sola-sağa döner · sürükle · yakınlaş</span>
         </p>
         <div className="feel-bar-actions">
-          <button type="button" className="btn-ghost" onClick={() => void useGyro()}>
-            Telefonu çevir
-          </button>
+          {useSphere && (
+            <button type="button" className="btn-ghost" onClick={() => void useGyro()}>
+              Telefonu çevir
+            </button>
+          )}
           <button type="button" className="btn-ghost" onClick={() => void goFullscreen()}>
             Tam ekran
           </button>
@@ -225,8 +244,115 @@ function FeelViewer({
           </button>
         </div>
       </div>
-      <p className="feel-credit">{pano.credit}</p>
+      <p className="feel-credit">{pano?.credit || clip?.title || ''}</p>
     </div>,
     document.body,
+  )
+}
+
+function ClipPip({ clip }: { clip: PlaceVideo }) {
+  if (clip.src) {
+    return <video className="feel-pip" src={clip.src} muted loop autoPlay playsInline controls />
+  }
+  if (!clip.youtubeId) return null
+  return (
+    <iframe
+      className="feel-pip"
+      src={`https://www.youtube-nocookie.com/embed/${clip.youtubeId}?autoplay=1&mute=1&loop=1&playlist=${clip.youtubeId}`}
+      title={clip.title}
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowFullScreen
+    />
+  )
+}
+
+function LookPan({ pano, clip }: { pano?: PlacePano; clip?: PlaceVideo }) {
+  const stageRef = useRef<HTMLDivElement>(null)
+  const xRef = useRef(0)
+  const dirRef = useRef(1)
+  const dragRef = useRef<{ x: number; start: number; pausedUntil: number } | null>(null)
+  const [shift, setShift] = useState(0)
+  const photo = pano ? sharpUrl(pano.preview || pano.url, 2048) : ''
+
+  useEffect(() => {
+    let frame = 0
+    const tick = (now: number) => {
+      const drag = dragRef.current
+      const holding = Boolean(drag && drag.pausedUntil === Number.POSITIVE_INFINITY)
+      const cooling = Boolean(drag && now < drag.pausedUntil)
+      if (drag && !holding && !cooling) dragRef.current = null
+      if (!holding && !cooling) {
+        xRef.current += dirRef.current * 0.22
+        if (xRef.current > 100) {
+          xRef.current = 100
+          dirRef.current = -1
+        } else if (xRef.current < 0) {
+          xRef.current = 0
+          dirRef.current = 1
+        }
+        setShift(xRef.current)
+      }
+      frame = requestAnimationFrame(tick)
+    }
+    frame = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(frame)
+  }, [])
+
+  function onPointerDown(event: PointerEvent<HTMLDivElement>) {
+    event.currentTarget.setPointerCapture(event.pointerId)
+    dragRef.current = { x: event.clientX, start: xRef.current, pausedUntil: Number.POSITIVE_INFINITY }
+  }
+
+  function onPointerMove(event: PointerEvent<HTMLDivElement>) {
+    const drag = dragRef.current
+    if (!drag || drag.pausedUntil !== Number.POSITIVE_INFINITY) return
+    const width = stageRef.current?.clientWidth || 1
+    const next = Math.max(0, Math.min(100, drag.start + ((drag.x - event.clientX) / width) * 120))
+    xRef.current = next
+    setShift(next)
+  }
+
+  function onPointerUp() {
+    if (!dragRef.current) return
+    dragRef.current = { x: 0, start: xRef.current, pausedUntil: performance.now() + 1800 }
+  }
+
+  return (
+    <div
+      className="look-stage"
+      ref={stageRef}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerUp}
+    >
+      {photo ? (
+        <img
+          src={photo}
+          alt=""
+          draggable={false}
+          style={{
+            width: '175%',
+            height: '120%',
+            maxWidth: 'none',
+            position: 'absolute',
+            top: '-10%',
+            left: 0,
+            transform: `translateX(-${shift * 0.42}%)`,
+          }}
+        />
+      ) : clip?.src ? (
+        <video src={clip.src} muted loop autoPlay playsInline />
+      ) : clip?.youtubeId ? (
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${clip.youtubeId}?autoplay=1&mute=1&rel=0`}
+          title={clip.title}
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowFullScreen
+        />
+      ) : (
+        <span className="feel-empty-bg" />
+      )}
+    </div>
   )
 }

@@ -10,6 +10,7 @@ Tarih: 29 Ekim 2026. Kaynak PDF: `yuruyom_grok_20_ajan_master_prompt.pdf`. Googl
 - Sokak görünümü: Google Haritalar pano bağlantısı (içerik çekilmez)
 - Yorum + doğa/temizlik/ulaşım/güvenlik puanı (bu tarayıcıda)
 - 360: hfov 70°, DPR tavan 2.5, anizotropik filtre; Wikimedia URL büyütülmez (2560px 400 veriyordu)
+- Bakış: düz fotoğraf kürede kilitlenmiyordu; sola-sağa kaydırma. Gerçek 360 (Spil) kendi döner. Video bulunan yerde küçük kutu (Yedigöller, Spil, Bafa); yoksa bakış kalır.
 
 ## Ne duruyor
 DKMP katalog, kamp rehberi, GPS parkurlar, mevcut 360. Giriş/Kaydol yok.

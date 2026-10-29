@@ -1,7 +1,8 @@
 export type PlaceKind = 'kamp' | 'yayla' | 'doga' | 'manzara' | 'sahil' | 'orman' | 'gol'
 
 export interface PlaceVideo {
-  youtubeId: string
+  youtubeId?: string
+  src?: string
   title: string
 }
 

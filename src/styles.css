@@ -462,11 +462,53 @@ img {
 }
 
 .feel-card img,
+.feel-card video,
+.feel-card iframe,
 .feel-empty-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.feel-card iframe {
+  border: 0;
+  pointer-events: none;
+}
+
+.feel-card iframe.feel-card-pip,
+.feel-card video.feel-card-pip {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  z-index: 2;
+  width: min(168px, 36%);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.feel-card img.feel-pan,
+.feel-card video.feel-pan {
+  transform: scale(1.28);
+  animation: feel-pan 16s ease-in-out infinite;
+}
+
+@keyframes feel-pan {
+  0%,
+  100% {
+    object-position: 12% 50%;
+    transform: scale(1.28) translateX(4%);
+  }
+  50% {
+    object-position: 88% 50%;
+    transform: scale(1.28) translateX(-4%);
+  }
 }
 
 .feel-empty-bg {
@@ -542,6 +584,49 @@ img {
 .feel-stage {
   position: absolute;
   inset: 0;
+}
+
+.look-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+  background: #050807;
+}
+
+.look-stage:active {
+  cursor: grabbing;
+}
+
+.look-stage img,
+.look-stage video,
+.look-stage iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.look-stage img {
+  will-change: transform;
+}
+
+.feel-pip {
+  position: absolute;
+  right: 16px;
+  bottom: 88px;
+  z-index: 6;
+  width: min(280px, 38vw);
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
 }
 
 .feel-status {
