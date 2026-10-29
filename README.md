@@ -68,6 +68,14 @@ Klasör: `adim-8`
 
 Harita-kağıdı arka plan, logo sağda, basınca yumuşak geçiş. Unsplash stok ve uydurma YouTube yok. Wikimedia, OSM, hava ve parkurlar duruyor.
 
+## 9. adım — Fotoğraf üstte, çiçek
+
+Klasör: `adim-9`
+
+`adim-9/index.html` dosyasına çift tıkla.
+
+Fotoğrafı olan kamp alanları listenin üstünde. Fotoğraf yoksa harf yok; küçük bir çiçek çıkar. Stok görsel yok.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -80,5 +88,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 6. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-6/
 - 7. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-7/
 - 8. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-8/
+- 9. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-9/
 
 Harita ve fotoğraf için internet açık olsun.

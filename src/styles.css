@@ -2376,15 +2376,12 @@ body.is-polish .detail {
   height: 100%;
 }
 
+.trail-thumb.is-bloom {
+  background: #dce8d4;
+}
+
 .trail-thumb-label {
-  position: absolute;
-  right: 8px;
-  bottom: 6px;
-  color: #f6ead0;
-  font-family: Fraunces, Nunito, serif;
-  font-weight: 700;
-  font-size: 18px;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+  display: none;
 }
 
 .cover.trail-cover {

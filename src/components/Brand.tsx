@@ -55,25 +55,58 @@ function hashSeed(value: string): number {
   return Math.abs(hash)
 }
 
-export function TrailThumb({ seed, title }: { seed: string; title?: string }) {
+const BLOOMS = [
+  { petal: '#fff6d8', edge: '#e0b84a', heart: '#d4a017' },
+  { petal: '#ffdce3', edge: '#d98996', heart: '#d4a017' },
+  { petal: '#fff1c4', edge: '#d4b056', heart: '#c4922c' },
+  { petal: '#f0d6f4', edge: '#c398cb', heart: '#d4a017' },
+]
+
+export function TrailThumb({ seed }: { seed: string; title?: string }) {
   const hash = hashSeed(seed)
-  const shift = (hash % 18) - 9
-  const peak = 18 + (hash % 10)
+  const bloom = BLOOMS[hash % BLOOMS.length]
+  const x = 66
+  const y = 46
+  const gid = `bloom${hash}`
+  const petals = [0, 51, 102, 153, 204, 255, 306]
+
   return (
-    <div className="trail-thumb" aria-hidden="true">
+    <div className="trail-thumb is-bloom" aria-hidden="true">
       <svg viewBox="0 0 132 98" preserveAspectRatio="xMidYMid slice">
-        <rect width="132" height="98" fill="#24382e" />
-        <path d={`M0 78 C 28 ${58 + shift}, 52 ${40 + shift}, 78 ${peak} L132 ${28 + (hash % 8)} V98 H0Z`} fill="#3b5c4c" />
-        <path d={`M0 88 C 24 ${70 + shift}, 58 ${56 + shift}, 90 ${42 + (hash % 6)} L132 58 V98 H0Z`} fill="#1b2c24" />
+        <defs>
+          <linearGradient id={gid} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#edf3e6" />
+            <stop offset="100%" stopColor="#c5d6b4" />
+          </linearGradient>
+        </defs>
+        <rect width="132" height="98" fill={`url(#${gid})`} />
+        <ellipse cx="28" cy="102" rx="46" ry="22" fill="#9fb58a" />
+        <ellipse cx="110" cy="106" rx="44" ry="20" fill="#8ea87a" />
         <path
-          d={`M14 90 C 28 ${76 + (shift % 4)}, 46 ${68 + (shift % 3)}, 62 ${58 + (hash % 5)} S 96 ${36 + (hash % 4)}, 118 28`}
+          d={`M${x} ${y + 12} C ${x - 2} ${y + 32}, ${x + 4} ${y + 52}, ${x} 92`}
           fill="none"
-          stroke="#e2c57a"
+          stroke="#4f6d3d"
           strokeWidth="2.2"
           strokeLinecap="round"
         />
+        <ellipse cx={x - 11} cy={y + 30} rx="9" ry="4" fill="#5f8248" transform={`rotate(-32 ${x - 11} ${y + 30})`} />
+        <ellipse cx={x + 12} cy={y + 36} rx="8" ry="3.6" fill="#6b9154" transform={`rotate(30 ${x + 12} ${y + 36})`} />
+        {petals.map((deg) => (
+          <ellipse
+            key={deg}
+            cx={x}
+            cy={y - 13}
+            rx="6.4"
+            ry="14"
+            fill={bloom.petal}
+            stroke={bloom.edge}
+            strokeWidth="0.85"
+            transform={`rotate(${deg} ${x} ${y})`}
+          />
+        ))}
+        <circle cx={x} cy={y} r="6.4" fill={bloom.heart} />
+        <circle cx={x} cy={y} r="2.6" fill="#fbf3d6" />
       </svg>
-      {title ? <span className="trail-thumb-label">{title.slice(0, 1)}</span> : null}
     </div>
   )
 }

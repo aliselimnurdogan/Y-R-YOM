@@ -93,6 +93,10 @@ export function initials(name: string): string {
   return (first + last).toLocaleUpperCase('tr')
 }
 
+export function hasPlacePhoto(place: PlaceItem): boolean {
+  return Boolean(place.images[0] || place.pano?.preview)
+}
+
 export function difficultyClass(difficulty: Difficulty): string {
   if (difficulty === 'Kolay') return 'kolay'
   if (difficulty === 'Orta') return 'orta'

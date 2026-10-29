@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { cx, formatInt, matchesPlace } from '../format'
+import { cx, formatInt, hasPlacePhoto, matchesPlace } from '../format'
 import {
   CAMP_KINDS,
   CATALOG_ZONES,
@@ -17,7 +17,7 @@ import {
 } from '../labels'
 import { fetchOsmCamps, mergePlaces } from '../overpass'
 import { isWaterPlace, PROVINCES } from '../provinces'
-import { APP_STEP, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_LOOK, HAS_POLISH } from '../step'
+import { APP_STEP, HAS_BLOOM, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_LOOK, HAS_POLISH } from '../step'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
 import type { PlaceItem, PlaceKind } from '../types'
@@ -54,9 +54,21 @@ export function ExplorePage() {
   const [hoveredId, setHoveredId] = useState<string | null>(null)
   const [osm, setOsm] = useState<PlaceItem[]>([])
   const [osmStatus, setOsmStatus] = useState<'idle' | 'loading' | 'error' | 'ready'>('idle')
+  const [failedPhotos, setFailedPhotos] = useState<Set<string>>(() => new Set())
+
+  function markPhotoFail(id: string) {
+    setFailedPhotos((current) => {
+      if (current.has(id)) return current
+      const next = new Set(current)
+      next.add(id)
+      return next
+    })
+  }
 
   useEffect(() => {
-    document.title = HAS_POLISH
+    document.title = HAS_BLOOM
+      ? 'Yürüyom'
+      : HAS_POLISH
       ? 'Yürüyom'
       : HAS_LIVE
       ? 'Yürüyom — 81 il'
@@ -118,6 +130,11 @@ export function ExplorePage() {
       return matchesPlace(place, query)
     })
     return [...list].sort((a, b) => {
+      if (HAS_BLOOM) {
+        const shown = (place: PlaceItem) => hasPlacePhoto(place) && !failedPhotos.has(place.id)
+        const photo = Number(shown(b)) - Number(shown(a))
+        if (photo !== 0) return photo
+      }
       if (sort === 'name') return a.title.localeCompare(b.title, 'tr')
       if (sort === 'high') return b.elevationM - a.elevationM
       if (catalog) {
@@ -131,7 +148,7 @@ export function ExplorePage() {
       if (diff !== 0) return diff
       return a.title.localeCompare(b.title, 'tr')
     })
-  }, [merged, query, kind, zone, sort, kinds, catalog, province, only360, onlyWater])
+  }, [merged, query, kind, zone, sort, kinds, catalog, province, only360, onlyWater, failedPhotos])
 
   const mapActive = !mobile || mode === 'map'
   const filtersOn = Boolean((catalog ? zone : kind) || query || province || only360 || onlyWater)
@@ -310,6 +327,7 @@ export function ExplorePage() {
                     place={place}
                     active={hoveredId === place.id}
                     onHover={setHoveredId}
+                    onPhotoFail={HAS_BLOOM ? markPhotoFail : undefined}
                     basePath={basePath}
                   />
                 ))}

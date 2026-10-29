@@ -14,6 +14,7 @@ import {
 } from '../labels'
 import { useRoutes } from '../routes-context'
 import { useSearch } from '../search-context'
+import { HAS_BLOOM } from '../step'
 import type { Activity, Difficulty } from '../types'
 import { useMediaQuery } from '../use-media'
 import { ChevronIcon } from './Icons'
@@ -101,6 +102,10 @@ export function RouteExplorePage() {
       return true
     })
     return [...list].sort((a, b) => {
+      if (HAS_BLOOM) {
+        const photo = Number(Boolean(b.image)) - Number(Boolean(a.image))
+        if (photo !== 0) return photo
+      }
       let diff = 0
       if (sort === 'longest') diff = b.distanceKm - a.distanceKm
       else if (sort === 'shortest') diff = a.distanceKm - b.distanceKm

@@ -7,12 +7,20 @@ import { HAS_CATALOG, HAS_FEEL } from '../step'
 import type { PlaceItem } from '../types'
 import { TrailThumb } from './Brand'
 
-function CardImage({ src, seed, title }: { src: string; seed: string; title: string }) {
+function CardImage({
+  src,
+  seed,
+  onFail,
+}: {
+  src: string
+  seed: string
+  onFail?: () => void
+}) {
   const [failed, setFailed] = useState(false)
   useEffect(() => {
     setFailed(false)
   }, [src])
-  if (!src || failed) return <TrailThumb seed={seed} title={title} />
+  if (!src || failed) return <TrailThumb seed={seed} />
   return (
     <img
       className="thumb"
@@ -24,7 +32,10 @@ function CardImage({ src, seed, title }: { src: string; seed: string; title: str
       height={98}
       loading="lazy"
       decoding="async"
-      onError={() => setFailed(true)}
+      onError={() => {
+        setFailed(true)
+        onFail?.()
+      }}
     />
   )
 }
@@ -33,11 +44,13 @@ export function PlaceCard({
   place,
   active,
   onHover,
+  onPhotoFail,
   basePath,
 }: {
   place: PlaceItem
   active: boolean
   onHover: (id: string | null) => void
+  onPhotoFail?: (id: string) => void
   basePath: string
 }) {
   return (
@@ -54,7 +67,7 @@ export function PlaceCard({
           <CardImage
             src={place.images[0] ?? place.pano?.preview ?? ''}
             seed={place.id}
-            title={place.title}
+            onFail={onPhotoFail ? () => onPhotoFail(place.id) : undefined}
           />
           {HAS_FEEL && place.pano && (
             <span className="pano-badge">{place.pano.kind === '360' ? '360°' : 'Bakış'}</span>
