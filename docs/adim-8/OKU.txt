@@ -1,0 +1,11 @@
+Yürüyom — 8. adım
+
+1) Bu klasörü aç.
+2) index.html dosyasına çift tıkla.
+3) İnternet açık olsun (harita, OSM, hava, bakış).
+
+Üstten: Parkurlar veya Kamp. Logo sağda.
+
+Stok Unsplash yok. Fotoğraf yoksa kendi sırt çizimi çıkar; Wikimedia varsa o durur.
+
+Pin izin değildir. 3D model yok.

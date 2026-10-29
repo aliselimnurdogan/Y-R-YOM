@@ -5,6 +5,7 @@ import { formatKm } from '../format'
 import { ACTIVITY_COLORS } from '../labels'
 import { TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL } from '../tiles'
 import type { RouteItem } from '../types'
+import { MapBrand } from './Brand'
 
 function MapController({
   active,
@@ -116,6 +117,7 @@ export function RouteExploreMap({
       >
         Türkiye
       </button>
+      <MapBrand />
     </div>
   )
 }

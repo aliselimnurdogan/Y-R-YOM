@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useSearch } from '../search-context'
-import { HAS_CATALOG, HAS_LIVE, HAS_ROUTE_MODE } from '../step'
+import { HAS_CATALOG, HAS_LIVE, HAS_POLISH, HAS_ROUTE_MODE } from '../step'
+import { BrandLockup } from './Brand'
 import { PinMark, SearchIcon } from './Icons'
 
 export function Header() {
@@ -34,14 +35,24 @@ export function Header() {
       : 'Parkur, şehir veya bölge ara'
     : 'Kamp, yayla veya doğal alan ara'
 
+  const headerClass = [
+    'header',
+    HAS_ROUTE_MODE ? 'has-modes' : '',
+    HAS_POLISH ? 'is-polish-bar' : '',
+  ]
+    .filter(Boolean)
+    .join(' ')
+
   return (
-    <header className={HAS_ROUTE_MODE ? 'header has-modes' : 'header'}>
-      <Link to="/" className="brand" aria-label="Yürüyom ana sayfa">
-        <PinMark />
-        <span className="wordmark">
-          <span className="wy">y</span>ürüyom
-        </span>
-      </Link>
+    <header className={headerClass}>
+      {!HAS_POLISH && (
+        <Link to="/" className="brand" aria-label="Yürüyom ana sayfa">
+          <PinMark />
+          <span className="wordmark">
+            <span className="wy">y</span>ürüyom
+          </span>
+        </Link>
+      )}
       {HAS_ROUTE_MODE && (
         <nav className="mode-nav" aria-label="Bölüm">
           <NavLink
@@ -51,13 +62,13 @@ export function Header() {
               location.pathname === '/' || location.pathname.startsWith('/rota') ? 'is-on' : undefined
             }
           >
-            Yürüyüş parkurları
+            {HAS_POLISH ? 'Parkurlar' : 'Yürüyüş parkurları'}
           </NavLink>
           <NavLink
             to="/kamp"
             className={() => (location.pathname.startsWith('/kamp') ? 'is-on' : undefined)}
           >
-            Kamp alanları
+            {HAS_POLISH ? 'Kamp' : 'Kamp alanları'}
           </NavLink>
         </nav>
       )}
@@ -78,6 +89,11 @@ export function Header() {
           </button>
         )}
       </form>
+      {HAS_POLISH && (
+        <Link to="/" className="brand brand-end" aria-label="Yürüyom ana sayfa">
+          <BrandLockup compact />
+        </Link>
+      )}
       {HAS_CATALOG ? null : (
         <div className="header-actions">
           <button type="button" className="btn-text" onClick={() => setAuthOpen(true)}>

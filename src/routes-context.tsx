@@ -1,6 +1,8 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 import bundledRoutes from './data/routes.json'
 import { ACTIVITIES, DIFFICULTIES } from './labels'
+import { isAllowedMedia } from './media'
+import { HAS_POLISH } from './step'
 import type { Activity, Difficulty, RouteItem, Waypoint } from './types'
 
 type Status = 'loading' | 'error' | 'ready'
@@ -97,7 +99,7 @@ function normalizeRoute(raw: unknown): RouteItem | null {
     author: record.author,
     recordedAt: record.recordedAt,
     description: record.description,
-    image: record.image,
+    image: HAS_POLISH && !isAllowedMedia(record.image) ? '' : record.image,
     track: parseTrack(record.track),
     waypoints: parseWaypoints(record.waypoints),
   }

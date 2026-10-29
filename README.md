@@ -60,6 +60,14 @@ Klasör: `adim-7`
 
 DKMP katalog + 81 il doğa noktaları. İl seçince OpenStreetMap kamp/piknik gelir. Topo/uydu/OpenTopo, hava, yol tarifi, yorum ve puan. 360 bakış 70° FOV. 3D model yok.
 
+## 8. adım — Profesyonel arayüz
+
+Klasör: `adim-8`
+
+`adim-8/index.html` dosyasına çift tıkla.
+
+Harita-kağıdı arka plan, logo sağda, basınca yumuşak geçiş. Unsplash stok ve uydurma YouTube yok. Wikimedia, OSM, hava ve parkurlar duruyor.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -71,5 +79,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 5. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-5/
 - 6. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-6/
 - 7. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-7/
+- 8. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-8/
 
 Harita ve fotoğraf için internet açık olsun.

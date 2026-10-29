@@ -4,14 +4,15 @@ import { formatInt, formatKm } from '../format'
 import { ACTIVITY_LABELS } from '../labels'
 import { srcSet, sharpUrl } from '../media'
 import type { RouteItem } from '../types'
+import { TrailThumb } from './Brand'
 import { EyeIcon, UpIcon } from './Icons'
 
-function CardImage({ src }: { src: string }) {
+function CardImage({ src, seed, title }: { src: string; seed: string; title: string }) {
   const [failed, setFailed] = useState(false)
   useEffect(() => {
     setFailed(false)
   }, [src])
-  if (!src || failed) return <div className="thumb fallback" aria-hidden="true" />
+  if (!src || failed) return <TrailThumb seed={seed} title={title} />
   return (
     <img
       className="thumb"
@@ -41,7 +42,7 @@ export function RouteCard({
   return (
     <li className={onMap ? 'card is-on' : 'card'}>
       <Link to={`/rota/${route.id}`} className="card-link">
-        <CardImage src={route.image} />
+        <CardImage src={route.image} seed={route.id} title={route.title} />
         <div className="card-body">
           <h2 className="card-title" title={route.title}>
             {route.title}

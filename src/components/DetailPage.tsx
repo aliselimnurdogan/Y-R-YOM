@@ -7,9 +7,10 @@ import { srcSet, sharpUrl } from '../media'
 import { appleDir, googleDir, googlePano, yandexDir } from '../nav'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
-import { APP_STEP, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_SOCIAL } from '../step'
+import { APP_STEP, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_POLISH, HAS_SOCIAL } from '../step'
 import type { PlaceComment, PlaceItem, PlaceScores } from '../types'
 import { fetchWeather, type PlaceWeather } from '../weather'
+import { TrailThumb } from './Brand'
 import { CampGuideBlock } from './CampGuideBlock'
 import { DetailMap } from './DetailMap'
 import { FeelThereBlock } from './FeelThereBlock'
@@ -144,7 +145,7 @@ export function DetailPage() {
             className="gallery-main"
             src={sharpUrl(currentImage, 1920)}
             srcSet={srcSet(currentImage, [960, 1440, 1920])}
-            sizes="(max-width: 860px) 100vw, 1100px"
+            sizes="(max-width: 860px) 100%, 1100px"
             alt={place.title}
           />
           <div className="gallery-thumbs" role="list">
@@ -170,6 +171,13 @@ export function DetailPage() {
           </div>
           {HAS_CATALOG && <p className="photo-credit">Fotoğraflar Wikimedia Commons, yerinde çekilmiş kareler.</p>}
         </div>
+      ) : HAS_POLISH ? (
+        <>
+          <div className="cover trail-cover" aria-hidden="true">
+            <TrailThumb seed={place.id} />
+          </div>
+          <p className="empty-photo">Yerinde Wikimedia fotoğrafı yok; stok görsel konmadı.</p>
+        </>
       ) : (
         HAS_CATALOG && (
           <p className="empty-photo">Bu park için yerinde Wikimedia fotoğrafı henüz yok; temsili görsel kullanılmadı.</p>

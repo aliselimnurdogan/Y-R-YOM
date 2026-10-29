@@ -17,7 +17,7 @@ import {
 } from '../labels'
 import { fetchOsmCamps, mergePlaces } from '../overpass'
 import { isWaterPlace, PROVINCES } from '../provinces'
-import { APP_STEP, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_LOOK } from '../step'
+import { APP_STEP, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_LOOK, HAS_POLISH } from '../step'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
 import type { PlaceItem, PlaceKind } from '../types'
@@ -56,7 +56,9 @@ export function ExplorePage() {
   const [osmStatus, setOsmStatus] = useState<'idle' | 'loading' | 'error' | 'ready'>('idle')
 
   useEffect(() => {
-    document.title = HAS_LIVE
+    document.title = HAS_POLISH
+      ? 'Yürüyom'
+      : HAS_LIVE
       ? 'Yürüyom — 81 il'
       : HAS_LOOK
         ? 'Yürüyom — Net bakış'
@@ -215,7 +217,7 @@ export function ExplorePage() {
             {HAS_LIVE && (
               <>
                 <label className="live-select">
-                  <span>İl</span>
+                  {!HAS_POLISH && <span>İl</span>}
                   <select
                     value={province}
                     onChange={(event) => setProvince(event.target.value)}

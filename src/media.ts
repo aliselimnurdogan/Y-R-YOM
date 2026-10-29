@@ -1,7 +1,18 @@
 /** Raise remote image quality without changing stored catalog URLs. */
 
+const BLOCKED =
+  /unsplash\.com|pexels\.com|pixabay\.com|shutterstock|gettyimages|wikiloc|instagram|facebook|fbcdn|tiktok|imgur\.com|googleusercontent|istockphoto|adobe\.stock|flickr\.com/i
+
+export const ALLOWED_YOUTUBE = new Set(['_NSPZHac7P4', 'R6cz1XMXaOc'])
+
 function clean(url: string): string {
   return url.replace(/\?utm_source=.*$/, '')
+}
+
+export function isAllowedMedia(url: string): boolean {
+  if (!url.startsWith('https://')) return false
+  if (BLOCKED.test(url)) return false
+  return /wikimedia\.org|wikipedia\.org/.test(url)
 }
 
 export function sharpUrl(url: string, width: number): string {

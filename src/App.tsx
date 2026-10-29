@@ -8,7 +8,7 @@ import { RouteExplorePage } from './components/RouteExplorePage'
 import { PlacesProvider } from './places-context'
 import { RoutesProvider } from './routes-context'
 import { SearchProvider } from './search-context'
-import { HAS_LIVE, HAS_LOOK, HAS_ROUTE_MODE } from './step'
+import { HAS_LIVE, HAS_LOOK, HAS_POLISH, HAS_ROUTE_MODE } from './step'
 
 interface BoundaryProps {
   children: ReactNode
@@ -58,7 +58,16 @@ function Shell({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.body.classList.toggle('is-look', HAS_LOOK)
     document.body.classList.toggle('is-live', HAS_LIVE)
-    if (HAS_LIVE) {
+    document.body.classList.toggle('is-polish', HAS_POLISH)
+    if (HAS_POLISH) {
+      document
+        .querySelector('meta[name="description"]')
+        ?.setAttribute(
+          'content',
+          'Yürüyom: Türkiye kamp, yayla ve yürüyüş parkurları. Wikimedia fotoğraf, OSM harita, telifsiz arayüz.',
+        )
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#24382e')
+    } else if (HAS_LIVE) {
       document
         .querySelector('meta[name="description"]')
         ?.setAttribute(
@@ -69,8 +78,10 @@ function Shell({ children }: { children: ReactNode }) {
     return () => {
       document.body.classList.remove('is-look')
       document.body.classList.remove('is-live')
+      document.body.classList.remove('is-polish')
     }
   }, [])
+
   return (
     <SearchProvider>
       <div className={HAS_LOOK ? 'app-shell is-look' : 'app-shell'}>

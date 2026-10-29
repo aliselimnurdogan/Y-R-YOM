@@ -6,8 +6,10 @@ import { ACTIVITY_COLORS, ACTIVITY_LABELS } from '../labels'
 import { srcSet, sharpUrl } from '../media'
 import { useRoutes } from '../routes-context'
 import { useSearch } from '../search-context'
-import { RouteDetailMap, type WaypointFocus } from './RouteDetailMap'
+import { TrailThumb } from './Brand'
 import { ElevationChart } from './ElevationChart'
+import { RouteDetailMap, type WaypointFocus } from './RouteDetailMap'
+import { HAS_POLISH } from '../step'
 
 export function RouteDetailPage() {
   const { id = '' } = useParams()
@@ -124,16 +126,20 @@ export function RouteDetailPage() {
           </Link>
         </div>
       </div>
-      {coverOn && route.image && (
+      {coverOn && route.image ? (
         <img
           className="cover"
           src={sharpUrl(route.image, 1920)}
           srcSet={srcSet(route.image, [960, 1440, 1920])}
-          sizes="(max-width: 860px) 100vw, 1100px"
+          sizes="(max-width: 860px) 100%, 1100px"
           alt=""
           onError={() => setCoverOn(false)}
         />
-      )}
+      ) : HAS_POLISH ? (
+        <div className="cover trail-cover" aria-hidden="true">
+          <TrailThumb seed={route.id} />
+        </div>
+      ) : null}
       <RouteDetailMap route={route} hoverIndex={hoverIndex} waypoint={waypoint} />
       <ElevationChart track={route.track} onHover={setHoverIndex} />
       <div className="stats">

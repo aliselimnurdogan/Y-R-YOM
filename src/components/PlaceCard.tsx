@@ -5,13 +5,14 @@ import { PLACE_KIND_LABELS } from '../labels'
 import { srcSet, sharpUrl } from '../media'
 import { HAS_CATALOG, HAS_FEEL } from '../step'
 import type { PlaceItem } from '../types'
+import { TrailThumb } from './Brand'
 
-function CardImage({ src }: { src: string }) {
+function CardImage({ src, seed, title }: { src: string; seed: string; title: string }) {
   const [failed, setFailed] = useState(false)
   useEffect(() => {
     setFailed(false)
   }, [src])
-  if (!src || failed) return <div className="thumb fallback" aria-hidden="true" />
+  if (!src || failed) return <TrailThumb seed={seed} title={title} />
   return (
     <img
       className="thumb"
@@ -50,7 +51,11 @@ export function PlaceCard({
         onBlur={() => onHover(null)}
       >
         <div className="thumb-wrap">
-          <CardImage src={place.images[0] ?? place.pano?.preview ?? ''} />
+          <CardImage
+            src={place.images[0] ?? place.pano?.preview ?? ''}
+            seed={place.id}
+            title={place.title}
+          />
           {HAS_FEEL && place.pano && (
             <span className="pano-badge">{place.pano.kind === '360' ? '360°' : 'Bakış'}</span>
           )}

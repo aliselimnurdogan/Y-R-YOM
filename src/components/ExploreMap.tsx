@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { formatInt } from '../format'
 import { PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
 import { HAS_LIVE } from '../step'
+import { MapBrand } from './Brand'
 import { BASEMAPS, TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL, type BasemapId } from '../tiles'
 import type { PlaceItem } from '../types'
 
@@ -200,6 +201,7 @@ export function ExploreMap({
       <button type="button" className="map-reset" onClick={() => mapRef.current?.setView(center, zoom)}>
         {resetLabel}
       </button>
+      <MapBrand />
     </div>
   )
 }
