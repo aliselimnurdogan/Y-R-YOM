@@ -9,8 +9,10 @@ import type {
   FacilityFlag,
   FireFlag,
   FirewoodFlag,
+  PanoKind,
   PlaceItem,
   PlaceKind,
+  PlacePano,
   PlaceVideo,
   ShopFlag,
 } from './types'
@@ -81,6 +83,24 @@ function normalizePlace(raw: unknown): PlaceItem | null {
     feeTent: feeTent === null && feeRaw !== null ? undefined : feeTent,
     statusLabel: typeof record.statusLabel === 'string' ? record.statusLabel : undefined,
     guide: parseGuide(record.guide),
+    pano: parsePano(record.pano),
+  }
+}
+
+function parsePano(raw: unknown): PlacePano | undefined {
+  if (!raw || typeof raw !== 'object') return undefined
+  const record = raw as Record<string, unknown>
+  if (typeof record.url !== 'string' || !record.url.startsWith('https://')) return undefined
+  if (record.kind !== '360' && record.kind !== 'pano' && record.kind !== 'view') return undefined
+  const width = finiteNumber(record.width)
+  const height = finiteNumber(record.height)
+  return {
+    url: record.url,
+    preview: typeof record.preview === 'string' && record.preview.startsWith('https://') ? record.preview : undefined,
+    credit: typeof record.credit === 'string' && record.credit.length > 0 ? record.credit : 'Wikimedia Commons',
+    kind: record.kind as PanoKind,
+    width: width ?? undefined,
+    height: height ?? undefined,
   }
 }
 

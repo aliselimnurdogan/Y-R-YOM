@@ -36,6 +36,14 @@ Klasör: `adim-4`
 
 Kamp alanına tıklayınca tuvalet, priz, su, odun, ateş, market; güzel yanlar, zorluklar ve ne yapmalı çıkar. Parkurlar duruyor. Giriş ve yorum yok.
 
+## 5. adım — Orada gibi hisset
+
+Klasör: `adim-5`
+
+`adim-5/index.html` dosyasına çift tıkla.
+
+Kamp alanına tıklayınca **Orada gibi hisset**. 360 veya yerinde bakış; sürükle, telefonda çevir. Uydurma görüntü yok.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -44,5 +52,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 2. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-2/
 - 3. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-3/
 - 4. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-4/
+- 5. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-5/
 
 Harita ve fotoğraf için internet açık olsun.

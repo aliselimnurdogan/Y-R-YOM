@@ -15,7 +15,7 @@ import {
   ZONE_COLORS,
   type PlaceSortKey,
 } from '../labels'
-import { APP_STEP, HAS_CATALOG } from '../step'
+import { APP_STEP, HAS_CATALOG, HAS_FEEL } from '../step'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
 import type { PlaceKind } from '../types'
@@ -43,11 +43,13 @@ export function ExplorePage() {
   const [hoveredId, setHoveredId] = useState<string | null>(null)
 
   useEffect(() => {
-    document.title = catalog
-      ? 'Yürüyom — Kamp rehberi'
-      : turkey
-        ? 'Yürüyom — Kamp alanları'
-        : 'Yürüyom — Kahramanmaraş kamp ve doğa'
+    document.title = HAS_FEEL
+      ? 'Yürüyom — Orada gibi hisset'
+      : catalog
+        ? 'Yürüyom — Kamp rehberi'
+        : turkey
+          ? 'Yürüyom — Kamp alanları'
+          : 'Yürüyom — Kahramanmaraş kamp ve doğa'
   }, [catalog, turkey])
 
   const filtered = useMemo(() => {

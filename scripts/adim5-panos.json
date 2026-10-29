@@ -1,0 +1,426 @@
+{
+  "found": 42,
+  "total": 64,
+  "results": {
+    "ayvalik-adalari": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Cunda_0010486.JPG/2560px-Cunda_0010486.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Cunda_0010486.JPG/3840px-Cunda_0010486.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "360",
+      "file": "File:Cunda 0010486.JPG",
+      "score": 105.33933333333333,
+      "width": 5376,
+      "height": 2688
+    },
+    "kucukelmali": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg/2560px-K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg/3840px-K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Küçükelmalı' da Kış.jpg",
+      "score": 26,
+      "width": 5472,
+      "height": 3648
+    },
+    "buyukada-tp": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/B%C3%BCy%C3%BCkada_ayayorgi_manzaras%C4%B1_panorama_-_panoramio.jpg/2560px-B%C3%BCy%C3%BCkada_ayayorgi_manzaras%C4%B1_panorama_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/B%C3%BCy%C3%BCkada_ayayorgi_manzaras%C4%B1_panorama_-_panoramio.jpg/3840px-B%C3%BCy%C3%BCkada_ayayorgi_manzaras%C4%B1_panorama_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "file": "File:Büyükada ayayorgi manzarası panorama - panoramio.jpg",
+      "score": 81.586,
+      "width": 4985,
+      "height": 1324
+    },
+    "danamandira": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Danamand%C4%B1raNP_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/6/67/Danamand%C4%B1raNP_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:DanamandıraNP (1).jpg",
+      "score": 26,
+      "width": 2134,
+      "height": 1280
+    },
+    "dilburnu": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg/2560px-Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg/3840px-Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "file": "File:Dilburnu tabiat parkı panoramik görüntü.jpg",
+      "score": 46,
+      "width": 9152,
+      "height": 3520
+    },
+    "hacet-deresi": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Hacet_Deresi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Hacet_Deresi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Hacet Deresi.jpg",
+      "score": 46,
+      "width": 3264,
+      "height": 1836
+    },
+    "polonezkoy-tp": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Polonezk%C3%B6y_nature_panorama.jpg/2560px-Polonezk%C3%B6y_nature_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Polonezk%C3%B6y_nature_panorama.jpg/3840px-Polonezk%C3%B6y_nature_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "file": "File:Polonezköy nature panorama.jpg",
+      "score": 64,
+      "width": 5483,
+      "height": 1787
+    },
+    "beskayalar": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg/2560px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg/3840px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Beşkayalar Tabiat Parkı - Ocak 2020 DSC08558 hamdigumus.jpg",
+      "score": 26,
+      "width": 6000,
+      "height": 4000
+    },
+    "suadiye-tp": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Princes%E2%80%99_Islands%2C_Istanbul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Princes%E2%80%99_Islands%2C_Istanbul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "credit": "Wikimedia Commons",
+      "kind": "360",
+      "file": "File:Princes’ Islands, Istanbul.jpg",
+      "score": 50,
+      "width": 2906,
+      "height": 1434
+    },
+    "poyrazlar": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Poyrazlar_G%C3%B6l%C3%BC%2C_M.Acar.jpg/2560px-Poyrazlar_G%C3%B6l%C3%BC%2C_M.Acar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Poyrazlar_G%C3%B6l%C3%BC%2C_M.Acar.jpg/3840px-Poyrazlar_G%C3%B6l%C3%BC%2C_M.Acar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Poyrazlar Gölü, M.Acar.jpg",
+      "score": 46,
+      "width": 3872,
+      "height": 2592
+    },
+    "kartaltepe": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg/2560px-Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg/3840px-Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Tekirdağ Kartaltepe Natural Park.jpg",
+      "score": 46,
+      "width": 5472,
+      "height": 3648
+    },
+    "bafa-golu-tp": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Bafa_G%C3%B6l%C3%BCnde_Kaya_Mezarlar%C4%B1.jpg/2560px-Bafa_G%C3%B6l%C3%BCnde_Kaya_Mezarlar%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Bafa_G%C3%B6l%C3%BCnde_Kaya_Mezarlar%C4%B1.jpg/3840px-Bafa_G%C3%B6l%C3%BCnde_Kaya_Mezarlar%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Bafa Gölünde Kaya Mezarları.jpg",
+      "score": 46,
+      "width": 4032,
+      "height": 3024
+    },
+    "spil-dagi-mp": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Spil_da%C4%9F%C4%B1_360%C2%B0.jpg/2560px-Spil_da%C4%9F%C4%B1_360%C2%B0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Spil_da%C4%9F%C4%B1_360%C2%B0.jpg/3840px-Spil_da%C4%9F%C4%B1_360%C2%B0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "360",
+      "file": "File:Spil dağı 360°.jpg",
+      "score": 116,
+      "width": 6682,
+      "height": 3340
+    },
+    "belemedik": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/20.Belemedik_Nature_Park.jpg/2560px-20.Belemedik_Nature_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/20.Belemedik_Nature_Park.jpg/3840px-20.Belemedik_Nature_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:20.Belemedik Nature Park.jpg",
+      "score": 41.062,
+      "width": 6240,
+      "height": 4160
+    },
+    "obruk-selalesi": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Hyacinthus_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Hyacinthus_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Hyacinthus II.jpg",
+      "score": 46,
+      "width": 3744,
+      "height": 5616
+    },
+    "kursunlu-selalesi": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg/2560px-Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg/3840px-Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Kurşunlu Şelalesi Tabiat Parkı.jpg",
+      "score": 46,
+      "width": 5184,
+      "height": 3888
+    },
+    "salda-golu-tp": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Salda-G%C3%B6l%C3%BC_Panorama.jpg/2560px-Salda-G%C3%B6l%C3%BC_Panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Salda-G%C3%B6l%C3%BC_Panorama.jpg/3840px-Salda-G%C3%B6l%C3%BC_Panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "file": "File:Salda-Gölü Panorama.jpg",
+      "score": 84,
+      "width": 9581,
+      "height": 2370
+    },
+    "isparta-golcuk": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_Bolu.jpg/2560px-G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_Bolu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_Bolu.jpg/3840px-G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_Bolu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Gölcük Tabiat Parkı Bolu.jpg",
+      "score": 26,
+      "width": 6000,
+      "height": 4000
+    },
+    "yazili-kanyon": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Yaz%C4%B1l%C4%B1_Canyon_Nature_Park%2C_March_2024_03.jpg/2560px-Yaz%C4%B1l%C4%B1_Canyon_Nature_Park%2C_March_2024_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Yaz%C4%B1l%C4%B1_Canyon_Nature_Park%2C_March_2024_03.jpg/3840px-Yaz%C4%B1l%C4%B1_Canyon_Nature_Park%2C_March_2024_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Yazılı Canyon Nature Park, March 2024 03.jpg",
+      "score": 26,
+      "width": 4608,
+      "height": 3456
+    },
+    "altiparmak-tp": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Yavuzk%C3%B6y.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/6/67/Yavuzk%C3%B6y.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "credit": "Wikimedia Commons",
+      "kind": "360",
+      "file": "File:Yavuzköy.jpg",
+      "score": 56,
+      "width": 3681,
+      "height": 1894
+    },
+    "karagol-sahara": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Karag%C3%B6l_Panorama.jpg/2560px-Karag%C3%B6l_Panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Karag%C3%B6l_Panorama.jpg/3840px-Karag%C3%B6l_Panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "file": "File:Karagöl Panorama.jpg",
+      "score": 84,
+      "width": 9572,
+      "height": 2872
+    },
+    "abant-mp": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Abant_Panorama.JPG/2560px-Abant_Panorama.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Abant_Panorama.JPG/3840px-Abant_Panorama.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "file": "File:Abant Panorama.JPG",
+      "score": 84,
+      "width": 11285,
+      "height": 2074
+    },
+    "arkutdagi": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/ISS043-E-259164_-_View_of_Earth.jpg/2560px-ISS043-E-259164_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/ISS043-E-259164_-_View_of_Earth.jpg/3840px-ISS043-E-259164_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:ISS043-E-259164 - View of Earth.jpg",
+      "score": 24,
+      "width": 4928,
+      "height": 3280
+    },
+    "ayikayasi": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg/2560px-Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg/3840px-Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Ayıkayası-Tabiat-Parkı.jpg",
+      "score": 32,
+      "width": 5999,
+      "height": 3375
+    },
+    "bolu-golcuk": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Bolu_G%C3%B6lc%C3%BCk_G%C3%B6l%C3%BC_04_panorama.jpg/2560px-Bolu_G%C3%B6lc%C3%BCk_G%C3%B6l%C3%BC_04_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Bolu_G%C3%B6lc%C3%BCk_G%C3%B6l%C3%BC_04_panorama.jpg/3840px-Bolu_G%C3%B6lc%C3%BCk_G%C3%B6l%C3%BC_04_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "file": "File:Bolu Gölcük Gölü 04 panorama.jpg",
+      "score": 84,
+      "width": 10464,
+      "height": 2064
+    },
+    "karaca-tp": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/I%C5%9F%C4%B1n_Karaca_2026.jpg/2560px-I%C5%9F%C4%B1n_Karaca_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/I%C5%9F%C4%B1n_Karaca_2026.jpg/3840px-I%C5%9F%C4%B1n_Karaca_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Işın Karaca 2026.jpg",
+      "score": 26,
+      "width": 5464,
+      "height": 8192
+    },
+    "kargali-golcuk": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/ISS043-E-259145_-_View_of_Earth.jpg/2560px-ISS043-E-259145_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/ISS043-E-259145_-_View_of_Earth.jpg/3840px-ISS043-E-259145_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:ISS043-E-259145 - View of Earth.jpg",
+      "score": 24,
+      "width": 4928,
+      "height": 3280
+    },
+    "sunnet-golu": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/S%C3%9CNNET_G%C3%96L%C3%9C3.jpg/2560px-S%C3%9CNNET_G%C3%96L%C3%9C3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/S%C3%9CNNET_G%C3%96L%C3%9C3.jpg/3840px-S%C3%9CNNET_G%C3%96L%C3%9C3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:SÜNNET GÖLÜ3.jpg",
+      "score": 52,
+      "width": 5984,
+      "height": 3283
+    },
+    "yedigoller-mp": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Yedig%C3%B6ller_National_Park_Panorama_View.jpg/2560px-Yedig%C3%B6ller_National_Park_Panorama_View.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Yedig%C3%B6ller_National_Park_Panorama_View.jpg/3840px-Yedig%C3%B6ller_National_Park_Panorama_View.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "file": "File:Yedigöller National Park Panorama View.jpg",
+      "score": 64,
+      "width": 5251,
+      "height": 1904
+    },
+    "aksu-tp": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/TE%26II_Vol_06_Fig_099.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/4/48/TE%26II_Vol_06_Fig_099.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:TE&II Vol 06 Fig 099.jpg",
+      "score": 20,
+      "width": 1438,
+      "height": 1391
+    },
+    "catak-corum": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Ye%C5%9Filin_ak%C4%B1%C5%9F%C4%B1.jpg/2560px-Ye%C5%9Filin_ak%C4%B1%C5%9F%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Ye%C5%9Filin_ak%C4%B1%C5%9F%C4%B1.jpg/3840px-Ye%C5%9Filin_ak%C4%B1%C5%9F%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Yeşilin akışı.jpg",
+      "score": 35.968,
+      "width": 4624,
+      "height": 3472
+    },
+    "kuzalan": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Kuzalan_Giresun.jpg/2560px-Kuzalan_Giresun.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Kuzalan_Giresun.jpg/3840px-Kuzalan_Giresun.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "360",
+      "file": "File:Kuzalan Giresun.jpg",
+      "score": 56,
+      "width": 4608,
+      "height": 2176
+    },
+    "limni-golu": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Lake_Limni_aerial_view_01.jpg/2560px-Lake_Limni_aerial_view_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Lake_Limni_aerial_view_01.jpg/3840px-Lake_Limni_aerial_view_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Lake Limni aerial view 01.jpg",
+      "score": 26,
+      "width": 4056,
+      "height": 3040
+    },
+    "tunca-vadisi": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Ar%C4%B1l%C4%B1%2C_F%C4%B1nd%C4%B1kl%C4%B1.jpg/2560px-Ar%C4%B1l%C4%B1%2C_F%C4%B1nd%C4%B1kl%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Ar%C4%B1l%C4%B1%2C_F%C4%B1nd%C4%B1kl%C4%B1.jpg/3840px-Ar%C4%B1l%C4%B1%2C_F%C4%B1nd%C4%B1kl%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Arılı, Fındıklı.jpg",
+      "score": 16.77166666666667,
+      "width": 4032,
+      "height": 3024
+    },
+    "akgol-sinop": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Lake_Akg%C3%B6l_and_the_surrounding_plains%2C_March_2024_04.jpg/2560px-Lake_Akg%C3%B6l_and_the_surrounding_plains%2C_March_2024_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Lake_Akg%C3%B6l_and_the_surrounding_plains%2C_March_2024_04.jpg/3840px-Lake_Akg%C3%B6l_and_the_surrounding_plains%2C_March_2024_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Lake Akgöl and the surrounding plains, March 2024 04.jpg",
+      "score": 32,
+      "width": 4608,
+      "height": 2592
+    },
+    "catak-kanyonu-sinop": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/ISS052-E-83004_-_View_of_Earth.jpg/2560px-ISS052-E-83004_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/ISS052-E-83004_-_View_of_Earth.jpg/3840px-ISS052-E-83004_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:ISS052-E-83004 - View of Earth.jpg",
+      "score": 16.587,
+      "width": 4928,
+      "height": 3280
+    },
+    "calcamili": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/%C3%87alk%C3%B6y_do%C4%9Fa_park%C4%B1.jpg/2560px-%C3%87alk%C3%B6y_do%C4%9Fa_park%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/%C3%87alk%C3%B6y_do%C4%9Fa_park%C4%B1.jpg/3840px-%C3%87alk%C3%B6y_do%C4%9Fa_park%C4%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Çalköy doğa parkı.jpg",
+      "score": 26,
+      "width": 7952,
+      "height": 5304
+    },
+    "uzungol-tp": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Uzung%C3%B6l_Panorama.jpg/2560px-Uzung%C3%B6l_Panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Uzung%C3%B6l_Panorama.jpg/3840px-Uzung%C3%B6l_Panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "file": "File:Uzungöl Panorama.jpg",
+      "score": 64,
+      "width": 15462,
+      "height": 3770
+    },
+    "danaagzi": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Karadeniz_Ere%C4%9Fli_sahil_g%C3%B6r%C3%BCn%C3%BCm%C3%BC.jpg/2560px-Karadeniz_Ere%C4%9Fli_sahil_g%C3%B6r%C3%BCn%C3%BCm%C3%BC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Karadeniz_Ere%C4%9Fli_sahil_g%C3%B6r%C3%BCn%C3%BCm%C3%BC.jpg/3840px-Karadeniz_Ere%C4%9Fli_sahil_g%C3%B6r%C3%BCn%C3%BCm%C3%BC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Karadeniz Ereğli sahil görünümü.jpg",
+      "score": 15.626666666666667,
+      "width": 4032,
+      "height": 3024
+    },
+    "saricali": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/ISS023-E-18148_-_View_of_Earth.jpg/2560px-ISS023-E-18148_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/ISS023-E-18148_-_View_of_Earth.jpg/3840px-ISS023-E-18148_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:ISS023-E-18148 - View of Earth.jpg",
+      "score": 24,
+      "width": 4288,
+      "height": 2848
+    },
+    "soguksu": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Panoramic_K%C4%B1z%C4%B1lcahamam.jpg/2560px-Panoramic_K%C4%B1z%C4%B1lcahamam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Panoramic_K%C4%B1z%C4%B1lcahamam.jpg/3840px-Panoramic_K%C4%B1z%C4%B1lcahamam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "file": "File:Panoramic Kızılcahamam.jpg",
+      "score": 61.21666666666667,
+      "width": 7376,
+      "height": 576
+    },
+    "sorgun-goleti": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Sorgun3.jpg/2560px-Sorgun3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "preview": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Sorgun3.jpg/3840px-Sorgun3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "file": "File:Sorgun3.jpg",
+      "score": 46,
+      "width": 4608,
+      "height": 3456
+    }
+  }
+}

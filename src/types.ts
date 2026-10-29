@@ -24,6 +24,17 @@ export interface CampGuide {
   advice: string
 }
 
+export type PanoKind = '360' | 'pano' | 'view'
+
+export interface PlacePano {
+  url: string
+  preview?: string
+  credit: string
+  kind: PanoKind
+  width?: number
+  height?: number
+}
+
 export interface PlaceItem {
   id: string
   title: string
@@ -41,6 +52,7 @@ export interface PlaceItem {
   feeTent?: number | null
   statusLabel?: string
   guide?: CampGuide
+  pano?: PlacePano
 }
 
 export interface PlaceComment {

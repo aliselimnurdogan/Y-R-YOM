@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { formatFee, formatInt } from '../format'
 import { PLACE_KIND_LABELS } from '../labels'
-import { HAS_CATALOG } from '../step'
+import { HAS_CATALOG, HAS_FEEL } from '../step'
 import type { PlaceItem } from '../types'
 
 function CardImage({ src }: { src: string }) {
@@ -46,7 +46,12 @@ export function PlaceCard({
         onFocus={() => onHover(place.id)}
         onBlur={() => onHover(null)}
       >
-        <CardImage src={place.images[0] ?? ''} />
+        <div className="thumb-wrap">
+          <CardImage src={place.images[0] ?? place.pano?.preview ?? ''} />
+          {HAS_FEEL && place.pano && (
+            <span className="pano-badge">{place.pano.kind === '360' ? '360°' : 'Bakış'}</span>
+          )}
+        </div>
         <div className="card-body">
           <h2 className="card-title" title={place.title}>
             {place.title}

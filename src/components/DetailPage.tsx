@@ -5,10 +5,11 @@ import { formatDate, formatFee, formatInt, initials } from '../format'
 import { LEGAL_CAMP_NOTE, PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
-import { APP_STEP, HAS_CATALOG } from '../step'
+import { APP_STEP, HAS_CATALOG, HAS_FEEL } from '../step'
 import type { PlaceComment, PlaceItem } from '../types'
 import { CampGuideBlock } from './CampGuideBlock'
 import { DetailMap } from './DetailMap'
+import { FeelThereBlock } from './FeelThereBlock'
 
 export function DetailPage() {
   const { id = '' } = useParams()
@@ -100,6 +101,7 @@ export function DetailPage() {
         </div>
       </div>
       <p className="lede place-lede">{place.summary}</p>
+      {HAS_FEEL && <FeelThereBlock place={place} />}
       {HAS_CATALOG && place.guide && <CampGuideBlock place={place} />}
       {HAS_CATALOG && (
         <dl className="fact-grid">

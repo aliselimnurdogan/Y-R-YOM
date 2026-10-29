@@ -48,6 +48,12 @@
         "Vapur saatini ve dönüşü planlayın; gece ulaşım seyrek."
       ],
       "advice": "Bu gece Ayvalık Adaları’nda kalacaksanız önce idareye yer gösterin; vapurla inip arabasız ilerleyeceksiniz. Market ve suyu iskele civarında bitirin, çadır bedeli tarifede 225 TL, tesis belirsiz. Ateşi ocağa sıkıştırın, odunu yanınıza alın ve 20:30 sonrası mangalı unutun."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Ayval%C4%B1k_Islands.jpg/1920px-Ayval%C4%B1k_Islands.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Ayval%C4%B1k_Islands.jpg/1920px-Ayval%C4%B1k_Islands.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -142,6 +148,14 @@
         "Piknik masalarını günübirlikçilerle paylaşmayı göze alın."
       ],
       "advice": "Küçükelmalı’ya bu gece inecekseniz gişede kamp yerini sorun; serbest ormana çadır kurulmaz. Çadır bedeli tarifede 195 TL; açık kaynaklarda çeşme yazılıyor ama resmi kayıt net değil, suyu yedekleyin. Odunu ve yemeği Pazaryeri’nden getirin, ateşi ocağa alın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg/1920px-K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg/1920px-K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 5472,
+      "height": 3648
     }
   },
   {
@@ -191,6 +205,12 @@
         "Fener ve yedek su şart; gece kanyon karanlık."
       ],
       "advice": "Sadağı’na bu gece geliyorsanız kanyonun içine değil idarenin gösterdiği alana inin. Çadır bedeli tarifede 150 TL, tesis belirsiz; suyu, yemeği ve tuvalet çözümünü Orhaneli’nden alın. Odun kesmeyin, ateşi ocağa sıkıştırın, kaygan tabanda kazığı sağlam çakın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Sada%C4%9F%C4%B1_kanyonu.jpg/1920px-Sada%C4%9F%C4%B1_kanyonu.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Sada%C4%9F%C4%B1_kanyonu.jpg/1920px-Sada%C4%9F%C4%B1_kanyonu.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -243,6 +263,12 @@
         "Şelale kenarı ıslak; çadırı düz ve kuru yere kurun."
       ],
       "advice": "Suuçtu’ya bu gece gelirseniz gişede tahsisli çadır yerini alın; şelale dibine inmeyin. Çadır bedeli tarifede 150 TL, çeşme ve büfe yazılı, WC’yi gişede sorun, elektrik beklemeyin. Yerde ateş yok, tüp veya ocak kullanın; odun kesmeyin ve yiyeceği açık bırakmayın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Suu%C3%A7tu_Waterfall%2C_Mustafakemalpa%C5%9Fa.jpg/1920px-Suu%C3%A7tu_Waterfall%2C_Mustafakemalpa%C5%9Fa.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Suu%C3%A7tu_Waterfall%2C_Mustafakemalpa%C5%9Fa.jpg/1920px-Suu%C3%A7tu_Waterfall%2C_Mustafakemalpa%C5%9Fa.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -292,6 +318,14 @@
         "Son vapuru kaçırmayın; gece dönüş seçeneği dar."
       ],
       "advice": "Büyükada Tabiat Parkı küçük bir çamlık; bu gece kalacaksanız idareden yer ve izin sorun, aksi halde pratikte günübirlik alandır. Çadır bedeli tarifede 225 TL; arabasız ineceksiniz, suyu ve erzakı iskelede alın. Ateşi sıkı tutun, odun kesmeyin, tesis beklemeyin — fener ve tuvalet planı size kalır."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/B%C3%BCy%C3%BCkada_ayayorgi_manzaras%C4%B1_panorama_-_panoramio.jpg/1920px-B%C3%BCy%C3%BCkada_ayayorgi_manzaras%C4%B1_panorama_-_panoramio.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/B%C3%BCy%C3%BCkada_ayayorgi_manzaras%C4%B1_panorama_-_panoramio.jpg/1920px-B%C3%BCy%C3%BCkada_ayayorgi_manzaras%C4%B1_panorama_-_panoramio.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "width": 4985,
+      "height": 1324
     }
   },
   {
@@ -341,6 +375,14 @@
         "Yazın yangın yasağını gişede sorun."
       ],
       "advice": "Danamandıra’ya bu gece geliyorsanız önce idareye yer sorun; orman içi serbest kamp yok. Çadır bedeli tarifede 225 TL, tesis belirsiz, suyu ve yemeği Çatalca’dan getirin. Odun kesmeyin, ateşi ocağa alın; İstanbul’a yakın olduğu için gece gürültü olabilir."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Danamand%C4%B1raNP_%281%29.jpg/1920px-Danamand%C4%B1raNP_%281%29.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Danamand%C4%B1raNP_%281%29.jpg/1920px-Danamand%C4%B1raNP_%281%29.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 2134,
+      "height": 1280
     }
   },
   {
@@ -391,6 +433,14 @@
         "Odun kesmek ve orman içi kamp yasak."
       ],
       "advice": "Dilburnu küçük bir burun parkı; bu gece çadır için mutlaka idareyi arayın, açık kaynaklar gecelemeyi sık sık yasak yazıyor. Çadır bedeli tarifede 225 TL. Arabasız, yangın kuralı sıkı, tesis belirsiz; suyu iskelede alın, ateşi ocağa bile sormadan yakmayın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg/1920px-Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg/1920px-Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "width": 9152,
+      "height": 3520
     }
   },
   {
@@ -438,6 +488,14 @@
         "Islak zemin için branda alın."
       ],
       "advice": "Hacet Deresi’ne bu gece inecekseniz gişede veya idarede tahsisli yeri sorun. Çadır bedeli tarifede 150 TL; dere kenarı ıslak, çadırı suya yaklaştırmayın. Tesis belirsiz, suyu Şile’den getirin; odun kesmeyin, ateşi ocağa alın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hacet_Deresi.jpg/1920px-Hacet_Deresi.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hacet_Deresi.jpg/1920px-Hacet_Deresi.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 3264,
+      "height": 1836
     }
   },
   {
@@ -535,6 +593,14 @@
         "Köy marketinden su ve ekmek alın."
       ],
       "advice": "Polonezköy’e bu gece geliyorsanız kapı saatini kaçırmayın ve çadırı gösterilen yere kurun. Çadır bedeli tarifede 225 TL; WC ve çeşme var, elektrik ve duş yok, market köyde. Ateşi ocağa sorun, yazın yangın dönemi sıkı; odun kesmeyin, şarjı önceden yapın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Polonezk%C3%B6y_nature_panorama.jpg/1920px-Polonezk%C3%B6y_nature_panorama.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Polonezk%C3%B6y_nature_panorama.jpg/1920px-Polonezk%C3%B6y_nature_panorama.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "width": 5483,
+      "height": 1787
     }
   },
   {
@@ -587,6 +653,14 @@
         "Gişede WC’nin açık olup olmadığını sorun."
       ],
       "advice": "Beşkayalar’a bu gece geliyorsanız Yuvacık’ta yemek ve suyu bitirin; içeride büfe yok. Çadır bedeli tarifede 195 TL, son iki kilometre toprak, yağmurda çamur. Çeşme ve tuvalet yazılı, elektrik yok; çadırı kanyona değil gösterilen düzlüğe kurun."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg/1920px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg/1920px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 6000,
+      "height": 4000
     }
   },
   {
@@ -635,6 +709,12 @@
         "Gece 1050 m’de serin; üç mevsim tulum iyi olur."
       ],
       "advice": "Suadiye Tabiat Parkı’na bu gece özel araçla çıkın; çadır bedeli tarifede 195 TL. Tesis belirsiz, suyu ve yemeği yolda alın, çadırı gösterilen yere kurun. Rakım 1050 m, gece üşütür; kalın bir kat, fener ve ocak şart."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Suad%C4%B0ye_Tab%C4%B0at_Park%C4%B1.jpg/1920px-Suad%C4%B0ye_Tab%C4%B0at_Park%C4%B1.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Suad%C4%B0ye_Tab%C4%B0at_Park%C4%B1.jpg/1920px-Suad%C4%B0ye_Tab%C4%B0at_Park%C4%B1.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -687,6 +767,14 @@
         "Kapı saatini kaçırmayın."
       ],
       "advice": "Poyrazlar’a bu gece gelirseniz göl kenarına çadır kurmayın; gişede yeri sorun. Çadır bedeli tarifede 195 TL; büfe ve WC var, içme suyu ve elektrik belirsiz, sivrisinek yoğun. Hafta sonu gürültülü olabilir; odun kesmeyin, ateşi ocağa alın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Poyrazlar_G%C3%B6l%C3%BC%2C_M.Acar.jpg/1920px-Poyrazlar_G%C3%B6l%C3%BC%2C_M.Acar.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Poyrazlar_G%C3%B6l%C3%BC%2C_M.Acar.jpg/1920px-Poyrazlar_G%C3%B6l%C3%BC%2C_M.Acar.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 3872,
+      "height": 2592
     }
   },
   {
@@ -736,6 +824,14 @@
         "Geceleme yalnız belirlenmiş yerde."
       ],
       "advice": "Kartaltepe’ye bu gece çıkıyorsanız idareden yer teyidi alın. Çadır bedeli tarifede 195 TL, tesis belirsiz; suyu ve yemeği şehirden getirin. Sırt rüzgârlı, kazığı sağlam çakın; odun kesmeyin, ateşi ocağa alın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg/1920px-Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg/1920px-Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 5472,
+      "height": 3648
     }
   },
   {
@@ -878,6 +974,14 @@
         "Özel kampinglerin duş-prizini park imkânı sanmayın."
       ],
       "advice": "Bafa’ya bu gece geliyorsanız kapı saatini (07:00–20:30) kaçırmayın ve yeri görevliye sorun. Çadır bedeli tarifede 255 TL; park WC-elektriği belirsiz, köy marketinden su ve yemek alın, sivrisinek bekleyin. Göle sabun dökmeyin, odun kesmeyin, ateşi ocağa sorun."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Bafa_G%C3%B6l%C3%BCnde_Kaya_Mezarlar%C4%B1.jpg/1920px-Bafa_G%C3%B6l%C3%BCnde_Kaya_Mezarlar%C4%B1.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Bafa_G%C3%B6l%C3%BCnde_Kaya_Mezarlar%C4%B1.jpg/1920px-Bafa_G%C3%B6l%C3%BCnde_Kaya_Mezarlar%C4%B1.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 4032,
+      "height": 3024
     }
   },
   {
@@ -930,6 +1034,14 @@
         "Kapı saatini sorun."
       ],
       "advice": "Spil’e bu gece çıkıyorsanız Manisa’da erzakı bitirin ve kapı saatini (09:00–18:00) sorun. Çadır bedeli tarifede 225 TL; tuvalet ve çeşme var, çadır prizi belirsiz, yol sonu bozulabilir. Ateşi ocakta yakın, odun kesmeyin; 1300 m gece serin, kalın tulum alın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Spil_da%C4%9F%C4%B1_360%C2%B0.jpg/1920px-Spil_da%C4%9F%C4%B1_360%C2%B0.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Spil_da%C4%9F%C4%B1_360%C2%B0.jpg/1920px-Spil_da%C4%9F%C4%B1_360%C2%B0.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "360",
+      "width": 6682,
+      "height": 3340
     }
   },
   {
@@ -1027,6 +1139,14 @@
         "Odun kesmek yasak."
       ],
       "advice": "Belemedik’e bu gece inecekseniz Pozantı’da erzakı bitirin ve idareden tahsisli yeri sorun. Çadır bedeli tarifede 195 TL; resmi kayıtta WC-elektrik net değil, açık kaynaklara güvenip boş gelmeyin. Yerde ateş yok; yiyeceği kapatın, yaban dolaşır."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/20.Belemedik_Nature_Park.jpg/1920px-20.Belemedik_Nature_Park.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/20.Belemedik_Nature_Park.jpg/1920px-20.Belemedik_Nature_Park.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 6240,
+      "height": 4160
     }
   },
   {
@@ -1076,6 +1196,12 @@
         "Odun kesmeyin; ateş izinli ocakta."
       ],
       "advice": "Obruk Şelalesi’ne bu gece çıkıyorsanız her şeyi Saimbeyli’den tamamlayın. Çadır bedeli tarifede 105 TL, tesis belirsiz; şelale kenarı ıslak, çadırı tahsisli kuru düzlüğe kurun. 1646 m’de gece soğuk, üç-dört mevsim tulum alın, odun kesmeyin."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_03.JPG/1920px-Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_03.JPG",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_03.JPG/1920px-Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_03.JPG",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -1127,6 +1253,14 @@
         "Çadır elektriği beklemeyin."
       ],
       "advice": "Kurşunlu’ya bu gece çadır için geliyorsanız önce gişeyi arayın; alan günübirlik şelale parkı, geceleme kaydı tartışmalı. Çadır bedeli tarifede 285 TL; WC ve büfe var, elektrik belirsiz, tur otobüsü bekleyin. Ateşi sormadan yakmayın, odun kesmeyin."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 5184,
+      "height": 3888
     }
   },
   {
@@ -1179,6 +1313,14 @@
         "Sigara ve kıyı pikniği yasağına uyun."
       ],
       "advice": "Salda’ya bu gece geliyorsanız çadırı beyaz kumsala değil yalnızca gösterilen alana kurun. Çadır bedeli tarifede 195 TL, tesis belirsiz; suyu köyden alın. Göle sabun dökmek, çamur banyosu ve kum almak yasak; ateşi ocağa sorun, kıyı koruması cezalı."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Salda-G%C3%B6l%C3%BC_Panorama.jpg/1920px-Salda-G%C3%B6l%C3%BC_Panorama.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Salda-G%C3%B6l%C3%BC_Panorama.jpg/1920px-Salda-G%C3%B6l%C3%BC_Panorama.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "width": 9581,
+      "height": 2370
     }
   },
   {
@@ -1230,6 +1372,12 @@
         "Kapı saatini kaçırmayın."
       ],
       "advice": "Isparta Gölcük’e bu gece şehirden 6 km’desiniz; erzakı merkezden alın. Çadır bedeli tarifede 165 TL, tesis resmi kayıtta net değil, suyu yedekleyin. Gölde yüzülmez, kıyıya serbest çadır yok; 1350 m gece üşütür, odun kesmeyin."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Isparta_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1.jpg/1920px-Isparta_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Isparta_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1.jpg/1920px-Isparta_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -1279,6 +1427,14 @@
         "Odun kesmek yasak; kaygan tabanda dikkat."
       ],
       "advice": "Yazılı Kanyon’a bu gece çadır için geliyorsanız mutlaka idareyi arayın; kanyon içi kamp yeri değil ve dönemsel yasak notu düşülmüş. Çadır bedeli tarifede 165 TL, tesis belirsiz, suyu Sütçüler’den getirin. Odun kesmeyin, ateşi sorun, feneri alın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Yaz%C4%B1l%C4%B1_Canyon_Nature_Park%2C_March_2024_03.jpg/1920px-Yaz%C4%B1l%C4%B1_Canyon_Nature_Park%2C_March_2024_03.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Yaz%C4%B1l%C4%B1_Canyon_Nature_Park%2C_March_2024_03.jpg/1920px-Yaz%C4%B1l%C4%B1_Canyon_Nature_Park%2C_March_2024_03.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 4608,
+      "height": 3456
     }
   },
   {
@@ -1418,6 +1574,12 @@
         "Kaygan taşta kafa lambası şart."
       ],
       "advice": "Yerköprü’ye bu gece inecekseniz doğal köprüyü gezilecek yer sayın, çadır yeri değil; ücreti idareden sorun. Tesis belirsiz, suyu Mut’tan getirin, tahsisli düzlükte kalın. Odun kesmeyin, ateşi ocağa alın; zemin ıslak, kazığı ve feneri unutmayın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi.jpg/1920px-Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi.jpg/1920px-Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -1470,6 +1632,12 @@
         "Gitmeden WC’yi teyit edin."
       ],
       "advice": "Karatepe-Aslantaş’a bu gece geliyorsanız gişede yer gösterilmesini isteyin; müze ve baraj kıyısı serbest kamp değil. Çadır bedeli tarifede 195 TL, resmi tesis kaydı net değil, suyu Kadirli’den getirin. Ateşi sorun, odun kesmeyin; kapı 08:00–19:00, geç kalmayın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Karatepe_6060_%284872732156%29.jpg/1920px-Karatepe_6060_%284872732156%29.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Karatepe_6060_%284872732156%29.jpg/1920px-Karatepe_6060_%284872732156%29.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -1519,6 +1687,12 @@
         "Sis ve yön kaybına karşı GPS ve fener."
       ],
       "advice": "Altıparmak’a bu gece çıkıyorsanız 2230 m’ye kış gibi bakın: dört mevsim tulum, yedek kat, dolu matara. Çadır bedeli tarifede 150 TL, tesis yok sayılıyor; erzakı Yusufeli’nden alın. Tahsisli yer dışında geceleme yok, odun kesmeyin; kışın yolu teyit edin."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Alt%C4%B1parmak_Nature_Park_02.jpg/1920px-Alt%C4%B1parmak_Nature_Park_02.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Alt%C4%B1parmak_Nature_Park_02.jpg/1920px-Alt%C4%B1parmak_Nature_Park_02.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -1571,6 +1745,14 @@
         "Sahara tesisinin Karagöl kadar olmadığını bilin."
       ],
       "advice": "Karagöl-Sahara’ya bu gece geliyorsanız virajlı son kilometreye gündüz çıkın. Çadır bedeli tarifede 195 TL; WC ve restoran Karagöl’de yazılı, çadır prizi belirsiz, yaz gecesi bile donar. Dört mevsim tulum alın, ayı için yiyeceği kapatın, odun kesmeyin."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Karag%C3%B6l_Panorama.jpg/1920px-Karag%C3%B6l_Panorama.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Karag%C3%B6l_Panorama.jpg/1920px-Karag%C3%B6l_Panorama.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "width": 9572,
+      "height": 2872
     }
   },
   {
@@ -1668,6 +1850,14 @@
         "Boşaltma saatini gişede sorun."
       ],
       "advice": "Abant’a bu gece geliyorsanız çadırı yalnız resmi kamp yerine kurun; göl kıyısı serbest değil. Çadır bedeli tarifede 225 TL; WC ve çeşme var, mangal ve odun yasak — tüp ocak getirin, elektrik net değil. Ağustos gecesi bile soğuk, kalın tulum alın; marketi Bolu’da bitirin."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Abant_Panorama.JPG/1920px-Abant_Panorama.JPG",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Abant_Panorama.JPG/1920px-Abant_Panorama.JPG",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "width": 11285,
+      "height": 2074
     }
   },
   {
@@ -1760,6 +1950,14 @@
         "Gece ses çıkarmadan dolaşmayın."
       ],
       "advice": "Ayıkayası’na bu gece geliyorsanız adı gibi ayı uyarısını ciddiye alın; yiyeceği çadır dışında kapalı tutun. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu Mengen’den getirin. Tahsisli yerde kalın, odun kesmeyin, ateşi ocağa sorun."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg/1920px-Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg/1920px-Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 5999,
+      "height": 3375
     }
   },
   {
@@ -1811,6 +2009,14 @@
         "Hafta sonu erken gelin."
       ],
       "advice": "Bolu Gölcük’e bu gece çadır için geliyorsanız önce güncel yasağı sorun; valilik dönemsel çadır yasağı çıkarmış. Çadır bedeli tarifede 225 TL; WC ve büfe var, elektrik belirsiz. Göl kıyısına araç ve serbest çadır yok, yerde ateş yasak, suyu yedekleyin."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Bolu_G%C3%B6lc%C3%BCk_G%C3%B6l%C3%BC_04_panorama.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_G%C3%B6l%C3%BC_04_panorama.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Bolu_G%C3%B6lc%C3%BCk_G%C3%B6l%C3%BC_04_panorama.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_G%C3%B6l%C3%BC_04_panorama.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "width": 10464,
+      "height": 2064
     }
   },
   {
@@ -1995,6 +2201,14 @@
         "İçme suyunu yedekleyin."
       ],
       "advice": "Sünnet Gölü’ne bu gece geliyorsanız idareyi ve Bolu valilik kararını arayın; dönemsel yasak çıkabiliyor. Çadır bedeli tarifede 150 TL, tesis listesi yok, suyu Göynük’ten getirin. Göl kenarı serbest çadır değil; odun kesmeyin, ateşi ocağa sorun."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/S%C3%9CNNET_G%C3%96L%C3%9C3.jpg/1920px-S%C3%9CNNET_G%C3%96L%C3%9C3.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/S%C3%9CNNET_G%C3%96L%C3%9C3.jpg/1920px-S%C3%9CNNET_G%C3%96L%C3%9C3.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 5984,
+      "height": 3283
     }
   },
   {
@@ -2047,6 +2261,14 @@
         "Erzakı yolda (Mengen–Bolu) alın; parkta market yok."
       ],
       "advice": "Yedigöller’e rezervasyonsuz gelmeyin; hafta sonu 2 gece kuralı var, karavan ve duş yok. Çadır bedeli tarifede 225 TL; ortak WC, mescit ve kafe var, odunu restorandan alın. Elektriği evde bitirin, erzakı yolda alın; 2026’da yerde ateş yasak."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Yedig%C3%B6ller_National_Park_Panorama_View.jpg/1920px-Yedig%C3%B6ller_National_Park_Panorama_View.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Yedig%C3%B6ller_National_Park_Panorama_View.jpg/1920px-Yedig%C3%B6ller_National_Park_Panorama_View.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "width": 5251,
+      "height": 1904
     }
   },
   {
@@ -2141,6 +2363,12 @@
         "Yangın döneminde görevliye sorun."
       ],
       "advice": "Çatak’a (Çorum) bu gece geliyorsanız idareden yeri sorun; orman içi serbest kamp yok. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu şehirden getirin. 1500 m gece soğuk; odun kesmeyin, ateşi ocağa alın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/%C3%87atak_Tabiat_Park%C4%B1%2C_%C3%87orum%2C_Park_giri%C5%9Fi_levhas%C4%B1.jpg/1920px-%C3%87atak_Tabiat_Park%C4%B1%2C_%C3%87orum%2C_Park_giri%C5%9Fi_levhas%C4%B1.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/%C3%87atak_Tabiat_Park%C4%B1%2C_%C3%87orum%2C_Park_giri%C5%9Fi_levhas%C4%B1.jpg/1920px-%C3%87atak_Tabiat_Park%C4%B1%2C_%C3%87orum%2C_Park_giri%C5%9Fi_levhas%C4%B1.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -2190,6 +2418,14 @@
         "Odun kesmek yasak."
       ],
       "advice": "Kuzalan’a bu gece inecekseniz vadinin ıslak tabanına değil tahsisli düzlüğe bakın. Çadır bedeli tarifede 195 TL; resmi WC-elektrik kaydı net değil, açık kaynaklara güvenip susuz gelmeyin, Dereli’den su alın. Odun kesmeyin, ateşi sorun."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Kuzalan_Giresun.jpg/1920px-Kuzalan_Giresun.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Kuzalan_Giresun.jpg/1920px-Kuzalan_Giresun.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 4608,
+      "height": 2176
     }
   },
   {
@@ -2241,6 +2477,12 @@
         "Kapı saatini kaçırmayın."
       ],
       "advice": "Artabel’e bu gece çıkıyorsanız dağ kampı paketi şart: dört mevsim tulum, yedek kat, su, ocak, fener. Çadır bedeli tarifede 150 TL, tesisi yok, market Torul’da biter, 3000 m gece donar. Odun kesmeyin; giriş 06:00–20:00, geç kalırsanız kapı kapanır."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Artabel_G%C3%B6lleri..._-_panoramio.jpg/1920px-Artabel_G%C3%B6lleri..._-_panoramio.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Artabel_G%C3%B6lleri..._-_panoramio.jpg/1920px-Artabel_G%C3%B6lleri..._-_panoramio.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -2293,6 +2535,14 @@
         "Büfe fiyatına güvenmeyin; Gümüşhane’den ekmek alın."
       ],
       "advice": "Limni’ye bu gece 2010 m’ye çıkıyorsunuz; dört mevsim tulum ve bere şart. Çadır bedeli tarifede 195 TL; büfe ve lokanta yazılı, WC teyit şart, çadır prizi belirsiz. Yalnız işaretli yerde kalın, odun kesmeyin, suyu yedekleyin; kapı 06:00–20:00."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Lake_Limni_aerial_view_01.jpg/1920px-Lake_Limni_aerial_view_01.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Lake_Limni_aerial_view_01.jpg/1920px-Lake_Limni_aerial_view_01.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 4056,
+      "height": 3040
     }
   },
   {
@@ -2434,6 +2684,14 @@
         "Odun kesmeyin; ateş izinli ocakta."
       ],
       "advice": "Akgöl’e (Sinop) bu gece geliyorsanız her şeyi Türkeli’den tamamlayın; içeride market yok. Çadır bedeli tarifede 150 TL; WC kaynaklarda çelişkili, resmi kayıt belirsiz, göl kenarına çadır yok. Yiyeceği kapatın, odun kesmeyin, ateşi ocağa alın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lake_Akg%C3%B6l_and_the_surrounding_plains%2C_March_2024_04.jpg/1920px-Lake_Akg%C3%B6l_and_the_surrounding_plains%2C_March_2024_04.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lake_Akg%C3%B6l_and_the_surrounding_plains%2C_March_2024_04.jpg/1920px-Lake_Akg%C3%B6l_and_the_surrounding_plains%2C_March_2024_04.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 4608,
+      "height": 2592
     }
   },
   {
@@ -2450,7 +2708,9 @@
     "feeTent": null,
     "statusLabel": "Tabiat parkı",
     "summary": "Erfelek kanyonu. Çadırlı kamp kaydı vardır; kanyon içi geceleme yeri değildir.",
-    "images": [],
+    "images": [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/%C3%87atak_Kanyonu1.jpg/1920px-%C3%87atak_Kanyonu1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    ],
     "videos": [],
     "guide": {
       "toilet": "belirsiz",
@@ -2479,6 +2739,14 @@
         "Kaygan tabanda kafa lambası."
       ],
       "advice": "Çatak Kanyonu’na (Sinop) bu gece çadır için geliyorsanız kanyonun içine inmeyin; tahsisli düzlüğü ve ücreti idareden sorun. Tesis belirsiz, suyu Erfelek’ten getirin. Odun kesmeyin, ateşi ocağa alın; zemin ıslak, fener şart."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/%C3%87atak_Kanyonu1.jpg/1920px-%C3%87atak_Kanyonu1.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/%C3%87atak_Kanyonu1.jpg/1920px-%C3%87atak_Kanyonu1.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 5184,
+      "height": 3456
     }
   },
   {
@@ -2527,6 +2795,12 @@
         "Fener ve yedek su."
       ],
       "advice": "Zinav’a bu gece geliyorsanız idareden tahsisli yeri sorun; heyelan gölünün kıyısı serbest kamp değil. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu Reşadiye’den getirin. Odun kesmeyin, ateşi ocağa alın."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Zinav_g%C3%B6l%C3%BC_ben_ve_babam.jpg/1920px-Zinav_g%C3%B6l%C3%BC_ben_ve_babam.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Zinav_g%C3%B6l%C3%BC_ben_ve_babam.jpg/1920px-Zinav_g%C3%B6l%C3%BC_ben_ve_babam.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -2574,6 +2848,12 @@
         "Küçük alanda sessiz kalın."
       ],
       "advice": "Çalcamili 9 hektarlık küçük bir park; bu gece yer var mı diye idareyi arayın. Çadır bedeli tarifede 150 TL, tesis belirsiz, suyu Tonya’dan getirin. Odun kesmeyin, ateşi ocağa alın; kapasite dar, komşuya saygılı olun."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/CalcamiliNaturePark3.jpg/1920px-CalcamiliNaturePark3.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/CalcamiliNaturePark3.jpg/1920px-CalcamiliNaturePark3.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -2625,6 +2905,14 @@
         "Gitmeden WC-elektriği teyit edin."
       ],
       "advice": "Uzungöl’e bu gece çadır için geliyorsanız göl kenarı yerleşimini kamp sanmayın; aşırı kalabalık, resmi alan sınırlı. Çadır bedeli tarifede 195 TL; market mahallede bol, park WC-elektriği belirsiz, kıyıya serbest çadır yok. Odun kesmeyin, ateşi ocağa alın; kalabalık ve yağmur bekleyin."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Uzung%C3%B6l_Panorama.jpg/1920px-Uzung%C3%B6l_Panorama.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Uzung%C3%B6l_Panorama.jpg/1920px-Uzung%C3%B6l_Panorama.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "pano",
+      "width": 15462,
+      "height": 3770
     }
   },
   {
@@ -2857,6 +3145,12 @@
         "Gece 1400 m için kalın kat."
       ],
       "advice": "Soğuksu’ya bu gece geliyorsanız çadırı gösterilen alana kurun; park ormanı serbest kamp değil. Çadır bedeli tarifede 225 TL; WC ve lokanta var, çadır prizi ve içme suyu net değil — suyu ilçeden alın. Hafta sonu dolu, odun kesmeyin, gece serin."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Mountains_of_So%C4%9Fuksu_Milli_Park%C4%B1.jpg/1920px-Mountains_of_So%C4%9Fuksu_Milli_Park%C4%B1.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Mountains_of_So%C4%9Fuksu_Milli_Park%C4%B1.jpg/1920px-Mountains_of_So%C4%9Fuksu_Milli_Park%C4%B1.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -2906,6 +3200,14 @@
         "Odun kesmeyin."
       ],
       "advice": "Sorgun Göleti’ne bu gece geliyorsanız ayı uyarısını ciddiye alın; yiyeceği çadırda kokutmayın, patikada sesli yürüyün. Çadır bedeli tarifede 225 TL, tesis belirsiz, suyu ilçeden getirin. Gölet kenarı serbest çadır değil; odun kesmeyin, ateşi ocağa sorun."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Sorgun3.jpg/1920px-Sorgun3.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Sorgun3.jpg/1920px-Sorgun3.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view",
+      "width": 4608,
+      "height": 3456
     }
   },
   {
@@ -3048,6 +3350,12 @@
         "Kanyon girişi ayrı ücretli tur olabilir."
       ],
       "advice": "Göynük Çomaklar Kemer sahilindeki resmi çadır yeridir; parkın geri kalanında geceleme yok. Çadır bedeli tarifede 225 TL, tesis belirsiz; suyu Göynük’ten alın, özel kampingle karıştırmayın. Yazın yangın riski yüksek, ateş sıkı yasak; odun kesmeyin, gişede yeri sorun."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/2019_G%C3%B6yn%C3%BCk_Canyon_1.jpg/1920px-2019_G%C3%B6yn%C3%BCk_Canyon_1.jpg",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/2019_G%C3%B6yn%C3%BCk_Canyon_1.jpg/1920px-2019_G%C3%B6yn%C3%BCk_Canyon_1.jpg",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   },
   {
@@ -3100,6 +3408,12 @@
         "Ahşap baraka 4 kişilik çadır bedelinden (2026 dipnotu); elektriği teyit edin."
       ],
       "advice": "Sarıalan işletmeci kampıdır; bu gece kayıt yaptırın, kayıtsız kalmak kaçak sayılır. Çadır bedeli tarifede 225 TL, baraka ayrı; tuvalet, çeşme ve büfe var, çadır prizi belirsiz. 1620 m alp soğuğu, yerde ateş yok; ayı için yiyeceği kapatın, odun kesmeyin."
+    },
+    "pano": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/View_of_Uluda%C4%9F_from_Sar%C4%B1alan.JPG/1920px-View_of_Uluda%C4%9F_from_Sar%C4%B1alan.JPG",
+      "preview": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/View_of_Uluda%C4%9F_from_Sar%C4%B1alan.JPG/1920px-View_of_Uluda%C4%9F_from_Sar%C4%B1alan.JPG",
+      "credit": "Wikimedia Commons",
+      "kind": "view"
     }
   }
 ]
