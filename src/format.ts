@@ -29,7 +29,9 @@ export function matchesPlace(place: PlaceItem, query: string): boolean {
     trIncludes(place.city, q) ||
     trIncludes(place.region, q) ||
     trIncludes(place.summary, q) ||
-    trIncludes(place.kind, q)
+    trIncludes(place.kind, q) ||
+    (place.zone ? trIncludes(place.zone, q) : false) ||
+    (place.statusLabel ? trIncludes(place.statusLabel, q) : false)
   )
 }
 
@@ -70,6 +72,11 @@ export function featuredScore(route: RouteItem): number {
 
 export function formatInt(n: number): string {
   return Math.round(n).toLocaleString('tr-TR')
+}
+
+export function formatFee(fee: number | null | undefined): string {
+  if (fee == null) return 'Tarife yok'
+  return `${formatInt(fee)} TL`
 }
 
 export function formatDate(iso: string): string {

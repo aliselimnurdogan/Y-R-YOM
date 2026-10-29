@@ -1,8 +1,8 @@
 import { useEffect, useId, useState, type FormEvent } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { compressPhoto, loadComments, saveComment } from '../community'
-import { formatDate, formatInt, initials } from '../format'
-import { PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
+import { formatDate, formatFee, formatInt, initials } from '../format'
+import { LEGAL_CAMP_NOTE, PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
 import { APP_STEP } from '../step'
@@ -17,7 +17,7 @@ export function DetailPage() {
   const place = places.find((item) => item.id === id) ?? null
   const [photoIndex, setPhotoIndex] = useState(0)
   const homePath = APP_STEP === '1' ? '/kamp' : '/'
-  const homeLabel = APP_STEP === '1' ? 'Kamp alanları' : 'Kahramanmaraş'
+  const homeLabel = APP_STEP === '1' ? 'Kamp alanları' : APP_STEP === '3' ? 'Kamp rehberi' : 'Kahramanmaraş'
 
   useEffect(() => {
     setPhotoIndex(0)
@@ -87,10 +87,11 @@ export function DetailPage() {
       <h1>{place.title}</h1>
       <div className="author-row">
         <span className="chip" style={{ background: `${PLACE_KIND_COLORS[place.kind]}22`, color: PLACE_KIND_COLORS[place.kind] }}>
-          {PLACE_KIND_LABELS[place.kind]}
+          {place.statusLabel ?? PLACE_KIND_LABELS[place.kind]}
         </span>
         <span className="act-name">{place.city}</span>
         <span className="chip">{formatInt(place.elevationM)} m</span>
+        {APP_STEP === '3' && <span className="chip">{formatFee(place.feeTent)}</span>}
         <div className="actions">
           <Link className="btn-ghost" to={homePath}>
             Geri
@@ -98,7 +99,38 @@ export function DetailPage() {
         </div>
       </div>
       <p className="lede place-lede">{place.summary}</p>
-      {currentImage && (
+      {APP_STEP === '3' && (
+        <dl className="fact-grid">
+          <div>
+            <dt>Tür</dt>
+            <dd>{place.statusLabel ?? PLACE_KIND_LABELS[place.kind]}</dd>
+          </div>
+          <div>
+            <dt>İl</dt>
+            <dd>
+              {place.region}
+              {place.city ? ` / ${place.city}` : ''}
+            </dd>
+          </div>
+          <div>
+            <dt>Bölge</dt>
+            <dd>{place.zone ?? '—'}</dd>
+          </div>
+          <div>
+            <dt>Rakım</dt>
+            <dd>{formatInt(place.elevationM)} m</dd>
+          </div>
+          <div>
+            <dt>Alan</dt>
+            <dd>{place.areaHa && place.areaHa > 0 ? `${formatInt(place.areaHa)} ha` : '—'}</dd>
+          </div>
+          <div>
+            <dt>2026 çadır</dt>
+            <dd>{place.feeTent == null ? 'Tarife eşleşmedi' : `${formatFee(place.feeTent)} / gece, 4 kişilik`}</dd>
+          </div>
+        </dl>
+      )}
+      {currentImage ? (
         <div className="gallery">
           <img className="gallery-main" src={currentImage} alt={place.title} />
           <div className="gallery-thumbs" role="list">
@@ -115,7 +147,12 @@ export function DetailPage() {
               </button>
             ))}
           </div>
+          {APP_STEP === '3' && <p className="photo-credit">Fotoğraflar Wikimedia Commons, yerinde çekilmiş kareler.</p>}
         </div>
+      ) : (
+        APP_STEP === '3' && (
+          <p className="empty-photo">Bu park için yerinde Wikimedia fotoğrafı henüz yok; temsili görsel kullanılmadı.</p>
+        )
       )}
       {place.videos.length > 0 && (
         <section className="video-block">
@@ -138,7 +175,7 @@ export function DetailPage() {
         </section>
       )}
       <DetailMap place={place} />
-      <Comments place={place} />
+      {APP_STEP === '3' ? <p className="legal-note">{LEGAL_CAMP_NOTE}</p> : <Comments place={place} />}
     </article>
   )
 }

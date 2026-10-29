@@ -28,7 +28,9 @@ export function Header() {
       ? location.pathname.startsWith('/kamp')
         ? 'Kamp alanı veya il ara'
         : 'Rota, şehir veya bölge ara'
-      : 'Kamp, yayla veya doğal alan ara'
+      : APP_STEP === '3'
+        ? 'Park, il veya bölge ara'
+        : 'Kamp, yayla veya doğal alan ara'
 
   return (
     <header className={APP_STEP === '1' ? 'header has-modes' : 'header'}>
@@ -74,15 +76,19 @@ export function Header() {
           </button>
         )}
       </form>
-      <div className="header-actions">
-        <button type="button" className="btn-text" onClick={() => setAuthOpen(true)}>
-          Giriş
-        </button>
-        <button type="button" className="btn-fill" onClick={() => setAuthOpen(true)}>
-          Kaydol
-        </button>
-      </div>
-      {authOpen && <AuthModal onClose={() => setAuthOpen(false)} />}
+      {APP_STEP === '3' ? (
+        <p className="header-badge">Kamp rehberi</p>
+      ) : (
+        <div className="header-actions">
+          <button type="button" className="btn-text" onClick={() => setAuthOpen(true)}>
+            Giriş
+          </button>
+          <button type="button" className="btn-fill" onClick={() => setAuthOpen(true)}>
+            Kaydol
+          </button>
+        </div>
+      )}
+      {authOpen && APP_STEP !== '3' && <AuthModal onClose={() => setAuthOpen(false)} />}
     </header>
   )
 }

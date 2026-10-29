@@ -18,11 +18,22 @@ Klasör: `adim-2`
 
 Fotoğraf, kısa video, yorum ve fotoğraf bırakma bu adımda.
 
+## 3. adım — Kamp rehberi
+
+Klasör: `adim-3`
+
+`adim-3/index.html` dosyasına çift tıkla.
+
+DKMP kaydında çadırlı kamp görülen milli park ve tabiat parkları. Wikimedia Commons yerinde fotoğraf, 2026 çadır tarifesi, orman kanunu notu. Giriş, kaydol ve yorum yok.
+
+Kaynak: kampatesim.com.tr/kamp-alanlari ve `turkiye-kamp-alanlari-listesi.pdf`. Ürün notu: `RAPOR.md`.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 
 - 1. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-1/
 - 2. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-2/
+- 3. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-3/
 
-Harita, fotoğraf ve video için internet açık olsun.
+Harita ve fotoğraf için internet açık olsun.

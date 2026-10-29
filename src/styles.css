@@ -219,6 +219,59 @@ img {
   gap: 4px;
 }
 
+.header-badge {
+  justify-self: end;
+  margin: 0;
+  background: #e7f6df;
+  color: #246b12;
+  font-weight: 800;
+  font-size: 13px;
+  border-radius: 999px;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.catalog-banner,
+.legal-note,
+.photo-credit,
+.empty-photo {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+.catalog-banner {
+  margin: 8px 0 4px;
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 18px 0 4px;
+}
+
+.fact-grid div {
+  background: #f7faf3;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.fact-grid dt {
+  font-size: 12px;
+  font-weight: 800;
+  color: #6b7280;
+}
+
+.fact-grid dd {
+  margin: 4px 0 0;
+  font-weight: 800;
+  color: #1c1c1c;
+}
+
 .btn-text {
   background: transparent;
   border: 0;
@@ -1430,7 +1483,8 @@ img {
   }
 
   .brand,
-  .header-actions {
+  .header-actions,
+  .header-badge {
     flex-shrink: 0;
   }
 

@@ -41,8 +41,8 @@ class AppErrorBoundary extends Component<BoundaryProps, BoundaryState> {
 }
 
 function NotFound() {
-  const home = APP_STEP === '1' ? '/' : '/'
-  const label = APP_STEP === '1' ? 'Rotalara dön' : 'Alanlara dön'
+  const home = '/'
+  const label = APP_STEP === '1' ? 'Rotalara dön' : APP_STEP === '3' ? 'Kataloga dön' : 'Alanlara dön'
   return (
     <div className="detail">
       <h1>Sayfa bulunamadı</h1>

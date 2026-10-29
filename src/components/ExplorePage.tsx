@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import { cx, formatInt, matchesPlace } from '../format'
 import {
   CAMP_KINDS,
+  CATALOG_ZONES,
+  LEGAL_CAMP_NOTE,
   MARAS_CENTER,
   MARAS_ZOOM,
   PLACE_KINDS,
@@ -10,6 +12,7 @@ import {
   PLACE_SORTS,
   TURKEY_CENTER,
   TURKEY_ZOOM,
+  ZONE_COLORS,
   type PlaceSortKey,
 } from '../labels'
 import { APP_STEP } from '../step'
@@ -22,37 +25,58 @@ import { PlaceCard } from './PlaceCard'
 
 export function ExplorePage() {
   const turkey = APP_STEP === '1'
+  const catalog = APP_STEP === '3'
   const kinds = turkey ? CAMP_KINDS : PLACE_KINDS
   const basePath = turkey ? '/kamp' : '/yer'
-  const title = turkey ? 'Türkiye’deki kamp alanları' : 'Kahramanmaraş kamp ve doğa'
+  const title = catalog
+    ? 'Türkiye korunan kamp alanları'
+    : turkey
+      ? 'Türkiye’deki kamp alanları'
+      : 'Kahramanmaraş kamp ve doğa'
   const { status, places, reload } = usePlaces()
   const { query, setQuery } = useSearch()
   const mobile = useMediaQuery('(max-width: 860px)')
   const [mode, setMode] = useState<'list' | 'map'>('list')
   const [kind, setKind] = useState<PlaceKind | null>(null)
+  const [zone, setZone] = useState<string | null>(null)
   const [sort, setSort] = useState<PlaceSortKey>('featured')
   const [hoveredId, setHoveredId] = useState<string | null>(null)
 
   useEffect(() => {
-    document.title = turkey ? 'Yürüyom — Kamp alanları' : 'Yürüyom — Kahramanmaraş kamp ve doğa'
-  }, [turkey])
+    document.title = catalog
+      ? 'Yürüyom — Kamp rehberi'
+      : turkey
+        ? 'Yürüyom — Kamp alanları'
+        : 'Yürüyom — Kahramanmaraş kamp ve doğa'
+  }, [catalog, turkey])
 
   const filtered = useMemo(() => {
     const list = places.filter((place) => {
-      if (kind && place.kind !== kind) return false
+      if (catalog) {
+        if (zone && place.zone !== zone) return false
+      } else if (kind && place.kind !== kind) {
+        return false
+      }
       return matchesPlace(place, query)
     })
     return [...list].sort((a, b) => {
       if (sort === 'name') return a.title.localeCompare(b.title, 'tr')
       if (sort === 'high') return b.elevationM - a.elevationM
+      if (catalog) {
+        const fee = (value: number | null | undefined) => (value == null ? 1 : 0)
+        const diff = fee(a.feeTent) - fee(b.feeTent)
+        if (diff !== 0) return diff
+        return a.title.localeCompare(b.title, 'tr')
+      }
       const rank = (value: PlaceKind) => kinds.indexOf(value)
       const diff = rank(a.kind) - rank(b.kind)
       if (diff !== 0) return diff
       return a.title.localeCompare(b.title, 'tr')
     })
-  }, [places, query, kind, sort, kinds])
+  }, [places, query, kind, zone, sort, kinds, catalog])
 
   const mapActive = !mobile || mode === 'map'
+  const filtersOn = Boolean((catalog ? zone : kind) || query)
 
   return (
     <section className="explore">
@@ -73,29 +97,50 @@ export function ExplorePage() {
                 {formatInt(filtered.length)} alan
               </p>
             )}
-            <div className="kind-row" role="group" aria-label="Alan türü">
-              <button type="button" className={cx('kind-pill', !kind && 'is-on')} onClick={() => setKind(null)}>
+            {catalog && <p className="catalog-banner">{LEGAL_CAMP_NOTE}</p>}
+            <div className="kind-row" role="group" aria-label={catalog ? 'Bölge' : 'Alan türü'}>
+              <button
+                type="button"
+                className={cx('kind-pill', !(catalog ? zone : kind) && 'is-on')}
+                onClick={() => {
+                  setKind(null)
+                  setZone(null)
+                }}
+              >
                 Tümü
               </button>
-              {kinds.map((item) => (
-                <button
-                  key={item}
-                  type="button"
-                  className={cx('kind-pill', kind === item && 'is-on')}
-                  onClick={() => setKind(item)}
-                >
-                  <span className="swatch" style={{ background: PLACE_KIND_COLORS[item] }} />
-                  {PLACE_KIND_LABELS[item]}
-                </button>
-              ))}
+              {catalog
+                ? CATALOG_ZONES.map((item) => (
+                    <button
+                      key={item}
+                      type="button"
+                      className={cx('kind-pill', zone === item && 'is-on')}
+                      onClick={() => setZone(item)}
+                    >
+                      <span className="swatch" style={{ background: ZONE_COLORS[item] }} />
+                      {item}
+                    </button>
+                  ))
+                : kinds.map((item) => (
+                    <button
+                      key={item}
+                      type="button"
+                      className={cx('kind-pill', kind === item && 'is-on')}
+                      onClick={() => setKind(item)}
+                    >
+                      <span className="swatch" style={{ background: PLACE_KIND_COLORS[item] }} />
+                      {PLACE_KIND_LABELS[item]}
+                    </button>
+                  ))}
             </div>
             <div className="subbar">
-              {kind || query ? (
+              {filtersOn ? (
                 <button
                   type="button"
                   className="linkish"
                   onClick={() => {
                     setKind(null)
+                    setZone(null)
                     setQuery('')
                   }}
                 >
@@ -138,6 +183,7 @@ export function ExplorePage() {
                   className="linkish"
                   onClick={() => {
                     setKind(null)
+                    setZone(null)
                     setQuery('')
                   }}
                 >
@@ -165,9 +211,9 @@ export function ExplorePage() {
           hoveredId={hoveredId}
           active={mapActive}
           basePath={basePath}
-          center={turkey ? TURKEY_CENTER : MARAS_CENTER}
-          zoom={turkey ? TURKEY_ZOOM : MARAS_ZOOM}
-          resetLabel={turkey ? 'Türkiye' : 'Kahramanmaraş'}
+          center={turkey || catalog ? TURKEY_CENTER : MARAS_CENTER}
+          zoom={turkey || catalog ? TURKEY_ZOOM : MARAS_ZOOM}
+          resetLabel={turkey || catalog ? 'Türkiye' : 'Kahramanmaraş'}
         />
       </div>
     </section>

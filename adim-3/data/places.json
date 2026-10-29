@@ -1,0 +1,420 @@
+[
+  {
+    "id": "baskonus-yaylasi",
+    "title": "Başkonuş Yaylası",
+    "kind": "kamp",
+    "city": "Onikişubat",
+    "lat": 37.5666,
+    "lng": 36.5838,
+    "elevationM": 1320,
+    "summary": "Andırın yolu üzerindeki Avgasır sırtında, sedir ve göknar gölgesinde serin bir yayladır. Çadır ve karavan için düzlükler var; yazın şehir sıcağından kaçmak için en bilinen Maraş duraklarından biri.",
+    "videos": [
+      {
+        "youtubeId": "1krfCTwlMCE",
+        "title": "Kahramanmaraş yaylalarında çadır kampı"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "yavsan-yaylasi",
+    "title": "Yavşan Yaylası",
+    "kind": "yayla",
+    "city": "Onikişubat",
+    "lat": 37.4825,
+    "lng": 36.7028,
+    "elevationM": 1650,
+    "summary": "Sır Barajı güneyindeki sedir–göknar kuşağında, yaklaşık 1650 metrede bir tabiat parkıdır. İlkbaharda çiçekli, yaz öğleden sonraları serin; kısa yürüyüş ve piknik için uygundur.",
+    "videos": [],
+    "images": [
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "kapicam-tabiat-parki",
+    "title": "Kapıçam Tabiat Parkı",
+    "kind": "doga",
+    "city": "Dulkadiroğlu",
+    "lat": 37.492,
+    "lng": 37.032,
+    "elevationM": 610,
+    "summary": "Gaziantep yolu kenarında, merkeze yakın kızılçam ve göletli bir tabiat parkıdır. Botanik bahçe, kısa yürüyüş yolları ve piknik gölgesi aynı yerde; günübirlik doğa için en kolay adres.",
+    "videos": [],
+    "images": [
+      "https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1445308394109-4ec2920981b1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "tekir-yaylasi",
+    "title": "Tekir Yaylası",
+    "kind": "kamp",
+    "city": "Onikişubat",
+    "lat": 37.8852,
+    "lng": 36.6225,
+    "elevationM": 1503,
+    "summary": "Kayseri yolu üzerindeki Tekir, dere ve çam arasında serin bir vadi yaylasıdır. Yazın gölet kenarına çadır iner; gece havası ovadan belirgin biçimde soğuktur.",
+    "videos": [
+      {
+        "youtubeId": "XirCXtmexxA",
+        "title": "Tekir Yaylası genel manzara"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1465695954255-a262b0f57b40?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "yesilgoz-mesire",
+    "title": "Yeşilgöz",
+    "kind": "doga",
+    "city": "Onikişubat",
+    "lat": 37.9176,
+    "lng": 36.617,
+    "elevationM": 1385,
+    "summary": "Tekir Vadisi’nde turkuaz obruk gölüyle tanınır. Su mağara kaynağından gelir, yazın bile buz gibi kalır. Kıyıdaki çınar–çam gölgesi kısa bir mola ve fotoğraf için yeter.",
+    "videos": [
+      {
+        "youtubeId": "xBvFxKBoBcc",
+        "title": "Kahramanmaraş Yeşilgöz vlog"
+      },
+      {
+        "youtubeId": "q-eYFbuutLQ",
+        "title": "Döngel Mağarası ve Yeşilgöz"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613487700156-bbde37f69132?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1631740694409-580a251e4ab8?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1602391833977-358a52198938?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1576176539998-0237d1ac6a85?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "dongel-magarasi",
+    "title": "Döngel Mağarası",
+    "kind": "doga",
+    "city": "Onikişubat",
+    "lat": 37.8593,
+    "lng": 36.6413,
+    "elevationM": 1130,
+    "summary": "Tekir tarafında karstik yamaçta bağlı mağaralar ve ceviz–çınar örtüsü vardır. Köy deresi gölge verir; yazın serin, kısa ve fotojenik bir doğa durağır.",
+    "videos": [
+      {
+        "youtubeId": "aygzVuHQAls",
+        "title": "Döngel Mağarası’ndan kesit"
+      },
+      {
+        "youtubeId": "q-eYFbuutLQ",
+        "title": "Döngel Mağarası ve Yeşilgöz"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1500389783522-18c9d0d14cbc?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1551120738-c3fcea8d0cf8?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1607348318282-6d2148bb296c?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1613297595539-0d36a37702c6?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "ali-kayasi-menzelet",
+    "title": "Ali Kayası Cam Teras",
+    "kind": "manzara",
+    "city": "Onikişubat",
+    "lat": 37.748,
+    "lng": 36.796,
+    "elevationM": 990,
+    "summary": "Bulutoğlu sırtında Menzelet Baraj Gölü’ne bakan kayalık bir seyirdir. Cam teras Ceyhan vadisinin mavi düzlüğünü karşıya alır; kısa yürüyüş, geniş manzara.",
+    "videos": [
+      {
+        "youtubeId": "Sp_sfuLVJ1Y",
+        "title": "Kahramanmaraş keşif gezisi"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1431965400057-a84b80cfdbff?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1593201464529-e286c575128c?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1644676654534-abc4f62ceee1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "berit-dagi",
+    "title": "Berit Dağı",
+    "kind": "manzara",
+    "city": "Göksun",
+    "lat": 38.0776,
+    "lng": 36.8779,
+    "elevationM": 3054,
+    "summary": "Göksun’un güneydoğusunda 3054 metrelik rüzgârlı bir Toros zirvesidir. Çavdarbeli’nden sonra çıplak sırt ve yaz yaylaları başlar; ufuk Elbistan ovasına açılır.",
+    "videos": [],
+    "images": [
+      "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "engizek-dagi",
+    "title": "Engizek Dağı",
+    "kind": "manzara",
+    "city": "Çağlayancerit",
+    "lat": 37.776,
+    "lng": 37.263,
+    "elevationM": 2814,
+    "summary": "Çağlayancerit kuzeyinde sedir ormanının doğu ucu sayılan yüksek bir sırt kütlesidir. Etekte meşe ve karaçam, yukarıda bozkır ve yaz otlakları görülür.",
+    "videos": [],
+    "images": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "cokak-geben-orman",
+    "title": "Çokak Yayla Ormanı",
+    "kind": "yayla",
+    "city": "Andırın",
+    "lat": 37.7361,
+    "lng": 36.3287,
+    "elevationM": 1235,
+    "summary": "Andırın’ın kuzeyinde karaçam ve meşe ile çevrili bir çöküntü yaylasıdır. Pınarlar mahalle çevresinden çıkar; Geben yönündeki orman kuşağı kısa sırt turuna yeter.",
+    "videos": [
+      {
+        "youtubeId": "Aazs32fe6ns",
+        "title": "Andırın ve Kahramanmaraş gezisi"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "ahir-dagi-etek",
+    "title": "Ahır Dağı",
+    "kind": "manzara",
+    "city": "Dulkadiroğlu",
+    "lat": 37.605,
+    "lng": 36.98,
+    "elevationM": 720,
+    "summary": "Şehrin hemen kuzeyindeki dağ, alçakta kızılçam, yukarıda sedir ve ardıç kuşaklarıyla yükselir. Etekten bakınca Maraş ayak altında kalır.",
+    "videos": [
+      {
+        "youtubeId": "Sp_sfuLVJ1Y",
+        "title": "Kahramanmaraş keşif gezisi"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1445308394109-4ec2920981b1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "binboga-keklikoluk",
+    "title": "Keklikoluk Yaylası",
+    "kind": "yayla",
+    "city": "Göksun",
+    "lat": 38.203,
+    "lng": 36.46,
+    "elevationM": 1850,
+    "summary": "Binboğa’nın güney yamacında, 1850–2100 metre arası dağ çayırı ve seyrek ardıçtır. Yaz başında sürü çıkar; ufuk Sarız ve Göksun çaylarına açılır.",
+    "videos": [],
+    "images": [
+      "https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1465695954255-a262b0f57b40?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "nurhak-dagi",
+    "title": "Nurhak Dağı",
+    "kind": "manzara",
+    "city": "Nurhak",
+    "lat": 38.0469,
+    "lng": 37.483,
+    "elevationM": 3081,
+    "summary": "İlçenin kuzeyinde 3000 metreyi aşan kayalık bir zirvedir. Tek Ardıç ve Ali Gölü üzerinden plato açılır; göl kar suyuyla yaz ortasına kadar durur.",
+    "videos": [
+      {
+        "youtubeId": "oQX-r9RSTGU",
+        "title": "Nurhak Dağı"
+      },
+      {
+        "youtubeId": "9ql-Hy4rYhs",
+        "title": "Nurhak Dağı Göbeliği"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613487700156-bbde37f69132?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1631740694409-580a251e4ab8?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1602391833977-358a52198938?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1576176539998-0237d1ac6a85?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "hartlap-orman",
+    "title": "Hartlap Ormanı",
+    "kind": "doga",
+    "city": "Onikişubat",
+    "lat": 37.5455,
+    "lng": 36.6941,
+    "elevationM": 820,
+    "summary": "Sandal ağacı ve karışık makiden ormana geçen serin bir mahalle sırtıdır. Gökçe Dağı ormanı kısa döngü verir; yazı merkezden serin, kışın ıslak çamur olur.",
+    "videos": [],
+    "images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1500389783522-18c9d0d14cbc?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1551120738-c3fcea8d0cf8?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1607348318282-6d2148bb296c?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1613297595539-0d36a37702c6?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "yedikuyular",
+    "title": "Yedikuyular",
+    "kind": "manzara",
+    "city": "Dulkadiroğlu",
+    "lat": 37.642,
+    "lng": 37.036,
+    "elevationM": 1835,
+    "summary": "Ahır Dağı’nın 1800–2000 metre bandındaki açık sırt düzlüğüdür. Yazın çayır ve bakış, kışın kar; Milcan yönü ovayı ve Engizek silsilesini gösterir.",
+    "videos": [],
+    "images": [
+      "https://images.unsplash.com/photo-1431965400057-a84b80cfdbff?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1593201464529-e286c575128c?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1644676654534-abc4f62ceee1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "halbur-yaylasi",
+    "title": "Halbur Yaylası",
+    "kind": "kamp",
+    "city": "Andırın",
+    "lat": 37.6625,
+    "lng": 36.4453,
+    "elevationM": 1453,
+    "summary": "Andırın–Göksun yolu yakınında çam ve açık otlak karışımı bir ipek yolu yaylasıdır. Su gözeleri düzlüktedir; yazın serin kamp ve kısa yürüyüş için elverişlidir.",
+    "videos": [],
+    "images": [
+      "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "kirksu-yaylasi",
+    "title": "Kırksu Yaylası",
+    "kind": "kamp",
+    "city": "Andırın",
+    "lat": 37.7782,
+    "lng": 36.3585,
+    "elevationM": 1480,
+    "summary": "Geben batısında onlarca soğuk su gözesinin birleştiği orman–yayla koridorudur. Aşağıda çam gölgesi, yukarıda açık çayır; çadır düzlüğü boldur.",
+    "videos": [],
+    "images": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "karagol-degirmendere",
+    "title": "Değirmendere Karagöl",
+    "kind": "doga",
+    "city": "Göksun",
+    "lat": 37.8703,
+    "lng": 36.4591,
+    "elevationM": 1780,
+    "summary": "Göksun güneyinde kar suyuyla oluşan küçük bir dağ gölüdür. İlkbaharda çiçek ve kalan kar bir arada durur; kıyı taşlı çayır, manzara vadiye iner.",
+    "videos": [],
+    "images": [
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=1400&q=72"
+    ]
+  },
+  {
+    "id": "domuzdere-selaleler",
+    "title": "Domuzdere Şelaleleri",
+    "kind": "doga",
+    "city": "Çağlayancerit",
+    "lat": 37.82,
+    "lng": 37.35,
+    "elevationM": 980,
+    "summary": "Helete–Düzbağ tarafında orman içi şelale ve dere yataklarıdır. Yazın serin, ilkbaharda su bol; kısa yürüyüşle ulaşılır, ıslak zemine dikkat ister.",
+    "videos": [
+      {
+        "youtubeId": "iVy3S8hrKZY",
+        "title": "Domuzdere takım grup şelaleleri"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1445308394109-4ec2920981b1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=72",
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=72"
+    ]
+  }
+]

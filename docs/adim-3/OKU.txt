@@ -1,0 +1,6 @@
+3. ADIM - Kamp rehberi
+index.html cift tikla.
+DKMP kaydinda cadirli kamp gorulen milli park ve tabiat parklari.
+Giris, kaydol ve yorum yok.
+Kaynak: kampatesim.com.tr ve turkiye-kamp-alanlari-listesi.pdf
+Rapor: RAPOR.md

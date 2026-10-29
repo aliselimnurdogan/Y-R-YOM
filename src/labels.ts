@@ -26,6 +26,31 @@ export const PLACE_KIND_COLORS: Record<PlaceKind, string> = {
   gol: '#1565c0',
 }
 
+export const CATALOG_ZONES = [
+  'Marmara',
+  'Ege',
+  'Akdeniz',
+  'Karadeniz',
+  'İç Anadolu',
+  'Doğu Anadolu',
+  'Güneydoğu Anadolu',
+] as const
+
+export type CatalogZone = (typeof CATALOG_ZONES)[number]
+
+export const ZONE_COLORS: Record<CatalogZone, string> = {
+  Marmara: '#1565c0',
+  Ege: '#00838f',
+  Akdeniz: '#c79200',
+  Karadeniz: '#2f7d32',
+  'İç Anadolu': '#6d4c41',
+  'Doğu Anadolu': '#5d4037',
+  'Güneydoğu Anadolu': '#e65100',
+}
+
+export const LEGAL_CAMP_NOTE =
+  '6831 sayılı Orman Kanunu md. 76-a: belirlenmiş konak yeri dışında devlet ormanında gecelemek yasaktır. Haritadaki pin izin değildir.'
+
 export const MARAS_CENTER: [number, number] = [37.58, 36.92]
 export const MARAS_ZOOM = 9
 export const TURKEY_CENTER: [number, number] = [39.1, 35.2]

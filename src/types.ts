@@ -17,6 +17,10 @@ export interface PlaceItem {
   summary: string
   images: string[]
   videos: PlaceVideo[]
+  zone?: string
+  areaHa?: number
+  feeTent?: number | null
+  statusLabel?: string
 }
 
 export interface PlaceComment {

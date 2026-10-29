@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 import bundledCamps from './data/camps.json'
+import bundledCatalog from './data/catalog.json'
 import bundledPlaces from './data/places.json'
 import { ALL_PLACE_KINDS } from './labels'
 import { APP_STEP } from './step'
@@ -50,7 +51,10 @@ function normalizePlace(raw: unknown): PlaceItem | null {
   if (Math.abs(lat) > 90 || Math.abs(lng) > 180) return null
   if (typeof record.summary !== 'string') return null
   const images = parseImages(record.images)
-  if (images.length === 0) return null
+  if (images.length === 0 && APP_STEP !== '3') return null
+  const areaHa = finiteNumber(record.areaHa)
+  const feeRaw = record.feeTent
+  const feeTent = feeRaw === null ? null : finiteNumber(feeRaw)
   return {
     id: record.id,
     title: record.title,
@@ -63,6 +67,10 @@ function normalizePlace(raw: unknown): PlaceItem | null {
     summary: record.summary,
     images,
     videos: parseVideos(record.videos),
+    zone: typeof record.zone === 'string' ? record.zone : undefined,
+    areaHa: areaHa ?? undefined,
+    feeTent: feeTent === null && feeRaw !== null ? undefined : feeTent,
+    statusLabel: typeof record.statusLabel === 'string' ? record.statusLabel : undefined,
   }
 }
 
@@ -74,7 +82,7 @@ export function PlacesProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     setStatus('loading')
     try {
-      const bundled = APP_STEP === '1' ? bundledCamps : bundledPlaces
+      const bundled = APP_STEP === '3' ? bundledCatalog : APP_STEP === '1' ? bundledCamps : bundledPlaces
       if (!Array.isArray(bundled) || bundled.length === 0) throw new Error('empty')
       const parsed = bundled.map(normalizePlace).filter((place): place is PlaceItem => place !== null)
       if (parsed.length === 0) throw new Error('empty')
