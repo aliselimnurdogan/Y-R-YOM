@@ -2,16 +2,25 @@
 
 Git uygulaması gerekmez.
 
-Birinci adım (Türkiye rotaları) `main` dalında duruyor.
+## 1. adım — Türkiye rotaları
 
-Bu dal ikinci adımdır: Kahramanmaraş kamp, yayla ve doğal alanlar. Kısa anlatım, fotoğraf galerisi, video, yorum ve fotoğraf bırakma.
+Klasör: `adim-1`
 
-## Arkadaşa gönder
+`adim-1/index.html` dosyasına çift tıkla.
 
-Masaüstündeki `Yuruyom-tikla-ac.rar` dosyasını at. Karşı taraf çıkarıp `index.html` dosyasına çift tıklasın. İnternet açık olsun (harita, fotoğraf ve video için).
+## 2. adım — Kahramanmaraş kamp ve doğa
 
-## Uzaktan aç
+Klasör: `adim-2`
 
-Birinci adım: https://aliselimnurdogan.github.io/Y-R-YOM/
+`adim-2/index.html` dosyasına çift tıkla.
 
-İkinci adım dalı: `adim-2-maras`
+Fotoğraf, kısa video, yorum ve fotoğraf bırakma bu adımda.
+
+## İnternet
+
+Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
+
+- 1. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-1/
+- 2. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-2/
+
+Harita, fotoğraf ve video için internet açık olsun.
