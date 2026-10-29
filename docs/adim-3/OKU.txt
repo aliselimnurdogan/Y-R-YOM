@@ -1,6 +1,6 @@
-3. ADIM - Kamp rehberi
+3. ADIM - Kamp alanlari ve yuruyus parkurları
 index.html cift tikla.
-DKMP kaydinda cadirli kamp gorulen milli park ve tabiat parklari.
+Ustten Kamp alanlari veya Yuruyus parkurları sec.
 Giris, kaydol ve yorum yok.
 Kaynak: kampatesim.com.tr ve turkiye-kamp-alanlari-listesi.pdf
 Rapor: RAPOR.md

@@ -54,7 +54,7 @@ export function RouteExplorePage() {
   const barRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    document.title = "Yürüyom — Türkiye'deki yürüyüş rotaları"
+    document.title = 'Yürüyom — Yürüyüş parkurları'
   }, [])
 
   useEffect(() => {
@@ -150,7 +150,7 @@ export function RouteExplorePage() {
       <div className={mode === 'map' ? 'explore-body is-map' : 'explore-body is-list'}>
         <aside className="panel">
           <div className="panel-head" ref={barRef}>
-            <h1>Yürüyüş ve bisiklet rotaları</h1>
+            <h1>Yürüyüş parkurları</h1>
             {status === 'ready' && (
               <p className="count" aria-live="polite">
                 {formatInt(filtered.length)} rota

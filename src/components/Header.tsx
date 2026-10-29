@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useSearch } from '../search-context'
-import { APP_STEP } from '../step'
+import { APP_STEP, HAS_ROUTE_MODE } from '../step'
 import { PinMark, SearchIcon } from './Icons'
 
 export function Header() {
@@ -15,7 +15,7 @@ export function Header() {
     setQuery(next)
     const onCamp = location.pathname.startsWith('/kamp')
     const onRoute = location.pathname.startsWith('/rota')
-    if (APP_STEP === '1') {
+    if (HAS_ROUTE_MODE) {
       if (onRoute) navigate('/')
       else if (onCamp && location.pathname !== '/kamp') navigate('/kamp')
       return
@@ -23,24 +23,24 @@ export function Header() {
     if (location.pathname !== '/') navigate('/')
   }
 
-  const searchPlaceholder =
-    APP_STEP === '1'
-      ? location.pathname.startsWith('/kamp')
-        ? 'Kamp alanı veya il ara'
-        : 'Rota, şehir veya bölge ara'
-      : APP_STEP === '3'
+  const onCamp = location.pathname.startsWith('/kamp')
+  const searchPlaceholder = HAS_ROUTE_MODE
+    ? onCamp
+      ? APP_STEP === '3'
         ? 'Park, il veya bölge ara'
-        : 'Kamp, yayla veya doğal alan ara'
+        : 'Kamp alanı veya il ara'
+      : 'Parkur, şehir veya bölge ara'
+    : 'Kamp, yayla veya doğal alan ara'
 
   return (
-    <header className={APP_STEP === '1' ? 'header has-modes' : 'header'}>
+    <header className={HAS_ROUTE_MODE ? 'header has-modes' : 'header'}>
       <Link to="/" className="brand" aria-label="Yürüyom ana sayfa">
         <PinMark />
         <span className="wordmark">
           <span className="wy">y</span>ürüyom
         </span>
       </Link>
-      {APP_STEP === '1' && (
+      {HAS_ROUTE_MODE && (
         <nav className="mode-nav" aria-label="Bölüm">
           <NavLink
             to="/"
@@ -49,7 +49,7 @@ export function Header() {
               location.pathname === '/' || location.pathname.startsWith('/rota') ? 'is-on' : undefined
             }
           >
-            Rotalar
+            Yürüyüş parkurları
           </NavLink>
           <NavLink
             to="/kamp"
@@ -76,9 +76,7 @@ export function Header() {
           </button>
         )}
       </form>
-      {APP_STEP === '3' ? (
-        <p className="header-badge">Kamp rehberi</p>
-      ) : (
+      {APP_STEP === '3' ? null : (
         <div className="header-actions">
           <button type="button" className="btn-text" onClick={() => setAuthOpen(true)}>
             Giriş

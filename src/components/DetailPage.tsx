@@ -16,8 +16,8 @@ export function DetailPage() {
   const { setQuery } = useSearch()
   const place = places.find((item) => item.id === id) ?? null
   const [photoIndex, setPhotoIndex] = useState(0)
-  const homePath = APP_STEP === '1' ? '/kamp' : '/'
-  const homeLabel = APP_STEP === '1' ? 'Kamp alanları' : APP_STEP === '3' ? 'Kamp rehberi' : 'Kahramanmaraş'
+  const homePath = APP_STEP === '2' ? '/' : '/kamp'
+  const homeLabel = APP_STEP === '2' ? 'Kahramanmaraş' : 'Kamp alanları'
 
   useEffect(() => {
     setPhotoIndex(0)

@@ -8,7 +8,7 @@ import { RouteExplorePage } from './components/RouteExplorePage'
 import { PlacesProvider } from './places-context'
 import { RoutesProvider } from './routes-context'
 import { SearchProvider } from './search-context'
-import { APP_STEP } from './step'
+import { HAS_ROUTE_MODE } from './step'
 
 interface BoundaryProps {
   children: ReactNode
@@ -42,7 +42,7 @@ class AppErrorBoundary extends Component<BoundaryProps, BoundaryState> {
 
 function NotFound() {
   const home = '/'
-  const label = APP_STEP === '1' ? 'Rotalara dön' : APP_STEP === '3' ? 'Kataloga dön' : 'Alanlara dön'
+  const label = HAS_ROUTE_MODE ? 'Parkurlara dön' : 'Alanlara dön'
   return (
     <div className="detail">
       <h1>Sayfa bulunamadı</h1>
@@ -71,7 +71,7 @@ function Shell({ children }: { children: ReactNode }) {
 }
 
 export function App() {
-  if (APP_STEP === '1') {
+  if (HAS_ROUTE_MODE) {
     return (
       <RoutesProvider>
         <PlacesProvider>

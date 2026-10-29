@@ -18,13 +18,13 @@ Klasör: `adim-2`
 
 Fotoğraf, kısa video, yorum ve fotoğraf bırakma bu adımda.
 
-## 3. adım — Kamp rehberi
+## 3. adım — Kamp alanları ve yürüyüş parkurları
 
 Klasör: `adim-3`
 
 `adim-3/index.html` dosyasına çift tıkla.
 
-DKMP kaydında çadırlı kamp görülen milli park ve tabiat parkları. Wikimedia Commons yerinde fotoğraf, 2026 çadır tarifesi, orman kanunu notu. Giriş, kaydol ve yorum yok.
+Üstte iki bölüm: **Yürüyüş parkurları** (önceki GPS rotalar) ve **Kamp alanları** (DKMP parkları, yerinde fotoğraf, 2026 tarife). Giriş, kaydol ve yorum yok.
 
 Kaynak: kampatesim.com.tr/kamp-alanlari ve `turkiye-kamp-alanlari-listesi.pdf`. Ürün notu: `RAPOR.md`.
 

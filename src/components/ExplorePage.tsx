@@ -24,10 +24,10 @@ import { ExploreMap } from './ExploreMap'
 import { PlaceCard } from './PlaceCard'
 
 export function ExplorePage() {
-  const turkey = APP_STEP === '1'
+  const turkey = APP_STEP !== '2'
   const catalog = APP_STEP === '3'
-  const kinds = turkey ? CAMP_KINDS : PLACE_KINDS
-  const basePath = turkey ? '/kamp' : '/yer'
+  const kinds = APP_STEP === '2' ? PLACE_KINDS : CAMP_KINDS
+  const basePath = APP_STEP === '2' ? '/yer' : '/kamp'
   const title = catalog
     ? 'Türkiye korunan kamp alanları'
     : turkey
