@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { formatInt, formatKm } from '../format'
 import { ACTIVITY_LABELS } from '../labels'
 import type { RouteItem } from '../types'
-import { EyeIcon, Stars, UpIcon } from './Icons'
+import { EyeIcon, UpIcon } from './Icons'
 
 function CardImage({ src }: { src: string }) {
   const [failed, setFailed] = useState(false)
@@ -56,19 +56,7 @@ export function RouteCard({
               <UpIcon /> {formatInt(route.elevationGainM)} m
             </span>
           </p>
-          <p className="card-sub">
-            <span className="who" title={route.author}>
-              {route.author}
-            </span>
-            <span className="dotsep" aria-hidden="true">
-              ·
-            </span>
-            <Stars value={route.rating} />
-            <span className="dotsep" aria-hidden="true">
-              ·
-            </span>
-            <span>{formatInt(route.ratingCount)}</span>
-          </p>
+          <p className="card-sub card-excerpt">{route.city}</p>
         </div>
       </Link>
       <button

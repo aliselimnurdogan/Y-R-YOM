@@ -41,8 +41,7 @@ export function matchesRoute(route: RouteItem, query: string): boolean {
   return (
     trIncludes(route.title, q) ||
     trIncludes(route.city, q) ||
-    trIncludes(route.region, q) ||
-    trIncludes(route.author, q)
+    trIncludes(route.region, q)
   )
 }
 

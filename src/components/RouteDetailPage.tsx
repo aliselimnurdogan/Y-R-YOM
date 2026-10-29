@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { difficultyClass, formatDate, formatDuration, formatInt, formatKm, initials } from '../format'
+import { difficultyClass, formatDuration, formatInt, formatKm } from '../format'
 import { downloadGpx } from '../geo'
 import { ACTIVITY_COLORS, ACTIVITY_LABELS } from '../labels'
 import { useRoutes } from '../routes-context'
@@ -104,13 +104,6 @@ export function RouteDetailPage() {
       </nav>
       <h1>{route.title}</h1>
       <div className="author-row">
-        <span className="avatar" style={{ background: ACTIVITY_COLORS[route.activity] }} aria-hidden="true">
-          {initials(route.author)}
-        </span>
-        <span className="who-block">
-          <span className="who-name">{route.author}</span>
-          <span className="who-date">{formatDate(route.recordedAt)}</span>
-        </span>
         <span className="act-name" style={{ color: ACTIVITY_COLORS[route.activity] }}>
           {ACTIVITY_LABELS[route.activity]}
         </span>
