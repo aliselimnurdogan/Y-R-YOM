@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { compressPhoto, loadComments, saveComment } from '../community'
 import { formatDate, formatFee, formatInt, initials } from '../format'
 import { LEGAL_CAMP_NOTE, PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
+import { srcSet, sharpUrl } from '../media'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
 import { APP_STEP, HAS_CATALOG, HAS_FEEL } from '../step'
@@ -136,7 +137,13 @@ export function DetailPage() {
       )}
       {currentImage ? (
         <div className="gallery">
-          <img className="gallery-main" src={currentImage} alt={place.title} />
+          <img
+            className="gallery-main"
+            src={sharpUrl(currentImage, 1920)}
+            srcSet={srcSet(currentImage, [960, 1440, 1920])}
+            sizes="(max-width: 860px) 100vw, 1100px"
+            alt={place.title}
+          />
           <div className="gallery-thumbs" role="list">
             {place.images.map((image, index) => (
               <button
@@ -147,7 +154,14 @@ export function DetailPage() {
                 aria-current={index === photoIndex ? 'true' : undefined}
                 onClick={() => setPhotoIndex(index)}
               >
-                <img src={image} alt="" width={96} height={68} />
+                <img
+                  src={sharpUrl(image, 480)}
+                  srcSet={srcSet(image, [240, 480])}
+                  sizes="96px"
+                  alt=""
+                  width={96}
+                  height={68}
+                />
               </button>
             ))}
           </div>

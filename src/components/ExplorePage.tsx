@@ -15,7 +15,7 @@ import {
   ZONE_COLORS,
   type PlaceSortKey,
 } from '../labels'
-import { APP_STEP, HAS_CATALOG, HAS_FEEL } from '../step'
+import { APP_STEP, HAS_CATALOG, HAS_FEEL, HAS_LOOK } from '../step'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
 import type { PlaceKind } from '../types'
@@ -43,9 +43,11 @@ export function ExplorePage() {
   const [hoveredId, setHoveredId] = useState<string | null>(null)
 
   useEffect(() => {
-    document.title = HAS_FEEL
-      ? 'Yürüyom — Orada gibi hisset'
-      : catalog
+    document.title = HAS_LOOK
+      ? 'Yürüyom — Net bakış'
+      : HAS_FEEL
+        ? 'Yürüyom — Orada gibi hisset'
+        : catalog
         ? 'Yürüyom — Kamp rehberi'
         : turkey
           ? 'Yürüyom — Kamp alanları'

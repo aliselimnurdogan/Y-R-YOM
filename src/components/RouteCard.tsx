@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { formatInt, formatKm } from '../format'
 import { ACTIVITY_LABELS } from '../labels'
+import { srcSet, sharpUrl } from '../media'
 import type { RouteItem } from '../types'
 import { EyeIcon, UpIcon } from './Icons'
 
@@ -14,7 +15,9 @@ function CardImage({ src }: { src: string }) {
   return (
     <img
       className="thumb"
-      src={src}
+      src={sharpUrl(src, 640)}
+      srcSet={srcSet(src, [320, 640, 960])}
+      sizes="108px"
       alt=""
       width={108}
       height={82}

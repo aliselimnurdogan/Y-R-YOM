@@ -1,4 +1,4 @@
-import { Component, type ReactNode } from 'react'
+import { Component, useEffect, type ReactNode } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 import { Header } from './components/Header'
 import { DetailPage } from './components/DetailPage'
@@ -8,7 +8,7 @@ import { RouteExplorePage } from './components/RouteExplorePage'
 import { PlacesProvider } from './places-context'
 import { RoutesProvider } from './routes-context'
 import { SearchProvider } from './search-context'
-import { HAS_ROUTE_MODE } from './step'
+import { HAS_LOOK, HAS_ROUTE_MODE } from './step'
 
 interface BoundaryProps {
   children: ReactNode
@@ -55,9 +55,13 @@ function NotFound() {
 }
 
 function Shell({ children }: { children: ReactNode }) {
+  useEffect(() => {
+    document.body.classList.toggle('is-look', HAS_LOOK)
+    return () => document.body.classList.remove('is-look')
+  }, [])
   return (
     <SearchProvider>
-      <div className="app-shell">
+      <div className={HAS_LOOK ? 'app-shell is-look' : 'app-shell'}>
         <a className="skip" href="#icerik">
           İçeriğe geç
         </a>

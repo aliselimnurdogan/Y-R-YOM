@@ -44,6 +44,14 @@ Klasör: `adim-5`
 
 Kamp alanına tıklayınca **Orada gibi hisset**. 360 veya yerinde bakış; sürükle, telefonda çevir. Uydurma görüntü yok.
 
+## 6. adım — Net bakış ve doğa arayüzü
+
+Klasör: `adim-6`
+
+`adim-6/index.html` dosyasına çift tıkla.
+
+Aynı kamp rehberi ve 360 bakış; yumuşak doğa arka planı, keskin fotoğraflar, tam ekran 360.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -53,5 +61,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 3. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-3/
 - 4. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-4/
 - 5. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-5/
+- 6. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-6/
 
 Harita ve fotoğraf için internet açık olsun.

@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { difficultyClass, formatDuration, formatInt, formatKm } from '../format'
 import { downloadGpx } from '../geo'
 import { ACTIVITY_COLORS, ACTIVITY_LABELS } from '../labels'
+import { srcSet, sharpUrl } from '../media'
 import { useRoutes } from '../routes-context'
 import { useSearch } from '../search-context'
 import { RouteDetailMap, type WaypointFocus } from './RouteDetailMap'
@@ -124,7 +125,14 @@ export function RouteDetailPage() {
         </div>
       </div>
       {coverOn && route.image && (
-        <img className="cover" src={route.image} alt="" onError={() => setCoverOn(false)} />
+        <img
+          className="cover"
+          src={sharpUrl(route.image, 1920)}
+          srcSet={srcSet(route.image, [960, 1440, 1920])}
+          sizes="(max-width: 860px) 100vw, 1100px"
+          alt=""
+          onError={() => setCoverOn(false)}
+        />
       )}
       <RouteDetailMap route={route} hoverIndex={hoverIndex} waypoint={waypoint} />
       <ElevationChart track={route.track} onHover={setHoverIndex} />
