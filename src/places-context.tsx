@@ -1,6 +1,8 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
+import bundledCamps from './data/camps.json'
 import bundledPlaces from './data/places.json'
-import { PLACE_KINDS } from './labels'
+import { ALL_PLACE_KINDS } from './labels'
+import { APP_STEP } from './step'
 import type { PlaceItem, PlaceKind, PlaceVideo } from './types'
 
 type Status = 'loading' | 'error' | 'ready'
@@ -40,7 +42,7 @@ function normalizePlace(raw: unknown): PlaceItem | null {
   const record = raw as Record<string, unknown>
   if (typeof record.id !== 'string' || record.id.length === 0) return null
   if (typeof record.title !== 'string' || typeof record.city !== 'string') return null
-  if (typeof record.kind !== 'string' || !PLACE_KINDS.includes(record.kind as PlaceKind)) return null
+  if (typeof record.kind !== 'string' || !ALL_PLACE_KINDS.includes(record.kind as PlaceKind)) return null
   const lat = finiteNumber(record.lat)
   const lng = finiteNumber(record.lng)
   const elevationM = finiteNumber(record.elevationM)
@@ -53,6 +55,7 @@ function normalizePlace(raw: unknown): PlaceItem | null {
     id: record.id,
     title: record.title,
     kind: record.kind as PlaceKind,
+    region: typeof record.region === 'string' && record.region.length > 0 ? record.region : 'Kahramanmaraş',
     city: record.city,
     lat,
     lng,
@@ -71,8 +74,9 @@ export function PlacesProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     setStatus('loading')
     try {
-      if (!Array.isArray(bundledPlaces) || bundledPlaces.length === 0) throw new Error('empty')
-      const parsed = bundledPlaces.map(normalizePlace).filter((place): place is PlaceItem => place !== null)
+      const bundled = APP_STEP === '1' ? bundledCamps : bundledPlaces
+      if (!Array.isArray(bundled) || bundled.length === 0) throw new Error('empty')
+      const parsed = bundled.map(normalizePlace).filter((place): place is PlaceItem => place !== null)
       if (parsed.length === 0) throw new Error('empty')
       setPlaces(parsed)
       setStatus('ready')

@@ -97,6 +97,35 @@ img {
   padding: 0 16px 0 18px;
 }
 
+.header.has-modes {
+  grid-template-columns: auto auto minmax(0, 440px) 1fr;
+}
+
+.mode-nav {
+  display: flex;
+  gap: 4px;
+  background: #f2f3f5;
+  padding: 3px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.mode-nav a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 13.5px;
+  text-decoration: none;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.mode-nav a.is-on {
+  background: #fff;
+  color: #246b12;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -1385,6 +1414,19 @@ img {
     display: flex;
     padding: 0 10px;
     gap: 8px;
+  }
+
+  .header.has-modes {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 10px 10px;
+    row-gap: 8px;
+  }
+
+  .header.has-modes .mode-nav {
+    order: 5;
+    width: 100%;
+    justify-content: center;
   }
 
   .brand,

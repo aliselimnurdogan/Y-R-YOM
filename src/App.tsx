@@ -3,8 +3,12 @@ import { Link, Route, Routes } from 'react-router-dom'
 import { Header } from './components/Header'
 import { DetailPage } from './components/DetailPage'
 import { ExplorePage } from './components/ExplorePage'
+import { RouteDetailPage } from './components/RouteDetailPage'
+import { RouteExplorePage } from './components/RouteExplorePage'
 import { PlacesProvider } from './places-context'
+import { RoutesProvider } from './routes-context'
 import { SearchProvider } from './search-context'
+import { APP_STEP } from './step'
 
 interface BoundaryProps {
   children: ReactNode
@@ -37,37 +41,63 @@ class AppErrorBoundary extends Component<BoundaryProps, BoundaryState> {
 }
 
 function NotFound() {
+  const home = APP_STEP === '1' ? '/' : '/'
+  const label = APP_STEP === '1' ? 'Rotalara dön' : 'Alanlara dön'
   return (
     <div className="detail">
       <h1>Sayfa bulunamadı</h1>
       <p className="lede">Aradığın sayfa yok.</p>
-      <Link className="btn-ghost stack-gap" to="/">
-        Alanlara dön
+      <Link className="btn-ghost stack-gap" to={home}>
+        {label}
       </Link>
     </div>
   )
 }
 
+function Shell({ children }: { children: ReactNode }) {
+  return (
+    <SearchProvider>
+      <div className="app-shell">
+        <a className="skip" href="#icerik">
+          İçeriğe geç
+        </a>
+        <Header />
+        <main id="icerik">
+          <AppErrorBoundary>{children}</AppErrorBoundary>
+        </main>
+      </div>
+    </SearchProvider>
+  )
+}
+
 export function App() {
+  if (APP_STEP === '1') {
+    return (
+      <RoutesProvider>
+        <PlacesProvider>
+          <Shell>
+            <Routes>
+              <Route path="/" element={<RouteExplorePage />} />
+              <Route path="/rota/:id" element={<RouteDetailPage />} />
+              <Route path="/kamp" element={<ExplorePage />} />
+              <Route path="/kamp/:id" element={<DetailPage />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Shell>
+        </PlacesProvider>
+      </RoutesProvider>
+    )
+  }
+
   return (
     <PlacesProvider>
-      <SearchProvider>
-        <div className="app-shell">
-          <a className="skip" href="#icerik">
-            İçeriğe geç
-          </a>
-          <Header />
-          <main id="icerik">
-            <AppErrorBoundary>
-              <Routes>
-                <Route path="/" element={<ExplorePage />} />
-                <Route path="/yer/:id" element={<DetailPage />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </AppErrorBoundary>
-          </main>
-        </div>
-      </SearchProvider>
+      <Shell>
+        <Routes>
+          <Route path="/" element={<ExplorePage />} />
+          <Route path="/yer/:id" element={<DetailPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Shell>
     </PlacesProvider>
   )
 }

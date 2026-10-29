@@ -5,6 +5,7 @@ import { formatDate, formatInt, initials } from '../format'
 import { PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
+import { APP_STEP } from '../step'
 import type { PlaceComment, PlaceItem } from '../types'
 import { DetailMap } from './DetailMap'
 
@@ -15,6 +16,8 @@ export function DetailPage() {
   const { setQuery } = useSearch()
   const place = places.find((item) => item.id === id) ?? null
   const [photoIndex, setPhotoIndex] = useState(0)
+  const homePath = APP_STEP === '1' ? '/kamp' : '/'
+  const homeLabel = APP_STEP === '1' ? 'Kamp alanları' : 'Kahramanmaraş'
 
   useEffect(() => {
     setPhotoIndex(0)
@@ -50,7 +53,7 @@ export function DetailPage() {
       <div className="detail">
         <h1>Alan bulunamadı</h1>
         <p className="lede">Bu yer listede yok.</p>
-        <Link className="btn-ghost stack-gap" to="/">
+        <Link className="btn-ghost stack-gap" to={homePath}>
           Alanlara dön
         </Link>
       </div>
@@ -63,22 +66,22 @@ export function DetailPage() {
     <article className="detail">
       <nav className="crumb" aria-label="Konum">
         <Link
-          to="/"
+          to={homePath}
           onClick={() => {
             setQuery('')
           }}
         >
-          Kahramanmaraş
+          {homeLabel}
         </Link>
         <span aria-hidden="true">/</span>
         <button
           type="button"
           onClick={() => {
-            setQuery(place.city)
-            navigate('/')
+            setQuery(place.region)
+            navigate(homePath)
           }}
         >
-          {place.city}
+          {place.region}
         </button>
       </nav>
       <h1>{place.title}</h1>
@@ -89,7 +92,7 @@ export function DetailPage() {
         <span className="act-name">{place.city}</span>
         <span className="chip">{formatInt(place.elevationM)} m</span>
         <div className="actions">
-          <Link className="btn-ghost" to="/">
+          <Link className="btn-ghost" to={homePath}>
             Geri
           </Link>
         </div>

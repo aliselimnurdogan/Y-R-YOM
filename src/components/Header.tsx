@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useSearch } from '../search-context'
+import { APP_STEP } from '../step'
 import { PinMark, SearchIcon } from './Icons'
 
 export function Header() {
@@ -12,24 +13,57 @@ export function Header() {
 
   function updateQuery(next: string) {
     setQuery(next)
+    const onCamp = location.pathname.startsWith('/kamp')
+    const onRoute = location.pathname.startsWith('/rota')
+    if (APP_STEP === '1') {
+      if (onRoute) navigate('/')
+      else if (onCamp && location.pathname !== '/kamp') navigate('/kamp')
+      return
+    }
     if (location.pathname !== '/') navigate('/')
   }
 
+  const searchPlaceholder =
+    APP_STEP === '1'
+      ? location.pathname.startsWith('/kamp')
+        ? 'Kamp alanı veya il ara'
+        : 'Rota, şehir veya bölge ara'
+      : 'Kamp, yayla veya doğal alan ara'
+
   return (
-    <header className="header">
+    <header className={APP_STEP === '1' ? 'header has-modes' : 'header'}>
       <Link to="/" className="brand" aria-label="Yürüyom ana sayfa">
         <PinMark />
         <span className="wordmark">
           <span className="wy">y</span>ürüyom
         </span>
       </Link>
+      {APP_STEP === '1' && (
+        <nav className="mode-nav" aria-label="Bölüm">
+          <NavLink
+            to="/"
+            end
+            className={() =>
+              location.pathname === '/' || location.pathname.startsWith('/rota') ? 'is-on' : undefined
+            }
+          >
+            Rotalar
+          </NavLink>
+          <NavLink
+            to="/kamp"
+            className={() => (location.pathname.startsWith('/kamp') ? 'is-on' : undefined)}
+          >
+            Kamp alanları
+          </NavLink>
+        </nav>
+      )}
       <form className="search" role="search" onSubmit={(event) => event.preventDefault()}>
         <SearchIcon />
         <input
           type="search"
           value={query}
-          placeholder="Kamp, yayla veya doğal alan ara"
-          aria-label="Kamp, yayla veya doğal alan ara"
+          placeholder={searchPlaceholder}
+          aria-label={searchPlaceholder}
           autoComplete="off"
           enterKeyHint="search"
           onChange={(event) => updateQuery(event.target.value)}

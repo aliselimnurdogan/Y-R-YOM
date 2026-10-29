@@ -28,15 +28,17 @@ export function PlaceCard({
   place,
   active,
   onHover,
+  basePath,
 }: {
   place: PlaceItem
   active: boolean
   onHover: (id: string | null) => void
+  basePath: string
 }) {
   return (
     <li className={active ? 'card is-on' : 'card'}>
       <Link
-        to={`/yer/${place.id}`}
+        to={`${basePath}/${place.id}`}
         className="card-link"
         onMouseEnter={() => onHover(place.id)}
         onMouseLeave={() => onHover(null)}
@@ -53,7 +55,7 @@ export function PlaceCard({
             <span className="dotsep" aria-hidden="true">
               ·
             </span>
-            <span>{place.city}</span>
+            <span>{place.region}</span>
             <span className="dotsep" aria-hidden="true">
               ·
             </span>

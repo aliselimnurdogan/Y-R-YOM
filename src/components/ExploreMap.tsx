@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
 import { Link } from 'react-router-dom'
 import { formatInt } from '../format'
-import { MARAS_CENTER, MARAS_ZOOM, PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
+import { PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
 import { TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL } from '../tiles'
 import type { PlaceItem } from '../types'
 
@@ -11,11 +11,15 @@ function MapController({
   hoveredId,
   places,
   mapRef,
+  center,
+  zoom,
 }: {
   active: boolean
   hoveredId: string | null
   places: PlaceItem[]
   mapRef: { current: ReturnType<typeof useMap> | null }
+  center: [number, number]
+  zoom: number
 }) {
   const map = useMap()
 
@@ -29,16 +33,16 @@ function MapController({
     const handle = window.setTimeout(() => {
       map.invalidateSize()
       if (places.length === 0) {
-        map.setView(MARAS_CENTER, MARAS_ZOOM)
+        map.setView(center, zoom)
         return
       }
       map.fitBounds(
         places.map((place) => [place.lat, place.lng] as [number, number]),
-        { padding: [40, 40], maxZoom: 11 },
+        { padding: [40, 40], maxZoom: zoom >= 8 ? 11 : 8 },
       )
     }, 50)
     return () => window.clearTimeout(handle)
-  }, [active, map, places])
+  }, [active, map, places, center, zoom])
 
   useEffect(() => {
     if (!hoveredId) return
@@ -54,25 +58,40 @@ export function ExploreMap({
   places,
   hoveredId,
   active,
+  basePath,
+  center,
+  zoom,
+  resetLabel,
 }: {
   places: PlaceItem[]
   hoveredId: string | null
   active: boolean
+  basePath: string
+  center: [number, number]
+  zoom: number
+  resetLabel: string
 }) {
   const mapRef = useRef<ReturnType<typeof useMap> | null>(null)
 
   return (
-    <div className="map-wrap" role="region" aria-label="Kahramanmaraş haritası">
+    <div className="map-wrap" role="region" aria-label={`${resetLabel} haritası`}>
       <MapContainer
-        center={MARAS_CENTER}
-        zoom={MARAS_ZOOM}
+        center={center}
+        zoom={zoom}
         className="map-canvas"
         style={{ height: '100%', width: '100%' }}
         scrollWheelZoom
         zoomControl
       >
         <TileLayer url={TILE_URL} attribution={TILE_ATTRIBUTION} maxZoom={TILE_MAX_ZOOM} />
-        <MapController active={active} hoveredId={hoveredId} places={places} mapRef={mapRef} />
+        <MapController
+          active={active}
+          hoveredId={hoveredId}
+          places={places}
+          mapRef={mapRef}
+          center={center}
+          zoom={zoom}
+        />
         {places.map((place) => {
           const color = PLACE_KIND_COLORS[place.kind]
           const selected = hoveredId === place.id
@@ -94,7 +113,7 @@ export function ExploreMap({
                 <div className="popup-meta">
                   {PLACE_KIND_LABELS[place.kind]} · {place.city} · {formatInt(place.elevationM)} m
                 </div>
-                <Link className="popup-link" to={`/yer/${place.id}`}>
+                <Link className="popup-link" to={`${basePath}/${place.id}`}>
                   Yeri aç
                 </Link>
               </Popup>
@@ -102,8 +121,8 @@ export function ExploreMap({
           )
         })}
       </MapContainer>
-      <button type="button" className="map-reset" onClick={() => mapRef.current?.setView(MARAS_CENTER, MARAS_ZOOM)}>
-        Kahramanmaraş
+      <button type="button" className="map-reset" onClick={() => mapRef.current?.setView(center, zoom)}>
+        {resetLabel}
       </button>
     </div>
   )

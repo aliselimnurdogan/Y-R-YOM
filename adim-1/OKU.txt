@@ -1,2 +1,2 @@
-﻿1. ADIM - Turkiye rotalari
-index.html dosyasina cift tikla.
+﻿1. ADIM - Rotalar ve Turkiye kamp alanlari
+index.html cift tikla. Ustten Rotalar veya Kamp alanlari sec.

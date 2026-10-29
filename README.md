@@ -2,11 +2,13 @@
 
 Git uygulaması gerekmez.
 
-## 1. adım — Türkiye rotaları
+## 1. adım — Rotalar ve kamp alanları
 
 Klasör: `adim-1`
 
 `adim-1/index.html` dosyasına çift tıkla.
+
+Üstte iki bölüm var: **Rotalar** (yürüyüş/bisiklet GPS) ve **Kamp alanları** (Türkiye geneli, fotoğraflı).
 
 ## 2. adım — Kahramanmaraş kamp ve doğa
 

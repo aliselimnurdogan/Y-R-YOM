@@ -1,4 +1,4 @@
-export type PlaceKind = 'kamp' | 'yayla' | 'doga' | 'manzara'
+export type PlaceKind = 'kamp' | 'yayla' | 'doga' | 'manzara' | 'sahil' | 'orman' | 'gol'
 
 export interface PlaceVideo {
   youtubeId: string
@@ -9,6 +9,7 @@ export interface PlaceItem {
   id: string
   title: string
   kind: PlaceKind
+  region: string
   city: string
   lat: number
   lng: number

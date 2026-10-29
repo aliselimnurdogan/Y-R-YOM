@@ -1,6 +1,18 @@
 import { useEffect, useMemo, useState } from 'react'
-import { cx, formatInt, matchesQuery } from '../format'
-import { PLACE_KINDS, PLACE_KIND_COLORS, PLACE_KIND_LABELS, PLACE_SORTS, type PlaceSortKey } from '../labels'
+import { cx, formatInt, matchesPlace } from '../format'
+import {
+  CAMP_KINDS,
+  MARAS_CENTER,
+  MARAS_ZOOM,
+  PLACE_KINDS,
+  PLACE_KIND_COLORS,
+  PLACE_KIND_LABELS,
+  PLACE_SORTS,
+  TURKEY_CENTER,
+  TURKEY_ZOOM,
+  type PlaceSortKey,
+} from '../labels'
+import { APP_STEP } from '../step'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
 import type { PlaceKind } from '../types'
@@ -9,6 +21,10 @@ import { ExploreMap } from './ExploreMap'
 import { PlaceCard } from './PlaceCard'
 
 export function ExplorePage() {
+  const turkey = APP_STEP === '1'
+  const kinds = turkey ? CAMP_KINDS : PLACE_KINDS
+  const basePath = turkey ? '/kamp' : '/yer'
+  const title = turkey ? 'Türkiye’deki kamp alanları' : 'Kahramanmaraş kamp ve doğa'
   const { status, places, reload } = usePlaces()
   const { query, setQuery } = useSearch()
   const mobile = useMediaQuery('(max-width: 860px)')
@@ -18,23 +34,23 @@ export function ExplorePage() {
   const [hoveredId, setHoveredId] = useState<string | null>(null)
 
   useEffect(() => {
-    document.title = 'Yürüyom — Kahramanmaraş kamp ve doğa'
-  }, [])
+    document.title = turkey ? 'Yürüyom — Kamp alanları' : 'Yürüyom — Kahramanmaraş kamp ve doğa'
+  }, [turkey])
 
   const filtered = useMemo(() => {
     const list = places.filter((place) => {
       if (kind && place.kind !== kind) return false
-      return matchesQuery(place, query)
+      return matchesPlace(place, query)
     })
     return [...list].sort((a, b) => {
       if (sort === 'name') return a.title.localeCompare(b.title, 'tr')
       if (sort === 'high') return b.elevationM - a.elevationM
-      const rank = (value: PlaceKind) => PLACE_KINDS.indexOf(value)
+      const rank = (value: PlaceKind) => kinds.indexOf(value)
       const diff = rank(a.kind) - rank(b.kind)
       if (diff !== 0) return diff
       return a.title.localeCompare(b.title, 'tr')
     })
-  }, [places, query, kind, sort])
+  }, [places, query, kind, sort, kinds])
 
   const mapActive = !mobile || mode === 'map'
 
@@ -51,7 +67,7 @@ export function ExplorePage() {
       <div className={mode === 'map' ? 'explore-body is-map' : 'explore-body is-list'}>
         <aside className="panel">
           <div className="panel-head">
-            <h1>Kahramanmaraş kamp ve doğa</h1>
+            <h1>{title}</h1>
             {status === 'ready' && (
               <p className="count" aria-live="polite">
                 {formatInt(filtered.length)} alan
@@ -61,7 +77,7 @@ export function ExplorePage() {
               <button type="button" className={cx('kind-pill', !kind && 'is-on')} onClick={() => setKind(null)}>
                 Tümü
               </button>
-              {PLACE_KINDS.map((item) => (
+              {kinds.map((item) => (
                 <button
                   key={item}
                   type="button"
@@ -137,13 +153,22 @@ export function ExplorePage() {
                     place={place}
                     active={hoveredId === place.id}
                     onHover={setHoveredId}
+                    basePath={basePath}
                   />
                 ))}
               </ul>
             )}
           </div>
         </aside>
-        <ExploreMap places={filtered} hoveredId={hoveredId} active={mapActive} />
+        <ExploreMap
+          places={filtered}
+          hoveredId={hoveredId}
+          active={mapActive}
+          basePath={basePath}
+          center={turkey ? TURKEY_CENTER : MARAS_CENTER}
+          zoom={turkey ? TURKEY_ZOOM : MARAS_ZOOM}
+          resetLabel={turkey ? 'Türkiye' : 'Kahramanmaraş'}
+        />
       </div>
     </section>
   )
