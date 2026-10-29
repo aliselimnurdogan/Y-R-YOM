@@ -1,0 +1,340 @@
+[
+  {
+    "id": "baskonus-yaylasi",
+    "title": "Başkonuş Yaylası",
+    "activity": "camping",
+    "region": "Kahramanmaraş",
+    "city": "Onikişubat",
+    "loop": true,
+    "description": "Avgasır mahallesi güneyindeki Başkonuş, meşe, kayın, gürgen ve yükseklerde sedir-göknar karışımıyla kaplı bir yayla ormanıdır. Yazın serin, kışın karlı durur; kaynaklar ve gölgeli düzlükler çadır kurmaya elverişlidir. OGM’nin işaretli yürüyüş ve bisiklet hatları kamp alanından seyir sırtına çıkar, açık havada Sır Barajı yönü görünür.",
+    "spine": [
+      [37.5666, 36.5838, 1320],
+      [37.5688, 36.5915, 1260],
+      [37.5760, 36.5760, 1460],
+      [37.5820, 36.5680, 1560],
+      [37.5725, 36.5645, 1650],
+      [37.5605, 36.5710, 1580],
+      [37.5575, 36.5805, 1480],
+      [37.5666, 36.5838, 1320]
+    ],
+    "waypoints": ["Avgasır girişi", "Kamp alanı", "Başkonuş seyir sırtı"]
+  },
+  {
+    "id": "yavsan-yaylasi",
+    "title": "Yavşan Yaylası Tabiat Parkı",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Onikişubat",
+    "loop": true,
+    "description": "Büyüksır–Fatmalı sırtında, yaklaşık 1650 metrede sedir, göknar, karaçam ve meşenin iç içe geçtiği bir tabiat parkıdır. Yaz öğleden sonraları serin, ilkbaharda çiçekli, kışın karlıdır. Dere yataklarında yabani ceviz görülür; günübirlik yürüyüş düzlükleri ormanın içine sokulur.",
+    "spine": [
+      [37.4825, 36.7028, 1550],
+      [37.4792, 36.6992, 1620],
+      [37.4771, 36.6980, 1650],
+      [37.4748, 36.6946, 1680],
+      [37.4776, 36.6922, 1660],
+      [37.4808, 36.6964, 1600],
+      [37.4825, 36.7028, 1550]
+    ],
+    "waypoints": ["Fatmalı girişi", "Sedir korusu", "Yavşan düzlüğü"]
+  },
+  {
+    "id": "kapicam-tabiat-parki",
+    "title": "Kapıçam Tabiat Parkı",
+    "activity": "cycling",
+    "region": "Kahramanmaraş",
+    "city": "Dulkadiroğlu",
+    "loop": true,
+    "description": "Güzelyurt’ta, Gaziantep yolu kenarında kızılçam ve fıstık çamı örtülü alçak bir tabiat parkıdır. Botanik bahçesindeki sığ göletler ve taş–ahşap yollar kısa turlar için uygundur. Parkur ve ekstrem alan bisiklet ve dağ bisikleti kullanımına açıktır; ilkbahar ve sonbahar gölge–serinlik dengesi en iyisidir.",
+    "spine": [
+      [37.4920, 37.0320, 610],
+      [37.4900, 37.0352, 660],
+      [37.4880, 37.0380, 650],
+      [37.4862, 37.0348, 720],
+      [37.4852, 37.0313, 640],
+      [37.4886, 37.0300, 630],
+      [37.4920, 37.0320, 610]
+    ],
+    "waypoints": ["Güzelyurt girişi", "Botanik göletleri", "Seyir köşkü"]
+  },
+  {
+    "id": "tekir-yaylasi",
+    "title": "Tekir Yaylası",
+    "activity": "camping",
+    "region": "Kahramanmaraş",
+    "city": "Onikişubat",
+    "loop": false,
+    "description": "Kayseri yolu üzerindeki Tekir, 1500 metre dolayında serin bir vadi yaylasıdır. Çam ve yapraklı orman arasından dere akar, yazın gölet kenarına çadır ve karavan iner. Alabalık tesisleri yol boyundadır; gece yayla havası şehir ovasından belirgin biçimde soğuktur.",
+    "spine": [
+      [37.8852, 36.6225, 1503],
+      [37.8902, 36.6280, 1480],
+      [37.8948, 36.6332, 1460],
+      [37.8990, 36.6373, 1440],
+      [37.9042, 36.6402, 1465],
+      [37.9085, 36.6360, 1490]
+    ],
+    "waypoints": ["Tekir mahalle", "Akarsu kenarı", "Yayla göleti"]
+  },
+  {
+    "id": "yesilgoz-mesire",
+    "title": "Yeşilgöz Mesire Alanı",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Onikişubat",
+    "loop": true,
+    "description": "Tekir Vadisi’nde turkuaz obruk gölüyle tanınan kısa bir mesire yürüyüşüdür. Su, mağara çıkışlı kaynakla beslenir ve yazın bile buz gibi kalır. Kıyıdaki çınar–çam gölgesi piknik ve tur için yeter; Kayseri yolundan birkaç dakikalık sapmadır.",
+    "spine": [
+      [37.9100, 36.6220, 1450],
+      [37.9135, 36.6200, 1420],
+      [37.9161, 36.6187, 1390],
+      [37.9176, 36.6170, 1385],
+      [37.9180, 36.6196, 1410],
+      [37.9142, 36.6212, 1430],
+      [37.9100, 36.6220, 1450]
+    ],
+    "waypoints": ["Kayseri yolu ayrımı", "Yeşilgöz obruğu", "Piknik kıyısı"]
+  },
+  {
+    "id": "berit-dagi",
+    "title": "Berit Dağı",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Göksun",
+    "loop": false,
+    "description": "Göksun’un güneydoğusunda 3054 metrelik Berit, Elbistan ovasına bakan rüzgârlı bir Toros zirvesidir. Ericek ve Kınıkkoz’dan Çavdarbeli’ne toprak yol çıkar; geçitten sonra çıplak sırt ve yazın göçer otlakları başlar. Kar geç erir, su yüksek kamp düzlüğündeki derecikten alınır, manzara kuzeyde ovanın düzlüğüne açılır.",
+    "spine": [
+      [38.0776, 36.8779, 1400],
+      [38.0600, 36.8750, 1650],
+      [38.0450, 36.8680, 1850],
+      [38.0320, 36.8600, 2000],
+      [38.0250, 36.8650, 2300],
+      [38.0210, 36.8720, 2700],
+      [38.0192, 36.8778, 3054]
+    ],
+    "waypoints": ["Ericek", "Çavdarbeli Geçidi", "Berit zirve"]
+  },
+  {
+    "id": "ali-kayasi-menzelet",
+    "title": "Ali Kayası Menzelet Manzara",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Onikişubat",
+    "loop": true,
+    "description": "Bulutoğlu sırtında, Menzelet Baraj Gölü’ne bakan kayalık bir seyir yürüyüşüdür. Cam teras ve kısa patika, Ceyhan vadisinin mavi su düzlüğünü karşıya alır. Yazın sıcak, ilkbaharda rüzgârlı; ağaç seyrek, zemin taşlı ve açık manzaralıdır.",
+    "spine": [
+      [37.7410, 36.7880, 900],
+      [37.7447, 36.7913, 950],
+      [37.7480, 36.7960, 990],
+      [37.7502, 36.8020, 1020],
+      [37.7462, 36.8080, 980],
+      [37.7412, 36.8000, 920],
+      [37.7410, 36.7880, 900]
+    ],
+    "waypoints": ["Bulutoğlu", "Ali Kayası cam teras", "Menzelet bakış"]
+  },
+  {
+    "id": "dongel-magarasi",
+    "title": "Döngel Mağarası Çevresi",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Onikişubat",
+    "loop": true,
+    "description": "Tekir tarafında, Kayseri yolunun batısında karstik yamaçta üç bağlı mağara ve ceviz–çınar örtüsü vardır. Köy deresi gölge verir, mağara ağzı güneye bakar. Yazın serin piknik, kışın ıslak zemin; kısa tırmanıştan sonra vadiye inilir.",
+    "spine": [
+      [37.8550, 36.6380, 850],
+      [37.8570, 36.6400, 1000],
+      [37.8593, 36.6413, 1130],
+      [37.8610, 36.6435, 1180],
+      [37.8600, 36.6380, 950],
+      [37.8574, 36.6360, 880],
+      [37.8550, 36.6380, 850]
+    ],
+    "waypoints": ["Döngel mahalle", "Mağara ağzı", "Tekir Deresi"]
+  },
+  {
+    "id": "engizek-dagi",
+    "title": "Engizek Dağı Yaklaşımı",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Çağlayancerit",
+    "loop": false,
+    "description": "Çağlayancerit’in kuzeyindeki Engizek, sedir ormanının doğu ucu sayılan 2814 metrelik bir sırt kütlesidir. Ekinözü ve ilçe vadisinden bakınca çıplak yayla, etekte meşe ve karaçam görülür. Yazın otlak, kışın kar; su kaynakları yamaç köylerinde, zirveye yaklaştıkça bozkır açılır.",
+    "spine": [
+      [37.7760, 37.2630, 1450],
+      [37.7900, 37.2100, 1750],
+      [37.8020, 37.1600, 2000],
+      [37.8120, 37.1200, 2250],
+      [37.8200, 37.0950, 2500],
+      [37.8267, 37.0742, 2814]
+    ],
+    "waypoints": ["Engizek mahalle", "Güney yamaç", "Engizek zirve"]
+  },
+  {
+    "id": "cokak-geben-orman",
+    "title": "Çokak Yayla Ormanı",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Andırın",
+    "loop": true,
+    "description": "Andırın’ın kuzeyinde Çokak, 1235 metrede karaçam ve meşe ile çevrili bir çöküntü yaylasıdır. Kesiş Suyu’nu besleyen pınarlar mahalle çevresinden çıkar. Yazı serin, kışı karlıdır; Geben yönündeki orman kuşağı kısa sırt turuna yeter.",
+    "spine": [
+      [37.7361, 36.3287, 1235],
+      [37.7420, 36.3220, 1380],
+      [37.7500, 36.3180, 1550],
+      [37.7480, 36.3350, 1400],
+      [37.7400, 36.3400, 1280],
+      [37.7361, 36.3287, 1235]
+    ],
+    "waypoints": ["Çokak mahalle", "Karaçam sırtı", "Kesiş Suyu"]
+  },
+  {
+    "id": "ahir-dagi-etek",
+    "title": "Ahır Dağı Etek Yürüyüşü",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Dulkadiroğlu",
+    "loop": true,
+    "description": "Şehrin hemen kuzeyinde Ahır Dağı, alçakta kızılçam, 1200 metreden sonra sedir ve ardıç kuşaklarıyla yükselir. Etek patikası ovadan bakınca Maraş’ı ayak altında bırakır. İlkbahar yeşil, yazın tozlu ve sıcaktır; su azdır, gölge çamlıkta bulunur.",
+    "spine": [
+      [37.6050, 36.9800, 720],
+      [37.6150, 36.9950, 900],
+      [37.6220, 37.0080, 1100],
+      [37.6271, 37.0190, 1350],
+      [37.6200, 37.0150, 1200],
+      [37.6120, 37.0000, 950],
+      [37.6050, 36.9800, 720]
+    ],
+    "waypoints": ["Şehir kuzeyi", "Kızılçam yamaç", "Yedikuyu eteği"]
+  },
+  {
+    "id": "binboga-keklikoluk",
+    "title": "Binboğa Keklikoluk Yaylası",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Göksun",
+    "loop": true,
+    "description": "Göksun’un kuzeybatısında Keklikoluk, Binboğa’nın güney yamacındaki yayla köyüdür. 1850–2100 metre arası dağ çayırı, geven ve seyrek ardıçtır; yaz başında sürü çıkar, eylülde iner. Su sınırlıdır, ufuk Sarız ve Göksun çaylarına açılır.",
+    "spine": [
+      [38.2030, 36.4600, 1550],
+      [38.2120, 36.4700, 1750],
+      [38.2220, 36.4780, 1950],
+      [38.2300, 36.4650, 2100],
+      [38.2200, 36.4500, 1900],
+      [38.2100, 36.4520, 1700],
+      [38.2030, 36.4600, 1550]
+    ],
+    "waypoints": ["Keklikoluk", "Yayla çayırı", "Binboğa etek sırtı"]
+  },
+  {
+    "id": "nurhak-dagi",
+    "title": "Nurhak Dağı Yaklaşımı",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Nurhak",
+    "loop": false,
+    "description": "İlçenin kuzeyindeki Nurhak, 3080 metreye yaklaşan kayalık bir ultra zirvedir. Kuzeyden Tek Ardıç yaylası ve Ali Gölü havzası üzerinden plato açılır; göl kar suyuyla yaz ortasına kadar durur. Zemin kireçtaşı ve kırık sırtlardır, rüzgâr sert, su göl civarı dışında seyrektir.",
+    "spine": [
+      [38.0650, 37.4780, 2150],
+      [38.0550, 37.4800, 2350],
+      [38.0469, 37.4830, 2580],
+      [38.0380, 37.4840, 2750],
+      [38.0320, 37.4845, 2900],
+      [38.0278, 37.4847, 3081]
+    ],
+    "waypoints": ["Tek Ardıç", "Ali Gölü", "Killi Tepe"]
+  },
+  {
+    "id": "hartlap-orman",
+    "title": "Hartlap Orman Yürüyüşü",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Onikişubat",
+    "loop": true,
+    "description": "Hartlap, sandal (yöresel adıyla hartlap) ağacı ve karışık makiden ormana geçen serin bir mahalle sırtıdır. Gökçe Dağı ormanı köyün güneyinde kısa döngü verir; yazı merkezden serin, kışın ıslak çamur olur. Su azdır, gölge sık çalı ve çam altındadır.",
+    "spine": [
+      [37.5455, 36.6941, 820],
+      [37.5380, 36.6930, 950],
+      [37.5287, 36.6936, 1080],
+      [37.5260, 36.7000, 1020],
+      [37.5340, 36.7050, 900],
+      [37.5420, 36.7000, 850],
+      [37.5455, 36.6941, 820]
+    ],
+    "waypoints": ["Hartlap mahalle", "Gökçe Dağı ormanı", "Güney sırt"]
+  },
+  {
+    "id": "yedikuyular",
+    "title": "Yedikuyular Ahır Sırtı",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Dulkadiroğlu",
+    "loop": true,
+    "description": "Ulutaş–Ballıca yolunun ucunda, Ahır’ın 1830–2040 metre bandındaki kayak düzlüğüdür. Yazın çayır ve kısa sırt yürüyüşü, kışın kar pistidir; Milcan yönü ovayı ve Engizek silsilesini gösterir. Su tesiste vardır, açık yamaç rüzgârlıdır.",
+    "spine": [
+      [37.6420, 37.0360, 1835],
+      [37.6448, 37.0371, 1900],
+      [37.6481, 37.0417, 1980],
+      [37.6510, 37.0440, 2040],
+      [37.6500, 37.0380, 2100],
+      [37.6460, 37.0340, 1950],
+      [37.6420, 37.0360, 1835]
+    ],
+    "waypoints": ["Tesis girişi", "Pist sırtı", "Milcan bakış"]
+  },
+  {
+    "id": "halbur-yaylasi",
+    "title": "Halbur Yaylası",
+    "activity": "camping",
+    "region": "Kahramanmaraş",
+    "city": "Andırın",
+    "loop": true,
+    "description": "Andırın–Göksun yolu yakınında, Kargaçayırı tarafında 1453 metrelik ipek yolu yaylasıdır. Çam ve açık otlak karışır; yazın serin, su gözeleri yayla düzlüğündedir. Bungalov ve yürüyüş hattı planı olan kamu alanı, Geben göç yolunun konak yeridir.",
+    "spine": [
+      [37.6580, 36.4400, 1400],
+      [37.6625, 36.4453, 1453],
+      [37.6680, 36.4500, 1480],
+      [37.6700, 36.4420, 1500],
+      [37.6650, 36.4380, 1470],
+      [37.6600, 36.4420, 1430],
+      [37.6580, 36.4400, 1400]
+    ],
+    "waypoints": ["Kargaçayırı yolu", "Halbur düzlüğü", "Yayla çeşmesi"]
+  },
+  {
+    "id": "kirksu-yaylasi",
+    "title": "Kırksu Yaylası",
+    "activity": "camping",
+    "region": "Kahramanmaraş",
+    "city": "Andırın",
+    "loop": false,
+    "description": "Geben’in batısındaki Kırksu, onlarca soğuk su gözesinin birleştiği orman–yayla koridorudur. Stabilize yol vadiden çıkar, gölge aşağıda çamlıkta, yukarıda açık çayırdadır. Yazın buz gibi su, telefon çekmez; çadır için düzlük boldur, ateşe karşı dikkat ister.",
+    "spine": [
+      [37.7800, 36.4300, 1280],
+      [37.7790, 36.4000, 1350],
+      [37.7782, 36.3585, 1480],
+      [37.7820, 36.3550, 1520],
+      [37.7750, 36.3520, 1500],
+      [37.7740, 36.3650, 1450]
+    ],
+    "waypoints": ["Geben ayrımı", "Kırksu gözeleri", "Üst yayla"]
+  },
+  {
+    "id": "karagol-degirmendere",
+    "title": "Değirmendere Karagöl",
+    "activity": "hiking",
+    "region": "Kahramanmaraş",
+    "city": "Göksun",
+    "loop": true,
+    "description": "Göksun’un güneyinde Küçükçamurlu–Değirmendere sırtında kar suyuyla oluşan küçük bir dağ gölüdür. İlkbaharda çiçek ve kalan kar bir arada durur, yazın göl çekilebilir. Zemin taşlı çayır, etrafta seyrek meşe; su göl kıyısından, manzara vadiye iner.",
+    "spine": [
+      [37.8650, 36.4520, 1650],
+      [37.8680, 36.4560, 1720],
+      [37.8703, 36.4591, 1780],
+      [37.8730, 36.4630, 1850],
+      [37.8710, 36.4680, 1820],
+      [37.8670, 36.4620, 1740],
+      [37.8650, 36.4520, 1650]
+    ],
+    "waypoints": ["Değirmendere", "Karagöl kıyısı", "Kuzey sırt"]
+  }
+]

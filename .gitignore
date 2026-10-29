@@ -1,0 +1,9 @@
+node_modules
+dist
+.DS_Store
+*.log
+scripts/_imgcheck
+scripts/_imgcheck/**
+.vite
+.idea
+.vscode
