@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { CircleMarker, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
+import { CircleMarker, GeoJSON, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
+import type { Layer, LeafletMouseEvent, PathOptions } from 'leaflet'
 import { Link } from 'react-router-dom'
+import { regionById, turkeyRegionCollection } from '../data/turkey-regions'
 import { formatInt } from '../format'
-import { PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
-import { HAS_LIVE } from '../step'
+import { PLACE_KIND_COLORS, PLACE_KIND_LABELS, type CatalogZone } from '../labels'
+import { HAS_ATLAS, HAS_LIVE } from '../step'
 import { MapBrand } from './Brand'
 import { BASEMAPS, TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL, type BasemapId } from '../tiles'
 import type { PlaceItem } from '../types'
@@ -16,6 +18,8 @@ function MapController({
   center,
   zoom,
   onZoom,
+  zone,
+  locked,
 }: {
   active: boolean
   hoveredId: string | null
@@ -24,6 +28,8 @@ function MapController({
   center: [number, number]
   zoom: number
   onZoom: (value: number) => void
+  zone: string | null
+  locked: boolean
 }) {
   const map = useMap()
 
@@ -42,7 +48,20 @@ function MapController({
   }, [map, onZoom])
 
   useEffect(() => {
-    if (!active) return
+    if (!active || !locked) return
+    const apply = () => {
+      map.invalidateSize()
+      const region = regionById(zone)
+      if (region) map.flyToBounds(region.bounds, { padding: [36, 36], maxZoom: 8, duration: 0.85 })
+      else map.setView(center, zoom, { animate: false })
+    }
+    apply()
+    const later = window.setTimeout(apply, 280)
+    return () => window.clearTimeout(later)
+  }, [active, map, locked, zone, center, zoom])
+
+  useEffect(() => {
+    if (!active || locked) return
     const handle = window.setTimeout(() => {
       map.invalidateSize()
       if (places.length === 0) {
@@ -55,16 +74,70 @@ function MapController({
       )
     }, 50)
     return () => window.clearTimeout(handle)
-  }, [active, map, places, center, zoom])
+  }, [active, map, locked, places, center, zoom])
 
   useEffect(() => {
-    if (!hoveredId) return
+    if (locked || !hoveredId) return
     const place = places.find((item) => item.id === hoveredId)
     if (!place) return
     map.panTo([place.lat, place.lng])
-  }, [hoveredId, map, places])
+  }, [hoveredId, locked, map, places])
 
   return null
+}
+
+function RegionLayer({
+  zone,
+  onSelectZone,
+}: {
+  zone: string | null
+  onSelectZone: (zone: CatalogZone) => void
+}) {
+  const data = useMemo(() => turkeyRegionCollection(), [])
+
+  function pathStyle(id: string): PathOptions {
+    const selected = zone === id
+    const dim = Boolean(zone && !selected)
+    return {
+      color: selected ? '#7f1d1d' : '#8a3b32',
+      weight: selected ? 2.8 : 1.3,
+      fillColor: selected ? '#c43121' : '#e2c2b4',
+      fillOpacity: selected ? 0.58 : dim ? 0.1 : 0.32,
+      opacity: dim ? 0.35 : 1,
+    }
+  }
+
+  return (
+    <GeoJSON
+      key={zone || 'all'}
+      data={data}
+      style={(feature) => pathStyle(String(feature?.properties?.id || ''))}
+      onEachFeature={(feature, layer: Layer) => {
+        const id = String(feature.properties?.id || '') as CatalogZone
+        layer.bindTooltip(id, {
+          sticky: true,
+          direction: 'center',
+          className: 'zone-tip',
+          opacity: 1,
+        })
+        layer.on({
+          click: (event: LeafletMouseEvent) => {
+            event.originalEvent.preventDefault()
+            event.originalEvent.stopPropagation()
+            onSelectZone(id)
+          },
+          mouseover: (event) => {
+            if (zone === id) return
+            event.target.setStyle({ fillColor: '#e24a3a', fillOpacity: 0.48, color: '#9f1f1f', weight: 2.2 })
+            event.target.bringToFront()
+          },
+          mouseout: (event) => {
+            event.target.setStyle(pathStyle(id))
+          },
+        })
+      }}
+    />
+  )
 }
 
 function clusterPlaces(places: PlaceItem[], zoom: number) {
@@ -95,6 +168,8 @@ export function ExploreMap({
   center,
   zoom,
   resetLabel,
+  zone = null,
+  onSelectZone,
 }: {
   places: PlaceItem[]
   hoveredId: string | null
@@ -103,22 +178,30 @@ export function ExploreMap({
   center: [number, number]
   zoom: number
   resetLabel: string
+  zone?: string | null
+  onSelectZone?: (zone: CatalogZone | null) => void
 }) {
   const mapRef = useRef<ReturnType<typeof useMap> | null>(null)
   const [basemap, setBasemap] = useState<BasemapId>('topo')
   const [zoomLevel, setZoomLevel] = useState(zoom)
+  const locked = HAS_ATLAS
   const layer = HAS_LIVE ? BASEMAPS[basemap] : { url: TILE_URL, attribution: TILE_ATTRIBUTION }
   const clusters = useMemo(() => clusterPlaces(places, zoomLevel), [places, zoomLevel])
 
   return (
-    <div className="map-wrap" role="region" aria-label={`${resetLabel} haritası`}>
+    <div className={locked ? 'map-wrap is-atlas' : 'map-wrap'} role="region" aria-label={`${resetLabel} haritası`}>
       <MapContainer
         center={center}
         zoom={zoom}
         className="map-canvas"
         style={{ height: '100%', width: '100%' }}
-        scrollWheelZoom
-        zoomControl
+        scrollWheelZoom={!locked}
+        doubleClickZoom={!locked}
+        touchZoom={!locked}
+        boxZoom={!locked}
+        keyboard={!locked}
+        dragging={!locked}
+        zoomControl={!locked}
       >
         <TileLayer key={layer.url} url={layer.url} attribution={layer.attribution} maxZoom={TILE_MAX_ZOOM} />
         <MapController
@@ -129,8 +212,12 @@ export function ExploreMap({
           center={center}
           zoom={zoom}
           onZoom={setZoomLevel}
+          zone={zone}
+          locked={locked}
         />
-        {clusters.map((cluster) => {
+        {locked && onSelectZone && <RegionLayer zone={zone} onSelectZone={onSelectZone} />}
+        {(!locked || zone) &&
+          clusters.map((cluster) => {
           if (cluster.items.length > 1) {
             return (
               <CircleMarker
@@ -140,16 +227,19 @@ export function ExploreMap({
                 pathOptions={{
                   color: '#ffffff',
                   weight: 2,
-                  fillColor: '#0ea5e9',
+                  fillColor: locked ? '#c43121' : '#0ea5e9',
                   fillOpacity: 0.92,
                 }}
                 eventHandlers={{
-                  click: () => mapRef.current?.setView([cluster.lat, cluster.lng], Math.min(zoomLevel + 2, 12)),
+                  click: () => {
+                    if (locked) return
+                    mapRef.current?.setView([cluster.lat, cluster.lng], Math.min(zoomLevel + 2, 12))
+                  },
                 }}
               >
                 <Popup className="route-popup" maxWidth={240}>
                   <div className="popup-title">{cluster.items.length} nokta</div>
-                  <div className="popup-meta">Yakınlaşınca tek tek açılır</div>
+                  <div className="popup-meta">{locked ? 'Bölgeye tıkla, yanda listelenir' : 'Yakınlaşınca tek tek açılır'}</div>
                 </Popup>
               </CircleMarker>
             )
@@ -165,7 +255,7 @@ export function ExploreMap({
               pathOptions={{
                 color: place.pano ? '#14b8a6' : '#ffffff',
                 weight: place.pano ? 3 : 2,
-                fillColor: color,
+                fillColor: selected ? '#c43121' : color,
                 fillOpacity: 1,
                 opacity: 1,
               }}
@@ -184,7 +274,7 @@ export function ExploreMap({
           )
         })}
       </MapContainer>
-      {HAS_LIVE && (
+      {HAS_LIVE && !locked && (
         <div className="basemap-switch" role="group" aria-label="Harita katmanı">
           {(Object.keys(BASEMAPS) as BasemapId[]).map((id) => (
             <button
@@ -198,9 +288,19 @@ export function ExploreMap({
           ))}
         </div>
       )}
-      <button type="button" className="map-reset" onClick={() => mapRef.current?.setView(center, zoom)}>
+      <button
+        type="button"
+        className="map-reset"
+        onClick={() => {
+          if (locked && onSelectZone) onSelectZone(null)
+          else mapRef.current?.setView(center, zoom)
+        }}
+      >
         {resetLabel}
       </button>
+      {locked && (
+        <p className="map-hint">{zone ? `${zone} seçili · kırmızı bölge` : 'Bölgeye tıkla, harita oraya gider'}</p>
+      )}
       <MapBrand />
     </div>
   )

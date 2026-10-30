@@ -56,7 +56,7 @@ export function HomePage() {
         {mosaic.length > 0 && (
           <div className="home-mosaic" aria-hidden="true">
             {mosaic.map((src, index) => (
-              <img key={`${index}-${src}`} src={sharpUrl(src, 720)} alt="" />
+              <img key={`${index}-${src}`} src={sharpUrl(src, 720)} alt="" referrerPolicy="no-referrer" />
             ))}
           </div>
         )}
@@ -71,7 +71,7 @@ export function HomePage() {
           {trailPicks.map((route) => (
             <li key={route.id}>
               <Link className="home-card" to={`/rota/${route.id}`}>
-                <img className="home-card-img" src={sharpUrl(route.image, 720)} alt="" />
+                <img className="home-card-img" src={sharpUrl(route.image, 720)} alt="" referrerPolicy="no-referrer" />
                 <div className="home-card-body">
                   <h3>{route.title}</h3>
                   <p>
@@ -96,7 +96,7 @@ export function HomePage() {
               <li key={place.id}>
                 <Link className="home-card" to={`/kamp/${place.id}`}>
                   {cover ? (
-                    <img className="home-card-img" src={sharpUrl(cover, 720)} alt="" />
+                    <img className="home-card-img" src={sharpUrl(cover, 720)} alt="" referrerPolicy="no-referrer" />
                   ) : (
                     <TrailThumb seed={place.id} />
                   )}

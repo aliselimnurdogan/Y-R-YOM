@@ -456,7 +456,7 @@ img {
   position: relative;
   display: block;
   width: 100%;
-  height: 220px;
+  height: 280px;
   padding: 0;
   border: 0;
   border-radius: 18px;
@@ -617,6 +617,48 @@ img {
 
 .look-stage img {
   will-change: transform;
+}
+
+.look-drift {
+  position: absolute;
+  width: 260%;
+  height: 170%;
+  top: -32%;
+  left: -78%;
+  will-change: transform;
+}
+
+.look-drift img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.look-drift img.is-on {
+  z-index: 1;
+  animation: look-in 1.2s ease;
+}
+
+@keyframes look-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.look-stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 80% at 50% 42%, transparent 42%, rgba(5, 8, 7, 0.38) 100%),
+    linear-gradient(180deg, rgba(5, 8, 7, 0.18) 0%, transparent 22%, transparent 70%, rgba(5, 8, 7, 0.55) 100%);
 }
 
 .feel-pip {
@@ -2138,8 +2180,8 @@ body.is-look .gallery-thumbs img {
 
 body.is-look .feel-card {
   height: auto;
-  aspect-ratio: 2.35 / 1;
-  min-height: 220px;
+  aspect-ratio: 2.2 / 1;
+  min-height: 280px;
   box-shadow: 0 16px 40px rgba(20, 32, 22, 0.22);
 }
 
@@ -2394,6 +2436,73 @@ body.is-polish .detail {
   width: 100%;
   height: 100%;
   border-radius: 12px;
+}
+
+.map-wrap.is-atlas .leaflet-container {
+  cursor: default !important;
+}
+
+.map-wrap.is-atlas .leaflet-interactive {
+  cursor: pointer !important;
+}
+
+.map-wrap.is-atlas .map-reset {
+  background: #c43121;
+  color: #fff7f2;
+  border: 0;
+}
+
+.map-wrap.is-atlas .map-reset:hover {
+  background: #9f1f1f;
+  color: #fff7f2;
+}
+
+body.is-atlas .kind-pill.is-on {
+  background: #c43121;
+  color: #fff7f2;
+  border-color: #9f1f1f;
+}
+
+body.is-atlas .thumb-wrap {
+  width: 168px;
+  height: 118px;
+  aspect-ratio: 168 / 118;
+}
+
+body.is-atlas .thumb {
+  width: 100%;
+  height: 100%;
+}
+
+.zone-tip {
+  background: rgba(36, 22, 18, 0.88) !important;
+  color: #f6ead0 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  font-weight: 800 !important;
+  font-size: 12px !important;
+  padding: 4px 10px !important;
+  box-shadow: none !important;
+}
+
+.zone-tip::before {
+  display: none !important;
+}
+
+.map-hint {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 500;
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(36, 22, 18, 0.84);
+  color: #f6ead0;
+  font-weight: 800;
+  font-size: 12.5px;
+  pointer-events: none;
+  box-shadow: 0 8px 20px rgba(20, 12, 10, 0.28);
 }
 
 .map-brand {

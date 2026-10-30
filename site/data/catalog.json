@@ -14,9 +14,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Edremit körfezindeki ada ve kıyı tabiat parkı. DKMP kaydında çadırlı kamp ve günübirlik kullanım vardır; geceleme yalnızca idarenin gösterdiği yerde.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Ayval%C4%B1k_Islands.jpg/1920px-Ayval%C4%B1k_Islands.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Ayval%C4%B1k_Islands_Nature_Park.jpg/1920px-Ayval%C4%B1k_Islands_Nature_Park.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/%C5%9Eeytan_Sofras%C4%B1%27ndan_G%C3%BCnbat%C4%B1m%C4%B1nda_Ayval%C4%B1k_Adalar%C4%B1_Milli_Park%C4%B1_G%C3%B6r%C3%BCn%C3%BCm%C3%BC.jpg/1920px-%C5%9Eeytan_Sofras%C4%B1%27ndan_G%C3%BCnbat%C4%B1m%C4%B1nda_Ayval%C4%B1k_Adalar%C4%B1_Milli_Park%C4%B1_G%C3%B6r%C3%BCn%C3%BCm%C3%BC.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Ayval%C4%B1k_Islands.jpg/1920px-Ayval%C4%B1k_Islands.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Ayval%C4%B1k_Islands_Nature_Park.jpg/1920px-Ayval%C4%B1k_Islands_Nature_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/%C5%9Eeytan_Sofras%C4%B1%27ndan_G%C3%BCnbat%C4%B1m%C4%B1nda_Ayval%C4%B1k_Adalar%C4%B1_Milli_Park%C4%B1_G%C3%B6r%C3%BCn%C3%BCm%C3%BC.jpg/1920px-%C5%9Eeytan_Sofras%C4%B1%27ndan_G%C3%BCnbat%C4%B1m%C4%B1nda_Ayval%C4%B1k_Adalar%C4%B1_Milli_Park%C4%B1_G%C3%B6r%C3%BCn%C3%BCm%C3%BC.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Ayvalik_Islands_Nature_Park.jpg/1920px-Ayvalik_Islands_Nature_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/72/Comet_NEOWISE_over_Ayval%C4%B1k_Islands_Nature_Park.jpg"
     ],
     "videos": [],
     "guide": {
@@ -116,8 +118,8 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Pazaryeri yayla ormanı. Çadırlı kamp ve fotosafari kaydı vardır; suyun yerini idareden sorun.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Bilecik%2C_K%C3%BC%C3%A7%C3%BCkelmal%C4%B1_tabiat_park%C4%B1_g%C3%B6leti.jpg/1920px-Bilecik%2C_K%C3%BC%C3%A7%C3%BCkelmal%C4%B1_tabiat_park%C4%B1_g%C3%B6leti.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg/1920px-K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Bilecik%2C_K%C3%BC%C3%A7%C3%BCkelmal%C4%B1_tabiat_park%C4%B1_g%C3%B6leti.jpg/1920px-Bilecik%2C_K%C3%BC%C3%A7%C3%BCkelmal%C4%B1_tabiat_park%C4%B1_g%C3%B6leti.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg/1920px-K%C3%BC%C3%A7%C3%BCkelmal%C4%B1%27_da_K%C4%B1%C5%9F.jpg"
     ],
     "videos": [],
     "guide": {
@@ -175,7 +177,9 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/7/76/Sada%C4%9F%C4%B1_kanyonu.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/0/08/Sadagi.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Sada%C4%9F%C4%B1_k%C3%B6pr%C3%BC.jpg/1920px-Sada%C4%9F%C4%B1_k%C3%B6pr%C3%BC.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Sada%C4%9F%C4%B1_k%C3%B6pr%C3%BC.jpg/1920px-Sada%C4%9F%C4%B1_k%C3%B6pr%C3%BC.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Sada%C4%9F%C4%B1_giri%C5%9F.jpg/1920px-Sada%C4%9F%C4%B1_giri%C5%9F.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Sada%C4%9F%C4%B1_kanyonu_giri%C5%9F.jpg/1920px-Sada%C4%9F%C4%B1_kanyonu_giri%C5%9F.jpg"
     ],
     "videos": [],
     "guide": {
@@ -229,8 +233,10 @@
     "summary": "Mustafakemalpaşa şelalesi ve mesire. Çadırlı kamp kaydı vardır; yazın kalabalık, geceleme tahsisli alanda.",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/9/94/Suu%C3%A7tu_Waterfall%2C_Mustafakemalpa%C5%9Fa.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/SUU%C3%87TU_%C5%9EELALES%C4%B0_FOTO%C4%9ERAFLARI_-_panoramio.jpg/1920px-SUU%C3%87TU_%C5%9EELALES%C4%B0_FOTO%C4%9ERAFLARI_-_panoramio.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Suu%C3%A7tu_%C5%9Felalesi.jpg/1920px-Suu%C3%A7tu_%C5%9Felalesi.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/SUU%C3%87TU_%C5%9EELALES%C4%B0_FOTO%C4%9ERAFLARI_-_panoramio.jpg/1920px-SUU%C3%87TU_%C5%9EELALES%C4%B0_FOTO%C4%9ERAFLARI_-_panoramio.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Suu%C3%A7tu_%C5%9Felalesi.jpg/1920px-Suu%C3%A7tu_%C5%9Felalesi.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/KAYIN_A%C4%9EA%C3%87LARI_SUU%C3%87TU_%C5%9EELALES%C4%B0_-_panoramio.jpg/1920px-KAYIN_A%C4%9EA%C3%87LARI_SUU%C3%87TU_%C5%9EELALES%C4%B0_-_panoramio.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/SUU%C3%87TU_P%C4%B0KN%C4%B0K_ALANI_M%C4%B0S_G%C4%B0B%C4%B0_KAYIN_ORMANII_-_panoramio.jpg/1920px-SUU%C3%87TU_P%C4%B0KN%C4%B0K_ALANI_M%C4%B0S_G%C4%B0B%C4%B0_KAYIN_ORMANII_-_panoramio.jpg"
     ],
     "videos": [],
     "guide": {
@@ -286,8 +292,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Adalar’da küçük tabiat parkı. Çadırlı kamp kaydı vardır; ada kuralları ve yangın yasağı sıkıdır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/B%C3%BCy%C3%BCkada_Ayayorgi_Hill.jpg/1920px-B%C3%BCy%C3%BCkada_Ayayorgi_Hill.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/B%C3%BCy%C3%BCkada_Nature_Park.jpg/1920px-B%C3%BCy%C3%BCkada_Nature_Park.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/B%C3%BCy%C3%BCkada_Ayayorgi_Hill.jpg/1920px-B%C3%BCy%C3%BCkada_Ayayorgi_Hill.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/B%C3%BCy%C3%BCkada_Nature_Park.jpg/1920px-B%C3%BCy%C3%BCkada_Nature_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Buyukada.jpg/1920px-Buyukada.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Buyukada_Nature_Park-2.jpg/1920px-Buyukada_Nature_Park-2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Buyukada_Nature_Park.jpg/1920px-Buyukada_Nature_Park.jpg"
     ],
     "videos": [],
     "guide": {
@@ -343,9 +352,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Çatalca orman tabiat parkı. Çadırlı kamp kaydı vardır; İstanbul’a yakın, hafta sonu dolu.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Danamand%C4%B1raNP_%281%29.jpg/1920px-Danamand%C4%B1raNP_%281%29.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Danamand%C4%B1raNP_%282%29.jpg/1920px-Danamand%C4%B1raNP_%282%29.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Danamand%C4%B1raNP_%283%29.jpg/1920px-Danamand%C4%B1raNP_%283%29.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Danamand%C4%B1raNP_%281%29.jpg/1920px-Danamand%C4%B1raNP_%281%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Danamand%C4%B1raNP_%282%29.jpg/1920px-Danamand%C4%B1raNP_%282%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Danamand%C4%B1raNP_%283%29.jpg/1920px-Danamand%C4%B1raNP_%283%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Danamand%C4%B1raNP_%286%29.jpg/1920px-Danamand%C4%B1raNP_%286%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Danamand%C4%B1raNP_%287%29.jpg/1920px-Danamand%C4%B1raNP_%287%29.jpg"
     ],
     "videos": [],
     "guide": {
@@ -401,8 +412,10 @@
     "summary": "Heybeliada burun ormanı. Çadırlı kamp kaydı vardır; alan küçük, geceleme idareyerinde.",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/1/12/D%C4%B0LBURNU_TAB%C4%B0AT_PARKI.png",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg/1920px-Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Dilburnu_tabiat_park%C4%B1.jpg/1920px-Dilburnu_tabiat_park%C4%B1.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg/1920px-Dilburnu_tabiat_park%C4%B1_panoramik_g%C3%B6r%C3%BCnt%C3%BC.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Dilburnu_tabiat_park%C4%B1.jpg/1920px-Dilburnu_tabiat_park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Dilburnu_B%C3%BCy%C3%BCkada.jpg/1920px-Dilburnu_B%C3%BCy%C3%BCkada.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Dilburnu_nature_park%E2%80%99s_shoreline_03.jpg/1920px-Dilburnu_nature_park%E2%80%99s_shoreline_03.jpg"
     ],
     "videos": [],
     "guide": {
@@ -458,7 +471,7 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Şile deresi tabiat parkı. Çadırlı kamp kaydı vardır; dere kenarı ıslak, yangına dikkat.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Hacet_Deresi.jpg/1920px-Hacet_Deresi.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hacet_Deresi.jpg/1920px-Hacet_Deresi.jpg"
     ],
     "videos": [],
     "guide": {
@@ -558,9 +571,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Beykoz orman ve doğal yaşam parkı. Çadırlı kamp kaydı vardır; ateş ve geceleme tahsisli yerde.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Polonezk%C3%B6y_nature_panorama.jpg/1920px-Polonezk%C3%B6y_nature_panorama.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Polenezk%C3%B6y_Tabiat_Park%C4%B1%2C_%C4%B0stanbul%2C_EOS_60D.jpg/1920px-Polenezk%C3%B6y_Tabiat_Park%C4%B1%2C_%C4%B0stanbul%2C_EOS_60D.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Polonezk%C3%B6y_tabiat_park%C4%B1_y%C3%BCr%C3%BCy%C3%BC%C5%9F_yolu_09.jpg/1920px-Polonezk%C3%B6y_tabiat_park%C4%B1_y%C3%BCr%C3%BCy%C3%BC%C5%9F_yolu_09.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Polonezk%C3%B6y_nature_panorama.jpg/1920px-Polonezk%C3%B6y_nature_panorama.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Polenezk%C3%B6y_Tabiat_Park%C4%B1%2C_%C4%B0stanbul%2C_EOS_60D.jpg/1920px-Polenezk%C3%B6y_Tabiat_Park%C4%B1%2C_%C4%B0stanbul%2C_EOS_60D.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Polonezk%C3%B6y_tabiat_park%C4%B1_y%C3%BCr%C3%BCy%C3%BC%C5%9F_yolu_09.jpg/1920px-Polonezk%C3%B6y_tabiat_park%C4%B1_y%C3%BCr%C3%BCy%C3%BC%C5%9F_yolu_09.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Polonezk%C3%B6y_tabiat_park%C4%B1_y%C3%BCr%C3%BCy%C3%BC%C5%9F_yolu_03.jpg/1920px-Polonezk%C3%B6y_tabiat_park%C4%B1_y%C3%BCr%C3%BCy%C3%BC%C5%9F_yolu_03.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Polonezk%C3%B6y_tabiat_park%C4%B1_y%C3%BCr%C3%BCy%C3%BC%C5%9F_yolu_04.jpg/1920px-Polonezk%C3%B6y_tabiat_park%C4%B1_y%C3%BCr%C3%BCy%C3%BC%C5%9F_yolu_04.jpg"
     ],
     "videos": [],
     "guide": {
@@ -618,9 +633,10 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Kartepe kanyon-orman. Çadırlı kamp ve dağcılık kaydı vardır; su kaynaklıdır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg/1920px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Ocak_2020_DSC08558_hamdigumus.jpg/1920px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Ocak_2020_DSC08558_hamdigumus.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Kocaeli_Ocak_2020_DSC08558_hamdigumus.jpg/1920px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Kocaeli_Ocak_2020_DSC08558_hamdigumus.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg/1920px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_-_Ocak_2020_DSC08558_hamdigumus.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Ocak_2020_DSC08558_hamdigumus.jpg/1920px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Ocak_2020_DSC08558_hamdigumus.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Kocaeli_Ocak_2020_DSC08558_hamdigumus.jpg/1920px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Kocaeli_Ocak_2020_DSC08558_hamdigumus.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Ocak_2020_hamdigumus.jpg/1920px-Be%C5%9Fkayalar_Tabiat_Park%C4%B1_Ocak_2020_hamdigumus.jpg"
     ],
     "videos": [],
     "guide": {
@@ -678,7 +694,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Kartepe etek tabiat parkı. Çadırlı kamp ve bisiklet yolu kaydı vardır.",
     "images": [
-      "https://upload.wikimedia.org/wikipedia/commons/0/01/Suad%C4%B0ye_Tab%C4%B0at_Park%C4%B1.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/0/01/Suad%C4%B0ye_Tab%C4%B0at_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Suadiye_station.jpg/1920px-Suadiye_station.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/21/Cleopatra_Ink_%C4%B0stanbul_Suadiye_St%C3%BCdyosu.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Suadiye_Tren_%C4%B0stasyonu.jpg/1920px-Suadiye_Tren_%C4%B0stasyonu.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Marmaray_set_%40_Suadiye%2C_2025.jpg/1920px-Marmaray_set_%40_Suadiye%2C_2025.jpg"
     ],
     "videos": [],
     "guide": {
@@ -732,9 +752,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Sakarya göl tabiat parkı. Çadırlı kamp kaydı vardır; kuş gözlemi zengindir.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Poyrazlar_Lake.jpg/1920px-Poyrazlar_Lake.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Recreational_areas_of_the_Lake_Poyrazlar_Nature_Park.jpg/1920px-Recreational_areas_of_the_Lake_Poyrazlar_Nature_Park.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/6/65/Sakarya_Poyrazlar_G%C3%B6l%C3%BC.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Poyrazlar_Lake.jpg/1920px-Poyrazlar_Lake.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Recreational_areas_of_the_Lake_Poyrazlar_Nature_Park.jpg/1920px-Recreational_areas_of_the_Lake_Poyrazlar_Nature_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/65/Sakarya_Poyrazlar_G%C3%B6l%C3%BC.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Poyrazlar_G%C3%B6l%C3%BC_%28Sakarya%29_3.jpg/1920px-Poyrazlar_G%C3%B6l%C3%BC_%28Sakarya%29_3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Poyrazlar_G%C3%B6l%C3%BC_%28Sakarya%29_2.jpg/1920px-Poyrazlar_G%C3%B6l%C3%BC_%28Sakarya%29_2.jpg"
     ],
     "videos": [],
     "guide": {
@@ -792,9 +814,10 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Tekirdağ orman sırtı. Çadırlı kamp kaydı vardır; rüzgâr açık sırtta sert olabilir.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Kartaltepe_Landscape.jpg/1920px-Kartaltepe_Landscape.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg/1920px-Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/7/76/Kartaltepe_Tabiat_Park%C4%B1.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Kartaltepe_Landscape.jpg/1920px-Kartaltepe_Landscape.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg/1920px-Tekirda%C4%9F_Kartaltepe_Natural_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/76/Kartaltepe_Tabiat_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kartaltepe_Tabiat_Park%C4%B1_Tekirda%C4%9F.jpg"
     ],
     "videos": [],
     "guide": {
@@ -893,7 +916,9 @@
     "feeTent": null,
     "statusLabel": "Tabiat parkı",
     "summary": "Yalova orman tabiat parkı. Çadırlı kamp kaydı vardır; geceleme idarenin gösterdiği düzlükte.",
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/0/0a/Wounded_man_Ortaburun.png"
+    ],
     "videos": [],
     "guide": {
       "toilet": "belirsiz",
@@ -940,8 +965,10 @@
     "summary": "Latmos eteklerinde göl. Çadırlı kamp kaydı vardır; manastır yürüyüşü ayrı, geceleme tahsisli kıyıda.",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/f/fc/Bafa_lake1.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Bafa_Lake.jpg/1920px-Bafa_Lake.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Bafa_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_%28bilgekorkmaz%29.jpg/1920px-Bafa_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_%28bilgekorkmaz%29.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Bafa_Lake.jpg/1920px-Bafa_Lake.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bafa_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_%28bilgekorkmaz%29.jpg/1920px-Bafa_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_%28bilgekorkmaz%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/7/77/Bafa_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Bafa_lake_1.jpg/1920px-Bafa_lake_1.jpg"
     ],
     "videos": [
       {
@@ -1006,7 +1033,9 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/e/e7/Mount_Sipylus_Manisa_Turkey_Atalani_Lake.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/3/35/Spil_Da%C4%9F%C4%B1_Zirvesi.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Spil_Da%C4%9F%C4%B1_%2820220803%29.jpg/1920px-Spil_Da%C4%9F%C4%B1_%2820220803%29.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Spil_Da%C4%9F%C4%B1_%2820220803%29.jpg/1920px-Spil_Da%C4%9F%C4%B1_%2820220803%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Spil_Da%C4%9F%C4%B1_Milli_Park%C4%B1_-_03.jpg/1920px-Spil_Da%C4%9F%C4%B1_Milli_Park%C4%B1_-_03.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Spil_Da%C4%9F%C4%B1_Milli_Park%C4%B1_-_02.jpg/1920px-Spil_Da%C4%9F%C4%B1_Milli_Park%C4%B1_-_02.jpg"
     ],
     "videos": [
       {
@@ -1114,9 +1143,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Pozantı vadi ormanı ve tarihi istasyon çevresi. Çadırlı kamp kaydı vardır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Belemedik_yolu.jpg/1920px-Belemedik_yolu.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/D%C3%B6rt_duvar_Belemedik.jpg/1920px-D%C3%B6rt_duvar_Belemedik.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/1.Belemedik_Nature_Park.jpg/1920px-1.Belemedik_Nature_Park.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Belemedik_yolu.jpg/1920px-Belemedik_yolu.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/D%C3%B6rt_duvar_Belemedik.jpg/1920px-D%C3%B6rt_duvar_Belemedik.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/1.Belemedik_Nature_Park.jpg/1920px-1.Belemedik_Nature_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/7.Belemedik_Nature_Park.jpg/1920px-7.Belemedik_Nature_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/15.Belemedik_Nature_Park.jpg/1920px-15.Belemedik_Nature_Park.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1174,9 +1205,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Saimbeyli şelale tabiat parkı. Çadırlı kamp kaydı vardır; zemin ıslak ve yüksek rakımlıdır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_03.JPG/1920px-Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_03.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_02.JPG/1920px-Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_02.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_01.JPG/1920px-Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_01.JPG"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_03.JPG/1920px-Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_03.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_02.JPG/1920px-Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_02.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_01.JPG/1920px-Obruk_Waterfall_-_Obruk_%C5%9Eelalesi_01.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d9/Asphodelus%2C_Saimbeyli_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/f/f1/Asphodelus%2C_Saimbeyli_03.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1229,9 +1262,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Antalya şelale tabiat parkı. Çadırlı kamp kaydı vardır; günübirlik yoğun, geceleme tahsisli alanda.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Kur%C5%9Funlu_%C5%9Eelalesi_Manzara_Foto%C4%9Fraf%C4%B1.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_Manzara_Foto%C4%9Fraf%C4%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Kur%C5%9Funlu_%C5%9Eelalesi_-_%C5%9Eelalesi_B%C3%B6lgesi_-_Manzara_Foto%C4%9Fraf%C4%B1.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_-_%C5%9Eelalesi_B%C3%B6lgesi_-_Manzara_Foto%C4%9Fraf%C4%B1.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Kur%C5%9Funlu_%C5%9Eelalesi_Manzara_Foto%C4%9Fraf%C4%B1.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_Manzara_Foto%C4%9Fraf%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Kur%C5%9Funlu_%C5%9Eelalesi_-_%C5%9Eelalesi_B%C3%B6lgesi_-_Manzara_Foto%C4%9Fraf%C4%B1.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_-_%C5%9Eelalesi_B%C3%B6lgesi_-_Manzara_Foto%C4%9Fraf%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1_ve_Etraf%C4%B1ndaki_Ya%C5%9Fl%C4%B1_A%C4%9Fa%C3%A7lar.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_Tabiat_Park%C4%B1_ve_Etraf%C4%B1ndaki_Ya%C5%9Fl%C4%B1_A%C4%9Fa%C3%A7lar.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Kur%C5%9Funlu_%C5%9Eelalesi_-_%C5%9Eelalesi_B%C3%B6lgesi_-_Manzara_Foto%C4%9Fraf%C4%B1_-_A%C4%9Fa%C3%A7.jpg/1920px-Kur%C5%9Funlu_%C5%9Eelalesi_-_%C5%9Eelalesi_B%C3%B6lgesi_-_Manzara_Foto%C4%9Fraf%C4%B1_-_A%C4%9Fa%C3%A7.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1288,9 +1323,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Beyaz kıyılı göl. Çadır ve karavan belirlenen alanda; kıyı koruma kuralı sıkıdır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Lake_Salda_%28Salda_G%C3%B6l%C3%BC%29.jpg/1920px-Lake_Salda_%28Salda_G%C3%B6l%C3%BC%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Lake_Salda_%28Salda_G%C3%B6l%C3%BC%29.jpg/1920px-Lake_Salda_%28Salda_G%C3%B6l%C3%BC%29.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/5/5c/Lake_Salda_Nature_Park_1.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/e/eb/Salda_G%C3%B6l%C3%BC_T%C3%BCrkiye_2022.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/e/eb/Salda_G%C3%B6l%C3%BC_T%C3%BCrkiye_2022.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Salda-G%C3%B6l%C3%BC_Panorama.jpg/1920px-Salda-G%C3%B6l%C3%BC_Panorama.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Salda_G%C3%B6l%C3%BC.jpg/1920px-Salda_G%C3%B6l%C3%BC.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1348,8 +1385,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Krater gölü ve sedir. Çadırlı kamp kaydı vardır; yazın serin, kışın kar.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Isparta_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1.jpg/1920px-Isparta_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_01.jpg/1920px-ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_01.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Isparta_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1.jpg/1920px-Isparta_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_01.jpg/1920px-ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_02.jpg/1920px-ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_02.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_03.jpg/1920px-ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_03.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_04.jpg/1920px-ISPARTA_G%C3%96LC%C3%9CK_TAB%C4%B0AT_PARKI_04.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1407,7 +1447,9 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/2/21/Turkey%2CIsparta_Yazili_Kanyon_National_Park%2C_hak3166.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/2/26/Yazili_Kanyon.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Yazili_kanyon_2.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Yazili_kanyon_2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Yaz%C4%B1l%C4%B1_canyon_national_park.jpg/1920px-Yaz%C4%B1l%C4%B1_canyon_national_park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Yaz%C4%B1l%C4%B1_kanyon_tabiat_park%C4%B1.jpg/1280px-Yaz%C4%B1l%C4%B1_kanyon_tabiat_park%C4%B1.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1461,7 +1503,13 @@
     "feeTent": 105,
     "statusLabel": "Milli park",
     "summary": "Andırın–Göksun koridoru milli park. Kampçılık kaydı vardır; orman kanunu konak yeri kuralı geçerlidir.",
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/a/a1/Geben-Sch%C3%BCser-Wappen.png",
+      "https://upload.wikimedia.org/wikipedia/commons/4/4b/Valet_will_ich_dir_geben_%28Melodie_1614%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a4/Valet_will_ich_dir_geben_%28Text_1614%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/53/Wappen_Geben-Sch%C3%BCser.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/48/Wappen_Geben_Schuser.jpg"
+    ],
     "videos": [],
     "guide": {
       "toilet": "belirsiz",
@@ -1552,9 +1600,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Mut doğal köprü ve şelale. Çadırlı kamp kaydı vardır; kayalık zemin ıslaktır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi.jpg/1920px-Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/196-Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi_Tabiat_Park%C4%B1_Mersin.jpg/1920px-196-Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi_Tabiat_Park%C4%B1_Mersin.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Mut_Yerk%C3%B6pr%C3%BC_Canyon.jpg/1920px-Mut_Yerk%C3%B6pr%C3%BC_Canyon.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi.jpg/1920px-Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/196-Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi_Tabiat_Park%C4%B1_Mersin.jpg/1920px-196-Yerk%C3%B6pr%C3%BC_%C5%9Eelalesi_Tabiat_Park%C4%B1_Mersin.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Mut_Yerk%C3%B6pr%C3%BC_Canyon.jpg/1920px-Mut_Yerk%C3%B6pr%C3%BC_Canyon.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Mut_Yerk%C3%B6pr%C3%BC_Falls.jpg/1920px-Mut_Yerk%C3%B6pr%C3%BC_Falls.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Mut_Yerk%C3%B6pr%C3%BC_Bridge.jpg/1920px-Mut_Yerk%C3%B6pr%C3%BC_Bridge.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1608,8 +1658,10 @@
     "summary": "Osmaniye açık hava müzesi ve baraj kenarı milli park. Çadırlı kamp kaydı vardır.",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/9/93/Karatepe_6060_%284872732156%29.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Pine_in_Karatepe-Aslanta%C5%9F_National_Park.jpg/1920px-Pine_in_Karatepe-Aslanta%C5%9F_National_Park.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/9/9d/Karatepe_Stadtmauer.JPG"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pine_in_Karatepe-Aslanta%C5%9F_National_Park.jpg/1920px-Pine_in_Karatepe-Aslanta%C5%9F_National_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/9d/Karatepe_Stadtmauer.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Aslanta%C5%9F_Milli_Park%C4%B1.jpg/1920px-Aslanta%C5%9F_Milli_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Kahramanmara%C5%9F_Aslanta%C5%9F_Milli_Park%C4%B1.jpg/1920px-Kahramanmara%C5%9F_Aslanta%C5%9F_Milli_Park%C4%B1.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1665,9 +1717,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Yusufeli yüksek yayla. Çadırlı kamp kaydı vardır; gece soğuk, sis sık.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Alt%C4%B1parmak_Nature_Park_02.jpg/1920px-Alt%C4%B1parmak_Nature_Park_02.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Alt%C4%B1parmak_Nature_Park_08.jpg/1920px-Alt%C4%B1parmak_Nature_Park_08.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Alt%C4%B1parmak_Nature_Park_20.jpg/1920px-Alt%C4%B1parmak_Nature_Park_20.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Alt%C4%B1parmak_Nature_Park_02.jpg/1920px-Alt%C4%B1parmak_Nature_Park_02.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Alt%C4%B1parmak_Nature_Park_08.jpg/1920px-Alt%C4%B1parmak_Nature_Park_08.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Alt%C4%B1parmak_Nature_Park_20.jpg/1920px-Alt%C4%B1parmak_Nature_Park_20.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Alt%C4%B1parmak_Nature_Park_14.jpg/1920px-Alt%C4%B1parmak_Nature_Park_14.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Alt%C4%B1parmak_Nature_Park_13.jpg/1920px-Alt%C4%B1parmak_Nature_Park_13.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1720,9 +1774,11 @@
     "statusLabel": "Milli park",
     "summary": "Şavşat göl ve sahara yaylası. Kuş gözlemi ve kamp kaydı vardır; kışın kapanabilir.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Karag%C3%B6l_in_%C5%9Eav%C5%9Fat_10.jpg/1920px-Karag%C3%B6l_in_%C5%9Eav%C5%9Fat_10.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Karag%C3%B6l-Sahara_National_Park.jpg/1920px-Karag%C3%B6l-Sahara_National_Park.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/2/27/Karag%C3%B6l_Sahara_Milli_Park%C4%B1.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Karag%C3%B6l_in_%C5%9Eav%C5%9Fat_10.jpg/1920px-Karag%C3%B6l_in_%C5%9Eav%C5%9Fat_10.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Karag%C3%B6l-Sahara_National_Park.jpg/1920px-Karag%C3%B6l-Sahara_National_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/27/Karag%C3%B6l_Sahara_Milli_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Karag%C3%B6l-Sahara_National_Park_entrance.jpg/1920px-Karag%C3%B6l-Sahara_National_Park_entrance.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Sahara_Yaylas%C4%B1.jpg/1920px-Sahara_Yaylas%C4%B1.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1825,9 +1881,11 @@
     "statusLabel": "Milli park",
     "summary": "Bolu göl milli parkı. Çadırlı kamp kaydı vardır; göl çevresi yürüyüş halkası kısadır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Bolu_Abant_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1.jpg/1920px-Bolu_Abant_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Abant_lake_snowy.jpg/1920px-Abant_lake_snowy.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Abant_G%C3%B6l%C3%BC_-_2024_Ocak.jpg/1920px-Abant_G%C3%B6l%C3%BC_-_2024_Ocak.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Bolu_Abant_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1.jpg/1920px-Bolu_Abant_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Abant_lake_snowy.jpg/1920px-Abant_lake_snowy.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Abant_G%C3%B6l%C3%BC_-_2024_Ocak.jpg/1920px-Abant_G%C3%B6l%C3%BC_-_2024_Ocak.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Snow_on_the_Lake_Abant.jpg/1920px-Snow_on_the_Lake_Abant.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Bolu_Abant_G%C3%B6l%C3%BC_Harika_Manzara.jpg/1920px-Bolu_Abant_G%C3%B6l%C3%BC_Harika_Manzara.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1930,7 +1988,7 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Mengen orman tabiat parkı. Çadırlı kamp kaydı vardır; ayı uyarısı geçerlidir.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg/1920px-Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg/1920px-Ay%C4%B1kayas%C4%B1-Tabiat-Park%C4%B1.jpg"
     ],
     "videos": [],
     "guide": {
@@ -1985,9 +2043,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Bolu krater gölü. Çadırlı kamp kaydı vardır; şehre yakın, hafta sonu dolu.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6lde_olta_bal%C4%B1k%C3%A7%C4%B1l%C4%B1%C4%9F%C4%B1.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6lde_olta_bal%C4%B1k%C3%A7%C4%B1l%C4%B1%C4%9F%C4%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6l_manzaras%C4%B1.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6l_manzaras%C4%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_ve_g%C3%B6l_evi.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_ve_g%C3%B6l_evi.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6lde_olta_bal%C4%B1k%C3%A7%C4%B1l%C4%B1%C4%9F%C4%B1.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6lde_olta_bal%C4%B1k%C3%A7%C4%B1l%C4%B1%C4%9F%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6l_manzaras%C4%B1.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6l_manzaras%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_ve_g%C3%B6l_evi.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_ve_g%C3%B6l_evi.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6l_evi.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_g%C3%B6l_evi.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_A%C4%9Fustos_2024_01.jpg/1920px-Bolu_G%C3%B6lc%C3%BCk_Tabiat_Park%C4%B1_A%C4%9Fustos_2024_01.jpg"
     ],
     "videos": [],
     "guide": {
@@ -2180,8 +2240,10 @@
     "summary": "Göynük (Bolu) göl tabiat parkı. Çadırlı kamp kaydı vardır.",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/9/99/S%C3%BCnnet_Lake%2C_G%C3%B6yn%C3%BCk.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/S%C3%BCnnet_G%C3%B6l%C3%BC.jpg/1920px-S%C3%BCnnet_G%C3%B6l%C3%BC.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/S%C3%BCnnet_G%C3%B6l%C3%BC2.jpg/1920px-S%C3%BCnnet_G%C3%B6l%C3%BC2.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/S%C3%BCnnet_G%C3%B6l%C3%BC.jpg/1920px-S%C3%BCnnet_G%C3%B6l%C3%BC.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/S%C3%BCnnet_G%C3%B6l%C3%BC2.jpg/1920px-S%C3%BCnnet_G%C3%B6l%C3%BC2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/S%C3%BCnnet_Lake.jpg/1920px-S%C3%BCnnet_Lake.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Lake_S%C3%BCnnet_in_the_fall_03.jpg/1920px-Lake_S%C3%BCnnet_in_the_fall_03.jpg"
     ],
     "videos": [],
     "guide": {
@@ -2236,9 +2298,11 @@
     "statusLabel": "Milli park",
     "summary": "Yedi göl ve kayın ormanı. Çadır, karavan ve bungalov kaydı vardır; kapı saati ve ayı uyarısı geçerlidir.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Waterfall_in_Yedig%C3%B6ller_National_Park.jpg/1920px-Waterfall_in_Yedig%C3%B6ller_National_Park.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/TR_Yedig%C3%B6ller_asv2021-10_img16.jpg/1920px-TR_Yedig%C3%B6ller_asv2021-10_img16.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Yedig%C3%B6ller_Yans%C4%B1ma.jpg/1920px-Yedig%C3%B6ller_Yans%C4%B1ma.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Waterfall_in_Yedig%C3%B6ller_National_Park.jpg/1920px-Waterfall_in_Yedig%C3%B6ller_National_Park.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/TR_Yedig%C3%B6ller_asv2021-10_img16.jpg/1920px-TR_Yedig%C3%B6ller_asv2021-10_img16.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Yedig%C3%B6ller_Yans%C4%B1ma.jpg/1920px-Yedig%C3%B6ller_Yans%C4%B1ma.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Yedig%C3%B6ller_Milli_Park%C4%B1_4.jpg/1920px-Yedig%C3%B6ller_Milli_Park%C4%B1_4.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Yedig%C3%B6ller_Milli_Park%C4%B1_3_%28bilgekorkmaz%29.jpg/1920px-Yedig%C3%B6ller_Milli_Park%C4%B1_3_%28bilgekorkmaz%29.jpg"
     ],
     "videos": [
       {
@@ -2346,9 +2410,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Çorum çatak ormanı. Çadırlı kamp kaydı vardır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/%C3%87atak_Tabiat_Park%C4%B1%2C_%C3%87orum%2C_Park_giri%C5%9Fi_levhas%C4%B1.jpg/1920px-%C3%87atak_Tabiat_Park%C4%B1%2C_%C3%87orum%2C_Park_giri%C5%9Fi_levhas%C4%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/%C3%87atak_tabiat_park%C4%B1%2C_park_giri%C5%9Fi.jpg/1920px-%C3%87atak_tabiat_park%C4%B1%2C_park_giri%C5%9Fi.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/%C3%87atak_Tabiat_Park%C4%B1%2C_giri%C5%9F_tabelas%C4%B1.jpg/1920px-%C3%87atak_Tabiat_Park%C4%B1%2C_giri%C5%9F_tabelas%C4%B1.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/%C3%87atak_Tabiat_Park%C4%B1%2C_%C3%87orum%2C_Park_giri%C5%9Fi_levhas%C4%B1.jpg/1920px-%C3%87atak_Tabiat_Park%C4%B1%2C_%C3%87orum%2C_Park_giri%C5%9Fi_levhas%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/%C3%87atak_tabiat_park%C4%B1%2C_park_giri%C5%9Fi.jpg/1920px-%C3%87atak_tabiat_park%C4%B1%2C_park_giri%C5%9Fi.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/%C3%87atak_Tabiat_Park%C4%B1%2C_giri%C5%9F_tabelas%C4%B1.jpg/1920px-%C3%87atak_Tabiat_Park%C4%B1%2C_giri%C5%9F_tabelas%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/%C3%87atak_Tabiat_Park%C4%B1%2C_giri%C5%9F_yolu.jpg/1920px-%C3%87atak_Tabiat_Park%C4%B1%2C_giri%C5%9F_yolu.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/%C3%87atak_Tabiat_Park%C4%B1%2C_otopark.jpg/1920px-%C3%87atak_Tabiat_Park%C4%B1%2C_otopark.jpg"
     ],
     "videos": [],
     "guide": {
@@ -2401,9 +2467,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Dereli şelale ve orman. Çadırlı kamp kaydı vardır; zemin ıslak.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-3.jpg/1920px-Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-3.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-1.jpg/1920px-Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-2.jpg/1920px-Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-2.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-3.jpg/1920px-Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-1.jpg/1920px-Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-2.jpg/1920px-Waterfall_Kuzalan_-_Kuzalan_%C5%9Eelalesi%2C_Giresun_2017-07-07_01-2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Mavig%C3%B6l%2C_Kuzalan_Tabiat_Park%C4%B1%2C_Dereli-Giresun_Haziran_2019-03.jpg/1920px-Mavig%C3%B6l%2C_Kuzalan_Tabiat_Park%C4%B1%2C_Dereli-Giresun_Haziran_2019-03.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mavig%C3%B6l%2C_Kuzalan_Tabiat_Park%C4%B1%2C_Dereli-Giresun_Haziran_2019-02.jpg/1920px-Mavig%C3%B6l%2C_Kuzalan_Tabiat_Park%C4%B1%2C_Dereli-Giresun_Haziran_2019-02.jpg"
     ],
     "videos": [],
     "guide": {
@@ -2460,7 +2528,7 @@
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/b/b8/Artabel_G%C3%B6lleri..._-_panoramio.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/d/dc/Artabel_%C5%9Eelalesi..._-_panoramio.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Artabel_Da%C4%9Flar%C4%B1..._-_panoramio.jpg/1920px-Artabel_Da%C4%9Flar%C4%B1..._-_panoramio.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Artabel_Da%C4%9Flar%C4%B1..._-_panoramio.jpg/1920px-Artabel_Da%C4%9Flar%C4%B1..._-_panoramio.jpg"
     ],
     "videos": [],
     "guide": {
@@ -2515,9 +2583,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Torul dağ gölü. Çadırlı kamp kaydı vardır; sis ve serinlik yazın de sürer.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Lake_Limni_aerial_view_02.jpg/1920px-Lake_Limni_aerial_view_02.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Limni_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_-_A%C4%9Fustos_2014_IMG_8923_hamdigumus.jpg/1920px-Limni_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_-_A%C4%9Fustos_2014_IMG_8923_hamdigumus.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Limni_G%C3%B6l%C3%BC_2014-1.jpg/1920px-Limni_G%C3%B6l%C3%BC_2014-1.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Lake_Limni_aerial_view_02.jpg/1920px-Lake_Limni_aerial_view_02.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Limni_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_-_A%C4%9Fustos_2014_IMG_8923_hamdigumus.jpg/1920px-Limni_G%C3%B6l%C3%BC_Tabiat_Park%C4%B1_-_A%C4%9Fustos_2014_IMG_8923_hamdigumus.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Limni_G%C3%B6l%C3%BC_2014-1.jpg/1920px-Limni_G%C3%B6l%C3%BC_2014-1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lake_Limni_Nature_Park_02.jpg/1920px-Lake_Limni_Nature_Park_02.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Lake_Limni_Nature_Park_entrance.jpg/1920px-Lake_Limni_Nature_Park_entrance.jpg"
     ],
     "videos": [],
     "guide": {
@@ -2666,9 +2736,9 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Türkeli göl tabiat parkı. Çadırlı kamp kaydı vardır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Akg%C3%B6l_Tabiat_Park%C4%B1.jpg/1920px-Akg%C3%B6l_Tabiat_Park%C4%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Akg%C3%B6l-2.jpg/1920px-Akg%C3%B6l-2.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Akg%C3%B6l-1.jpg/1920px-Akg%C3%B6l-1.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Akg%C3%B6l_Tabiat_Park%C4%B1.jpg/1920px-Akg%C3%B6l_Tabiat_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Akg%C3%B6l-2.jpg/1920px-Akg%C3%B6l-2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Akg%C3%B6l-1.jpg/1920px-Akg%C3%B6l-1.jpg"
     ],
     "videos": [],
     "guide": {
@@ -2724,7 +2794,7 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Erfelek kanyonu. Çadırlı kamp kaydı vardır; kanyon içi geceleme yeri değildir.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/%C3%87atak_Kanyonu1.jpg/1920px-%C3%87atak_Kanyonu1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/%C3%87atak_Kanyonu1.jpg/1920px-%C3%87atak_Kanyonu1.jpg"
     ],
     "videos": [],
     "guide": {
@@ -2833,7 +2903,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Tonya küçük orman tabiat parkı. Çadırlı kamp kaydı vardır; alan dardır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/CalcamiliNaturePark3.jpg/1920px-CalcamiliNaturePark3.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/CalcamiliNaturePark3.jpg/1920px-CalcamiliNaturePark3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/CalcamiliNaturePark1.jpg/1920px-CalcamiliNaturePark1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/CalcamiliNaturePark2.jpg/1920px-CalcamiliNaturePark2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/CalcamiliNaturePark4.jpg/1920px-CalcamiliNaturePark4.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/CalcamiliNaturePark5.jpg/1920px-CalcamiliNaturePark5.jpg"
     ],
     "videos": [],
     "guide": {
@@ -2886,9 +2960,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Çaykara vadi gölü. Çadırlı kamp kaydı vardır; yerleşim yoğun, resmi kamp alanı sınırlıdır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Uzung%C3%B6l_lake_and_town.jpg/1920px-Uzung%C3%B6l_lake_and_town.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Uzung%C3%B6l_112020.jpg/1920px-Uzung%C3%B6l_112020.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Uzung%C3%B6l%2C_Trabzon_2014.jpg/1920px-Uzung%C3%B6l%2C_Trabzon_2014.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Uzung%C3%B6l_lake_and_town.jpg/1920px-Uzung%C3%B6l_lake_and_town.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Uzung%C3%B6l_112020.jpg/1920px-Uzung%C3%B6l_112020.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Uzung%C3%B6l%2C_Trabzon_2014.jpg/1920px-Uzung%C3%B6l%2C_Trabzon_2014.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Uzung%C3%B6l_Tabiat_Park%C4%B1_Trabzon_2.jpg/1920px-Uzung%C3%B6l_Tabiat_Park%C4%B1_Trabzon_2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Uzung%C3%B6l_Tabiat_Park%C4%B1_Trabzon.jpg/1920px-Uzung%C3%B6l_Tabiat_Park%C4%B1_Trabzon.jpg"
     ],
     "videos": [],
     "guide": {
@@ -3125,9 +3201,11 @@
     "statusLabel": "Milli park",
     "summary": "Kızılcahamam çam milli parkı. Çadırlı kamp kaydı vardır; başkente en yakın resmî kamp ormanlarından biridir.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Mountains_of_So%C4%9Fuksu_Milli_Park%C4%B1.jpg/1920px-Mountains_of_So%C4%9Fuksu_Milli_Park%C4%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/TR_K%C4%B1z%C4%B1lcahamam_asv2021-10_img01.jpg/1920px-TR_K%C4%B1z%C4%B1lcahamam_asv2021-10_img01.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/So%C4%9Fuksu_Milli_Park%C4%B1.jpg/1920px-So%C4%9Fuksu_Milli_Park%C4%B1.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Mountains_of_So%C4%9Fuksu_Milli_Park%C4%B1.jpg/1920px-Mountains_of_So%C4%9Fuksu_Milli_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TR_K%C4%B1z%C4%B1lcahamam_asv2021-10_img01.jpg/1920px-TR_K%C4%B1z%C4%B1lcahamam_asv2021-10_img01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/So%C4%9Fuksu_Milli_Park%C4%B1.jpg/1920px-So%C4%9Fuksu_Milli_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/22/So%C4%9Fuksu_Milli_Park%C4%B1_Zirvesi_-_panoramio.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/So%C4%9Fuksu_Milli_Park%C4%B1_-_panoramio.jpg/1920px-So%C4%9Fuksu_Milli_Park%C4%B1_-_panoramio.jpg"
     ],
     "videos": [],
     "guide": {
@@ -3183,9 +3261,11 @@
     "statusLabel": "Tabiat parkı",
     "summary": "Kızılcahamam gölet tabiat parkı. Çadırlı kamp kaydı vardır.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Sorgun_G%C3%B6leti_Tabiat_Park%C4%B1.jpg/1920px-Sorgun_G%C3%B6leti_Tabiat_Park%C4%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Sorgun-G%C3%B6leti_Tabiat_Park%C4%B1.jpg/1920px-Sorgun-G%C3%B6leti_Tabiat_Park%C4%B1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/A%C4%9Fa%C3%A7lar%C4%B1n_ortas%C4%B1ndan_Sorgun_G%C3%B6leti.jpg/1920px-A%C4%9Fa%C3%A7lar%C4%B1n_ortas%C4%B1ndan_Sorgun_G%C3%B6leti.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Sorgun_G%C3%B6leti_Tabiat_Park%C4%B1.jpg/1920px-Sorgun_G%C3%B6leti_Tabiat_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Sorgun-G%C3%B6leti_Tabiat_Park%C4%B1.jpg/1920px-Sorgun-G%C3%B6leti_Tabiat_Park%C4%B1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/A%C4%9Fa%C3%A7lar%C4%B1n_ortas%C4%B1ndan_Sorgun_G%C3%B6leti.jpg/1920px-A%C4%9Fa%C3%A7lar%C4%B1n_ortas%C4%B1ndan_Sorgun_G%C3%B6leti.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Sorgun_g%C3%B6leti_ve_bir_manzaraya_kar%C5%9F%C4%B1_bir_bank.jpg/1920px-Sorgun_g%C3%B6leti_ve_bir_manzaraya_kar%C5%9F%C4%B1_bir_bank.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Sorgun_g%C3%B6leti_tabiat%C4%B1nda_huzurlu_sessiz_bir_manzara.jpg/1920px-Sorgun_g%C3%B6leti_tabiat%C4%B1nda_huzurlu_sessiz_bir_manzara.jpg"
     ],
     "videos": [],
     "guide": {
@@ -3239,7 +3319,10 @@
     "feeTent": null,
     "statusLabel": "Tabiat parkı",
     "summary": "Erzincan tabiat parkı. PDF’de çadırlı kamp kaydı vardır; gitmeden idareyi arayın.",
-    "images": [],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Dumanl%C4%B1_da%C4%9F_Zirvedeki_R%C3%BCzgar_g%C3%BCl%C3%BC_-_panoramio.jpg/1920px-Dumanl%C4%B1_da%C4%9F_Zirvedeki_R%C3%BCzgar_g%C3%BCl%C3%BC_-_panoramio.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Kars_Yaylas%C4%B1_06_1989_Dumanl%C4%B1_Da%C4%9F%C4%B1.jpg/1920px-Kars_Yaylas%C4%B1_06_1989_Dumanl%C4%B1_Da%C4%9F%C4%B1.jpg"
+    ],
     "videos": [],
     "guide": {
       "toilet": "belirsiz",
@@ -3330,9 +3413,9 @@
     "statusLabel": "Milli park kamp alanı",
     "summary": "Beydağları Sahil Milli Parkı içinde, 2026 tarifesinde adı geçen çadırlı kamp alanı. Kemer Göynük.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/2019_G%C3%B6yn%C3%BCk_Canyon_1.jpg/1920px-2019_G%C3%B6yn%C3%BCk_Canyon_1.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/G%C3%B6yn%C3%BCk_Kanyon_Kemer_Antalya_Turkey.jpg/1920px-G%C3%B6yn%C3%BCk_Kanyon_Kemer_Antalya_Turkey.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/G%C3%B6yn%C3%BCk_Kanyonu.jpg/1920px-G%C3%B6yn%C3%BCk_Kanyonu.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/2019_G%C3%B6yn%C3%BCk_Canyon_1.jpg/1920px-2019_G%C3%B6yn%C3%BCk_Canyon_1.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/G%C3%B6yn%C3%BCk_Kanyon_Kemer_Antalya_Turkey.jpg/1920px-G%C3%B6yn%C3%BCk_Kanyon_Kemer_Antalya_Turkey.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/G%C3%B6yn%C3%BCk_Kanyonu.jpg/1920px-G%C3%B6yn%C3%BCk_Kanyonu.jpg"
     ],
     "videos": [],
     "guide": {
@@ -3388,9 +3471,9 @@
     "statusLabel": "Milli park kamp alanı",
     "summary": "Uludağ Milli Parkı Sarıalan. 2026 tarifesi dipnotu: ahşap baraka 4 kişilik çadır bedelinden ücretlenir.",
     "images": [
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/View_of_Uluda%C4%9F_from_Sar%C4%B1alan.JPG/1920px-View_of_Uluda%C4%9F_from_Sar%C4%B1alan.JPG",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Uluda%C4%9F_Sar%C4%B1alan_region.jpg/1920px-Uluda%C4%9F_Sar%C4%B1alan_region.jpg",
-      "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Uluda%C4%9F_Sar%C4%B1alan_view.jpg/1920px-Uluda%C4%9F_Sar%C4%B1alan_view.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/View_of_Uluda%C4%9F_from_Sar%C4%B1alan.JPG/1920px-View_of_Uluda%C4%9F_from_Sar%C4%B1alan.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Uluda%C4%9F_Sar%C4%B1alan_region.jpg/1920px-Uluda%C4%9F_Sar%C4%B1alan_region.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Uluda%C4%9F_Sar%C4%B1alan_view.jpg/1920px-Uluda%C4%9F_Sar%C4%B1alan_view.jpg"
     ],
     "videos": [],
     "guide": {

@@ -9,7 +9,7 @@ import { RouteExplorePage } from './components/RouteExplorePage'
 import { PlacesProvider } from './places-context'
 import { RoutesProvider } from './routes-context'
 import { SearchProvider } from './search-context'
-import { HAS_HOME, HAS_LIVE, HAS_LOOK, HAS_POLISH, HAS_ROUTE_MODE, ROUTES_PATH } from './step'
+import { HAS_ATLAS, HAS_HOME, HAS_LIVE, HAS_LOOK, HAS_POLISH, HAS_ROUTE_MODE, ROUTES_PATH } from './step'
 
 interface BoundaryProps {
   children: ReactNode
@@ -60,6 +60,7 @@ function Shell({ children }: { children: ReactNode }) {
     document.body.classList.toggle('is-look', HAS_LOOK)
     document.body.classList.toggle('is-live', HAS_LIVE)
     document.body.classList.toggle('is-polish', HAS_POLISH)
+    document.body.classList.toggle('is-atlas', HAS_ATLAS)
     if (HAS_POLISH) {
       document
         .querySelector('meta[name="description"]')
@@ -77,7 +78,7 @@ function Shell({ children }: { children: ReactNode }) {
         )
     }
     return () => {
-      document.body.classList.remove('is-look')
+      document.body.classList.remove('is-look', 'is-atlas')
       document.body.classList.remove('is-live')
       document.body.classList.remove('is-polish')
     }

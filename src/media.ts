@@ -15,6 +15,15 @@ export function isAllowedMedia(url: string): boolean {
   return /wikimedia\.org|wikipedia\.org/.test(url)
 }
 
+export function originalUrl(url: string): string {
+  const normalized = clean(url).replace('https://thumb.wikimedia.org/', 'https://upload.wikimedia.org/')
+  const match = normalized.match(/\/wikipedia\/commons\/thumb\/([0-9a-f])\/([0-9a-f]{2})\/([^/]+)\/\d+px-/i)
+  if (match) {
+    return `https://upload.wikimedia.org/wikipedia/commons/${match[1]}/${match[2]}/${match[3]}`
+  }
+  return normalized
+}
+
 export function sharpUrl(url: string, width: number): string {
   if (!url.startsWith('http')) return url
   const cap = Math.max(320, Math.min(width, 2048))
@@ -28,7 +37,9 @@ export function sharpUrl(url: string, width: number): string {
       parsed.searchParams.set('dpr', '2')
       return parsed.toString()
     }
-    if (url.includes('wikimedia.org')) return clean(url)
+    if (url.includes('wikimedia.org') || url.includes('wikipedia.org')) {
+      return clean(url).replace('https://thumb.wikimedia.org/', 'https://upload.wikimedia.org/')
+    }
   } catch {
     return url
   }

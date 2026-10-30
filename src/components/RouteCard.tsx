@@ -30,6 +30,7 @@ function CardImage({
       srcSet={srcSet(src, [320, 640, 960])}
       sizes="108px"
       alt=""
+      referrerPolicy="no-referrer"
       width={108}
       height={82}
       loading="lazy"

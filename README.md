@@ -92,6 +92,14 @@ Klasör: `adim-11`
 
 Ana sayfada hareketli harita yok; parkur, kamp ve site hakkında sabit kareler var. Karttaki fotoğrafa girince aynı kare açılır.
 
+## 12. adım — Sabit Türkiye, kırmızı bölge
+
+Klasör: `adim-12`
+
+`adim-12/index.html` dosyasına çift tıkla.
+
+Kamp haritası durur; sürüklenmez. Bölgeye tıklayınca o bölge kırmızı olur, harita oraya gider, kamplar yanda listelenir. Başta tümü durur. İçeri girince kapaktaki kareye dalınır.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -107,5 +115,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 9. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-9/
 - 10. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-10/
 - 11. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-11/
+- 12. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-12/
 
 Harita ve fotoğraf için internet açık olsun.

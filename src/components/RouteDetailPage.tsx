@@ -133,6 +133,7 @@ export function RouteDetailPage() {
           srcSet={srcSet(route.image, [960, 1440, 1920])}
           sizes="(max-width: 860px) 100%, 1100px"
           alt=""
+          referrerPolicy="no-referrer"
           onError={() => setCoverOn(false)}
         />
       ) : HAS_POLISH ? (

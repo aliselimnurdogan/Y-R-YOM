@@ -21,6 +21,46 @@ function cleanUrl(url) {
   }
 }
 
+function fold(value) {
+  return String(value)
+    .toLocaleLowerCase('tr')
+    .replaceAll('ı', 'i')
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+}
+
+const STOP = new Set([
+  'tabiat',
+  'parki',
+  'milli',
+  'park',
+  'korunan',
+  'alan',
+  'alani',
+  'goreti',
+  'golu',
+  'yayla',
+  'yaylasi',
+  'kanyonu',
+  'selalesi',
+  'orman',
+  'turkiye',
+  'turkey',
+  'nature',
+  'national',
+  'reserve',
+])
+
+function parkTokens(park) {
+  return fold(`${park.title} ${park.city} ${park.region}`)
+    .split(/[^a-z0-9]+/)
+    .filter((word) => word.length >= 4 && !STOP.has(word))
+}
+
+function bumpThumb(url) {
+  return url.replace(/\/(\d+)px-/i, (_, n) => `/${Math.max(Number(n), 1920)}px-`)
+}
+
 function skipTitle(title) {
   const t = title.toLowerCase()
   return (
@@ -38,11 +78,11 @@ function skipTitle(title) {
   )
 }
 
-async function fileUrls(titles) {
+async function fileUrls(titles, tokens) {
   if (titles.length === 0) return []
   const url =
     'https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*' +
-    '&prop=imageinfo&iiprop=url|mime|size&iiurlwidth=1400&titles=' +
+    '&prop=imageinfo&iiprop=url|mime|size&iiurlwidth=1920&titles=' +
     titles.map((title) => encodeURIComponent(title)).join('|')
   const res = await fetch(url, { headers: { 'User-Agent': UA } })
   if (!res.ok) return []
@@ -51,16 +91,20 @@ async function fileUrls(titles) {
   const images = []
   for (const page of pages) {
     if (page.missing || skipTitle(String(page.title || ''))) continue
+    if (tokens?.length && !tokens.some((token) => fold(page.title).includes(token))) continue
     const info = page.imageinfo?.[0]
     if (!info) continue
     if (!String(info.mime || '').startsWith('image/') || String(info.mime).includes('svg')) continue
-    const src = info.thumburl || info.url
+    const src = (info.thumburl || info.url || '').replace(
+      'https://thumb.wikimedia.org/',
+      'https://upload.wikimedia.org/',
+    )
     if (src && src.startsWith('https://')) images.push(cleanUrl(src))
   }
   return images
 }
 
-async function commonsSearch(query) {
+async function commonsSearch(query, tokens) {
   const url =
     'https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*' +
     '&list=search&srnamespace=6&srlimit=8&srsearch=' +
@@ -69,10 +113,10 @@ async function commonsSearch(query) {
   if (!res.ok) return []
   const data = await res.json()
   const titles = (data.query?.search ?? []).map((row) => row.title).filter((title) => !skipTitle(title))
-  return fileUrls(titles)
+  return fileUrls(titles, tokens)
 }
 
-async function wikiFiles(title) {
+async function wikiFiles(title, tokens) {
   const url =
     'https://tr.wikipedia.org/w/api.php?action=query&format=json&origin=*' +
     '&prop=pageimages|images&piprop=original|name&imlimit=25&titles=' +
@@ -87,7 +131,7 @@ async function wikiFiles(title) {
   for (const item of page.images ?? []) {
     if (item.title && !skipTitle(item.title)) titles.push(item.title)
   }
-  return fileUrls(titles.slice(0, 8))
+  return fileUrls(titles.slice(0, 8), tokens)
 }
 
 const EXTRA_QUERIES = {
@@ -120,27 +164,30 @@ const EXTRA_QUERIES = {
 }
 
 for (const park of catalog) {
-  park.images = park.images.map(cleanUrl)
-  if (park.images.length >= 3) continue
+  park.images = park.images.map((url) => bumpThumb(cleanUrl(url)))
+  if (park.images.length >= 5) continue
   process.stdout.write(`fill ${park.id} (${park.images.length})\n`)
   const queries = EXTRA_QUERIES[park.id] ?? [park.title]
+  const tokens = parkTokens(park)
   const found = []
   try {
     for (const query of queries) {
-      const extra = await commonsSearch(query)
+      let extra = await commonsSearch(query, tokens)
+      if (extra.length === 0) extra = await commonsSearch(query)
       for (const url of extra) {
         if (!found.includes(url) && !park.images.includes(url)) found.push(url)
       }
       await sleep(180)
     }
-    const wiki = await wikiFiles(park.title)
+    let wiki = await wikiFiles(park.title, tokens)
+    if (wiki.length === 0) wiki = await wikiFiles(park.title)
     for (const url of wiki) {
       if (!found.includes(url) && !park.images.includes(url)) found.push(url)
     }
   } catch (error) {
     process.stdout.write(`  fail ${error instanceof Error ? error.message : error}\n`)
   }
-  park.images = [...park.images, ...found].slice(0, 3)
+  park.images = [...park.images, ...found].slice(0, 5)
   process.stdout.write(`  -> ${park.images.length}\n`)
   await sleep(200)
 }

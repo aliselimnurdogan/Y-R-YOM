@@ -24,10 +24,11 @@ function CardImage({
   return (
     <img
       className="thumb"
-      src={sharpUrl(src, 800)}
-      srcSet={srcSet(src, [400, 800, 1200])}
-      sizes="132px"
+      src={sharpUrl(src, 1600)}
+      srcSet={srcSet(src, [400, 800, 1600])}
+      sizes="168px"
       alt=""
+      referrerPolicy="no-referrer"
       width={132}
       height={98}
       loading="lazy"

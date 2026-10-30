@@ -149,6 +149,7 @@ export function DetailPage() {
             srcSet={srcSet(currentImage, [960, 1440, 1920])}
             sizes="(max-width: 860px) 100%, 1100px"
             alt={place.title}
+            referrerPolicy="no-referrer"
           />
           <div className="gallery-thumbs" role="list">
             {gallery.map((image, index) => (
@@ -165,6 +166,7 @@ export function DetailPage() {
                   srcSet={srcSet(image, [240, 480])}
                   sizes="96px"
                   alt=""
+                  referrerPolicy="no-referrer"
                   width={96}
                   height={68}
                 />

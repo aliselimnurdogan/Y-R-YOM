@@ -17,7 +17,7 @@ import {
 } from '../labels'
 import { fetchOsmCamps, mergePlaces } from '../overpass'
 import { isWaterPlace, PROVINCES } from '../provinces'
-import { APP_STEP, HAS_BLOOM, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_LOOK, HAS_POLISH } from '../step'
+import { APP_STEP, HAS_ATLAS, HAS_BLOOM, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_LOOK, HAS_POLISH } from '../step'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
 import type { PlaceItem, PlaceKind } from '../types'
@@ -34,13 +34,15 @@ export function ExplorePage() {
       ? PLACE_KINDS
       : CAMP_KINDS
   const basePath = APP_STEP === '2' ? '/yer' : '/kamp'
-  const title = HAS_LIVE
-    ? 'Türkiye kamp, yayla ve doğa'
-    : catalog
-      ? 'Türkiye korunan kamp alanları'
-      : turkey
-        ? 'Türkiye’deki kamp alanları'
-        : 'Kahramanmaraş kamp ve doğa'
+  const title = HAS_ATLAS
+    ? 'Türkiye kamp alanları'
+    : HAS_LIVE
+      ? 'Türkiye kamp, yayla ve doğa'
+      : catalog
+        ? 'Türkiye korunan kamp alanları'
+        : turkey
+          ? 'Türkiye’deki kamp alanları'
+          : 'Kahramanmaraş kamp ve doğa'
   const { status, places, reload } = usePlaces()
   const { query, setQuery } = useSearch()
   const mobile = useMediaQuery('(max-width: 860px)')
@@ -187,8 +189,9 @@ export function ExplorePage() {
             {catalog && <p className="catalog-banner">{LEGAL_CAMP_NOTE}</p>}
             {HAS_LIVE && (
               <p className="catalog-banner">
-                81 il filtresi ve OpenStreetMap canlı kamp katmanı. Pin izin değildir. İl seçince o ilin OSM kampları
-                gelir.
+                {HAS_ATLAS
+                  ? 'Harita sabit. Bölgeye tıklayınca o bölge kırmızı olur, kamplar yanda listelenir. Pin izin değildir.'
+                  : '81 il filtresi ve OpenStreetMap canlı kamp katmanı. Pin izin değildir. İl seçince o ilin OSM kampları gelir.'}
               </p>
             )}
             <div className="kind-row" role="group" aria-label={catalog ? 'Bölge' : 'Alan türü'}>
@@ -342,7 +345,18 @@ export function ExplorePage() {
           basePath={basePath}
           center={turkey || catalog ? TURKEY_CENTER : MARAS_CENTER}
           zoom={turkey || catalog ? TURKEY_ZOOM : MARAS_ZOOM}
-          resetLabel={turkey || catalog ? 'Türkiye' : 'Kahramanmaraş'}
+          resetLabel={turkey || catalog ? 'Tüm Türkiye' : 'Kahramanmaraş'}
+          zone={HAS_ATLAS ? zone : null}
+          onSelectZone={
+            HAS_ATLAS
+              ? (next) => {
+                  setZone(next)
+                  if (next && province && !PROVINCES.some((row) => row.name === province && row.zone === next)) {
+                    setProvince('')
+                  }
+                }
+              : undefined
+          }
         />
       </div>
     </section>
