@@ -97,13 +97,14 @@ function RegionLayer({
 
   function pathStyle(id: string): PathOptions {
     const selected = zone === id
-    const dim = Boolean(zone && !selected)
     return {
-      color: selected ? '#7f1d1d' : '#8a3b32',
-      weight: selected ? 2.8 : 1.3,
-      fillColor: selected ? '#c43121' : '#e2c2b4',
-      fillOpacity: selected ? 0.58 : dim ? 0.1 : 0.32,
-      opacity: dim ? 0.35 : 1,
+      stroke: selected,
+      color: '#7f1d1d',
+      weight: selected ? 2.8 : 0,
+      fillColor: '#c43121',
+      fillOpacity: selected ? 0.58 : 0,
+      opacity: selected ? 1 : 0,
+      fill: true,
     }
   }
 
@@ -125,14 +126,6 @@ function RegionLayer({
             event.originalEvent.preventDefault()
             event.originalEvent.stopPropagation()
             onSelectZone(id)
-          },
-          mouseover: (event) => {
-            if (zone === id) return
-            event.target.setStyle({ fillColor: '#e24a3a', fillOpacity: 0.48, color: '#9f1f1f', weight: 2.2 })
-            event.target.bringToFront()
-          },
-          mouseout: (event) => {
-            event.target.setStyle(pathStyle(id))
           },
         })
       }}
