@@ -1,0 +1,11 @@
+Yürüyom — 13. adım
+
+1) Bu klasörü aç.
+2) index.html dosyasına çift tıkla.
+3) İnternet açık olsun.
+
+Bölgeler üstte. Tüm Türkiye veya bir bölge seç; harita o coğrafi bölgeye gider, kamplar yanda hemen listelenir.
+
+İçeri girince kare sola-sağa kaymaz. Bakış durur, göz hafif gezer. Alttan sessiz, yerinde üretilmiş akustik gelir.
+
+Pin izin değildir. 3D model yok.

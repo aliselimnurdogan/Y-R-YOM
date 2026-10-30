@@ -500,19 +500,23 @@ img {
 
 .feel-card img.feel-pan,
 .feel-card video.feel-pan {
-  transform: scale(1.28);
-  animation: feel-pan 16s ease-in-out infinite;
+  transform: scale(1.1);
+  animation: feel-gaze 18s ease-in-out infinite;
 }
 
-@keyframes feel-pan {
+@keyframes feel-gaze {
   0%,
   100% {
-    object-position: 12% 50%;
-    transform: scale(1.28) translateX(4%);
+    object-position: 50% 46%;
+    transform: scale(1.1);
   }
-  50% {
-    object-position: 88% 50%;
-    transform: scale(1.28) translateX(-4%);
+  35% {
+    object-position: 54% 48%;
+    transform: scale(1.12);
+  }
+  70% {
+    object-position: 47% 44%;
+    transform: scale(1.11);
   }
 }
 
@@ -626,6 +630,13 @@ img {
   top: -32%;
   left: -78%;
   will-change: transform;
+}
+
+.look-drift.is-gaze {
+  width: 118%;
+  height: 118%;
+  top: -8%;
+  left: -8%;
 }
 
 .look-drift img {
@@ -790,6 +801,53 @@ img {
 .btn-ghost:hover {
   background: #fafafa;
   border-color: #ccc;
+}
+
+.zone-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 14px 8px;
+  overflow-x: auto;
+  flex-shrink: 0;
+  background: rgba(255, 252, 246, 0.94);
+  border-bottom: 1px solid rgba(36, 56, 46, 0.08);
+}
+
+.zone-chip {
+  flex: 0 0 auto;
+  border: 1px solid rgba(36, 56, 46, 0.14);
+  background: #fff;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 800;
+  font-size: 13px;
+  color: #24382e;
+  white-space: nowrap;
+}
+
+.zone-chip:hover {
+  border-color: #c43121;
+  color: #7f1d1d;
+}
+
+.zone-chip.is-on {
+  background: #c43121;
+  border-color: #9f1f1f;
+  color: #fff7f2;
+}
+
+body.is-atlas .atlas-extra {
+  display: none;
+}
+
+body.is-atlas .panel-head {
+  padding: 12px 14px 8px;
+}
+
+body.is-atlas .panel {
+  width: 380px;
+  flex-basis: 380px;
 }
 
 .explore {

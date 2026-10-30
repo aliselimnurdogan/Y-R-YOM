@@ -13,6 +13,7 @@ import {
   TURKEY_CENTER,
   TURKEY_ZOOM,
   ZONE_COLORS,
+  ZONE_SHORT,
   type PlaceSortKey,
 } from '../labels'
 import { fetchOsmCamps, mergePlaces } from '../overpass'
@@ -164,8 +165,33 @@ export function ExplorePage() {
     setQuery('')
   }
 
+  function chooseZone(next: string | null) {
+    setZone(next)
+    if (next && province && !PROVINCES.some((row) => row.name === province && row.zone === next)) {
+      setProvince('')
+    }
+  }
+
   return (
-    <section className="explore">
+    <section className={HAS_ATLAS ? 'explore is-atlas' : 'explore'}>
+      {HAS_ATLAS && (
+        <div className="zone-bar" role="group" aria-label="Coğrafi bölge">
+          <button type="button" className={cx('zone-chip', !zone && 'is-on')} onClick={() => chooseZone(null)}>
+            Tüm Türkiye
+          </button>
+          {CATALOG_ZONES.map((item) => (
+            <button
+              key={item}
+              type="button"
+              className={cx('zone-chip', zone === item && 'is-on')}
+              title={item}
+              onClick={() => chooseZone(item)}
+            >
+              {ZONE_SHORT[item]}
+            </button>
+          ))}
+        </div>
+      )}
       <div className="mode-switch" role="group" aria-label="Görünüm">
         <button type="button" aria-pressed={mode === 'list'} onClick={() => setMode('list')}>
           Liste
@@ -177,7 +203,7 @@ export function ExplorePage() {
       <div className={mode === 'map' ? 'explore-body is-map' : 'explore-body is-list'}>
         <aside className="panel">
           <div className="panel-head">
-            <h1>{title}</h1>
+            <h1>{HAS_ATLAS && zone ? zone : title}</h1>
             {status === 'ready' && (
               <p className="count" aria-live="polite">
                 {formatInt(filtered.length)} alan
@@ -186,14 +212,13 @@ export function ExplorePage() {
                 {HAS_LIVE && osmStatus === 'ready' ? ` · ${formatInt(osm.length)} OSM` : ''}
               </p>
             )}
-            {catalog && <p className="catalog-banner">{LEGAL_CAMP_NOTE}</p>}
-            {HAS_LIVE && (
+            {catalog && !HAS_ATLAS && <p className="catalog-banner">{LEGAL_CAMP_NOTE}</p>}
+            {HAS_LIVE && !HAS_ATLAS && (
               <p className="catalog-banner">
-                {HAS_ATLAS
-                  ? 'Harita sabit. Bölgeye tıklayınca o bölge kırmızı olur, kamplar yanda listelenir. Pin izin değildir.'
-                  : '81 il filtresi ve OpenStreetMap canlı kamp katmanı. Pin izin değildir. İl seçince o ilin OSM kampları gelir.'}
+                81 il filtresi ve OpenStreetMap canlı kamp katmanı. Pin izin değildir. İl seçince o ilin OSM kampları gelir.
               </p>
             )}
+            {!HAS_ATLAS && (
             <div className="kind-row" role="group" aria-label={catalog ? 'Bölge' : 'Alan türü'}>
               <button
                 type="button"
@@ -206,17 +231,12 @@ export function ExplorePage() {
                 Tümü
               </button>
               {catalog
-                ? CATALOG_ZONES.map((item) => (
+                ? (HAS_ATLAS ? [] : CATALOG_ZONES).map((item) => (
                     <button
                       key={item}
                       type="button"
                       className={cx('kind-pill', zone === item && 'is-on')}
-                      onClick={() => {
-                        setZone(item)
-                        if (province && !PROVINCES.some((row) => row.name === province && row.zone === item)) {
-                          setProvince('')
-                        }
-                      }}
+                      onClick={() => chooseZone(item)}
                     >
                       <span className="swatch" style={{ background: ZONE_COLORS[item] }} />
                       {item}
@@ -234,8 +254,9 @@ export function ExplorePage() {
                     </button>
                   ))}
             </div>
+            )}
             {HAS_LIVE && (
-              <>
+              <div className={HAS_ATLAS ? 'atlas-extra' : undefined}>
                 <label className="live-select">
                   {!HAS_POLISH && <span>İl</span>}
                   <select
@@ -278,7 +299,7 @@ export function ExplorePage() {
                     Su kenarı
                   </button>
                 </div>
-              </>
+              </div>
             )}
             <div className="subbar">
               {filtersOn ? (
@@ -347,16 +368,7 @@ export function ExplorePage() {
           zoom={turkey || catalog ? TURKEY_ZOOM : MARAS_ZOOM}
           resetLabel={turkey || catalog ? 'Tüm Türkiye' : 'Kahramanmaraş'}
           zone={HAS_ATLAS ? zone : null}
-          onSelectZone={
-            HAS_ATLAS
-              ? (next) => {
-                  setZone(next)
-                  if (next && province && !PROVINCES.some((row) => row.name === province && row.zone === next)) {
-                    setProvince('')
-                  }
-                }
-              : undefined
-          }
+          onSelectZone={HAS_ATLAS ? chooseZone : undefined}
         />
       </div>
     </section>

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type PointerEvent } from 'react'
 import { createPortal } from 'react-dom'
 import { placeCover } from '../format'
 import { sameMedia, sharpUrl } from '../media'
+import { startPlaceAmbience, type AmbienceHandle } from '../place-ambience'
 import { HAS_FEEL } from '../step'
 import type { PlaceItem, PlacePano, PlaceVideo } from '../types'
 import { EyeIcon } from './Icons'
@@ -74,8 +75,8 @@ function viewerConfig(pano: PlacePano) {
     doubleClickZoom: true,
     crossOrigin: 'anonymous',
     backgroundColor: [8, 12, 10],
-    autoRotate: 9,
-    autoRotateInactivityDelay: 1200,
+    autoRotate: 0.7,
+    autoRotateInactivityDelay: 2400,
   }
 }
 
@@ -113,7 +114,7 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
           <span className="feel-title">Orada gibi hisset</span>
           <span className="feel-sub">
             {canOpen
-              ? 'İçeri gir: gördüğün bu kareye dal. Sürükle, telefonu çevir; yerinde duruyormuş gibi bak.'
+              ? 'İçeri gir: aynı karede dur, bakışın hafif kayar. Alttan sessiz bir akustik gelir.'
               : 'Bu parkta henüz yerinde bakış yok; uydurma görüntü konmadı.'}
           </span>
           {canOpen && (
@@ -128,6 +129,7 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
         <FeelViewer
           placeTitle={place.title}
           placeCity={`${place.city} · ${place.region}`}
+          placeKind={place.kind}
           cover={cover}
           photos={livePhotos}
           pano={sameSphere ? pano : undefined}
@@ -142,6 +144,7 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
 function FeelViewer({
   placeTitle,
   placeCity,
+  placeKind,
   cover,
   photos,
   pano,
@@ -150,6 +153,7 @@ function FeelViewer({
 }: {
   placeTitle: string
   placeCity: string
+  placeKind: string
   cover: string
   photos: string[]
   pano?: PlacePano
@@ -160,6 +164,8 @@ function FeelViewer({
   const hostRef = useRef<HTMLDivElement>(null)
   const overlayRef = useRef<HTMLDivElement>(null)
   const viewerRef = useRef<ViewerHandle | null>(null)
+  const toneRef = useRef<AmbienceHandle | null>(null)
+  const [muted, setMuted] = useState(false)
   const [status, setStatus] = useState(useSphere ? 'Görüntü hazırlanıyor…' : '')
 
   useEffect(() => {
@@ -178,13 +184,14 @@ function FeelViewer({
           if (!alive || !hostRef.current || !window.pannellum) return
           const viewer = window.pannellum.viewer(hostRef.current, viewerConfig(pano))
           viewerRef.current = viewer
-          viewer.startAutoRotate?.(9)
+          viewer.startAutoRotate?.(0.7)
           setStatus('')
         })
         .catch(() => {
           if (alive) setStatus('360 görüntü yüklenemedi. İnterneti kontrol et.')
         })
     }
+    toneRef.current = startPlaceAmbience(placeKind)
     return () => {
       alive = false
       document.removeEventListener('keydown', onKey)
@@ -192,8 +199,10 @@ function FeelViewer({
       document.body.style.overflow = previousOverflow
       viewerRef.current?.destroy()
       viewerRef.current = null
+      toneRef.current?.stop()
+      toneRef.current = null
     }
-  }, [onClose, pano, useSphere])
+  }, [onClose, pano, useSphere, placeKind])
 
   async function goFullscreen() {
     const node = overlayRef.current
@@ -238,9 +247,22 @@ function FeelViewer({
       <div className="feel-bar">
         <p>
           <strong>{placeTitle}</strong>
-          <span>{placeCity} · aynı karedesin · sürükle, bak, telefonu çevir</span>
+          <span>{placeCity} · bakışın duruyor, gözün geziyor</span>
         </p>
         <div className="feel-bar-actions">
+          <button
+            type="button"
+            className="btn-ghost"
+            onClick={() => {
+              setMuted((value) => {
+                const next = !value
+                toneRef.current?.setMuted(next)
+                return next
+              })
+            }}
+          >
+            {muted ? 'Sesi aç' : 'Sesi kıs'}
+          </button>
           {useSphere && (
             <button type="button" className="btn-ghost" onClick={() => void useGyro()}>
               Telefonu çevir
@@ -279,29 +301,19 @@ function ClipPip({ clip }: { clip: PlaceVideo }) {
 function LookPan({ cover, photos, clip }: { cover: string; photos: string[]; clip?: PlaceVideo }) {
   const stageRef = useRef<HTMLDivElement>(null)
   const xRef = useRef(50)
-  const yRef = useRef(42)
-  const dirRef = useRef(1)
+  const yRef = useRef(46)
+  const aimRef = useRef({ x: 50, y: 46, until: 0 })
   const dragRef = useRef<{ x: number; y: number; startX: number; startY: number; pausedUntil: number } | null>(null)
-  const [shift, setShift] = useState({ x: 50, y: 42 })
-  const [shot, setShot] = useState(0)
-  const frames = photos.length > 0 ? photos : cover ? [sharpUrl(cover, 1920)] : []
-  const photo = frames[shot] || (cover ? sharpUrl(cover, 1920) : '')
-
-  useEffect(() => {
-    if (frames.length < 2) return
-    const timer = window.setInterval(() => {
-      setShot((current) => (current + 1) % frames.length)
-    }, 9000)
-    return () => window.clearInterval(timer)
-  }, [frames.length])
+  const [shift, setShift] = useState({ x: 50, y: 46 })
+  const photo = (photos[0] || (cover ? sharpUrl(cover, 1920) : '')) 
 
   useEffect(() => {
     const onOrient = (event: DeviceOrientationEvent) => {
       if (dragRef.current) return
-      const gamma = Math.max(-28, Math.min(28, event.gamma ?? 0))
-      const beta = Math.max(10, Math.min(70, event.beta ?? 45))
-      xRef.current = 50 + (gamma / 28) * 42
-      yRef.current = 50 + ((beta - 45) / 30) * 22
+      const gamma = Math.max(-10, Math.min(10, event.gamma ?? 0))
+      const beta = Math.max(28, Math.min(58, event.beta ?? 45))
+      xRef.current = 50 + (gamma / 10) * 6
+      yRef.current = 46 + ((beta - 45) / 30) * 5
       setShift({ x: xRef.current, y: yRef.current })
     }
     window.addEventListener('deviceorientation', onOrient)
@@ -316,16 +328,17 @@ function LookPan({ cover, photos, clip }: { cover: string; photos: string[]; cli
       const cooling = Boolean(drag && now < drag.pausedUntil)
       if (drag && !holding && !cooling) dragRef.current = null
       if (!holding && !cooling) {
-        xRef.current += dirRef.current * 0.12
-        yRef.current += Math.sin(now / 1800) * 0.04
-        if (xRef.current > 92) {
-          xRef.current = 92
-          dirRef.current = -1
-        } else if (xRef.current < 8) {
-          xRef.current = 8
-          dirRef.current = 1
+        if (now > aimRef.current.until) {
+          aimRef.current = {
+            x: 50 + (Math.random() * 10 - 5),
+            y: 46 + (Math.random() * 6 - 3),
+            until: now + 2200 + Math.random() * 2800,
+          }
         }
-        yRef.current = Math.max(18, Math.min(78, yRef.current))
+        xRef.current += (aimRef.current.x - xRef.current) * 0.012
+        yRef.current += (aimRef.current.y - yRef.current) * 0.012
+        xRef.current += Math.sin(now / 430) * 0.012
+        yRef.current += Math.sin(now / 610) * 0.01
         setShift({ x: xRef.current, y: yRef.current })
       }
       frame = requestAnimationFrame(tick)
@@ -350,8 +363,8 @@ function LookPan({ cover, photos, clip }: { cover: string; photos: string[]; cli
     if (!drag || drag.pausedUntil !== Number.POSITIVE_INFINITY) return
     const width = stageRef.current?.clientWidth || 1
     const height = stageRef.current?.clientHeight || 1
-    xRef.current = Math.max(0, Math.min(100, drag.startX + ((drag.x - event.clientX) / width) * 130))
-    yRef.current = Math.max(0, Math.min(100, drag.startY + ((drag.y - event.clientY) / height) * 90))
+    xRef.current = Math.max(40, Math.min(60, drag.startX + ((drag.x - event.clientX) / width) * 28))
+    yRef.current = Math.max(38, Math.min(54, drag.startY + ((drag.y - event.clientY) / height) * 18))
     setShift({ x: xRef.current, y: yRef.current })
   }
 
@@ -377,20 +390,12 @@ function LookPan({ cover, photos, clip }: { cover: string; photos: string[]; cli
     >
       {photo ? (
         <div
-          className="look-drift"
+          className="look-drift is-gaze"
           style={{
-            transform: `translate(${shift.x * -0.55}%, ${shift.y * -0.28}%) scale(1.06)`,
+            transform: `translate(${(shift.x - 50) * -0.22}%, ${(shift.y - 46) * -0.16}%) scale(1.12)`,
           }}
         >
-          {frames.length > 1 && (
-            <img
-              src={frames[(shot + frames.length - 1) % frames.length]}
-              alt=""
-              draggable={false}
-              referrerPolicy="no-referrer"
-            />
-          )}
-          <img key={photo} className="is-on" src={photo} alt="" draggable={false} referrerPolicy="no-referrer" />
+          <img className="is-on" src={photo} alt="" draggable={false} referrerPolicy="no-referrer" />
         </div>
       ) : clip?.src ? (
         <video src={clip.src} muted loop autoPlay playsInline />

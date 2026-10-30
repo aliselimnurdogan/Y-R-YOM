@@ -38,6 +38,16 @@ export const CATALOG_ZONES = [
 
 export type CatalogZone = (typeof CATALOG_ZONES)[number]
 
+export const ZONE_SHORT: Record<CatalogZone, string> = {
+  Marmara: 'Marmara',
+  Ege: 'Ege',
+  Akdeniz: 'Akdeniz',
+  Karadeniz: 'Karadeniz',
+  'İç Anadolu': 'İç Anadolu',
+  'Doğu Anadolu': 'Doğu',
+  'Güneydoğu Anadolu': 'Güneydoğu',
+}
+
 export const ZONE_COLORS: Record<CatalogZone, string> = {
   Marmara: '#1565c0',
   Ege: '#00838f',

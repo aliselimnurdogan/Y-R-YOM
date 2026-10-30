@@ -49,15 +49,29 @@ function MapController({
 
   useEffect(() => {
     if (!active || !locked) return
-    const apply = () => {
+    const node = map.getContainer()
+    const go = (animate: boolean) => {
       map.invalidateSize()
       const region = regionById(zone)
-      if (region) map.flyToBounds(region.bounds, { padding: [36, 36], maxZoom: 8, duration: 0.85 })
-      else map.setView(center, zoom, { animate: false })
+      if (region) {
+        map.flyTo(region.view.center, region.view.zoom, { duration: animate ? 0.8 : 0 })
+      } else {
+        map.setView(center, zoom, { animate: false })
+      }
     }
-    apply()
-    const later = window.setTimeout(apply, 280)
-    return () => window.clearTimeout(later)
+    go(Boolean(zone))
+    const later = window.setTimeout(() => go(false), 340)
+    let width = node.clientWidth
+    const observer = new ResizeObserver(() => {
+      if (Math.abs(node.clientWidth - width) < 10) return
+      width = node.clientWidth
+      go(false)
+    })
+    observer.observe(node)
+    return () => {
+      window.clearTimeout(later)
+      observer.disconnect()
+    }
   }, [active, map, locked, zone, center, zoom])
 
   useEffect(() => {
@@ -175,15 +189,38 @@ export function ExploreMap({
   onSelectZone?: (zone: CatalogZone | null) => void
 }) {
   const mapRef = useRef<ReturnType<typeof useMap> | null>(null)
+  const wrapRef = useRef<HTMLDivElement>(null)
   const [basemap, setBasemap] = useState<BasemapId>('topo')
   const [zoomLevel, setZoomLevel] = useState(zoom)
+  const [frame, setFrame] = useState({ w: 0, h: 0 })
   const locked = HAS_ATLAS
   const layer = HAS_LIVE ? BASEMAPS[basemap] : { url: TILE_URL, attribution: TILE_ATTRIBUTION }
   const clusters = useMemo(() => clusterPlaces(places, zoomLevel), [places, zoomLevel])
+  const sized = frame.w >= 180 && frame.h >= 180
+  const mapKey = `${Math.round(frame.w / 60)}x${Math.round(frame.h / 60)}`
+
+  useEffect(() => {
+    const node = wrapRef.current
+    if (!node) return
+    const check = () => {
+      setFrame({ w: node.clientWidth, h: node.clientHeight })
+    }
+    check()
+    const observer = new ResizeObserver(check)
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <div className={locked ? 'map-wrap is-atlas' : 'map-wrap'} role="region" aria-label={`${resetLabel} haritası`}>
+    <div
+      ref={wrapRef}
+      className={locked ? 'map-wrap is-atlas' : 'map-wrap'}
+      role="region"
+      aria-label={`${resetLabel} haritası`}
+    >
+      {sized && (
       <MapContainer
+        key={mapKey}
         center={center}
         zoom={zoom}
         className="map-canvas"
@@ -267,6 +304,7 @@ export function ExploreMap({
           )
         })}
       </MapContainer>
+      )}
       {HAS_LIVE && !locked && (
         <div className="basemap-switch" role="group" aria-label="Harita katmanı">
           {(Object.keys(BASEMAPS) as BasemapId[]).map((id) => (

@@ -100,6 +100,14 @@ Klasör: `adim-12`
 
 Kamp haritası durur; sürüklenmez. Bölgeye tıklayınca o bölge kırmızı olur, harita oraya gider, kamplar yanda listelenir. Başta tümü durur. İçeri girince kapaktaki kareye dalınır.
 
+## 13. adım — Üstten bölge, duran bakış
+
+Klasör: `adim-13`
+
+`adim-13/index.html` dosyasına çift tıkla.
+
+Bölgeler üstte, kamplar yanda hemen. Harita doğru coğrafi bölgeye gider. İçeri girince kare tarama yapmaz; bakış durur, göz hafif gezer, alttan sessiz akustik gelir.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -116,5 +124,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 10. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-10/
 - 11. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-11/
 - 12. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-12/
+- 13. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-13/
 
 Harita ve fotoğraf için internet açık olsun.
