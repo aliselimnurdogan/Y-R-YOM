@@ -2912,6 +2912,256 @@ body.is-polish .leaflet-control-attribution {
   padding: 28px 20px 80px;
 }
 
+body.is-land .home {
+  max-width: none;
+  padding: 0 0 72px;
+}
+
+.land-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+  height: calc(100vh - 60px);
+  min-height: 520px;
+  background: #e7e4dc;
+}
+
+.land-map {
+  position: relative;
+  min-height: 0;
+  height: 100%;
+  background: #e7e4dc;
+}
+
+.land-map .leaflet-container,
+.land-map .map-canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.land-panel {
+  background: rgba(255, 252, 246, 0.96);
+  border-left: 1px solid rgba(36, 56, 46, 0.1);
+  padding: 22px 18px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+}
+
+.land-panel h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.land-lede,
+.land-count {
+  color: #4b5563;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.land-count {
+  font-size: 13px;
+}
+
+.iller-tab {
+  margin-top: 8px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.iller-toggle {
+  align-self: flex-start;
+  border: 1px solid rgba(36, 56, 46, 0.14);
+  background: #fff;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 800;
+  color: #24382e;
+}
+
+.iller-toggle.is-on {
+  background: #24382e;
+  border-color: #24382e;
+  color: #fff7f2;
+}
+
+.iller-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+}
+
+.iller-search input {
+  width: 100%;
+  border: 1px solid rgba(36, 56, 46, 0.16);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  font-weight: 700;
+}
+
+.iller-list {
+  max-height: 280px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid rgba(36, 56, 46, 0.1);
+  border-radius: 14px;
+}
+
+.iller-list button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  border-radius: 10px;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.iller-list button:hover,
+.iller-list button.is-on {
+  background: rgba(196, 49, 33, 0.1);
+}
+
+.iller-list strong {
+  font-size: 14px;
+  color: #24382e;
+}
+
+.iller-list span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7a6e;
+}
+
+.land-board {
+  max-width: 1080px;
+  margin: 28px auto 0;
+  padding: 0 20px;
+}
+
+.land-cover {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 220px;
+  margin-bottom: 22px;
+}
+
+.land-cover img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.land-cover div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px 20px 16px;
+  background: linear-gradient(transparent, rgba(28, 40, 32, 0.78));
+  color: #fff7f2;
+}
+
+.land-cover .home-kicker {
+  color: #e2c57a;
+}
+
+.land-cover h2 {
+  font-size: 32px;
+  letter-spacing: -0.04em;
+}
+
+.land-cover p {
+  font-weight: 650;
+}
+
+.land-group {
+  margin-top: 22px;
+}
+
+.land-group h3 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.land-group h3 span {
+  font-size: 13px;
+  color: #6b7a6e;
+}
+
+.land-places {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.land-place {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  background: rgba(255, 252, 246, 0.94);
+  border: 1px solid rgba(36, 56, 46, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 0 0 10px;
+}
+
+.land-place img,
+.land-place svg {
+  width: 100%;
+  height: 92px;
+  object-fit: cover;
+  display: block;
+}
+
+.land-place span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 10px;
+}
+
+.land-place strong {
+  font-size: 13px;
+  line-height: 1.25;
+  color: #24382e;
+}
+
+.land-place em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7a6e;
+}
+
+body.is-land .home-section,
+body.is-land .home-about {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 body.is-polish .home {
   animation: page-in 0.34s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -3202,8 +3452,29 @@ body.is-polish .home {
   }
 
   .home-grid,
-  .tour-places {
+  .tour-places,
+  .land-places {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .land-hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    height: auto;
+  }
+
+  .land-map {
+    min-height: 52vh;
+    height: 52vh;
+  }
+
+  .land-panel {
+    border-left: 0;
+    border-top: 1px solid rgba(36, 56, 46, 0.1);
+  }
+
+  .iller-list {
+    max-height: 220px;
   }
 
   .home-facts {

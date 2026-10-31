@@ -29,11 +29,14 @@ area["name"="${province}"]["admin_level"="4"]["boundary"="administrative"]->.a;
   nwr["leisure"="picnic_table"](area.a);
   nwr["leisure"="park"](area.a);
   nwr["leisure"="nature_reserve"](area.a);
-  nwr["historic"~"castle|ruins|archaeological_site"](area.a);
-  nwr["natural"~"waterfall|cave_entrance|spring|peak"]["name"](area.a);
+  nwr["historic"~"castle|ruins|archaeological_site|monument"](area.a);
+  nwr["tourism"="museum"](area.a);
+  nwr["amenity"="museum"](area.a);
+  nwr["natural"~"waterfall|cave_entrance|spring|peak|beach"]["name"](area.a);
+  nwr["leisure"="beach_resort"](area.a);
   nwr["tourism"~"viewpoint|attraction"]["name"](area.a);
 );
-out center 220;`
+out center 320;`
   const body = `data=${encodeURIComponent(query)}`
   const attempts = ENDPOINTS.map(async (endpoint) => {
     const controller = new AbortController()
@@ -82,7 +85,15 @@ function toPlace(raw: Record<string, unknown>, province: string): PlaceItem | nu
   const ele = Number(tags.ele)
   const mapped = osmStatus(tags)
   const kind: PlaceKind =
-    mapped.intent === 'yayla' ? 'kamp' : mapped.intent === 'gol' ? 'gol' : mapped.intent === 'piknik' ? 'doga' : 'doga'
+    mapped.label === 'Sahil'
+      ? 'sahil'
+      : mapped.intent === 'yayla'
+        ? 'kamp'
+        : mapped.intent === 'gol'
+          ? 'gol'
+          : mapped.intent === 'piknik'
+            ? 'doga'
+            : 'doga'
   return {
     id: `osm-${osmId}`,
     title,
@@ -138,7 +149,7 @@ export async function fetchWikiGeo(province: string, lat: number, lng: number): 
       }
     }
     const byId = pages.query?.pages ?? {}
-    const useful = /kale|oren|hoyuk|selale|kanyon|yayla|tabiat|milli park|piknik|mesire|gol|magara|obruk|kamp/
+    const useful = /kale|oren|hoyuk|selale|kanyon|yayla|tabiat|milli park|piknik|mesire|gol|magara|obruk|kamp|muze|museum|sahil|plaj|orman|anit/
     const out: PlaceItem[] = []
     for (const hit of hits) {
       const page = byId[String(hit.pageid)]

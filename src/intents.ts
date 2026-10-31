@@ -20,10 +20,30 @@ export const INTENT_STATUS: Record<TourIntent, string> = {
 }
 
 const WATER = /kanyon|selale|şelale|obruk|magara|mağara|waterfall|gorge|cave|goze|göze|kapuzbasi|yerkopru|karacay|kırksu|kirksu|domuzdere/
-const HISTORY = /kale|castle|ruins|hoyuk|höyük|oren|ören|historic|muharebe|malazgirt|karatepe|anavarza|çem|cem kale|azgit|hatun kopru/
+const HISTORY = /kale|castle|ruins|hoyuk|höyük|oren|ören|historic|muharebe|malazgirt|karatepe|anavarza|çem|cem kale|azgit|hatun kopru|muze|müze|museum|anit|anıt/
 const PICNIC = /piknik|picnic|mesire|dagilcak|dağılcak|camlik|çamlık|savrun|dokuzoluk/
 const LAKE = /göl|gol |tabiat park|milli park|obruk göl|yesilgoz|yeşilgöz|hacli|haçlı/
 const HIGHLAND = /kamp|yayla|camp_site|nature_reserve|orman/
+const COAST = /sahil|plaj|beach|koy |korfez|liman/
+
+export const LAND_BUCKETS = [
+  { id: 'tarih', label: 'Müze & Tarih' },
+  { id: 'piknik', label: 'Mesire & Piknik' },
+  { id: 'yayla', label: 'Orman, Yayla & Kamp' },
+  { id: 'sahil', label: 'Sahil' },
+  { id: 'su', label: 'Şelale & Kanyon' },
+  { id: 'gol', label: 'Göl & Tabiat' },
+] as const
+
+export type LandBucket = (typeof LAND_BUCKETS)[number]['id']
+
+export function landBucket(place: Pick<PlaceItem, 'title' | 'kind' | 'summary' | 'statusLabel' | 'intent'>): LandBucket {
+  const blob = foldTr(`${place.title} ${place.summary} ${place.statusLabel ?? ''} ${place.kind}`)
+  if (place.kind === 'sahil' || COAST.test(blob) || place.statusLabel === 'Sahil') return 'sahil'
+  const intent = inferIntent(place)
+  if (intent === 'tarih' || intent === 'piknik' || intent === 'su' || intent === 'gol') return intent
+  return 'yayla'
+}
 
 export function inferIntent(place: Pick<PlaceItem, 'title' | 'kind' | 'summary' | 'statusLabel' | 'intent'>): TourIntent {
   if (place.intent) return place.intent
@@ -41,8 +61,14 @@ export function osmStatus(tags: Record<string, string>): { intent: TourIntent; l
   const natural = tags.natural
   const leisure = tags.leisure
   const tourism = tags.tourism
-  if (historic === 'castle' || historic === 'ruins' || historic === 'archaeological_site') {
-    return { intent: 'tarih', label: 'Tarihi Kale' }
+  if (tourism === 'museum' || tags.amenity === 'museum') {
+    return { intent: 'tarih', label: 'Müze' }
+  }
+  if (historic === 'castle' || historic === 'ruins' || historic === 'archaeological_site' || historic === 'monument') {
+    return { intent: 'tarih', label: historic === 'monument' ? 'Tarihi yer' : 'Tarihi Kale' }
+  }
+  if (natural === 'beach' || leisure === 'beach_resort') {
+    return { intent: 'gol', label: 'Sahil' }
   }
   if (natural === 'waterfall' || natural === 'cave_entrance' || natural === 'spring') {
     return { intent: 'su', label: 'Şelale & Doğa' }

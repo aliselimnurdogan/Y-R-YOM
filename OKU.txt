@@ -1,12 +1,12 @@
-﻿Yürüyom — 99. Adım
+﻿Yürüyom — 16. adım
 
 1) Bu klasörü aç.
 2) index.html dosyasına çift tıkla.
 3) İnternet açık olsun.
 
-Ana sayfada “Geziyorum, görüyorum”: il il bak, nerede ne var. Kamp ve Yürüyüş kartları ayrı durur; tıklayınca o alanlara girilir.
+Ana sayfa Türkiye haritasıdır. 81 il başta dökülmez. İller sekmesine bas, listeden seç veya adını yaz; harita o ile gider, ilin görseli ve mesire, müze, orman, sahil, gezilecek yerler çıkar.
 
-Kamp’ta amaç seç (kale, piknik, yayla, şelale, göl). İl veya ilçe yazınca harita oraya uçar, kırmızı il sınırı yanar, yanda o ilin noktaları çıkar. Harita pan/zoom açık; pinler Tüm Türkiye’de de görünür.
+Kamp ve Yürüyüş ayrı durur; tıklayınca o alanlara girilir.
 
 İçeri girince kare sola-sağa kaymaz. Bakış durur, göz hafif gezer. Alttan sessiz, yerinde üretilmiş akustik gelir.
 
