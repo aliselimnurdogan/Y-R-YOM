@@ -1,12 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
-import { CircleMarker, GeoJSON, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
+import { GeoJSON, MapContainer, TileLayer, useMap } from 'react-leaflet'
 import type { Layer, LeafletMouseEvent, PathOptions } from 'leaflet'
-import { Link } from 'react-router-dom'
 import { PROVINCE_COLLECTION, provinceBounds } from '../admin-geo'
-import { formatInt } from '../format'
-import { PLACE_KIND_COLORS, PLACE_KIND_LABELS, TURKEY_CENTER, TURKEY_ZOOM } from '../labels'
+import { TURKEY_CENTER, TURKEY_ZOOM } from '../labels'
 import { TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL } from '../tiles'
-import type { PlaceItem } from '../types'
 import { MapBrand } from './Brand'
 
 function FlyTo({ province }: { province: string | null }) {
@@ -73,11 +70,9 @@ function ProvincePaint({
 
 export function TurkeyMap({
   province,
-  places,
   onSelectProvince,
 }: {
   province: string | null
-  places: PlaceItem[]
   onSelectProvince: (name: string | null) => void
 }) {
   const wrapRef = useRef<HTMLDivElement>(null)
@@ -113,28 +108,6 @@ export function TurkeyMap({
           <TileLayer url={TILE_URL} attribution={TILE_ATTRIBUTION} maxZoom={TILE_MAX_ZOOM} />
           <FlyTo province={province} />
           <ProvincePaint province={province} onSelect={onSelectProvince} />
-          {places.map((place) => {
-            const color = PLACE_KIND_COLORS[place.kind]
-            return (
-              <CircleMarker
-                key={place.id}
-                center={[place.lat, place.lng]}
-                radius={7}
-                pathOptions={{ color: '#ffffff', weight: 2, fillColor: color, fillOpacity: 1 }}
-              >
-                <Popup className="route-popup" maxWidth={240}>
-                  <div className="popup-title">{place.title}</div>
-                  <div className="popup-meta">
-                    {place.statusLabel ?? PLACE_KIND_LABELS[place.kind]} · {place.city}
-                    {place.elevationM ? ` · ${formatInt(place.elevationM)} m` : ''}
-                  </div>
-                  <Link className="popup-link" to={`/kamp/${place.id}`}>
-                    Yeri aç
-                  </Link>
-                </Popup>
-              </CircleMarker>
-            )
-          })}
         </MapContainer>
       )}
       {province && (

@@ -1,12 +1,12 @@
-﻿Yürüyom — 16. adım
+﻿Yürüyom — 17. adım
 
 1) Bu klasörü aç.
 2) index.html dosyasına çift tıkla.
 3) İnternet açık olsun.
 
-Ana sayfa Türkiye haritasıdır. 81 il başta dökülmez. İller sekmesine bas, listeden seç veya adını yaz; harita o ile gider, ilin görseli ve mesire, müze, orman, sahil, gezilecek yerler çıkar.
+Ana sayfada solda İller: üstte ara, altta A’dan Z’ye 81 il. Parkur ve Kamp üstte durur.
 
-Kamp ve Yürüyüş ayrı durur; tıklayınca o alanlara girilir.
+İle tıklayınca haritada sarı-mavi nokta yok. Altta ilin resmi, kısa yazı, yer isimleri (tıklayınca açılır), solda yorum, sağda sohbet: “kampa gideceğim, giden var mı?” Aynı tarayıcıda açık sekmeler görür; sunucu yok.
 
 İçeri girince kare sola-sağa kaymaz. Bakış durur, göz hafif gezer. Alttan sessiz, yerinde üretilmiş akustik gelir.
 

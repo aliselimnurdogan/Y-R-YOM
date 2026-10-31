@@ -2,10 +2,10 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { provinceCenter } from '../admin-geo'
 import { featuredScore, foldTr, formatInt, formatKm, hasPlacePhoto, placeCover } from '../format'
-import { LAND_BUCKETS, landBucket } from '../intents'
 import { ACTIVITY_LABELS, CATALOG_ZONES, PLACE_KIND_LABELS, ZONE_SHORT, type CatalogZone } from '../labels'
 import { sharpUrl } from '../media'
-import { fetchOsmCamps, fetchWikiGeo, mergePlaces } from '../overpass'
+import { fetchOsmCamps, fetchWikiGeo, fetchWikiProvince, mergePlaces } from '../overpass'
+import { fallbackProvinceNote, trimExtract } from '../province-notes'
 import { PROVINCES, zoneOfProvince } from '../provinces'
 import { usePlaces } from '../places-context'
 import { useRoutes } from '../routes-context'
@@ -13,6 +13,7 @@ import { useSearch } from '../search-context'
 import { HAS_LAND, HAS_TOUR } from '../step'
 import type { PlaceItem } from '../types'
 import { TrailThumb } from './Brand'
+import { ProvinceTalk } from './ProvinceTalk'
 import { TurkeyMap } from './TurkeyMap'
 
 export function HomePage() {
@@ -22,10 +23,10 @@ export function HomePage() {
   const navigate = useNavigate()
   const [tourZone, setTourZone] = useState<CatalogZone | null>(null)
   const [tourProvince, setTourProvince] = useState('')
-  const [illerOpen, setIllerOpen] = useState(false)
   const [illerQuery, setIllerQuery] = useState('')
   const [live, setLive] = useState<PlaceItem[]>([])
   const [liveStatus, setLiveStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle')
+  const [wiki, setWiki] = useState({ extract: '', image: '' })
 
   useEffect(() => {
     document.title = 'Yürüyom'
@@ -34,12 +35,16 @@ export function HomePage() {
   useEffect(() => {
     if (!HAS_LAND || !tourProvince) {
       setLive([])
+      setWiki({ extract: '', image: '' })
       setLiveStatus('idle')
       return
     }
     let alive = true
     setLiveStatus('loading')
     const center = provinceCenter(tourProvince)
+    void fetchWikiProvince(tourProvince).then((page) => {
+      if (alive) setWiki(page)
+    })
     void Promise.all([
       fetchOsmCamps(tourProvince),
       center ? fetchWikiGeo(tourProvince, center[0], center[1]) : Promise.resolve([]),
@@ -85,10 +90,12 @@ export function HomePage() {
 
   const filteredIller = useMemo(() => {
     const q = illerQuery.trim()
-    if (!q) return PROVINCES
-    return PROVINCES.filter(
-      (item) => foldTr(item.name).includes(foldTr(q)) || foldTr(item.zone).includes(foldTr(q)),
-    )
+    const list = q
+      ? PROVINCES.filter(
+          (item) => foldTr(item.name).includes(foldTr(q)) || foldTr(item.zone).includes(foldTr(q)),
+        )
+      : PROVINCES
+    return [...list].sort((a, b) => a.name.localeCompare(b.name, 'tr'))
   }, [illerQuery])
 
   const localPlaces = useMemo(() => {
@@ -106,25 +113,28 @@ export function HomePage() {
     return mergePlaces(localPlaces, live.filter((item) => item.region === tourProvince))
   }, [localPlaces, live, tourProvince])
 
-  const grouped = useMemo(() => {
-    return LAND_BUCKETS.map((bucket) => ({
-      ...bucket,
-      items: provincePlaces.filter((place) => landBucket(place) === bucket.id),
-    })).filter((bucket) => bucket.items.length > 0)
-  }, [provincePlaces])
+  const namedPlaces = useMemo(
+    () => [...provincePlaces].sort((a, b) => a.title.localeCompare(b.title, 'tr')),
+    [provincePlaces],
+  )
 
   const cover = useMemo(() => {
+    if (wiki.image) return wiki.image
     const withPhoto = provincePlaces.find((place) => hasPlacePhoto(place))
     return withPhoto ? placeCover(withPhoto) : ''
-  }, [provincePlaces])
+  }, [provincePlaces, wiki.image])
+
+  const about = wiki.extract ? trimExtract(wiki.extract) : fallbackProvinceNote(tourProvince)
 
   function pickProvince(name: string) {
     const zone = zoneOfProvince(name)
     setTourProvince(name)
     setTourZone(zone ?? null)
-    setIllerQuery(name)
     setGeoPick({ province: name })
     setQuery('')
+    window.setTimeout(() => {
+      document.querySelector('.land-board')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 80)
   }
 
   function clearProvince() {
@@ -137,85 +147,40 @@ export function HomePage() {
   return (
     <div className={HAS_LAND ? 'home is-land' : 'home'}>
       {HAS_LAND ? (
-        <section className="land-hero" aria-label="Türkiye">
+        <section className={tourProvince ? 'land-hero has-il' : 'land-hero'} aria-label="Türkiye">
+          <aside className="land-panel">
+            <p className="iller-title">İller</p>
+            <label className="iller-search">
+              <span className="sr-only">İl ara</span>
+              <input
+                type="search"
+                value={illerQuery}
+                placeholder="Ara"
+                onChange={(event) => setIllerQuery(event.target.value)}
+              />
+            </label>
+            <ul className="iller-list" role="listbox" aria-label="İller A’dan Z’ye">
+              {filteredIller.length === 0 && <li className="tour-empty">Bu ada uyan il yok.</li>}
+              {filteredIller.map((item) => (
+                <li key={item.name}>
+                  <button
+                    type="button"
+                    className={tourProvince === item.name ? 'is-on' : undefined}
+                    onClick={() => pickProvince(item.name)}
+                  >
+                    {item.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </aside>
           <TurkeyMap
             province={tourProvince || null}
-            places={tourProvince ? provincePlaces : []}
             onSelectProvince={(name) => {
               if (!name) clearProvince()
               else pickProvince(name)
             }}
           />
-          <aside className="land-panel">
-            <p className="home-kicker">Türkiye</p>
-            <h1>{tourProvince || 'İl il bak'}</h1>
-            <p className="land-lede">
-              {tourProvince
-                ? `${tourProvince} seçili. Mesire, müze, orman, sahil ve gezilecek yerler aşağıda.`
-                : 'Haritadan ile tıkla ya da İller sekmesini aç. Kamp ve yürüyüş ayrı durur.'}
-            </p>
-            <div className="home-cta">
-              <Link className="btn-fill" to="/parkurlar">
-                Parkurlar
-                {routeStatus === 'ready' ? ` · ${formatInt(routes.length)}` : ''}
-              </Link>
-              <Link className="btn-ghost" to="/kamp">
-                Kamp
-                {placeStatus === 'ready' ? ` · ${formatInt(places.length)}` : ''}
-              </Link>
-            </div>
-            <div className="iller-tab">
-              <button
-                type="button"
-                className={illerOpen ? 'iller-toggle is-on' : 'iller-toggle'}
-                aria-expanded={illerOpen}
-                onClick={() => setIllerOpen((value) => !value)}
-              >
-                İller
-              </button>
-              {illerOpen && (
-                <div className="iller-box">
-                  <label className="iller-search">
-                    <span className="sr-only">İl adı</span>
-                    <input
-                      type="search"
-                      value={illerQuery}
-                      placeholder="İl adı yaz — Adana, Muş, Muğla"
-                      onChange={(event) => {
-                        const next = event.target.value
-                        setIllerQuery(next)
-                        const exact = PROVINCES.find((item) => foldTr(item.name) === foldTr(next.trim()))
-                        if (exact) pickProvince(exact.name)
-                      }}
-                    />
-                  </label>
-                  <ul className="iller-list" role="listbox" aria-label="İller">
-                    {filteredIller.length === 0 && <li className="tour-empty">Bu ada uyan il yok.</li>}
-                    {filteredIller.map((item) => (
-                      <li key={item.name}>
-                        <button
-                          type="button"
-                          className={tourProvince === item.name ? 'is-on' : undefined}
-                          onClick={() => pickProvince(item.name)}
-                        >
-                          <strong>{item.name}</strong>
-                          <span>{ZONE_SHORT[item.zone]}</span>
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-            {tourProvince && (
-              <p className="land-count">
-                {formatInt(provincePlaces.length)} yer
-                {liveStatus === 'loading' ? ' · OSM yükleniyor' : ''}
-                {liveStatus === 'error' ? ' · OSM alınamadı, çekirdek kayıt duruyor' : ''}
-                {liveStatus === 'ready' ? ` · ${formatInt(live.length)} OSM/Wiki` : ''}
-              </p>
-            )}
-          </aside>
         </section>
       ) : (
         <section className="home-hero">
@@ -256,7 +221,6 @@ export function HomePage() {
               <div>
                 <p className="home-kicker">{zoneOfProvince(tourProvince)}</p>
                 <h2>{tourProvince}</h2>
-                <p>Bu ilde mesire, müze, orman, sahil ve gezilecek kayıtlı yerler.</p>
               </div>
             </div>
           ) : (
@@ -267,39 +231,29 @@ export function HomePage() {
               </button>
             </div>
           )}
-          {grouped.length === 0 && (
-            <p className="tour-empty">Bu ilde henüz çekirdek kayıt yok; OSM yüklenince listelenir.</p>
+          <p className="land-about">
+            {about}
+            {wiki.extract ? ' Kaynak: Türkçe Wikipedia.' : ''}
+          </p>
+          <h3 className="land-names-head">
+            {formatInt(namedPlaces.length)} yer
+            {liveStatus === 'loading' ? ' · yükleniyor' : ''}
+          </h3>
+          {namedPlaces.length === 0 ? (
+            <p className="tour-empty">Bu ilde henüz kayıt yok; OSM gelince isimler burada durur.</p>
+          ) : (
+            <ul className="land-names">
+              {namedPlaces.map((place) => (
+                <li key={place.id}>
+                  <Link to={`/kamp/${place.id}`}>
+                    {place.title}
+                    <span>{place.statusLabel ?? PLACE_KIND_LABELS[place.kind]}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           )}
-          {grouped.map((bucket) => (
-            <div key={bucket.id} className="land-group">
-              <h3>
-                {bucket.label}
-                <span>{formatInt(bucket.items.length)}</span>
-              </h3>
-              <ul className="land-places">
-                {bucket.items.map((place) => {
-                  const image = placeCover(place)
-                  return (
-                    <li key={place.id}>
-                      <Link className="land-place" to={`/kamp/${place.id}`}>
-                        {image ? (
-                          <img src={sharpUrl(image, 480)} alt="" referrerPolicy="no-referrer" />
-                        ) : (
-                          <TrailThumb seed={place.id} />
-                        )}
-                        <span>
-                          <strong>{place.title}</strong>
-                          <em>
-                            {place.statusLabel ?? PLACE_KIND_LABELS[place.kind]} · {place.city}
-                          </em>
-                        </span>
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-          ))}
+          <ProvinceTalk province={tourProvince} />
         </section>
       )}
 
@@ -384,6 +338,8 @@ export function HomePage() {
         </section>
       )}
 
+      {!HAS_LAND && (
+        <>
       <section className="home-section">
         <div className="home-section-head">
           <h2>Yürüyüş parkurları</h2>
@@ -457,6 +413,8 @@ export function HomePage() {
           </li>
         </ul>
       </section>
+        </>
+      )}
     </div>
   )
 }

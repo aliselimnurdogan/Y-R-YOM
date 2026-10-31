@@ -183,6 +183,37 @@ export async function fetchWikiGeo(province: string, lat: number, lng: number): 
   }
 }
 
+export async function fetchWikiProvince(name: string): Promise<{ extract: string; image: string }> {
+  const titles = [name, `${name} (il)`]
+  for (const title of titles) {
+    try {
+      const url = new URL('https://tr.wikipedia.org/w/api.php')
+      url.searchParams.set('action', 'query')
+      url.searchParams.set('titles', title)
+      url.searchParams.set('prop', 'extracts|pageimages')
+      url.searchParams.set('exintro', '1')
+      url.searchParams.set('explaintext', '1')
+      url.searchParams.set('pithumbsize', '1400')
+      url.searchParams.set('format', 'json')
+      url.searchParams.set('origin', '*')
+      const data = (await fetch(url).then((response) => response.json())) as {
+        query?: {
+          pages?: Record<string, { missing?: boolean; extract?: string; thumbnail?: { source?: string } }>
+        }
+      }
+      const page = Object.values(data.query?.pages ?? {})[0]
+      if (!page || page.missing) continue
+      const extract = (page.extract ?? '').replace(/\s+/g, ' ').trim()
+      const thumb = page.thumbnail?.source
+      const image = thumb && /wikimedia\.org|wikipedia\.org/.test(thumb) ? thumb : ''
+      if (extract || image) return { extract, image }
+    } catch {
+      continue
+    }
+  }
+  return { extract: '', image: '' }
+}
+
 export function placeKey(place: { title: string; lat: number; lng: number; region?: string }): string {
   return `${slug(place.title)}-${slug(place.region || '')}-${place.lat.toFixed(2)}-${place.lng.toFixed(2)}`
 }

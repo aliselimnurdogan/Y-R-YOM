@@ -132,6 +132,14 @@ Klasör: `adim-16`
 
 Ana sayfa Türkiye haritası. İller sekmesi kapalı; açınca liste, yazınca il. Harita o ile gider, il görseli ve mesire/müze/orman/sahil çıkar. Kamp ve yürüyüş ayrı.
 
+## 17. adım — Sol İller, yorum ve sohbet
+
+Klasör: `adim-17`
+
+`adim-17/index.html` dosyasına çift tıkla.
+
+İller solda, A–Z, üstte ara. Pin yok. İl seçilince kapak, kısa yazı, yer isimleri; solda yorum, sağda sohbet. Parkur ve Kamp üstte.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -152,5 +160,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 14. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-14/
 - 15. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-15/
 - 16. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-16/
+- 17. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-17/
 
 Harita ve fotoğraf için internet açık olsun.

@@ -1,13 +1,13 @@
-# Yürüyom — 16. Adım
+# Yürüyom — 17. Adım
 
-Tarih: 31 Ekim 2026. Taban: 13. adım bakış/akustik + 15. adım Kamp keşif.
+Tarih: 31 Ekim 2026. Taban: 16. adım Türkiye haritası + 13. adım bakış/akustik.
 
 ## Ne değişti
-- Ana sayfa Türkiye görseli: 81 il GeoJSON, tıklanınca kırmızı il, harita oraya uçar.
-- **İller** sekmesi kapalı gelir. Açılınca liste; ada yazınca il süzülür, tam ad yazılırsa seçilir.
-- Seçilen ilin kapak görseli ve o ildeki mesire, müze, orman, sahil, şelale, göl/tabiat kayıtları gruplu listelenir.
-- OSM’ye müze, anıt, sahil eklendi. Wikipedia GeoSearch il merkezinden tamamlar.
-- Kamp ve Yürüyüş CTA ayrı durur.
+- İller paneli sola alındı, küçültüldü: yalnız “İller”, üstte ara, altta A–Z (tr locale).
+- Parkur ve Kamp yan panelden çıktı; üst menüde durur.
+- Ana haritada sarı/mavi pin yok; yalnız il sınırı ve kırmızı seçim.
+- İl seçilince altta Wikipedia kapağı + kısa yazı (81 il; yoksa bölge notu), yer isimleri tıklanınca açılır.
+- Solda kullanıcı yorumu (“şuraya gidin”), sağda il sohbeti. localStorage + BroadcastChannel; sunucu yok, sahte yorum yok.
 
 ## Ne duruyor
-13: İçeri gir, sentez akustik, Wikimedia, çiçek, `#24382e` / `#c43121`. 15: Kamp amaç çubuğu, Kozan/Kadirli/Çağlayancerit/Malazgirt, açık harita. Pin izin değildir.
+13: İçeri gir, sentez akustik, Wikimedia, çiçek, `#24382e` / `#c43121`. 15: Kamp amaç çubuğu, açık harita. Pin izin değildir.
