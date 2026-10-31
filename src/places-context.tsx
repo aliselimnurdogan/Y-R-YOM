@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 import bundledCamps from './data/camps.json'
 import bundledCatalog from './data/catalog.json'
 import bundledPlaces from './data/places.json'
@@ -7,7 +7,7 @@ import { highlightPlaces } from './highlights'
 import { ALL_PLACE_KINDS } from './labels'
 import { mergePlaces } from './overpass'
 import { ALLOWED_YOUTUBE, isAllowedMedia } from './media'
-import { APP_STEP, HAS_CATALOG, HAS_DISCOVER, HAS_LIVE, HAS_POLISH } from './step'
+import { APP_STEP, HAS_CATALOG, HAS_LIVE, HAS_POLISH, HAS_TOUR } from './step'
 import type {
   CampGuide,
   FacilityFlag,
@@ -27,7 +27,6 @@ interface PlacesState {
   status: Status
   places: PlaceItem[]
   reload: () => void
-  setHarvested: (items: PlaceItem[]) => void
 }
 
 const PlacesContext = createContext<PlacesState | null>(null)
@@ -104,10 +103,9 @@ function normalizePlace(raw: unknown): PlaceItem | null {
     areaHa: areaHa ?? undefined,
     feeTent: feeTent === null && feeRaw !== null ? undefined : feeTent,
     statusLabel: typeof record.statusLabel === 'string' ? record.statusLabel : undefined,
+    district: typeof record.district === 'string' ? record.district : typeof record.city === 'string' ? record.city : undefined,
     guide: parseGuide(record.guide),
     pano: parsePano(record.pano),
-    district: typeof record.district === 'string' ? record.district : typeof record.city === 'string' ? record.city : undefined,
-    source: 'catalog',
   }
 }
 
@@ -178,7 +176,6 @@ export function PlacesProvider({ children }: { children: ReactNode }) {
   const [tick, setTick] = useState(0)
   const [status, setStatus] = useState<Status>('loading')
   const [places, setPlaces] = useState<PlaceItem[]>([])
-  const [harvested, setHarvested] = useState<PlaceItem[]>([])
 
   useEffect(() => {
     setStatus('loading')
@@ -190,12 +187,11 @@ export function PlacesProvider({ children }: { children: ReactNode }) {
         const maras = bundledPlaces.map(normalizePlace).filter((place): place is PlaceItem => place !== null)
         parsed = mergePlaces(parsed, [...highlightPlaces(), ...maras])
       }
-      if (HAS_DISCOVER) {
+      if (HAS_TOUR) {
         parsed = mergePlaces(parsed, seedDiscoverPlaces())
       }
       if (parsed.length === 0) throw new Error('empty')
       setPlaces(parsed)
-      setHarvested([])
       setStatus('ready')
     } catch {
       setPlaces([])
@@ -204,16 +200,8 @@ export function PlacesProvider({ children }: { children: ReactNode }) {
   }, [tick])
 
   const reload = () => setTick((value) => value + 1)
-  const merged = useMemo(
-    () => (HAS_DISCOVER ? mergePlaces(places, harvested) : places),
-    [places, harvested],
-  )
 
-  return (
-    <PlacesContext.Provider value={{ status, places: merged, reload, setHarvested }}>
-      {children}
-    </PlacesContext.Provider>
-  )
+  return <PlacesContext.Provider value={{ status, places, reload }}>{children}</PlacesContext.Provider>
 }
 
 export function usePlaces(): PlacesState {

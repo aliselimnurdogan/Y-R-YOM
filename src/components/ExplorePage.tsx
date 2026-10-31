@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
-import { findDistrict } from '../admin-geo'
+import { findDistrict, provinceCenter, resolveAdminQuery } from '../admin-geo'
 import { cx, foldTr, formatInt, hasPlacePhoto, matchesPlace } from '../format'
-import { harvestArea, type HarvestProgress } from '../harvest'
-import { DISCOVER_INTENTS, inferIntent, intentLabel } from '../intents'
+import { inferIntent, TOUR_INTENTS } from '../intents'
 import {
   CAMP_KINDS,
   CATALOG_ZONES,
@@ -19,9 +18,9 @@ import {
   ZONE_SHORT,
   type PlaceSortKey,
 } from '../labels'
-import { fetchOsmCamps, mergePlaces } from '../overpass'
-import { isWaterPlace, PROVINCES } from '../provinces'
-import { APP_STEP, HAS_ATLAS, HAS_BLOOM, HAS_CATALOG, HAS_DISCOVER, HAS_FEEL, HAS_LIVE, HAS_LOOK, HAS_POLISH } from '../step'
+import { fetchOsmCamps, fetchWikiGeo, mergePlaces } from '../overpass'
+import { isWaterPlace, PROVINCES, zoneOfProvince } from '../provinces'
+import { APP_STEP, HAS_ATLAS, HAS_BLOOM, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_LOOK, HAS_POLISH, HAS_TOUR } from '../step'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
 import type { PlaceItem, PlaceKind } from '../types'
@@ -38,24 +37,18 @@ export function ExplorePage() {
       ? PLACE_KINDS
       : CAMP_KINDS
   const basePath = APP_STEP === '2' ? '/yer' : '/kamp'
-  const title = HAS_DISCOVER
-    ? 'Amaçlı keşif'
-    : HAS_ATLAS
-      ? 'Türkiye kamp alanları'
-      : HAS_LIVE
-        ? 'Türkiye kamp, yayla ve doğa'
-        : catalog
-          ? 'Türkiye korunan kamp alanları'
-          : turkey
-            ? 'Türkiye’deki kamp alanları'
-            : 'Kahramanmaraş kamp ve doğa'
-  const { status, places, reload, setHarvested } = usePlaces()
-  const { query, setQuery, intent, setIntent, focus, setFocus } = useSearch()
-  const [harvest, setHarvest] = useState<HarvestProgress>({
-    nature: 'idle',
-    history: 'idle',
-    wiki: 'idle',
-  })
+  const title = HAS_ATLAS
+    ? 'Türkiye kamp alanları'
+    : HAS_LIVE
+      ? 'Türkiye kamp, yayla ve doğa'
+      : catalog
+        ? 'Türkiye korunan kamp alanları'
+        : turkey
+          ? 'Türkiye’deki kamp alanları'
+          : 'Kahramanmaraş kamp ve doğa'
+  const { status, places, reload } = usePlaces()
+  const { query, setQuery, intent, setIntent, geoPick, setGeoPick } = useSearch()
+  const [district, setDistrict] = useState('')
   const mobile = useMediaQuery('(max-width: 860px)')
   const [mode, setMode] = useState<'list' | 'map'>('list')
   const [kind, setKind] = useState<PlaceKind | null>(null)
@@ -97,41 +90,36 @@ export function ExplorePage() {
   }, [catalog, turkey])
 
   useEffect(() => {
-    if (!HAS_DISCOVER || !focus?.province) {
-      if (HAS_DISCOVER) setHarvested([])
-      setHarvest({ nature: 'idle', history: 'idle', wiki: 'idle' })
-      return
-    }
-    let alive = true
-    setHarvest({ nature: 'loading', history: 'loading', wiki: 'loading' })
-    void harvestArea(focus.province, focus.district, (state) => {
-      if (alive) setHarvest(state)
-    })
-      .then((items) => {
-        if (!alive) return
-        setHarvested(items)
-      })
-      .catch(() => {
-        if (!alive) return
-        setHarvested([])
-      })
-    return () => {
-      alive = false
-    }
-  }, [focus, setHarvested])
+    if (!HAS_TOUR || !geoPick?.province) return
+    setProvince(geoPick.province)
+    setZone(zoneOfProvince(geoPick.province) ?? null)
+    setDistrict(geoPick.district ?? '')
+  }, [geoPick])
 
   useEffect(() => {
-    if (!HAS_LIVE || HAS_DISCOVER || !province) {
+    if (!HAS_TOUR) return
+    const hit = resolveAdminQuery(query)
+    if (!hit) return
+    setGeoPick(hit)
+  }, [query, setGeoPick])
+
+  useEffect(() => {
+    if (!HAS_LIVE || !province) {
       setOsm([])
       setOsmStatus('idle')
       return
     }
     let alive = true
     setOsmStatus('loading')
-    void fetchOsmCamps(province)
-      .then((items) => {
+    const row = district ? findDistrict(province, district) : null
+    const point = row ? ([row.lat, row.lng] as const) : provinceCenter(province)
+    void Promise.all([
+      fetchOsmCamps(province),
+      HAS_TOUR && point ? fetchWikiGeo(province, point[0], point[1]) : Promise.resolve([]),
+    ])
+      .then(([osmItems, wikiItems]) => {
         if (!alive) return
-        setOsm(items)
+        setOsm(mergePlaces(osmItems, wikiItems))
         setOsmStatus('ready')
       })
       .catch(() => {
@@ -142,7 +130,7 @@ export function ExplorePage() {
     return () => {
       alive = false
     }
-  }, [province])
+  }, [province, district])
 
   const merged = useMemo(() => (HAS_LIVE ? mergePlaces(places, osm) : places), [places, osm])
 
@@ -153,28 +141,35 @@ export function ExplorePage() {
 
   const filtered = useMemo(() => {
     const list = merged.filter((place) => {
-      if (HAS_DISCOVER) {
-        if (intent && inferIntent(place) !== intent) return false
-        if (focus?.province && place.region !== focus.province) return false
-        if (focus?.district) {
-          const needle = foldTr(focus.district)
-          const here = foldTr(`${place.city} ${place.district ?? ''} ${place.title}`)
-          if (!here.includes(needle)) return false
-        }
-        return query.trim() ? matchesPlace(place, query) : true
-      }
       if (catalog) {
         if (zone && place.zone !== zone) return false
       } else if (kind && place.kind !== kind) {
         return false
       }
+      if (HAS_TOUR && intent && inferIntent(place) !== intent) return false
+      if (HAS_TOUR && district) {
+        const blob = foldTr(`${place.city} ${place.district ?? ''} ${place.title} ${place.summary}`)
+        if (district === 'Çağlayancerit') {
+          if (
+            !/caglayancerit|helete|andirin|azgit|kirksu|kargacayiri|geben|baskonus|yesilgoz|engizek|domuzdere|zorkun/.test(
+              blob,
+            )
+          ) {
+            return false
+          }
+        } else if (!blob.includes(foldTr(district))) {
+          return false
+        }
+      }
       if (HAS_LIVE) {
         if (kind && place.kind !== kind) return false
-        if (province && place.region !== province) return false
+        if (province && place.region !== province) {
+          if (!(HAS_TOUR && district === 'Çağlayancerit' && place.region === 'Osmaniye')) return false
+        }
         if (only360 && !place.pano) return false
         if (onlyWater && !isWaterPlace(place.title, place.kind)) return false
       }
-      return matchesPlace(place, query)
+      return HAS_TOUR && district ? true : matchesPlace(place, query)
     })
     return [...list].sort((a, b) => {
       if (HAS_BLOOM) {
@@ -195,64 +190,42 @@ export function ExplorePage() {
       if (diff !== 0) return diff
       return a.title.localeCompare(b.title, 'tr')
     })
-  }, [merged, query, kind, zone, sort, kinds, catalog, province, only360, onlyWater, failedPhotos, intent, focus])
+  }, [merged, query, kind, zone, sort, kinds, catalog, province, only360, onlyWater, failedPhotos, intent, district])
 
   const mapActive = !mobile || mode === 'map'
-  const filtersOn = Boolean((catalog ? zone : kind) || query || province || only360 || onlyWater || intent || focus)
+  const filtersOn = Boolean((catalog ? zone : kind) || query || province || only360 || onlyWater || intent || district)
 
   function clearFilters() {
     setKind(null)
     setZone(null)
     setProvince('')
+    setDistrict('')
     setOnly360(false)
     setOnlyWater(false)
     setQuery('')
     setIntent(null)
-    setFocus(null)
+    setGeoPick(null)
+  }
+
+  function applyTarget(next: { zone: string; province: string; district?: string }) {
+    setZone(next.zone)
+    setProvince(next.province)
+    setDistrict(next.district ?? '')
+    setGeoPick({ province: next.province, district: next.district })
+    setQuery('')
   }
 
   function chooseZone(next: string | null) {
     setZone(next)
+    setDistrict('')
     if (next && province && !PROVINCES.some((row) => row.name === province && row.zone === next)) {
       setProvince('')
+      setGeoPick(null)
     }
   }
 
-  const districtRow =
-    HAS_DISCOVER && focus?.province && focus.district ? findDistrict(focus.province, focus.district) : undefined
-  const harvestBusy = HAS_DISCOVER && (harvest.nature === 'loading' || harvest.history === 'loading' || harvest.wiki === 'loading')
-  const panelTitle = HAS_DISCOVER
-    ? focus?.district
-      ? `${focus.district} · ${focus.province}`
-      : focus?.province
-        ? focus.province
-        : intent
-          ? intentLabel(intent)
-          : title
-    : HAS_ATLAS && zone
-      ? zone
-      : title
-
   return (
-    <section className={HAS_DISCOVER ? 'explore is-discover' : HAS_ATLAS ? 'explore is-atlas' : 'explore'}>
-      {HAS_DISCOVER && (
-        <div className="intent-bar" role="group" aria-label="Amaç">
-          <button type="button" className={cx('intent-chip', !intent && 'is-on')} onClick={() => setIntent(null)}>
-            Tüm amaçlar
-          </button>
-          {DISCOVER_INTENTS.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              className={cx('intent-chip', intent === item.id && 'is-on')}
-              title={item.hint}
-              onClick={() => setIntent(intent === item.id ? null : item.id)}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-      )}
+    <section className={HAS_ATLAS ? 'explore is-atlas' : 'explore'}>
       {HAS_ATLAS && (
         <div className="zone-bar" role="group" aria-label="Coğrafi bölge">
           <button type="button" className={cx('zone-chip', !zone && 'is-on')} onClick={() => chooseZone(null)}>
@@ -271,6 +244,41 @@ export function ExplorePage() {
           ))}
         </div>
       )}
+      {HAS_TOUR && (
+        <div className="intent-bar" role="group" aria-label="Amaç ve hedef">
+          <button type="button" className={cx('intent-chip', !intent && 'is-on')} onClick={() => setIntent(null)}>
+            Tümü
+          </button>
+          {TOUR_INTENTS.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              className={cx('intent-chip', intent === item.id && 'is-on')}
+              title={item.hint}
+              onClick={() => setIntent(intent === item.id ? null : item.id)}
+            >
+              {item.label}
+            </button>
+          ))}
+          <span className="intent-gap" aria-hidden="true" />
+          <button type="button" className="target-chip" onClick={() => applyTarget({ zone: 'Akdeniz', province: 'Adana', district: 'Kozan' })}>
+            Adana & Kozan Kalesi
+          </button>
+          <button type="button" className="target-chip" onClick={() => applyTarget({ zone: 'Akdeniz', province: 'Osmaniye', district: 'Kadirli' })}>
+            Kadirli Piknik & Karatepe
+          </button>
+          <button
+            type="button"
+            className="target-chip"
+            onClick={() => applyTarget({ zone: 'Akdeniz', province: 'Kahramanmaraş', district: 'Çağlayancerit' })}
+          >
+            Çağlayancerit’te Ne Var?
+          </button>
+          <button type="button" className="target-chip" onClick={() => applyTarget({ zone: 'Doğu Anadolu', province: 'Muş', district: 'Malazgirt' })}>
+            Şu An Muş Malazgirt’teyim
+          </button>
+        </div>
+      )}
       <div className="mode-switch" role="group" aria-label="Görünüm">
         <button type="button" aria-pressed={mode === 'list'} onClick={() => setMode('list')}>
           Liste
@@ -282,27 +290,22 @@ export function ExplorePage() {
       <div className={mode === 'map' ? 'explore-body is-map' : 'explore-body is-list'}>
         <aside className="panel">
           <div className="panel-head">
-            <h1>{panelTitle}</h1>
+            <h1>{HAS_TOUR && district ? `${district} · ${province}` : HAS_TOUR && province ? province : HAS_ATLAS && zone ? zone : title}</h1>
             {status === 'ready' && (
               <p className="count" aria-live="polite">
                 {formatInt(filtered.length)} alan
-                {HAS_DISCOVER && harvestBusy ? ' · ajanlar çalışıyor' : ''}
-                {HAS_DISCOVER && harvest.nature === 'ready' ? ' · doğa' : ''}
-                {HAS_DISCOVER && harvest.history === 'ready' ? ' · tarih' : ''}
-                {HAS_DISCOVER && harvest.wiki === 'ready' ? ' · wiki' : ''}
-                {HAS_DISCOVER && (harvest.nature === 'error' || harvest.history === 'error') ? ' · OSM kısmen alınamadı' : ''}
-                {!HAS_DISCOVER && HAS_LIVE && osmStatus === 'loading' ? ' · OSM yükleniyor' : ''}
-                {!HAS_DISCOVER && HAS_LIVE && osmStatus === 'error' ? ' · OSM alınamadı' : ''}
-                {!HAS_DISCOVER && HAS_LIVE && osmStatus === 'ready' ? ` · ${formatInt(osm.length)} OSM` : ''}
+                {HAS_LIVE && osmStatus === 'loading' ? ' · OSM yükleniyor' : ''}
+                {HAS_LIVE && osmStatus === 'error' ? ' · OSM alınamadı' : ''}
+                {HAS_LIVE && osmStatus === 'ready' ? ` · ${formatInt(osm.length)} OSM` : ''}
               </p>
             )}
-            {catalog && !HAS_ATLAS && !HAS_DISCOVER && <p className="catalog-banner">{LEGAL_CAMP_NOTE}</p>}
-            {HAS_LIVE && !HAS_ATLAS && !HAS_DISCOVER && (
+            {catalog && !HAS_ATLAS && <p className="catalog-banner">{LEGAL_CAMP_NOTE}</p>}
+            {HAS_LIVE && !HAS_ATLAS && (
               <p className="catalog-banner">
                 81 il filtresi ve OpenStreetMap canlı kamp katmanı. Pin izin değildir. İl seçince o ilin OSM kampları gelir.
               </p>
             )}
-            {!HAS_ATLAS && !HAS_DISCOVER && (
+            {!HAS_ATLAS && (
             <div className="kind-row" role="group" aria-label={catalog ? 'Bölge' : 'Alan türü'}>
               <button
                 type="button"
@@ -339,13 +342,21 @@ export function ExplorePage() {
                   ))}
             </div>
             )}
-            {HAS_LIVE && !HAS_DISCOVER && (
+            {HAS_LIVE && (
               <div className={HAS_ATLAS ? 'atlas-extra' : undefined}>
                 <label className="live-select">
                   {!HAS_POLISH && <span>İl</span>}
                   <select
                     value={province}
-                    onChange={(event) => setProvince(event.target.value)}
+                    onChange={(event) => {
+                      const name = event.target.value
+                      setProvince(name)
+                      setDistrict('')
+                      if (name) {
+                        setGeoPick({ province: name })
+                        setZone(zoneOfProvince(name) ?? zone)
+                      }
+                    }}
                     aria-label="81 il"
                   >
                     <option value="">81 il — OSM için seç</option>
@@ -453,17 +464,27 @@ export function ExplorePage() {
           resetLabel={turkey || catalog ? 'Tüm Türkiye' : 'Kahramanmaraş'}
           zone={HAS_ATLAS ? zone : null}
           onSelectZone={HAS_ATLAS ? chooseZone : undefined}
-          province={HAS_DISCOVER ? focus?.province ?? null : null}
-          district={HAS_DISCOVER ? focus?.district ?? null : null}
-          districtCenter={districtRow ? [districtRow.lat, districtRow.lng] : null}
+          province={HAS_TOUR ? province || null : null}
+          district={HAS_TOUR ? district || null : null}
+          districtCenter={
+            HAS_TOUR && province && district
+              ? (() => {
+                  const row = findDistrict(province, district)
+                  return row ? ([row.lat, row.lng] as [number, number]) : null
+                })()
+              : null
+          }
           onSelectProvince={
-            HAS_DISCOVER
+            HAS_TOUR
               ? (name) => {
                   if (!name) {
-                    setFocus(null)
+                    clearFilters()
                     return
                   }
-                  setFocus({ province: name })
+                  setProvince(name)
+                  setDistrict('')
+                  setGeoPick({ province: name })
+                  setZone(zoneOfProvince(name) ?? null)
                 }
               : undefined
           }

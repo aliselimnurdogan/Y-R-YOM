@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { suggestAdmin } from '../admin-geo'
 import { useSearch } from '../search-context'
-import { HAS_CATALOG, HAS_DISCOVER, HAS_HOME, HAS_LIVE, HAS_POLISH, HAS_ROUTE_MODE, ROUTES_PATH } from '../step'
+import { HAS_CATALOG, HAS_HOME, HAS_LIVE, HAS_POLISH, HAS_ROUTE_MODE, HAS_TOUR, ROUTES_PATH } from '../step'
 import { BrandLockup } from './Brand'
 import { PinMark, SearchIcon } from './Icons'
 
@@ -15,11 +15,7 @@ export function Header() {
   const [suggestOpen, setSuggestOpen] = useState(false)
   const [box, setBox] = useState({ top: 0, left: 0, width: 0 })
   const searchRef = useRef<HTMLFormElement>(null)
-
-  const suggestions = useMemo(
-    () => (HAS_DISCOVER ? suggestAdmin(query, 8) : []),
-    [query],
-  )
+  const suggestions = useMemo(() => (HAS_TOUR ? suggestAdmin(query, 8) : []), [query])
 
   function placeSearch() {
     const node = searchRef.current
@@ -30,7 +26,7 @@ export function Header() {
 
   function updateQuery(next: string) {
     setQuery(next)
-    if (HAS_DISCOVER) {
+    if (HAS_TOUR) {
       setSuggestOpen(next.trim().length > 0)
       placeSearch()
       if (location.pathname !== '/kamp') navigate('/kamp')
@@ -47,19 +43,11 @@ export function Header() {
     if (location.pathname !== '/') navigate('/')
   }
 
-  function chooseSuggestion(id: string) {
-    const item = suggestions.find((row) => row.id === id)
-    if (!item) return
-    pickSuggestion(item)
-    setSuggestOpen(false)
-    if (location.pathname !== '/kamp') navigate('/kamp')
-  }
-
   const onCamp = location.pathname.startsWith('/kamp')
   const onHome = HAS_HOME && location.pathname === '/'
   const onRoutes =
     location.pathname === ROUTES_PATH || location.pathname.startsWith('/rota')
-  const searchPlaceholder = HAS_DISCOVER
+  const searchPlaceholder = HAS_TOUR
     ? 'İl veya ilçe ara — Adana, Kozan, Kadirli, Malazgirt'
     : HAS_ROUTE_MODE
       ? onHome
@@ -110,7 +98,11 @@ export function Header() {
         ref={searchRef}
         onSubmit={(event) => {
           event.preventDefault()
-          if (HAS_DISCOVER && suggestions[0]) chooseSuggestion(suggestions[0].id)
+          if (HAS_TOUR && suggestions[0]) {
+            pickSuggestion(suggestions[0])
+            setSuggestOpen(false)
+            if (location.pathname !== '/kamp') navigate('/kamp')
+          }
         }}
       >
         <SearchIcon />
@@ -121,11 +113,9 @@ export function Header() {
           aria-label={searchPlaceholder}
           autoComplete="off"
           enterKeyHint="search"
-          aria-expanded={HAS_DISCOVER && suggestOpen && suggestions.length > 0}
-          aria-controls={HAS_DISCOVER ? 'geo-suggest' : undefined}
           onChange={(event) => updateQuery(event.target.value)}
           onFocus={() => {
-            if (HAS_DISCOVER && query.trim()) {
+            if (HAS_TOUR && query.trim()) {
               placeSearch()
               setSuggestOpen(true)
             }
@@ -138,12 +128,11 @@ export function Header() {
           </button>
         )}
       </form>
-      {HAS_DISCOVER &&
+      {HAS_TOUR &&
         suggestOpen &&
         suggestions.length > 0 &&
         createPortal(
           <ul
-            id="geo-suggest"
             className="geo-suggest"
             role="listbox"
             aria-label="İl ve ilçe"
@@ -151,7 +140,15 @@ export function Header() {
           >
             {suggestions.map((item) => (
               <li key={item.id} role="option">
-                <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => chooseSuggestion(item.id)}>
+                <button
+                  type="button"
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => {
+                    pickSuggestion(item)
+                    setSuggestOpen(false)
+                    if (location.pathname !== '/kamp') navigate('/kamp')
+                  }}
+                >
                   <strong>{item.label}</strong>
                   <span>{item.sub}</span>
                 </button>

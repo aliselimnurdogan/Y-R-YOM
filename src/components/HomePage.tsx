@@ -1,20 +1,22 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { featuredScore, formatInt, formatKm, hasPlacePhoto, placeCover } from '../format'
-import { DISCOVER_INTENTS } from '../intents'
-import { ACTIVITY_LABELS, PLACE_KIND_LABELS } from '../labels'
+import { ACTIVITY_LABELS, CATALOG_ZONES, PLACE_KIND_LABELS, ZONE_SHORT, type CatalogZone } from '../labels'
 import { sharpUrl } from '../media'
+import { PROVINCES } from '../provinces'
 import { usePlaces } from '../places-context'
 import { useRoutes } from '../routes-context'
 import { useSearch } from '../search-context'
-import { HAS_DISCOVER } from '../step'
+import { HAS_TOUR } from '../step'
 import { TrailThumb } from './Brand'
 
 export function HomePage() {
   const { status: routeStatus, routes } = useRoutes()
   const { status: placeStatus, places } = usePlaces()
-  const { setIntent } = useSearch()
+  const { setGeoPick, setQuery } = useSearch()
   const navigate = useNavigate()
+  const [tourZone, setTourZone] = useState<CatalogZone | null>(null)
+  const [tourProvince, setTourProvince] = useState('')
 
   useEffect(() => {
     document.title = 'Yürüyom'
@@ -37,35 +39,30 @@ export function HomePage() {
     ...campPicks.slice(0, 3).map((place) => placeCover(place)),
   ].filter(Boolean).slice(0, 4)
 
+  const tourProvinces = useMemo(
+    () => (tourZone ? PROVINCES.filter((item) => item.zone === tourZone) : PROVINCES),
+    [tourZone],
+  )
+  const tourPlaces = useMemo(() => {
+    const list = places.filter((place) => {
+      if (tourProvince && place.region !== tourProvince) return false
+      if (tourZone && place.zone && place.zone !== tourZone) return false
+      return true
+    })
+    return [...list].filter((place) => hasPlacePhoto(place) || HAS_TOUR).slice(0, 10)
+  }, [places, tourProvince, tourZone])
+
   return (
     <div className="home">
       <section className="home-hero">
         <div className="home-hero-copy">
           <p className="home-kicker">Türkiye</p>
-          <h1>{HAS_DISCOVER ? 'Nereye, ne için' : 'Kamp ve yürüyüş'}</h1>
+          <h1>Kamp ve yürüyüş</h1>
           <p className="home-lede">
-            {HAS_DISCOVER
-              ? 'Önce amacı seç: piknik, kale, yayla veya kanyon. Sonra il veya ilçe yaz; harita o ile kilitlenir, 81 il durur.'
+            {HAS_TOUR
+              ? 'Aşağıda il il bak: nerede ne var. Kamp veya yürüyüşe o kartlardan gir.'
               : 'Parkurlar, milli park kampları ve yerinde Wikimedia fotoğrafları. Girişte harita yok; liste ve harita Parkurlar veya Kamp’a girince açılır.'}
           </p>
-          {HAS_DISCOVER && (
-            <div className="home-intents" role="group" aria-label="Amaç">
-              {DISCOVER_INTENTS.map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  className="intent-chip"
-                  title={item.hint}
-                  onClick={() => {
-                    setIntent(item.id)
-                    navigate('/kamp')
-                  }}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          )}
           <div className="home-cta">
             <Link className="btn-fill" to="/parkurlar">
               Parkurlar
@@ -85,6 +82,80 @@ export function HomePage() {
           </div>
         )}
       </section>
+
+      {HAS_TOUR && (
+        <section className="tour-board" aria-label="Geziyorum görüyorum">
+          <div className="home-section-head">
+            <h2>Geziyorum, görüyorum</h2>
+            <Link to="/kamp">Haritada aç</Link>
+          </div>
+          <p className="tour-lede">Türkiye’de il il bak. Bölge seç, ili seç; o ilde ne olduğu listelenir. Kamp ve yürüyüş ayrı durur.</p>
+          <div className="tour-zones" role="group" aria-label="Bölge">
+            <button type="button" className={!tourZone ? 'is-on' : undefined} onClick={() => { setTourZone(null); setTourProvince('') }}>
+              Tüm Türkiye
+            </button>
+            {CATALOG_ZONES.map((item) => (
+              <button
+                key={item}
+                type="button"
+                className={tourZone === item ? 'is-on' : undefined}
+                onClick={() => {
+                  setTourZone(item)
+                  setTourProvince('')
+                }}
+              >
+                {ZONE_SHORT[item]}
+              </button>
+            ))}
+          </div>
+          <div className="tour-provinces" role="list">
+            {tourProvinces.map((item) => (
+              <button
+                key={item.name}
+                type="button"
+                className={tourProvince === item.name ? 'is-on' : undefined}
+                onClick={() => {
+                  setTourProvince(item.name)
+                  setTourZone(item.zone)
+                }}
+              >
+                {item.name}
+              </button>
+            ))}
+          </div>
+          <ul className="tour-places">
+            {tourPlaces.length === 0 && <li className="tour-empty">Bu ilde henüz çekirdek kayıt yok; Kamp’ta OSM katmanı açılır.</li>}
+            {tourPlaces.map((place) => {
+              const cover = placeCover(place)
+              return (
+                <li key={place.id}>
+                  <button
+                    type="button"
+                    className="tour-place"
+                    onClick={() => {
+                      setGeoPick({ province: place.region, district: place.district || place.city })
+                      setQuery('')
+                      navigate('/kamp')
+                    }}
+                  >
+                    {cover ? (
+                      <img src={sharpUrl(cover, 480)} alt="" referrerPolicy="no-referrer" />
+                    ) : (
+                      <TrailThumb seed={place.id} />
+                    )}
+                    <span>
+                      <strong>{place.title}</strong>
+                      <em>
+                        {place.city} · {place.region}
+                      </em>
+                    </span>
+                  </button>
+                </li>
+              )
+            })}
+          </ul>
+        </section>
+      )}
 
       <section className="home-section">
         <div className="home-section-head">
@@ -141,8 +212,9 @@ export function HomePage() {
         <h2>Site hakkında</h2>
         <p>
           Yürüyom, Türkiye’deki yürüyüş parkurlarını ve DKMP kamp alanlarını bir arada gösterir.
-          Kapaklar Wikimedia Commons; stok Unsplash yok. Harita OpenStreetMap üzerindedir. Pindeki
-          yer izin değildir; ormanda geceleme yalnız belirlenmiş konak yerinde.
+          Ana sayfada il il bakılır; Kamp ve Yürüyüş ayrı girilir. Kapaklar Wikimedia Commons;
+          stok Unsplash yok. Harita OpenStreetMap üzerindedir. Pindeki yer izin değildir; ormanda
+          geceleme yalnız belirlenmiş konak yerinde.
         </p>
         <ul className="home-facts">
           <li>

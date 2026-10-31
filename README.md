@@ -114,7 +114,15 @@ Klasör: `adim-14`
 
 `adim-14/index.html` dosyasına çift tıkla.
 
-Önce amaç seç: piknik, kale, yayla veya kanyon. İl/ilçe yazınca tamamlama çıkar; harita o ile kilitlenir, sınır kırmızı olur, diğer iller durur. Seçilen ilde OSM doğa/tarih ve Wikipedia ajanları çalışır.
+Arşiv. 13. adım tabanı bozulmuştu; güncel iş 15. adımdadır.
+
+## 15. adım — Geziyorum görüyorum (99. adım)
+
+Klasör: `adim-15`
+
+`adim-15/index.html` dosyasına çift tıkla.
+
+13. adım duran bakış ve akustik durur. Ana sayfada il il bak. Kamp’ta amaç, 81 il, kırmızı il sınırı, açık harita. Kozan, Kadirli, Çağlayancerit, Malazgirt hedefleri. OSM + Wikipedia. Geben kapakları Maraş ormanı.
 
 ## İnternet
 
@@ -134,5 +142,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 12. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-12/
 - 13. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-13/
 - 14. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-14/
+- 15. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-15/
 
 Harita ve fotoğraf için internet açık olsun.

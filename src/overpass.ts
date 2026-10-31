@@ -1,5 +1,7 @@
+import { inferIntent, INTENT_STATUS, osmStatus } from './intents'
+import { foldTr } from './format'
 import { zoneOfProvince } from './provinces'
-import type { PlaceItem } from './types'
+import type { PlaceItem, PlaceKind } from './types'
 
 const ENDPOINTS = [
   'https://overpass-api.de/api/interpreter',
@@ -17,14 +19,21 @@ function slug(value: string): string {
 }
 
 export async function fetchOsmCamps(province: string): Promise<PlaceItem[]> {
-  const query = `[out:json][timeout:25];
-area["name"="${province}"]["admin_level"="4"]->.a;
+  const query = `[out:json][timeout:28];
+area["name"="${province}"]["admin_level"="4"]["boundary"="administrative"]->.a;
 (
   nwr["tourism"="camp_site"](area.a);
   nwr["tourism"="caravan_site"](area.a);
   nwr["tourism"="picnic_site"](area.a);
+  nwr["leisure"="picnic_site"](area.a);
+  nwr["leisure"="picnic_table"](area.a);
+  nwr["leisure"="park"](area.a);
+  nwr["leisure"="nature_reserve"](area.a);
+  nwr["historic"~"castle|ruins|archaeological_site"](area.a);
+  nwr["natural"~"waterfall|cave_entrance|spring|peak"]["name"](area.a);
+  nwr["tourism"~"viewpoint|attraction"]["name"](area.a);
 );
-out center 160;`
+out center 220;`
   const body = `data=${encodeURIComponent(query)}`
   const attempts = ENDPOINTS.map(async (endpoint) => {
     const controller = new AbortController()
@@ -71,25 +80,95 @@ function toPlace(raw: Record<string, unknown>, province: string): PlaceItem | nu
   if (!osmId) return null
   const title = tags.name || tags['name:tr'] || `${province} OSM noktası`
   const ele = Number(tags.ele)
-  const picnic = tags.tourism === 'picnic_site'
+  const mapped = osmStatus(tags)
+  const kind: PlaceKind =
+    mapped.intent === 'yayla' ? 'kamp' : mapped.intent === 'gol' ? 'gol' : mapped.intent === 'piknik' ? 'doga' : 'doga'
   return {
     id: `osm-${osmId}`,
     title,
-    kind: picnic ? 'doga' : 'kamp',
+    kind,
     region: province,
-    city: tags['addr:city'] || province,
+    city: tags['addr:district'] || tags['addr:city'] || province,
+    district: tags['addr:district'] || tags['addr:city'] || province,
     lat,
     lng,
     elevationM: Number.isFinite(ele) ? ele : 0,
-    summary: picnic
-      ? 'OpenStreetMap piknik kaydı. Resmi kamp izni değildir.'
-      : 'OpenStreetMap kayıtlı kamp/karavan noktası. Resmi tahsis veya izin değildir; gitmeden idareyi veya muhtarlığı sorun.',
+    summary: `${mapped.label}. OpenStreetMap kaydı; resmi tahsis veya giriş izni değildir. Gitmeden idareyi veya muhtarlığı sorun.`,
     images: [],
     videos: [],
     zone: zoneOfProvince(province),
-    statusLabel:
-      tags.tourism === 'caravan_site' ? 'OSM karavan' : picnic ? 'OSM piknik' : 'OSM kamp',
+    statusLabel: mapped.label,
     feeTent: null,
+    intent: mapped.intent,
+  }
+}
+
+export async function fetchWikiGeo(province: string, lat: number, lng: number): Promise<PlaceItem[]> {
+  try {
+    const search = new URL('https://tr.wikipedia.org/w/api.php')
+    search.searchParams.set('action', 'query')
+    search.searchParams.set('list', 'geosearch')
+    search.searchParams.set('gscoord', `${lat}|${lng}`)
+    search.searchParams.set('gsradius', '10000')
+    search.searchParams.set('gslimit', '24')
+    search.searchParams.set('format', 'json')
+    search.searchParams.set('origin', '*')
+    const found = (await fetch(search).then((response) => response.json())) as {
+      query?: { geosearch?: Array<{ pageid: number; title: string; lat: number; lon: number }> }
+    }
+    const hits = found.query?.geosearch ?? []
+    if (hits.length === 0) return []
+    const ids = hits.map((item) => item.pageid).join('|')
+    const detail = new URL('https://tr.wikipedia.org/w/api.php')
+    detail.searchParams.set('action', 'query')
+    detail.searchParams.set('pageids', ids)
+    detail.searchParams.set('prop', 'extracts|pageimages|info')
+    detail.searchParams.set('exintro', '1')
+    detail.searchParams.set('explaintext', '1')
+    detail.searchParams.set('pithumbsize', '640')
+    detail.searchParams.set('inprop', 'url')
+    detail.searchParams.set('format', 'json')
+    detail.searchParams.set('origin', '*')
+    const pages = (await fetch(detail).then((response) => response.json())) as {
+      query?: {
+        pages?: Record<
+          string,
+          { title: string; extract?: string; thumbnail?: { source?: string }; fullurl?: string }
+        >
+      }
+    }
+    const byId = pages.query?.pages ?? {}
+    const useful = /kale|oren|hoyuk|selale|kanyon|yayla|tabiat|milli park|piknik|mesire|gol|magara|obruk|kamp/
+    const out: PlaceItem[] = []
+    for (const hit of hits) {
+      const page = byId[String(hit.pageid)]
+      if (!page) continue
+      const extract = page.extract ?? ''
+      if (!useful.test(foldTr(`${page.title} ${extract}`))) continue
+      const thumb = page.thumbnail?.source
+      const imageOk = Boolean(thumb && /wikimedia\.org|wikipedia\.org/.test(thumb))
+      const intent = inferIntent({ title: page.title, kind: 'doga', summary: extract })
+      out.push({
+        id: `wiki-${hit.pageid}`,
+        title: page.title,
+        kind: intent === 'gol' ? 'gol' : intent === 'yayla' ? 'kamp' : 'doga',
+        region: province,
+        city: province,
+        lat: hit.lat,
+        lng: hit.lon,
+        elevationM: 0,
+        summary: `${(extract || page.title).slice(0, 360)} Kaynak: Türkçe Wikipedia. Pin izin değildir.`,
+        images: imageOk && thumb ? [thumb] : [],
+        videos: [],
+        zone: zoneOfProvince(province),
+        statusLabel: INTENT_STATUS[intent],
+        feeTent: null,
+        intent,
+      })
+    }
+    return out
+  } catch {
+    return []
   }
 }
 

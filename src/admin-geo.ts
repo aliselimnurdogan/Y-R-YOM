@@ -218,3 +218,50 @@ export function focusFromSuggestion(item: GeoSuggestion): GeoFocus {
     ? { province: item.province, district: item.district }
     : { province: item.province }
 }
+
+export function resolveAdminQuery(query: string): GeoFocus | null {
+  const trimmed = query.trim()
+  if (!trimmed) return null
+  const exactDistrict = DISTRICT_ROWS.filter((row) => foldTr(row.district) === foldTr(trimmed))
+  if (exactDistrict.length === 1) {
+    return { province: exactDistrict[0].province, district: exactDistrict[0].district }
+  }
+  const province = canonicalProvince(trimmed)
+  if (province) return { province }
+  const two = trimmed.split(/\s+/).filter(Boolean)
+  if (two.length >= 2) {
+    const maybeProvince = canonicalProvince(two[0])
+    const rest = two.slice(1).join(' ')
+    if (maybeProvince) {
+      const row = findDistrict(maybeProvince, rest)
+      if (row) return { province: maybeProvince, district: row.district }
+    }
+  }
+  const suggestions = suggestAdmin(trimmed, 3)
+  if (suggestions.length === 1) return focusFromSuggestion(suggestions[0])
+  return null
+}
+
+export function zoneBounds(zone: string): [[number, number], [number, number]] | null {
+  const names = PROVINCES.filter((item) => item.zone === zone).map((item) => item.name)
+  let minLat = 90
+  let minLng = 180
+  let maxLat = -90
+  let maxLng = -180
+  let hit = false
+  for (const name of names) {
+    const box = BOUNDS.get(name)
+    if (!box) continue
+    hit = true
+    minLat = Math.min(minLat, box[0][0])
+    minLng = Math.min(minLng, box[0][1])
+    maxLat = Math.max(maxLat, box[1][0])
+    maxLng = Math.max(maxLng, box[1][1])
+  }
+  return hit
+    ? [
+        [minLat, minLng],
+        [maxLat, maxLng],
+      ]
+    : null
+}

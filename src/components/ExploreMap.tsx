@@ -2,16 +2,15 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { CircleMarker, GeoJSON, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
 import type { Layer, LeafletMouseEvent, PathOptions } from 'leaflet'
 import { Link } from 'react-router-dom'
-import { PROVINCE_COLLECTION, provinceBounds } from '../admin-geo'
+import { PROVINCE_COLLECTION, provinceBounds, zoneBounds } from '../admin-geo'
 import { regionById, turkeyRegionCollection } from '../data/turkey-regions'
 import { formatInt } from '../format'
 import { PLACE_KIND_COLORS, PLACE_KIND_LABELS, type CatalogZone } from '../labels'
-import { HAS_ATLAS, HAS_DISCOVER, HAS_LIVE } from '../step'
+import { zoneOfProvince } from '../provinces'
+import { HAS_ATLAS, HAS_LIVE, HAS_TOUR } from '../step'
 import { MapBrand } from './Brand'
 import { BASEMAPS, TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL, type BasemapId } from '../tiles'
 import type { PlaceItem } from '../types'
-
-const RED = '#d93829'
 
 function MapController({
   active,
@@ -55,24 +54,24 @@ function MapController({
   }, [map, onZoom])
 
   useEffect(() => {
-    if (!active || !HAS_DISCOVER) return
+    if (!active || !HAS_TOUR) return
     const go = (animate: boolean) => {
       map.invalidateSize()
       if (districtCenter) {
         map.flyTo(districtCenter, 10, { duration: animate ? 0.85 : 0 })
         return
       }
-      const box = province ? provinceBounds(province) : null
+      const box = province ? provinceBounds(province) : zone ? zoneBounds(zone) : null
       if (box) {
         map.flyToBounds(box, { padding: [36, 36], maxZoom: 9, animate, duration: animate ? 0.9 : 0 })
         return
       }
       map.setView(center, zoom, { animate: false })
     }
-    go(Boolean(province))
+    go(Boolean(province || zone))
     const later = window.setTimeout(() => map.invalidateSize(), 340)
     return () => window.clearTimeout(later)
-  }, [active, map, province, districtCenter, center, zoom])
+  }, [active, map, province, districtCenter, zone, center, zoom])
 
   useEffect(() => {
     if (!active || !locked) return
@@ -102,7 +101,7 @@ function MapController({
   }, [active, map, locked, zone, center, zoom])
 
   useEffect(() => {
-    if (!active || locked || HAS_DISCOVER) return
+    if (!active || locked || HAS_TOUR) return
     const handle = window.setTimeout(() => {
       map.invalidateSize()
       if (places.length === 0) {
@@ -139,12 +138,12 @@ function RegionLayer({
   function pathStyle(id: string): PathOptions {
     const selected = zone === id
     return {
-      stroke: selected,
-      color: '#7f1d1d',
-      weight: selected ? 2.8 : 0,
-      fillColor: '#c43121',
-      fillOpacity: selected ? 0.58 : 0,
-      opacity: selected ? 1 : 0,
+      stroke: true,
+      color: selected ? '#9f1f1f' : '#24382e',
+      weight: selected ? 2.8 : 1,
+      fillColor: selected ? '#c43121' : '#24382e',
+      fillOpacity: selected ? 0.35 : 0.04,
+      opacity: selected ? 1 : 0.55,
       fill: true,
     }
   }
@@ -175,28 +174,32 @@ function RegionLayer({
 }
 
 function ProvinceLayer({
+  zone,
   province,
   onSelectProvince,
 }: {
+  zone: string | null
   province: string | null
   onSelectProvince: (name: string) => void
 }) {
   function pathStyle(name: string): PathOptions {
-    const selected = province === name
+    const selectedIl = province === name
+    const inZone = Boolean(zone && zoneOfProvince(name) === zone)
+    const hot = selectedIl || (!province && inZone)
     return {
-      stroke: selected,
-      color: RED,
-      weight: selected ? 3 : 0,
-      fillColor: RED,
-      fillOpacity: selected ? 0.28 : 0,
-      opacity: selected ? 1 : 0,
+      stroke: true,
+      color: hot ? '#9f1f1f' : '#24382e',
+      weight: selectedIl ? 2.8 : 1,
+      fillColor: hot ? '#c43121' : '#24382e',
+      fillOpacity: selectedIl ? 0.35 : hot ? 0.18 : 0.04,
+      opacity: selectedIl ? 1 : 0.7,
       fill: true,
     }
   }
 
   return (
     <GeoJSON
-      key={province || 'tr-81'}
+      key={`${zone || 'tr'}-${province || 'all'}`}
       data={PROVINCE_COLLECTION}
       style={(feature) => pathStyle(String(feature?.properties?.name || ''))}
       onEachFeature={(feature, layer: Layer) => {
@@ -209,20 +212,6 @@ function ProvinceLayer({
           opacity: 1,
         })
         layer.on({
-          mouseover: () => {
-            if (province === name) return
-            ;(layer as unknown as { setStyle: (style: PathOptions) => void }).setStyle({
-              fillColor: '#e2c57a',
-              fillOpacity: 0.22,
-              stroke: true,
-              color: '#c9a65a',
-              weight: 1.4,
-              opacity: 1,
-            })
-          },
-          mouseout: () => {
-            ;(layer as unknown as { setStyle: (style: PathOptions) => void }).setStyle(pathStyle(name))
-          },
           click: (event: LeafletMouseEvent) => {
             event.originalEvent.preventDefault()
             event.originalEvent.stopPropagation()
@@ -288,7 +277,7 @@ export function ExploreMap({
   const [basemap, setBasemap] = useState<BasemapId>('topo')
   const [zoomLevel, setZoomLevel] = useState(zoom)
   const [frame, setFrame] = useState({ w: 0, h: 0 })
-  const locked = HAS_ATLAS && !HAS_DISCOVER
+  const locked = HAS_ATLAS && !HAS_TOUR
   const layer = HAS_LIVE ? BASEMAPS[basemap] : { url: TILE_URL, attribution: TILE_ATTRIBUTION }
   const clusters = useMemo(() => clusterPlaces(places, zoomLevel), [places, zoomLevel])
   const sized = frame.w >= 180 && frame.h >= 180
@@ -309,7 +298,7 @@ export function ExploreMap({
   return (
     <div
       ref={wrapRef}
-      className={HAS_DISCOVER ? 'map-wrap is-discover' : locked ? 'map-wrap is-atlas' : 'map-wrap'}
+      className={HAS_TOUR ? 'map-wrap is-tour' : locked ? 'map-wrap is-atlas' : 'map-wrap'}
       role="region"
       aria-label={`${resetLabel} haritası`}
     >
@@ -342,12 +331,11 @@ export function ExploreMap({
           province={province}
           districtCenter={districtCenter}
         />
-        {HAS_DISCOVER && onSelectProvince && (
-          <ProvinceLayer province={province} onSelectProvince={onSelectProvince} />
+        {HAS_TOUR && onSelectProvince && (
+          <ProvinceLayer zone={zone} province={province} onSelectProvince={onSelectProvince} />
         )}
         {locked && onSelectZone && <RegionLayer zone={zone} onSelectZone={onSelectZone} />}
-        {(!locked || zone || HAS_DISCOVER) &&
-          clusters.map((cluster) => {
+        {clusters.map((cluster) => {
           if (cluster.items.length > 1) {
             return (
               <CircleMarker
@@ -357,19 +345,18 @@ export function ExploreMap({
                 pathOptions={{
                   color: '#ffffff',
                   weight: 2,
-                  fillColor: locked ? '#c43121' : '#0ea5e9',
+                  fillColor: HAS_TOUR || locked ? '#c43121' : '#0ea5e9',
                   fillOpacity: 0.92,
                 }}
                 eventHandlers={{
                   click: () => {
-                    if (locked) return
                     mapRef.current?.setView([cluster.lat, cluster.lng], Math.min(zoomLevel + 2, 12))
                   },
                 }}
               >
                 <Popup className="route-popup" maxWidth={240}>
                   <div className="popup-title">{cluster.items.length} nokta</div>
-                  <div className="popup-meta">{locked ? 'Bölgeye tıkla, yanda listelenir' : 'Yakınlaşınca tek tek açılır'}</div>
+                  <div className="popup-meta">Yakınlaşınca tek tek açılır</div>
                 </Popup>
               </CircleMarker>
             )
@@ -393,7 +380,7 @@ export function ExploreMap({
               <Popup className="route-popup" maxWidth={240}>
                 <div className="popup-title">{place.title}</div>
                 <div className="popup-meta">
-                  {PLACE_KIND_LABELS[place.kind]} · {place.city} · {formatInt(place.elevationM)} m
+                  {place.statusLabel ?? PLACE_KIND_LABELS[place.kind]} · {place.city} · {formatInt(place.elevationM)} m
                   {place.pano ? ' · 360°' : ''}
                 </div>
                 <Link className="popup-link" to={`${basePath}/${place.id}`}>
@@ -423,21 +410,23 @@ export function ExploreMap({
         type="button"
         className="map-reset"
         onClick={() => {
-          if (HAS_DISCOVER && onSelectProvince) onSelectProvince(null)
+          if (HAS_TOUR && onSelectProvince) onSelectProvince(null)
           else if (locked && onSelectZone) onSelectZone(null)
           else mapRef.current?.setView(center, zoom)
         }}
       >
         {resetLabel}
       </button>
-      {HAS_DISCOVER && (
+      {HAS_TOUR && (
         <p className="map-hint">
           {province
             ? `${province}${district ? ` · ${district}` : ''} seçili · kırmızı il sınırı`
-            : 'İle tıkla veya üstten ara; sınır kırmızı olur, diğer iller durur'}
+            : zone
+              ? `${zone} seçili · il sınırları kırmızı`
+              : 'İle tıkla veya üstten ara; diğer iller durur, harita gezinir'}
         </p>
       )}
-      {locked && !HAS_DISCOVER && (
+      {locked && !HAS_TOUR && (
         <p className="map-hint">{zone ? `${zone} seçili · kırmızı bölge` : 'Bölgeye tıkla, harita oraya gider'}</p>
       )}
       <MapBrand />
