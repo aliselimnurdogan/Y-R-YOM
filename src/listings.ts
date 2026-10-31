@@ -1,4 +1,4 @@
-export type ListingKind = 'tur' | 'yemek'
+export type ListingKind = 'tur' | 'yemek' | 'ana'
 
 export interface Listing {
   id: string
@@ -19,6 +19,28 @@ export const LISTING_NOTE =
   'Ücretli ilan. Kart çekimi henüz sitede yok; formu doldurunca bu tarayıcıda durur. Yayına almak için yazın. Örnek ilan işaretlidir.'
 
 const SEED: Listing[] = [
+  {
+    id: 'ornek-ana-turkiye',
+    kind: 'ana',
+    province: 'Türkiye',
+    title: 'Örnek ana sponsor',
+    host: 'Marka yeri',
+    price: 'Harita üstü',
+    blurb: 'Türkiye haritasının üstünde durur. Örnek; gerçek sponsor değil.',
+    sample: true,
+    createdAt: '2026-10-31T07:50:00.000Z',
+  },
+  {
+    id: 'ornek-ana-adana',
+    kind: 'ana',
+    province: 'Adana',
+    title: 'Adana yürüyüş sponsoru',
+    host: 'Yerel marka',
+    price: 'Yan sütun',
+    blurb: 'Adana seçilince yanda Sponsor diye durur. Örnek; gerçek sponsor değil.',
+    sample: true,
+    createdAt: '2026-10-31T07:55:00.000Z',
+  },
   {
     id: 'ornek-tur-adana',
     kind: 'tur',
@@ -48,7 +70,7 @@ const SEED: Listing[] = [
     title: 'Kebap ızgara ocağı',
     host: 'Ocakbaşı ilanı',
     price: 'Porsiyon 280 TL’den',
-    blurb: 'Adana seçilince görünen yemek ilanı. Rezervasyon siteden alınmaz; örnek ilan.',
+    blurb: 'Adana seçilince yanda Yemek önerisi diye durur. Rezervasyon siteden alınmaz; örnek ilan.',
     sample: true,
     createdAt: '2026-10-31T08:20:00.000Z',
   },
@@ -79,7 +101,7 @@ const SEED: Listing[] = [
 function asListing(raw: unknown): Listing | null {
   if (!raw || typeof raw !== 'object') return null
   const record = raw as Record<string, unknown>
-  if (record.kind !== 'tur' && record.kind !== 'yemek') return null
+  if (record.kind !== 'tur' && record.kind !== 'yemek' && record.kind !== 'ana') return null
   if (typeof record.id !== 'string' || typeof record.province !== 'string') return null
   if (typeof record.title !== 'string' || typeof record.host !== 'string') return null
   if (typeof record.price !== 'string' || typeof record.blurb !== 'string') return null
@@ -119,6 +141,10 @@ export function loadListings(): Listing[] {
 
 export function listingsFor(province: string, kind?: ListingKind): Listing[] {
   return loadListings().filter((item) => item.province === province && (!kind || item.kind === kind))
+}
+
+export function mainSponsor(): Listing | null {
+  return loadListings().find((item) => item.kind === 'ana' && item.province === 'Türkiye') ?? null
 }
 
 export function saveListing(input: Omit<Listing, 'id' | 'sample' | 'createdAt'>): Listing {

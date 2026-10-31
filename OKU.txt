@@ -1,4 +1,4 @@
-﻿Yürüyom — 20. adım
+﻿Yürüyom — 21. adım
 
 1) Bu klasörü aç.
 2) index.html dosyasına çift tıkla.
@@ -6,8 +6,8 @@
 
 Üstte beş sekme: Ana sayfa, Geziyorum görüyorum, Kamp, Yürüyüş, Rehber.
 
-Geziyorum’da ile tıklayınca harita tam kalır; yerler alta iner.
+Geziyorum: harita tam kalır. Ana sponsor haritanın üstünde. İl seçince yanda Sponsor ve Yemek önerisi çıkar. Rehber ayrı yerde.
 
-Rehber: kıyafet katları, nerede ne yenir, turlar. Tur ve yemek ilanı ücretlidir; kart henüz çekilmez, form bu tarayıcıda durur. Adana seçince örnek yemek ilanı çıkar.
+Rehber: manken üzerine asılı kıyafet, masada yemek çizimi, turlar. İlan ücretlidir; kart henüz çekilmez.
 
 Pin izin değildir.

@@ -3006,6 +3006,10 @@ body.is-land .home {
   background: #e7e4dc;
 }
 
+.land-hero.has-sponsor {
+  grid-template-columns: 200px minmax(0, 1fr) 236px;
+}
+
 body.is-guide .mode-nav a {
   font-size: 12.5px;
   padding: 6px 9px;
@@ -3032,6 +3036,87 @@ body.is-guide .mode-nav a {
 
 .land-map.is-fixed .leaflet-interactive {
   cursor: pointer;
+}
+
+.map-ana {
+  position: absolute;
+  z-index: 520;
+  left: 50%;
+  top: 16px;
+  transform: translateX(-50%);
+  min-width: 180px;
+  max-width: 260px;
+  padding: 10px 14px 11px;
+  border-radius: 14px;
+  background: rgba(255, 252, 246, 0.94);
+  border: 1px solid rgba(226, 197, 122, 0.8);
+  box-shadow: 0 10px 24px rgba(20, 32, 24, 0.18);
+  pointer-events: none;
+  text-align: center;
+}
+
+.map-ana p {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9f1f1f;
+}
+
+.map-ana strong {
+  display: block;
+  margin: 4px 0 2px;
+  font-size: 15px;
+  letter-spacing: -0.03em;
+  color: #24382e;
+}
+
+.map-ana span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7a6e;
+}
+
+.land-rail {
+  background: rgba(255, 252, 246, 0.96);
+  border-left: 1px solid rgba(36, 56, 46, 0.1);
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+  overflow: auto;
+}
+
+.rail-kicker {
+  margin: 8px 6px 0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9f1f1f;
+}
+
+.rail-card {
+  background: #fffdf8;
+  border: 1px solid rgba(196, 49, 33, 0.18);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.rail-card strong {
+  display: block;
+  margin: 2px 0 4px;
+  color: #24382e;
+}
+
+.rail-card span,
+.rail-card p {
+  color: #3f4a43;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.4;
 }
 
 .land-panel {
@@ -3710,7 +3795,7 @@ body.is-polish .home {
 
 .layer-stage {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
+  grid-template-columns: 200px minmax(0, 1fr);
   gap: 22px;
   align-items: start;
   margin-bottom: 18px;
@@ -3719,6 +3804,10 @@ body.is-polish .home {
 .layer-art {
   width: 100%;
   height: auto;
+}
+
+.layer-art.is-mannequin {
+  max-width: 240px;
 }
 
 .layer-list {
@@ -3805,6 +3894,10 @@ body.is-polish .home {
   border-color: rgba(196, 49, 33, 0.28);
 }
 
+.ilan-grid li.is-ana {
+  border-color: rgba(226, 197, 122, 0.7);
+}
+
 .ilan-price {
   color: #9f1f1f !important;
   font-weight: 800 !important;
@@ -3882,7 +3975,8 @@ body.is-polish .home {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .land-hero {
+  .land-hero,
+  .land-hero.has-sponsor {
     grid-template-columns: 1fr;
     min-height: 0;
     height: auto;
@@ -3899,6 +3993,13 @@ body.is-polish .home {
     border-right: 0;
     border-bottom: 1px solid rgba(36, 56, 46, 0.1);
     max-height: 38vh;
+  }
+
+  .land-rail {
+    order: 3;
+    max-height: none;
+    border-left: 0;
+    border-top: 1px solid rgba(36, 56, 46, 0.1);
   }
 
   .land-talk,

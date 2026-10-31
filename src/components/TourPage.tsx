@@ -12,7 +12,7 @@ import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
 import { HAS_GEZI, HAS_GUIDE } from '../step'
 import type { PlaceItem } from '../types'
-import { ProvinceMarket } from './ProvinceMarket'
+import { MapSponsor, SponsorRail } from './ProvinceMarket'
 import { ProvinceTalk } from './ProvinceTalk'
 import { TurkeyMap } from './TurkeyMap'
 
@@ -126,7 +126,7 @@ export function TourPage() {
 
   return (
     <div className="home is-land">
-      <section className="land-hero" aria-label="Türkiye">
+      <section className={HAS_GUIDE ? 'land-hero has-sponsor' : 'land-hero'} aria-label="Türkiye">
         <aside className="land-panel">
           <p className="iller-title">İller</p>
           <label className="iller-search">
@@ -163,7 +163,9 @@ export function TourPage() {
             if (!name) clearProvince()
             else pickProvince(name)
           }}
+          overlay={HAS_GUIDE ? <MapSponsor /> : undefined}
         />
+        {HAS_GUIDE && <SponsorRail province={tourProvince} />}
       </section>
 
       {tourProvince && (
@@ -188,7 +190,6 @@ export function TourPage() {
             {about}
             {wiki.extract ? ' Kaynak: Türkçe Wikipedia.' : ''}
           </p>
-          {HAS_GUIDE && <ProvinceMarket province={tourProvince} />}
           {HAS_GEZI && (
             <p className="land-note">
               Tarihî yer, müze, tiyatro ve doğal alan kayıtları elle derlendi. {GEZI_NOTE}

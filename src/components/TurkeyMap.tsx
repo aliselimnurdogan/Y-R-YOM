@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { GeoJSON, MapContainer, TileLayer, useMap } from 'react-leaflet'
 import type { Layer, LeafletMouseEvent, PathOptions } from 'leaflet'
 import { PROVINCE_COLLECTION } from '../admin-geo'
@@ -69,9 +69,11 @@ function ProvincePaint({
 export function TurkeyMap({
   province,
   onSelectProvince,
+  overlay,
 }: {
   province: string | null
   onSelectProvince: (name: string | null) => void
+  overlay?: ReactNode
 }) {
   const wrapRef = useRef<HTMLDivElement>(null)
   const [frame, setFrame] = useState({ w: 0, h: 0 })
@@ -108,6 +110,7 @@ export function TurkeyMap({
           <ProvincePaint province={province} onSelect={onSelectProvince} />
         </MapContainer>
       )}
+      {overlay}
       {province && (
         <button type="button" className="map-reset" onClick={() => onSelectProvince(null)}>
           Tüm Türkiye

@@ -164,6 +164,14 @@ Klasör: `adim-20`
 
 İl tıklayınca harita tam kalır. Rehber sekmesinde kıyafet, yemek, tur. İlan ücretli görünür; kart henüz çekilmez. Adana seçince yemek ilanı çıkar.
 
+## 21. adım — Manken, harita sponsor, yan sütun
+
+Klasör: `adim-21`
+
+`adim-21/index.html` dosyasına çift tıkla.
+
+Rehberde manken; kıyafet üstüne asılı. Yemek masada oturan çizim. Geziyorum’da ana sponsor haritanın üstünde. İl tıklayınca yanda Sponsor ve Yemek önerisi. Rehber ayrı sekmede.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -188,5 +196,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 18. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-18/
 - 19. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-19/
 - 20. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-20/
+- 21. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-21/
 
 Harita ve fotoğraf için internet açık olsun.

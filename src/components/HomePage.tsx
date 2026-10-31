@@ -111,7 +111,7 @@ export function HomePage() {
             {HAS_GUIDE && (
               <Link className="gate-card" to={GUIDE_PATH}>
                 <strong>Rehber</strong>
-                <span>Kıyafet, yemek, tur. İlan ver; ile tıklayınca çıkar.</span>
+                <span>Kıyafet, yemek, tur. Rehber ayrı. Haritada ana sponsor, yanda il sponsorları.</span>
               </Link>
             )}
           </aside>

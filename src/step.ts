@@ -36,17 +36,19 @@ export const APP_STEP =
                                     ? '19'
                                     : raw === '20'
                                       ? '20'
-                                      : '2'
+                                      : raw === '21'
+                                        ? '21'
+                                        : '2'
 export type AppStep = typeof APP_STEP
-const FROM_3 = new Set(['3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20'])
+const FROM_3 = new Set(['3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20', '21'])
 export const HAS_ROUTE_MODE = APP_STEP === '1' || FROM_3.has(APP_STEP)
 export const HAS_CATALOG = FROM_3.has(APP_STEP)
-export const HAS_FEEL = new Set(['5', '6', '7', '8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20']).has(APP_STEP)
-export const HAS_LOOK = new Set(['6', '7', '8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20']).has(APP_STEP)
-export const HAS_LIVE = new Set(['7', '8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20']).has(APP_STEP)
-export const HAS_SOCIAL = APP_STEP === '2' || new Set(['7', '8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20']).has(APP_STEP)
-export const HAS_POLISH = new Set(['8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20']).has(APP_STEP)
-export const HAS_BLOOM = new Set(['9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20']).has(APP_STEP)
+export const HAS_FEEL = new Set(['5', '6', '7', '8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20', '21']).has(APP_STEP)
+export const HAS_LOOK = new Set(['6', '7', '8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20', '21']).has(APP_STEP)
+export const HAS_LIVE = new Set(['7', '8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20', '21']).has(APP_STEP)
+export const HAS_SOCIAL = APP_STEP === '2' || new Set(['7', '8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20', '21']).has(APP_STEP)
+export const HAS_POLISH = new Set(['8', '9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20', '21']).has(APP_STEP)
+export const HAS_BLOOM = new Set(['9', '10', '11', '12', '13', '15', '16', '17', '18', '19', '20', '21']).has(APP_STEP)
 export const HAS_HOME =
   APP_STEP === '11' ||
   APP_STEP === '12' ||
@@ -56,13 +58,14 @@ export const HAS_HOME =
   APP_STEP === '17' ||
   APP_STEP === '18' ||
   APP_STEP === '19' ||
-  APP_STEP === '20'
-export const HAS_ATLAS = APP_STEP === '12' || APP_STEP === '13' || APP_STEP === '15' || APP_STEP === '16' || APP_STEP === '17' || APP_STEP === '18' || APP_STEP === '19' || APP_STEP === '20'
-export const HAS_TOUR = APP_STEP === '15' || APP_STEP === '16' || APP_STEP === '17' || APP_STEP === '18' || APP_STEP === '19' || APP_STEP === '20'
-export const HAS_LAND = APP_STEP === '16' || APP_STEP === '17' || APP_STEP === '18' || APP_STEP === '19' || APP_STEP === '20'
-export const HAS_GATE = APP_STEP === '18' || APP_STEP === '19' || APP_STEP === '20'
-export const HAS_GEZI = APP_STEP === '19' || APP_STEP === '20'
-export const HAS_GUIDE = APP_STEP === '20'
+  APP_STEP === '20' ||
+  APP_STEP === '21'
+export const HAS_ATLAS = APP_STEP === '12' || APP_STEP === '13' || APP_STEP === '15' || APP_STEP === '16' || APP_STEP === '17' || APP_STEP === '18' || APP_STEP === '19' || APP_STEP === '20' || APP_STEP === '21'
+export const HAS_TOUR = APP_STEP === '15' || APP_STEP === '16' || APP_STEP === '17' || APP_STEP === '18' || APP_STEP === '19' || APP_STEP === '20' || APP_STEP === '21'
+export const HAS_LAND = APP_STEP === '16' || APP_STEP === '17' || APP_STEP === '18' || APP_STEP === '19' || APP_STEP === '20' || APP_STEP === '21'
+export const HAS_GATE = APP_STEP === '18' || APP_STEP === '19' || APP_STEP === '20' || APP_STEP === '21'
+export const HAS_GEZI = APP_STEP === '19' || APP_STEP === '20' || APP_STEP === '21'
+export const HAS_GUIDE = APP_STEP === '20' || APP_STEP === '21'
 export const ROUTES_PATH = HAS_HOME ? '/parkurlar' : '/'
 export const TOUR_PATH = HAS_GATE ? '/geziyorum' : '/'
 export const GUIDE_PATH = '/rehber'

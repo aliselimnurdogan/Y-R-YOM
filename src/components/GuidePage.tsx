@@ -12,6 +12,7 @@ export function GuidePage() {
   const listings = useMemo(() => loadListings(), [tick])
   const tours = listings.filter((item) => item.kind === 'tur')
   const meals = listings.filter((item) => item.kind === 'yemek')
+  const sponsors = listings.filter((item) => item.kind === 'ana')
 
   useEffect(() => {
     document.title = 'Rehber · Yürüyom'
@@ -45,7 +46,7 @@ export function GuidePage() {
           soğutur.
         </p>
         <div className="layer-stage">
-          <LayerArt />
+          <MannequinArt />
           <ol className="layer-list">
             {LAYERS.map((layer, index) => (
               <li key={layer.id}>
@@ -80,7 +81,7 @@ export function GuidePage() {
         <ul className="plate-grid">
           {TABLES.map((item) => (
             <li key={item.zone}>
-              <PlateArt zone={item.zone} />
+              <TableArt zone={item.zone} />
               <p className="home-kicker">{item.zone}</p>
               <strong>{item.plate}</strong>
               <p>{item.hint}</p>
@@ -98,13 +99,19 @@ export function GuidePage() {
       <section id="turlar" className="guide-block" aria-label="Turlar">
         <h2>Turlar</h2>
         <p className="guide-lead">
-          Rehber ücretini alır, tur sitede durur. Kart henüz çekilmez. Geziyorum’da ile tıklayınca o ilin turu da
-          görünür.
+          Rehber ücretini alır, tur burada durur. Kart henüz çekilmez. Geziyorum ayrı; orada harita ve il sponsorları
+          vardır.
         </p>
         {tours.length === 0 ? (
           <p className="tour-empty">Henüz tur ilanı yok. Aşağıdan bırak.</p>
         ) : (
           <ListingCards items={tours} />
+        )}
+        {sponsors.length > 0 && (
+          <div className="guide-ads">
+            <h3>Sponsorlar</h3>
+            <ListingCards items={sponsors} />
+          </div>
         )}
       </section>
 
@@ -125,9 +132,9 @@ function ListingCards({ items }: { items: Listing[] }) {
   return (
     <ul className="ilan-grid">
       {items.map((item) => (
-        <li key={item.id} className={item.kind === 'yemek' ? 'is-food' : 'is-tur'}>
+        <li key={item.id} className={item.kind === 'yemek' ? 'is-food' : item.kind === 'ana' ? 'is-ana' : 'is-tur'}>
           <p className="home-kicker">
-            {item.kind === 'tur' ? 'Tur' : 'Yemek ilanı'}
+            {item.kind === 'tur' ? 'Tur' : item.kind === 'ana' ? 'Ana sponsor' : 'Yemek önerisi'}
             {item.sample ? ' · örnek' : ''}
           </p>
           <strong>{item.title}</strong>
@@ -177,12 +184,14 @@ function ListingForm({ onSave }: { onSave: () => void }) {
         Tür
         <select value={kind} onChange={(event) => setKind(event.target.value as ListingKind)}>
           <option value="tur">Tur düzenliyorum</option>
-          <option value="yemek">Yemek ilanı</option>
+          <option value="yemek">Yemek önerisi</option>
+          <option value="ana">Ana sponsor</option>
         </select>
       </label>
       <label>
         İl
         <select value={province} onChange={(event) => setProvince(event.target.value)}>
+          <option value="Türkiye">Türkiye (harita)</option>
           {iller.map((item) => (
             <option key={item.name} value={item.name}>
               {item.name}
@@ -227,28 +236,39 @@ function HeroArt() {
   )
 }
 
-function LayerArt() {
+function MannequinArt() {
   return (
-    <svg className="layer-art" viewBox="0 0 160 220" aria-hidden="true">
-      <rect width="160" height="220" rx="18" fill="#f4efe4" />
-      <ellipse cx="80" cy="36" rx="18" ry="20" fill="#c9b48a" />
-      <rect x="48" y="54" width="64" height="28" rx="10" fill="#e8d7a8" />
-      <rect x="42" y="80" width="76" height="36" rx="12" fill="#7a9a6a" />
-      <rect x="36" y="112" width="88" height="40" rx="14" fill="#3b5c4c" />
-      <rect x="30" y="148" width="100" height="36" rx="14" fill="#24382e" />
-      <rect x="52" y="182" width="22" height="26" rx="6" fill="#6b5344" />
-      <rect x="86" y="182" width="22" height="26" rx="6" fill="#6b5344" />
-      <text x="80" y="74" textAnchor="middle" fill="#24382e" fontSize="9" fontWeight="700">
+    <svg className="layer-art is-mannequin" viewBox="0 0 240 400" aria-hidden="true">
+      <rect width="240" height="400" rx="22" fill="#efe8d8" />
+      <ellipse cx="120" cy="378" rx="52" ry="10" fill="#d8cbb0" />
+      <rect x="116" y="74" width="8" height="18" rx="3" fill="#c9b48a" />
+      <ellipse cx="120" cy="48" rx="22" ry="26" fill="#d7c09a" />
+      <ellipse cx="120" cy="50" rx="16" ry="20" fill="#c9b48a" />
+      <path d="M64 108c12-22 28-34 56-34s44 12 56 34l12 22-10 86c-14 20-34 28-58 28s-44-8-58-28l-10-86Z" fill="#3b5c4c" />
+      <path d="M58 126c-10 26-8 52 2 70 6-22 12-44 16-64Z" fill="#2f4a3e" />
+      <path d="M182 126c10 26 8 52-2 70-6-22-12-44-16-64Z" fill="#2f4a3e" />
+      <path d="M102 96c8-8 12-10 18-10s10 2 18 10v14H102Z" fill="#f6ead0" />
+      <path d="M96 112c10-4 16-6 24-6s14 2 24 6v78c-8 8-16 10-24 10s-16-2-24-10Z" fill="#f3e6c4" />
+      <path d="M102 120c8-4 12-6 18-6s10 2 18 6v40c-6 6-12 8-18 8s-12-2-18-8Z" fill="#7a9a6a" />
+      <path d="M86 102c12-14 22-18 34-18s22 4 34 18l8 12-10 8H88Z" fill="#24382e" />
+      <path d="M96 210h48v88H96Z" fill="#4a3c32" />
+      <path d="M96 210c8 8 16 10 24 10s16-2 24-10v12H96Z" fill="#f6ead0" />
+      <path d="M94 294h24v32c-2 10-8 14-14 14-8 0-12-8-10-18Z" fill="#6b5344" />
+      <path d="M122 294h24v32c2 10-2 18-10 18-6 0-12-4-14-14Z" fill="#6b5344" />
+      <line x1="48" y1="148" x2="78" y2="132" stroke="#24382e" strokeWidth="1.4" />
+      <line x1="190" y1="92" x2="168" y2="104" stroke="#24382e" strokeWidth="1.4" />
+      <line x1="196" y1="310" x2="150" y2="310" stroke="#24382e" strokeWidth="1.4" />
+      <text x="18" y="154" fill="#24382e" fontSize="12" fontWeight="800">
         iç
       </text>
-      <text x="80" y="102" textAnchor="middle" fill="#f6ead0" fontSize="9" fontWeight="700">
-        ara
+      <text x="18" y="122" fill="#3b5c4c" fontSize="12" fontWeight="800">
+        polar
       </text>
-      <text x="80" y="136" textAnchor="middle" fill="#e2c57a" fontSize="9" fontWeight="700">
+      <text x="186" y="86" fill="#24382e" fontSize="12" fontWeight="800">
         kabuk
       </text>
-      <text x="80" y="170" textAnchor="middle" fill="#f6ead0" fontSize="9" fontWeight="700">
-        dış
+      <text x="186" y="314" fill="#24382e" fontSize="12" fontWeight="800">
+        bot
       </text>
     </svg>
   )
@@ -290,7 +310,7 @@ function CondArt({ id }: { id: string }) {
   )
 }
 
-function PlateArt({ zone }: { zone: string }) {
+function TableArt({ zone }: { zone: string }) {
   const fill = zone.includes('Karadeniz')
     ? '#3b5c4c'
     : zone.includes('Ege')
@@ -305,10 +325,16 @@ function PlateArt({ zone }: { zone: string }) {
               ? '#c4a05a'
               : '#c43121'
   return (
-    <svg viewBox="0 0 140 72" aria-hidden="true">
-      <rect width="140" height="72" rx="14" fill="#f4efe4" />
-      <ellipse cx="70" cy="38" rx="44" ry="22" fill="#efe4d0" />
-      <ellipse cx="70" cy="38" rx="28" ry="14" fill={fill} />
+    <svg viewBox="0 0 180 110" aria-hidden="true">
+      <rect width="180" height="110" rx="16" fill="#f4efe4" />
+      <ellipse cx="48" cy="30" rx="13" ry="15" fill="#c9b48a" />
+      <path d="M34 44c8-6 20-6 28 0v28H34Z" fill="#7a9a6a" />
+      <path d="M28 72h36v16H28Z" fill="#4a3c32" />
+      <path d="M16 86h148v12H16Z" fill="#8a6a48" />
+      <ellipse cx="118" cy="82" rx="34" ry="12" fill="#efe4d0" />
+      <ellipse cx="118" cy="80" rx="18" ry="7" fill={fill} />
+      <rect x="102" y="62" width="5" height="18" rx="1" fill="#d8cbb0" />
+      <path d="M132 58c6-10 14-10 18 0" fill="none" stroke="#c43121" strokeWidth="1.6" strokeLinecap="round" />
     </svg>
   )
 }

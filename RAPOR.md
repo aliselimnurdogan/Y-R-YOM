@@ -1,12 +1,12 @@
-# Yürüyom — 20. Adım
+# Yürüyom — 21. Adım
 
-Tarih: 31 Ekim 2026. Taban: 19. adım 445 gezilecek yer.
+Tarih: 31 Ekim 2026. Taban: 20. adım Rehber.
 
 ## Ne değişti
-- Geziyorum’da il seçince harita **küçülmez**; tam Türkiye durur, içerik alta iner.
-- **Rehber** sekmesi: kıyafet katları, koşullar, yöresel tabak, tur listesi. Kendi çizim; başka siteden kopya yok.
-- Tur ve yemek **ilan**: örnek Adana kebap, Adana yürüyüş turu. Form bu tarayıcıda kalır. Kart çekimi yok.
-- İl seçilince o ilin yemek ilanı ve turu çıkar.
+- Rehber kıyafet: iç/ara/kabuk kutuları kalktı. Manken; kıyafet üstüne asılı.
+- Yemek: tabak elipsi değil, masada oturan çizim.
+- Geziyorum: **ana sponsor** Türkiye haritasının üstünde. İl tıklayınca **yanda** Sponsor ve Yemek önerisi. Rehber ayrı sekmede kalır.
+- Adana örnek: yanda sponsor + kebap. Haritada örnek ana sponsor.
 
 ## Ne duruyor
-19: 445 yer, ilçe grupları. 18: ana sayfa, sabit harita. Pin izin değildir.
+20: Rehber, ilan, tam harita. 19: 445 yer. Kart çekimi yok. Pin izin değildir.

@@ -1,0 +1,13 @@
+﻿Yürüyom — 21. adım
+
+1) Bu klasörü aç.
+2) index.html dosyasına çift tıkla.
+3) İnternet açık olsun.
+
+Üstte beş sekme: Ana sayfa, Geziyorum görüyorum, Kamp, Yürüyüş, Rehber.
+
+Geziyorum: harita tam kalır. Ana sponsor haritanın üstünde. İl seçince yanda Sponsor ve Yemek önerisi çıkar. Rehber ayrı yerde.
+
+Rehber: manken üzerine asılı kıyafet, masada yemek çizimi, turlar. İlan ücretlidir; kart henüz çekilmez.
+
+Pin izin değildir.
