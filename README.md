@@ -108,6 +108,14 @@ Klasör: `adim-13`
 
 Bölgeler üstte, kamplar yanda hemen. Harita doğru coğrafi bölgeye gider. İçeri girince kare tarama yapmaz; bakış durur, göz hafif gezer, alttan sessiz akustik gelir.
 
+## 14. adım — Amaçlı keşif, 81 il
+
+Klasör: `adim-14`
+
+`adim-14/index.html` dosyasına çift tıkla.
+
+Önce amaç seç: piknik, kale, yayla veya kanyon. İl/ilçe yazınca tamamlama çıkar; harita o ile kilitlenir, sınır kırmızı olur, diğer iller durur. Seçilen ilde OSM doğa/tarih ve Wikipedia ajanları çalışır.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -125,5 +133,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 11. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-11/
 - 12. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-12/
 - 13. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-13/
+- 14. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-14/
 
 Harita ve fotoğraf için internet açık olsun.

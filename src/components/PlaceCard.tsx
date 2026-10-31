@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { formatFee, formatInt, placeCover } from '../format'
 import { PLACE_KIND_LABELS } from '../labels'
 import { srcSet, sharpUrl } from '../media'
-import { HAS_CATALOG, HAS_FEEL } from '../step'
+import { HAS_CATALOG, HAS_DISCOVER, HAS_FEEL } from '../step'
 import type { PlaceItem } from '../types'
 import { TrailThumb } from './Brand'
 
@@ -83,11 +83,11 @@ export function PlaceCard({
             <span className="dotsep" aria-hidden="true">
               ·
             </span>
-            <span>{place.region}</span>
+            <span>{HAS_DISCOVER && place.district && place.district !== place.region ? `${place.district} · ${place.region}` : place.region}</span>
             <span className="dotsep" aria-hidden="true">
               ·
             </span>
-            <span>{HAS_CATALOG ? formatFee(place.feeTent) : `${formatInt(place.elevationM)} m`}</span>
+            <span>{HAS_DISCOVER ? (place.source === 'osm' ? 'OSM' : place.source === 'wiki' ? 'Wikipedia' : place.source === 'seed' ? 'Çekirdek' : formatFee(place.feeTent)) : HAS_CATALOG ? formatFee(place.feeTent) : `${formatInt(place.elevationM)} m`}</span>
           </p>
           <p className="card-sub card-excerpt">{place.guide?.difficulty ?? place.summary}</p>
         </div>

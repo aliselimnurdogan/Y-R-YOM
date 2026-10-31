@@ -1,4 +1,6 @@
 export type PlaceKind = 'kamp' | 'yayla' | 'doga' | 'manzara' | 'sahil' | 'orman' | 'gol'
+export type PlaceSource = 'catalog' | 'seed' | 'osm' | 'wiki'
+export type DiscoverIntentId = 'piknik' | 'tarih' | 'yayla' | 'su'
 
 export interface PlaceVideo {
   youtubeId?: string
@@ -54,6 +56,10 @@ export interface PlaceItem {
   statusLabel?: string
   guide?: CampGuide
   pano?: PlacePano
+  district?: string
+  intent?: DiscoverIntentId
+  source?: PlaceSource
+  wikiUrl?: string
 }
 
 export interface PlaceScores {

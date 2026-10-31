@@ -1,15 +1,20 @@
 import { useEffect, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { featuredScore, formatInt, formatKm, hasPlacePhoto, placeCover } from '../format'
+import { DISCOVER_INTENTS } from '../intents'
 import { ACTIVITY_LABELS, PLACE_KIND_LABELS } from '../labels'
 import { sharpUrl } from '../media'
 import { usePlaces } from '../places-context'
 import { useRoutes } from '../routes-context'
+import { useSearch } from '../search-context'
+import { HAS_DISCOVER } from '../step'
 import { TrailThumb } from './Brand'
 
 export function HomePage() {
   const { status: routeStatus, routes } = useRoutes()
   const { status: placeStatus, places } = usePlaces()
+  const { setIntent } = useSearch()
+  const navigate = useNavigate()
 
   useEffect(() => {
     document.title = 'Yürüyom'
@@ -37,11 +42,30 @@ export function HomePage() {
       <section className="home-hero">
         <div className="home-hero-copy">
           <p className="home-kicker">Türkiye</p>
-          <h1>Kamp ve yürüyüş</h1>
+          <h1>{HAS_DISCOVER ? 'Nereye, ne için' : 'Kamp ve yürüyüş'}</h1>
           <p className="home-lede">
-            Parkurlar, milli park kampları ve yerinde Wikimedia fotoğrafları. Girişte harita yok;
-            liste ve harita Parkurlar veya Kamp’a girince açılır.
+            {HAS_DISCOVER
+              ? 'Önce amacı seç: piknik, kale, yayla veya kanyon. Sonra il veya ilçe yaz; harita o ile kilitlenir, 81 il durur.'
+              : 'Parkurlar, milli park kampları ve yerinde Wikimedia fotoğrafları. Girişte harita yok; liste ve harita Parkurlar veya Kamp’a girince açılır.'}
           </p>
+          {HAS_DISCOVER && (
+            <div className="home-intents" role="group" aria-label="Amaç">
+              {DISCOVER_INTENTS.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  className="intent-chip"
+                  title={item.hint}
+                  onClick={() => {
+                    setIntent(item.id)
+                    navigate('/kamp')
+                  }}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          )}
           <div className="home-cta">
             <Link className="btn-fill" to="/parkurlar">
               Parkurlar

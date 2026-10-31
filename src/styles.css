@@ -837,6 +837,112 @@ img {
   color: #fff7f2;
 }
 
+.intent-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 14px 8px;
+  flex-shrink: 0;
+  background: #24382e;
+  border-bottom: 1px solid rgba(226, 197, 122, 0.28);
+}
+
+.intent-chip {
+  flex: 0 0 auto;
+  border: 1px solid rgba(226, 197, 122, 0.35);
+  background: transparent;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 800;
+  font-size: 13px;
+  color: #f6ead0;
+  white-space: nowrap;
+}
+
+.intent-chip:hover {
+  border-color: #e2c57a;
+  color: #e2c57a;
+}
+
+.intent-chip.is-on {
+  background: #e2c57a;
+  border-color: #e2c57a;
+  color: #24382e;
+}
+
+.geo-suggest {
+  position: fixed;
+  z-index: 80;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #fffdf8;
+  border: 1px solid rgba(36, 56, 46, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(36, 56, 46, 0.16);
+  max-height: 320px;
+  overflow: auto;
+}
+
+.geo-suggest button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  border: 0;
+  background: transparent;
+  border-radius: 12px;
+  padding: 9px 12px;
+  text-align: left;
+}
+
+.geo-suggest button:hover,
+.geo-suggest button:focus-visible {
+  background: #f4efe2;
+}
+
+.geo-suggest strong {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 15px;
+  color: #24382e;
+}
+
+.geo-suggest span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+body.is-discover .header {
+  overflow: visible;
+}
+
+body.is-discover .panel-head {
+  padding: 12px 14px 8px;
+}
+
+body.is-discover .panel {
+  width: 380px;
+  flex-basis: 380px;
+}
+
+body.is-discover .atlas-extra,
+body.is-discover .kind-row {
+  display: none;
+}
+
+.map-wrap.is-discover .map-reset {
+  background: #d93829;
+  color: #fff7f2;
+  border: 0;
+}
+
+.map-wrap.is-discover .map-reset:hover {
+  background: #b42d22;
+  color: #fff7f2;
+}
+
 body.is-atlas .atlas-extra {
   display: none;
 }
@@ -2843,6 +2949,26 @@ body.is-polish .home {
   color: #4b5563;
   font-weight: 650;
   line-height: 1.5;
+}
+
+.home-intents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.home-intents .intent-chip {
+  color: #24382e;
+  background: #fff;
+  border-color: rgba(36, 56, 46, 0.18);
+}
+
+.home-intents .intent-chip:hover,
+.home-intents .intent-chip:focus-visible {
+  background: #24382e;
+  color: #e2c57a;
+  border-color: #24382e;
 }
 
 .home-cta {

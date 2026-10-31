@@ -1,0 +1,13 @@
+Yürüyom — 14. adım
+
+1) Bu klasörü aç.
+2) index.html dosyasına çift tıkla.
+3) İnternet açık olsun (harita, OSM, Wikipedia).
+
+Girişte veya Kamp’ta bir amaç seç: piknik, kale, yayla/kamp, kanyon/şelale.
+
+Üstten il veya ilçe yaz (Adana, Kozan, Kadirli, Malazgirt). Tamamlamadan seç; harita o ile gider, sınır kırmızı olur, diğer iller kaybolmaz. Yanda yalnızca o il/ilçenin noktaları listelenir.
+
+Seçilince arka planda üç ajan çalışır: OSM doğa, OSM tarih, Wikipedia. Sonuçlar tarayıcıda önbelleğe alınır.
+
+Pin izin değildir. 3D model yok.

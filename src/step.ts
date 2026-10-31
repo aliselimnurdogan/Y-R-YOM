@@ -24,17 +24,20 @@ export const APP_STEP =
                         ? '12'
                         : raw === '13'
                           ? '13'
-                          : '2'
+                          : raw === '14'
+                            ? '14'
+                            : '2'
 export type AppStep = typeof APP_STEP
-const FROM_3 = new Set(['3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'])
+const FROM_3 = new Set(['3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14'])
 export const HAS_ROUTE_MODE = APP_STEP === '1' || FROM_3.has(APP_STEP)
 export const HAS_CATALOG = FROM_3.has(APP_STEP)
-export const HAS_FEEL = new Set(['5', '6', '7', '8', '9', '10', '11', '12', '13']).has(APP_STEP)
-export const HAS_LOOK = new Set(['6', '7', '8', '9', '10', '11', '12', '13']).has(APP_STEP)
-export const HAS_LIVE = new Set(['7', '8', '9', '10', '11', '12', '13']).has(APP_STEP)
-export const HAS_SOCIAL = APP_STEP === '2' || new Set(['7', '8', '9', '10', '11', '12', '13']).has(APP_STEP)
-export const HAS_POLISH = new Set(['8', '9', '10', '11', '12', '13']).has(APP_STEP)
-export const HAS_BLOOM = new Set(['9', '10', '11', '12', '13']).has(APP_STEP)
-export const HAS_HOME = APP_STEP === '11' || APP_STEP === '12' || APP_STEP === '13'
+export const HAS_FEEL = new Set(['5', '6', '7', '8', '9', '10', '11', '12', '13', '14']).has(APP_STEP)
+export const HAS_LOOK = new Set(['6', '7', '8', '9', '10', '11', '12', '13', '14']).has(APP_STEP)
+export const HAS_LIVE = new Set(['7', '8', '9', '10', '11', '12', '13', '14']).has(APP_STEP)
+export const HAS_SOCIAL = APP_STEP === '2' || new Set(['7', '8', '9', '10', '11', '12', '13', '14']).has(APP_STEP)
+export const HAS_POLISH = new Set(['8', '9', '10', '11', '12', '13', '14']).has(APP_STEP)
+export const HAS_BLOOM = new Set(['9', '10', '11', '12', '13', '14']).has(APP_STEP)
+export const HAS_HOME = APP_STEP === '11' || APP_STEP === '12' || APP_STEP === '13' || APP_STEP === '14'
 export const HAS_ATLAS = APP_STEP === '12' || APP_STEP === '13'
+export const HAS_DISCOVER = APP_STEP === '14'
 export const ROUTES_PATH = HAS_HOME ? '/parkurlar' : '/'

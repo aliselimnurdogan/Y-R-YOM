@@ -2,13 +2,16 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { CircleMarker, GeoJSON, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
 import type { Layer, LeafletMouseEvent, PathOptions } from 'leaflet'
 import { Link } from 'react-router-dom'
+import { PROVINCE_COLLECTION, provinceBounds } from '../admin-geo'
 import { regionById, turkeyRegionCollection } from '../data/turkey-regions'
 import { formatInt } from '../format'
 import { PLACE_KIND_COLORS, PLACE_KIND_LABELS, type CatalogZone } from '../labels'
-import { HAS_ATLAS, HAS_LIVE } from '../step'
+import { HAS_ATLAS, HAS_DISCOVER, HAS_LIVE } from '../step'
 import { MapBrand } from './Brand'
 import { BASEMAPS, TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL, type BasemapId } from '../tiles'
 import type { PlaceItem } from '../types'
+
+const RED = '#d93829'
 
 function MapController({
   active,
@@ -20,6 +23,8 @@ function MapController({
   onZoom,
   zone,
   locked,
+  province,
+  districtCenter,
 }: {
   active: boolean
   hoveredId: string | null
@@ -30,6 +35,8 @@ function MapController({
   onZoom: (value: number) => void
   zone: string | null
   locked: boolean
+  province: string | null
+  districtCenter: [number, number] | null
 }) {
   const map = useMap()
 
@@ -46,6 +53,26 @@ function MapController({
       map.off('zoomend', update)
     }
   }, [map, onZoom])
+
+  useEffect(() => {
+    if (!active || !HAS_DISCOVER) return
+    const go = (animate: boolean) => {
+      map.invalidateSize()
+      if (districtCenter) {
+        map.flyTo(districtCenter, 10, { duration: animate ? 0.85 : 0 })
+        return
+      }
+      const box = province ? provinceBounds(province) : null
+      if (box) {
+        map.flyToBounds(box, { padding: [36, 36], maxZoom: 9, animate, duration: animate ? 0.9 : 0 })
+        return
+      }
+      map.setView(center, zoom, { animate: false })
+    }
+    go(Boolean(province))
+    const later = window.setTimeout(() => map.invalidateSize(), 340)
+    return () => window.clearTimeout(later)
+  }, [active, map, province, districtCenter, center, zoom])
 
   useEffect(() => {
     if (!active || !locked) return
@@ -75,7 +102,7 @@ function MapController({
   }, [active, map, locked, zone, center, zoom])
 
   useEffect(() => {
-    if (!active || locked) return
+    if (!active || locked || HAS_DISCOVER) return
     const handle = window.setTimeout(() => {
       map.invalidateSize()
       if (places.length === 0) {
@@ -147,6 +174,66 @@ function RegionLayer({
   )
 }
 
+function ProvinceLayer({
+  province,
+  onSelectProvince,
+}: {
+  province: string | null
+  onSelectProvince: (name: string) => void
+}) {
+  function pathStyle(name: string): PathOptions {
+    const selected = province === name
+    return {
+      stroke: selected,
+      color: RED,
+      weight: selected ? 3 : 0,
+      fillColor: RED,
+      fillOpacity: selected ? 0.28 : 0,
+      opacity: selected ? 1 : 0,
+      fill: true,
+    }
+  }
+
+  return (
+    <GeoJSON
+      key={province || 'tr-81'}
+      data={PROVINCE_COLLECTION}
+      style={(feature) => pathStyle(String(feature?.properties?.name || ''))}
+      onEachFeature={(feature, layer: Layer) => {
+        const name = String(feature.properties?.name || '')
+        if (!name) return
+        layer.bindTooltip(name, {
+          sticky: true,
+          direction: 'center',
+          className: 'zone-tip',
+          opacity: 1,
+        })
+        layer.on({
+          mouseover: () => {
+            if (province === name) return
+            ;(layer as unknown as { setStyle: (style: PathOptions) => void }).setStyle({
+              fillColor: '#e2c57a',
+              fillOpacity: 0.22,
+              stroke: true,
+              color: '#c9a65a',
+              weight: 1.4,
+              opacity: 1,
+            })
+          },
+          mouseout: () => {
+            ;(layer as unknown as { setStyle: (style: PathOptions) => void }).setStyle(pathStyle(name))
+          },
+          click: (event: LeafletMouseEvent) => {
+            event.originalEvent.preventDefault()
+            event.originalEvent.stopPropagation()
+            onSelectProvince(name)
+          },
+        })
+      }}
+    />
+  )
+}
+
 function clusterPlaces(places: PlaceItem[], zoom: number) {
   if (!HAS_LIVE || zoom >= 8 || places.length < 50) {
     return places.map((place) => ({ key: place.id, lat: place.lat, lng: place.lng, items: [place] }))
@@ -177,6 +264,10 @@ export function ExploreMap({
   resetLabel,
   zone = null,
   onSelectZone,
+  province = null,
+  district = null,
+  districtCenter = null,
+  onSelectProvince,
 }: {
   places: PlaceItem[]
   hoveredId: string | null
@@ -187,13 +278,17 @@ export function ExploreMap({
   resetLabel: string
   zone?: string | null
   onSelectZone?: (zone: CatalogZone | null) => void
+  province?: string | null
+  district?: string | null
+  districtCenter?: [number, number] | null
+  onSelectProvince?: (name: string | null) => void
 }) {
   const mapRef = useRef<ReturnType<typeof useMap> | null>(null)
   const wrapRef = useRef<HTMLDivElement>(null)
   const [basemap, setBasemap] = useState<BasemapId>('topo')
   const [zoomLevel, setZoomLevel] = useState(zoom)
   const [frame, setFrame] = useState({ w: 0, h: 0 })
-  const locked = HAS_ATLAS
+  const locked = HAS_ATLAS && !HAS_DISCOVER
   const layer = HAS_LIVE ? BASEMAPS[basemap] : { url: TILE_URL, attribution: TILE_ATTRIBUTION }
   const clusters = useMemo(() => clusterPlaces(places, zoomLevel), [places, zoomLevel])
   const sized = frame.w >= 180 && frame.h >= 180
@@ -214,7 +309,7 @@ export function ExploreMap({
   return (
     <div
       ref={wrapRef}
-      className={locked ? 'map-wrap is-atlas' : 'map-wrap'}
+      className={HAS_DISCOVER ? 'map-wrap is-discover' : locked ? 'map-wrap is-atlas' : 'map-wrap'}
       role="region"
       aria-label={`${resetLabel} haritası`}
     >
@@ -244,9 +339,14 @@ export function ExploreMap({
           onZoom={setZoomLevel}
           zone={zone}
           locked={locked}
+          province={province}
+          districtCenter={districtCenter}
         />
+        {HAS_DISCOVER && onSelectProvince && (
+          <ProvinceLayer province={province} onSelectProvince={onSelectProvince} />
+        )}
         {locked && onSelectZone && <RegionLayer zone={zone} onSelectZone={onSelectZone} />}
-        {(!locked || zone) &&
+        {(!locked || zone || HAS_DISCOVER) &&
           clusters.map((cluster) => {
           if (cluster.items.length > 1) {
             return (
@@ -323,13 +423,21 @@ export function ExploreMap({
         type="button"
         className="map-reset"
         onClick={() => {
-          if (locked && onSelectZone) onSelectZone(null)
+          if (HAS_DISCOVER && onSelectProvince) onSelectProvince(null)
+          else if (locked && onSelectZone) onSelectZone(null)
           else mapRef.current?.setView(center, zoom)
         }}
       >
         {resetLabel}
       </button>
-      {locked && (
+      {HAS_DISCOVER && (
+        <p className="map-hint">
+          {province
+            ? `${province}${district ? ` · ${district}` : ''} seçili · kırmızı il sınırı`
+            : 'İle tıkla veya üstten ara; sınır kırmızı olur, diğer iller durur'}
+        </p>
+      )}
+      {locked && !HAS_DISCOVER && (
         <p className="map-hint">{zone ? `${zone} seçili · kırmızı bölge` : 'Bölgeye tıkla, harita oraya gider'}</p>
       )}
       <MapBrand />

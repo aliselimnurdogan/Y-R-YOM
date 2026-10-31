@@ -31,7 +31,8 @@ export function matchesPlace(place: PlaceItem, query: string): boolean {
     trIncludes(place.summary, q) ||
     trIncludes(place.kind, q) ||
     (place.zone ? trIncludes(place.zone, q) : false) ||
-    (place.statusLabel ? trIncludes(place.statusLabel, q) : false)
+    (place.statusLabel ? trIncludes(place.statusLabel, q) : false) ||
+    (place.district ? trIncludes(place.district, q) : false)
   )
 }
 
