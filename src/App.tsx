@@ -3,6 +3,7 @@ import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import { Header } from './components/Header'
 import { DetailPage } from './components/DetailPage'
 import { ExplorePage } from './components/ExplorePage'
+import { GuidePage } from './components/GuidePage'
 import { HomePage } from './components/HomePage'
 import { TourPage } from './components/TourPage'
 import { RouteDetailPage } from './components/RouteDetailPage'
@@ -10,7 +11,7 @@ import { RouteExplorePage } from './components/RouteExplorePage'
 import { PlacesProvider } from './places-context'
 import { RoutesProvider } from './routes-context'
 import { SearchProvider } from './search-context'
-import { HAS_ATLAS, HAS_GATE, HAS_HOME, HAS_LAND, HAS_LIVE, HAS_LOOK, HAS_POLISH, HAS_ROUTE_MODE, HAS_TOUR, ROUTES_PATH, TOUR_PATH } from './step'
+import { GUIDE_PATH, HAS_ATLAS, HAS_GATE, HAS_GUIDE, HAS_HOME, HAS_LAND, HAS_LIVE, HAS_LOOK, HAS_POLISH, HAS_ROUTE_MODE, HAS_TOUR, ROUTES_PATH, TOUR_PATH } from './step'
 
 interface BoundaryProps {
   children: ReactNode
@@ -66,6 +67,7 @@ function Shell({ children }: { children: ReactNode }) {
     document.body.classList.toggle('is-atlas', HAS_ATLAS)
     document.body.classList.toggle('is-tour', HAS_TOUR)
     document.body.classList.toggle('is-gate', HAS_GATE)
+    document.body.classList.toggle('is-guide', HAS_GUIDE)
     document.body.classList.toggle('is-land', landPage)
     if (HAS_POLISH) {
       document
@@ -84,7 +86,7 @@ function Shell({ children }: { children: ReactNode }) {
         )
     }
     return () => {
-      document.body.classList.remove('is-look', 'is-atlas', 'is-tour', 'is-land', 'is-gate')
+      document.body.classList.remove('is-look', 'is-atlas', 'is-tour', 'is-land', 'is-gate', 'is-guide')
       document.body.classList.remove('is-live')
       document.body.classList.remove('is-polish')
     }
@@ -114,6 +116,7 @@ export function App() {
             <Routes>
               <Route path="/" element={HAS_HOME ? <HomePage /> : <RouteExplorePage />} />
               {HAS_GATE && <Route path={TOUR_PATH} element={<TourPage />} />}
+              {HAS_GUIDE && <Route path={GUIDE_PATH} element={<GuidePage />} />}
               {HAS_HOME && <Route path="/parkurlar" element={<RouteExplorePage />} />}
               <Route path="/rota/:id" element={<RouteDetailPage />} />
               <Route path="/kamp" element={<ExplorePage />} />

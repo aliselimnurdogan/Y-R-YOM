@@ -10,8 +10,9 @@ import { fallbackProvinceNote, trimExtract } from '../province-notes'
 import { PROVINCES, zoneOfProvince } from '../provinces'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
-import { HAS_GEZI } from '../step'
+import { HAS_GEZI, HAS_GUIDE } from '../step'
 import type { PlaceItem } from '../types'
+import { ProvinceMarket } from './ProvinceMarket'
 import { ProvinceTalk } from './ProvinceTalk'
 import { TurkeyMap } from './TurkeyMap'
 
@@ -125,7 +126,7 @@ export function TourPage() {
 
   return (
     <div className="home is-land">
-      <section className={tourProvince ? 'land-hero has-il' : 'land-hero'} aria-label="Türkiye">
+      <section className="land-hero" aria-label="Türkiye">
         <aside className="land-panel">
           <p className="iller-title">İller</p>
           <label className="iller-search">
@@ -187,6 +188,7 @@ export function TourPage() {
             {about}
             {wiki.extract ? ' Kaynak: Türkçe Wikipedia.' : ''}
           </p>
+          {HAS_GUIDE && <ProvinceMarket province={tourProvince} />}
           {HAS_GEZI && (
             <p className="land-note">
               Tarihî yer, müze, tiyatro ve doğal alan kayıtları elle derlendi. {GEZI_NOTE}

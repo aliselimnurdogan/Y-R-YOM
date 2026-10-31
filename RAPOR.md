@@ -1,13 +1,12 @@
-# Yürüyom — 19. Adım
+# Yürüyom — 20. Adım
 
-Tarih: 31 Ekim 2026. Taban: 18. adım ana sayfa / sabit harita.
+Tarih: 31 Ekim 2026. Taban: 19. adım 445 gezilecek yer.
 
 ## Ne değişti
-- `detayy` paketindeki **445 gezilecek yer** (270 tarihî, 61 müze, 20 tiyatro, 94 doğal alan) programa girdi.
-- **80 il**; Kırıkkale’de elle kayıt yok.
-- Geziyorum görüyorum: ilçe ve türe göre grup. Sol İller’de sayı.
-- Ana sayfa kartı bu sayıları söyler.
-- Fotoğraf uydurulmadı. Konum yaklaşık. Kamp listesine müze karışmaz.
+- Geziyorum’da il seçince harita **küçülmez**; tam Türkiye durur, içerik alta iner.
+- **Rehber** sekmesi: kıyafet katları, koşullar, yöresel tabak, tur listesi. Kendi çizim; başka siteden kopya yok.
+- Tur ve yemek **ilan**: örnek Adana kebap, Adana yürüyüş turu. Form bu tarayıcıda kalır. Kart çekimi yok.
+- İl seçilince o ilin yemek ilanı ve turu çıkar.
 
 ## Ne duruyor
-18: ana sayfa girişi, sabit Türkiye, dört sekme. 17: A–Z iller, Wikipedia kapak, yorum/sohbet. Pin izin değildir.
+19: 445 yer, ilçe grupları. 18: ana sayfa, sabit harita. Pin izin değildir.

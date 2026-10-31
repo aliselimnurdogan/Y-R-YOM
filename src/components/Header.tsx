@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { suggestAdmin } from '../admin-geo'
 import { useSearch } from '../search-context'
-import { HAS_CATALOG, HAS_GATE, HAS_HOME, HAS_LIVE, HAS_POLISH, HAS_ROUTE_MODE, HAS_TOUR, ROUTES_PATH, TOUR_PATH } from '../step'
+import { GUIDE_PATH, HAS_CATALOG, HAS_GATE, HAS_GUIDE, HAS_HOME, HAS_LIVE, HAS_POLISH, HAS_ROUTE_MODE, HAS_TOUR, ROUTES_PATH, TOUR_PATH } from '../step'
 import { BrandLockup } from './Brand'
 import { PinMark, SearchIcon } from './Icons'
 
@@ -46,6 +46,7 @@ export function Header() {
   const onCamp = location.pathname.startsWith('/kamp')
   const onHome = HAS_HOME && location.pathname === '/'
   const onTour = location.pathname === TOUR_PATH || location.pathname.startsWith('/geziyorum')
+  const onGuide = location.pathname === GUIDE_PATH || location.pathname.startsWith('/rehber')
   const onRoutes =
     location.pathname === ROUTES_PATH || location.pathname.startsWith('/rota')
   const searchPlaceholder = HAS_TOUR
@@ -96,6 +97,11 @@ export function Header() {
               <NavLink to={ROUTES_PATH} className={() => (onRoutes ? 'is-on' : undefined)}>
                 Yürüyüş
               </NavLink>
+              {HAS_GUIDE && (
+                <NavLink to={GUIDE_PATH} className={() => (onGuide ? 'is-on' : undefined)}>
+                  Rehber
+                </NavLink>
+              )}
             </>
           ) : (
             <>

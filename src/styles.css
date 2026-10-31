@@ -3006,9 +3006,9 @@ body.is-land .home {
   background: #e7e4dc;
 }
 
-.land-hero.has-il {
-  height: 56vh;
-  min-height: 360px;
+body.is-guide .mode-nav a {
+  font-size: 12.5px;
+  padding: 6px 9px;
 }
 
 .land-map {
@@ -3231,6 +3231,47 @@ body.is-land .home {
   font-size: 12px;
   font-weight: 700;
   color: #6b7a6e;
+}
+
+.land-market {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  margin: 0 0 22px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(196, 49, 33, 0.06);
+  border: 1px solid rgba(196, 49, 33, 0.16);
+}
+
+.land-market h3 {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.land-market li {
+  background: #fffdf8;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+
+.land-market strong {
+  display: block;
+  margin: 2px 0 4px;
+}
+
+.land-market span,
+.land-market p {
+  color: #3f4a43;
+  font-size: 13.5px;
+  font-weight: 650;
+}
+
+.land-market .linkish {
+  grid-column: 1 / -1;
 }
 
 .land-talk {
@@ -3604,6 +3645,223 @@ body.is-polish .home {
   font-weight: 700;
 }
 
+.guide {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+}
+
+.guide-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(220px, 280px);
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.guide-hero h1 {
+  font-size: clamp(32px, 4.5vw, 48px);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 6px 0 12px;
+}
+
+.guide-hero-art {
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  box-shadow: 0 16px 32px rgba(36, 56, 46, 0.16);
+}
+
+.guide-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.guide-jump a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(36, 56, 46, 0.08);
+  color: #24382e;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.guide-block {
+  margin-bottom: 36px;
+}
+
+.guide-block h2 {
+  font-size: 26px;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.guide-lead {
+  max-width: 62ch;
+  color: #3f4a43;
+  font-weight: 650;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.layer-stage {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.layer-art {
+  width: 100%;
+  height: auto;
+}
+
+.layer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.layer-list li {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(255, 252, 246, 0.94);
+  border-radius: 14px;
+  border: 1px solid rgba(36, 56, 46, 0.08);
+}
+
+.layer-list span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #c43121;
+  color: #fff7f2;
+  font-weight: 800;
+  font-size: 13px;
+  display: grid;
+  place-items: center;
+}
+
+.layer-list em {
+  display: block;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: #9f1f1f;
+}
+
+.layer-list p {
+  margin: 4px 0 0;
+  color: #3f4a43;
+  font-weight: 650;
+  font-size: 13.5px;
+}
+
+.cond-grid,
+.plate-grid,
+.ilan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.cond-grid li,
+.plate-grid li,
+.ilan-grid li {
+  background: rgba(255, 252, 246, 0.94);
+  border: 1px solid rgba(36, 56, 46, 0.1);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.cond-grid svg,
+.plate-grid svg {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.cond-grid p,
+.plate-grid p,
+.ilan-grid p {
+  color: #3f4a43;
+  font-weight: 650;
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+.ilan-grid li.is-tur {
+  border-color: rgba(36, 56, 46, 0.18);
+}
+
+.ilan-grid li.is-food {
+  border-color: rgba(196, 49, 33, 0.28);
+}
+
+.ilan-price {
+  color: #9f1f1f !important;
+  font-weight: 800 !important;
+  margin: 6px 0;
+}
+
+.ilan-grid a {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 800;
+  color: #24382e;
+}
+
+.guide-ads {
+  margin-top: 18px;
+}
+
+.ilan-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 252, 246, 0.94);
+  border: 1px solid rgba(36, 56, 46, 0.1);
+}
+
+.ilan-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b7a6e;
+}
+
+.ilan-form .is-wide,
+.ilan-form button,
+.ilan-form .land-note {
+  grid-column: 1 / -1;
+}
+
+.ilan-form input,
+.ilan-form select,
+.ilan-form textarea {
+  border: 1px solid rgba(36, 56, 46, 0.16);
+  border-radius: 10px;
+  padding: 9px 11px;
+  font: inherit;
+  font-weight: 650;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #24382e;
+}
+
 @media (max-width: 860px) {
   .home-hero,
   .gate-hero {
@@ -3643,7 +3901,17 @@ body.is-polish .home {
     max-height: 38vh;
   }
 
-  .land-talk {
+  .land-talk,
+  .land-market,
+  .guide-hero,
+  .layer-stage,
+  .ilan-form {
+    grid-template-columns: 1fr;
+  }
+
+  .cond-grid,
+  .plate-grid,
+  .ilan-grid {
     grid-template-columns: 1fr;
   }
 

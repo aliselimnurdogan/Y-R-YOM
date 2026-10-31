@@ -156,6 +156,14 @@ Klasör: `adim-19`
 
 Geziyorum görüyorum’a 445 elle yazılmış tarihî yer, müze, tiyatro ve doğal alan girdi. 80 il, ilçeye göre gruplu. Kırıkkale boş; OSM gelirse isim orada durur. Yeni yerlerde fotoğraf yok.
 
+## 20. adım — Rehber, ilan, tam harita
+
+Klasör: `adim-20`
+
+`adim-20/index.html` dosyasına çift tıkla.
+
+İl tıklayınca harita tam kalır. Rehber sekmesinde kıyafet, yemek, tur. İlan ücretli görünür; kart henüz çekilmez. Adana seçince yemek ilanı çıkar.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -179,5 +187,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 17. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-17/
 - 18. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-18/
 - 19. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-19/
+- 20. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-20/
 
 Harita ve fotoğraf için internet açık olsun.

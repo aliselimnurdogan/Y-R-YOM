@@ -8,7 +8,7 @@ import { usePlaces } from '../places-context'
 import { useRoutes } from '../routes-context'
 import { useSearch } from '../search-context'
 import { GEZI_COUNT, GEZI_IL_COUNT } from '../gezi'
-import { HAS_GATE, HAS_GEZI, HAS_LAND, HAS_TOUR, TOUR_PATH } from '../step'
+import { GUIDE_PATH, HAS_GATE, HAS_GEZI, HAS_GUIDE, HAS_LAND, HAS_TOUR, TOUR_PATH } from '../step'
 import { TrailThumb } from './Brand'
 import { TourPage } from './TourPage'
 
@@ -67,8 +67,11 @@ export function HomePage() {
             <div className="gate-block">
               <h2>Sitemiz nedir</h2>
               <p>
-                Yürüyom, Türkiye’de yürüyüş parkurlarını ve kamp alanlarını bir arada gösteren bir sitedir. Satış
-                yok, rezervasyon yok. Giriş hesabı yok. Pin izin değildir; haritadaki nokta geceleme hakkı vermez.
+                Yürüyom, Türkiye’de yürüyüş parkurlarını ve kamp alanlarını bir arada gösteren bir sitedir.{' '}
+                {HAS_GUIDE
+                  ? 'Gezi ve kamp ücretsiz bakılır. Tur ve yemek ilanı ücretlidir; kart henüz çekilmez. Giriş hesabı yok.'
+                  : 'Satış yok, rezervasyon yok. Giriş hesabı yok.'}{' '}
+                Pin izin değildir; haritadaki nokta geceleme hakkı vermez.
               </p>
             </div>
             <div className="gate-block">
@@ -105,6 +108,12 @@ export function HomePage() {
               <strong>Yürüyüş</strong>
               <span>GPS parkurlar. Mesafesi, izi, yerinde kapak.</span>
             </Link>
+            {HAS_GUIDE && (
+              <Link className="gate-card" to={GUIDE_PATH}>
+                <strong>Rehber</strong>
+                <span>Kıyafet, yemek, tur. İlan ver; ile tıklayınca çıkar.</span>
+              </Link>
+            )}
           </aside>
         </section>
       </div>

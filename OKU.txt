@@ -1,11 +1,13 @@
-﻿Yürüyom — 19. adım
+﻿Yürüyom — 20. adım
 
 1) Bu klasörü aç.
 2) index.html dosyasına çift tıkla.
 3) İnternet açık olsun.
 
-Üstte dört sekme: Ana sayfa, Geziyorum görüyorum, Kamp, Yürüyüş.
+Üstte beş sekme: Ana sayfa, Geziyorum görüyorum, Kamp, Yürüyüş, Rehber.
 
-Geziyorum görüyorum’da 445 elle yazılmış yer var: tarihî yer, müze, tiyatro, doğal alan. İlçeye göre gruplanır. 80 il; Kırıkkale boş.
+Geziyorum’da ile tıklayınca harita tam kalır; yerler alta iner.
 
-Konum yaklaşık. Yeni yerlerde fotoğraf yok. Pin izin değildir.
+Rehber: kıyafet katları, nerede ne yenir, turlar. Tur ve yemek ilanı ücretlidir; kart henüz çekilmez, form bu tarayıcıda durur. Adana seçince örnek yemek ilanı çıkar.
+
+Pin izin değildir.
