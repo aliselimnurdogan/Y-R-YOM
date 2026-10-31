@@ -2742,6 +2742,17 @@ body.is-polish .mode-nav a:active {
   transform: scale(0.97);
 }
 
+body.is-gate .mode-nav a {
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+body.is-gate .header.is-polish-bar {
+  height: auto;
+  min-height: 64px;
+  padding: 8px 14px;
+}
+
 body.is-polish .search {
   background: rgba(255, 252, 246, 0.78);
   border-color: rgba(36, 56, 46, 0.12);
@@ -2912,6 +2923,76 @@ body.is-polish .leaflet-control-attribution {
   padding: 28px 20px 80px;
 }
 
+.gate-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(240px, 320px);
+  gap: 28px;
+  align-items: start;
+}
+
+.gate-copy h1 {
+  margin: 6px 0 18px;
+  font-size: clamp(36px, 5vw, 52px);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.gate-block + .gate-block {
+  margin-top: 22px;
+}
+
+.gate-block h2 {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b7a6e;
+  margin-bottom: 6px;
+}
+
+.gate-block p {
+  max-width: 54ch;
+  color: #3f4a43;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.gate-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: sticky;
+  top: 84px;
+}
+
+.gate-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 18px;
+  text-decoration: none;
+  background: rgba(255, 252, 246, 0.94);
+  border: 1px solid rgba(36, 56, 46, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(28, 40, 32, 0.06);
+}
+
+.gate-card:hover {
+  border-color: rgba(196, 49, 33, 0.28);
+}
+
+.gate-card strong {
+  font-size: 17px;
+  letter-spacing: -0.03em;
+  color: #24382e;
+}
+
+.gate-card span {
+  font-size: 13px;
+  font-weight: 650;
+  color: #6b7a6e;
+  line-height: 1.4;
+}
+
 body.is-land .home {
   max-width: none;
   padding: 0 0 72px;
@@ -2941,6 +3022,16 @@ body.is-land .home {
 .land-map .map-canvas {
   height: 100%;
   width: 100%;
+}
+
+.land-map.is-fixed .leaflet-container,
+.land-map.is-fixed .leaflet-grab,
+.land-map.is-fixed .leaflet-dragging .leaflet-grab {
+  cursor: default;
+}
+
+.land-map.is-fixed .leaflet-interactive {
+  cursor: pointer;
 }
 
 .land-panel {
@@ -3460,9 +3551,14 @@ body.is-polish .home {
 }
 
 @media (max-width: 860px) {
-  .home-hero {
+  .home-hero,
+  .gate-hero {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+
+  .gate-side {
+    position: static;
   }
 
   .home-mosaic {

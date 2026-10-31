@@ -1,13 +1,13 @@
-﻿Yürüyom — 17. adım
+﻿Yürüyom — 18. adım
 
 1) Bu klasörü aç.
 2) index.html dosyasına çift tıkla.
 3) İnternet açık olsun.
 
-Ana sayfada solda İller: üstte ara, altta A’dan Z’ye 81 il. Parkur ve Kamp üstte durur.
+Üstte dört sekme: Ana sayfa, Geziyorum görüyorum, Kamp, Yürüyüş.
 
-İle tıklayınca haritada sarı-mavi nokta yok. Altta ilin resmi, kısa yazı, yer isimleri (tıklayınca açılır), solda yorum, sağda sohbet: “kampa gideceğim, giden var mı?” Aynı tarayıcıda açık sekmeler görür; sunucu yok.
+Ana sayfada sitemiz nedir, ne yapıyor, ne amaçla çalışıyor yazar. Yanda üç giriş durur.
 
-İçeri girince kare sola-sağa kaymaz. Bakış durur, göz hafif gezer. Alttan sessiz, yerinde üretilmiş akustik gelir.
+Geziyorum görüyorum’da Türkiye haritası sabit durur; sürüklenmez, uçmaz. İle tıklayınca il kırmızı olur, yer isimleri altta çıkar.
 
 Pin izin değildir. 3D model yok.

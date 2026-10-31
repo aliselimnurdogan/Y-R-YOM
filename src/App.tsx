@@ -1,15 +1,16 @@
 import { Component, useEffect, type ReactNode } from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import { Header } from './components/Header'
 import { DetailPage } from './components/DetailPage'
 import { ExplorePage } from './components/ExplorePage'
 import { HomePage } from './components/HomePage'
+import { TourPage } from './components/TourPage'
 import { RouteDetailPage } from './components/RouteDetailPage'
 import { RouteExplorePage } from './components/RouteExplorePage'
 import { PlacesProvider } from './places-context'
 import { RoutesProvider } from './routes-context'
 import { SearchProvider } from './search-context'
-import { HAS_ATLAS, HAS_HOME, HAS_LAND, HAS_LIVE, HAS_LOOK, HAS_POLISH, HAS_ROUTE_MODE, HAS_TOUR, ROUTES_PATH } from './step'
+import { HAS_ATLAS, HAS_GATE, HAS_HOME, HAS_LAND, HAS_LIVE, HAS_LOOK, HAS_POLISH, HAS_ROUTE_MODE, HAS_TOUR, ROUTES_PATH, TOUR_PATH } from './step'
 
 interface BoundaryProps {
   children: ReactNode
@@ -56,13 +57,16 @@ function NotFound() {
 }
 
 function Shell({ children }: { children: ReactNode }) {
+  const location = useLocation()
+  const landPage = HAS_LAND && (HAS_GATE ? location.pathname === TOUR_PATH : location.pathname === '/')
   useEffect(() => {
     document.body.classList.toggle('is-look', HAS_LOOK)
     document.body.classList.toggle('is-live', HAS_LIVE)
     document.body.classList.toggle('is-polish', HAS_POLISH)
     document.body.classList.toggle('is-atlas', HAS_ATLAS)
     document.body.classList.toggle('is-tour', HAS_TOUR)
-    document.body.classList.toggle('is-land', HAS_LAND)
+    document.body.classList.toggle('is-gate', HAS_GATE)
+    document.body.classList.toggle('is-land', landPage)
     if (HAS_POLISH) {
       document
         .querySelector('meta[name="description"]')
@@ -80,11 +84,11 @@ function Shell({ children }: { children: ReactNode }) {
         )
     }
     return () => {
-      document.body.classList.remove('is-look', 'is-atlas', 'is-tour', 'is-land')
+      document.body.classList.remove('is-look', 'is-atlas', 'is-tour', 'is-land', 'is-gate')
       document.body.classList.remove('is-live')
       document.body.classList.remove('is-polish')
     }
-  }, [])
+  }, [landPage])
 
   return (
     <SearchProvider>
@@ -109,6 +113,7 @@ export function App() {
           <Shell>
             <Routes>
               <Route path="/" element={HAS_HOME ? <HomePage /> : <RouteExplorePage />} />
+              {HAS_GATE && <Route path={TOUR_PATH} element={<TourPage />} />}
               {HAS_HOME && <Route path="/parkurlar" element={<RouteExplorePage />} />}
               <Route path="/rota/:id" element={<RouteDetailPage />} />
               <Route path="/kamp" element={<ExplorePage />} />

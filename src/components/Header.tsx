@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { suggestAdmin } from '../admin-geo'
 import { useSearch } from '../search-context'
-import { HAS_CATALOG, HAS_HOME, HAS_LIVE, HAS_POLISH, HAS_ROUTE_MODE, HAS_TOUR, ROUTES_PATH } from '../step'
+import { HAS_CATALOG, HAS_GATE, HAS_HOME, HAS_LIVE, HAS_POLISH, HAS_ROUTE_MODE, HAS_TOUR, ROUTES_PATH, TOUR_PATH } from '../step'
 import { BrandLockup } from './Brand'
 import { PinMark, SearchIcon } from './Icons'
 
@@ -45,6 +45,7 @@ export function Header() {
 
   const onCamp = location.pathname.startsWith('/kamp')
   const onHome = HAS_HOME && location.pathname === '/'
+  const onTour = location.pathname === TOUR_PATH || location.pathname.startsWith('/geziyorum')
   const onRoutes =
     location.pathname === ROUTES_PATH || location.pathname.startsWith('/rota')
   const searchPlaceholder = HAS_TOUR
@@ -81,15 +82,31 @@ export function Header() {
       )}
       {HAS_ROUTE_MODE && (
         <nav className="mode-nav" aria-label="Bölüm">
-          <NavLink to={ROUTES_PATH} className={() => (onRoutes ? 'is-on' : undefined)}>
-            {HAS_POLISH ? 'Parkurlar' : 'Yürüyüş parkurları'}
-          </NavLink>
-          <NavLink
-            to="/kamp"
-            className={() => (location.pathname.startsWith('/kamp') ? 'is-on' : undefined)}
-          >
-            {HAS_POLISH ? 'Kamp' : 'Kamp alanları'}
-          </NavLink>
+          {HAS_GATE ? (
+            <>
+              <NavLink to="/" end className={() => (onHome ? 'is-on' : undefined)}>
+                Ana sayfa
+              </NavLink>
+              <NavLink to={TOUR_PATH} className={() => (onTour ? 'is-on' : undefined)}>
+                Geziyorum görüyorum
+              </NavLink>
+              <NavLink to="/kamp" className={() => (onCamp ? 'is-on' : undefined)}>
+                Kamp
+              </NavLink>
+              <NavLink to={ROUTES_PATH} className={() => (onRoutes ? 'is-on' : undefined)}>
+                Yürüyüş
+              </NavLink>
+            </>
+          ) : (
+            <>
+              <NavLink to={ROUTES_PATH} className={() => (onRoutes ? 'is-on' : undefined)}>
+                {HAS_POLISH ? 'Parkurlar' : 'Yürüyüş parkurları'}
+              </NavLink>
+              <NavLink to="/kamp" className={() => (onCamp ? 'is-on' : undefined)}>
+                {HAS_POLISH ? 'Kamp' : 'Kamp alanları'}
+              </NavLink>
+            </>
+          )}
         </nav>
       )}
       <form

@@ -1,24 +1,22 @@
 import { useEffect, useRef, useState } from 'react'
 import { GeoJSON, MapContainer, TileLayer, useMap } from 'react-leaflet'
 import type { Layer, LeafletMouseEvent, PathOptions } from 'leaflet'
-import { PROVINCE_COLLECTION, provinceBounds } from '../admin-geo'
+import { PROVINCE_COLLECTION } from '../admin-geo'
 import { TURKEY_CENTER, TURKEY_ZOOM } from '../labels'
 import { TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL } from '../tiles'
 import { MapBrand } from './Brand'
 
-function FlyTo({ province }: { province: string | null }) {
+function KeepTurkey() {
   const map = useMap()
   useEffect(() => {
     map.invalidateSize()
-    const box = province ? provinceBounds(province) : null
-    if (box) {
-      map.flyToBounds(box, { padding: [28, 28], maxZoom: 9, duration: 0.9 })
-    } else {
-      map.setView(TURKEY_CENTER, TURKEY_ZOOM)
-    }
-    const later = window.setTimeout(() => map.invalidateSize(), 320)
+    map.setView(TURKEY_CENTER, TURKEY_ZOOM, { animate: false })
+    const later = window.setTimeout(() => {
+      map.invalidateSize()
+      map.setView(TURKEY_CENTER, TURKEY_ZOOM, { animate: false })
+    }, 320)
     return () => window.clearTimeout(later)
-  }, [map, province])
+  }, [map])
   return null
 }
 
@@ -90,23 +88,23 @@ export function TurkeyMap({
   }, [])
 
   return (
-    <div ref={wrapRef} className="land-map" role="region" aria-label="Türkiye haritası">
+    <div ref={wrapRef} className="land-map is-fixed" role="region" aria-label="Türkiye haritası">
       {sized && (
         <MapContainer
           center={TURKEY_CENTER}
           zoom={TURKEY_ZOOM}
           className="map-canvas"
           style={{ height: '100%', width: '100%' }}
-          scrollWheelZoom
-          doubleClickZoom
-          touchZoom
-          boxZoom
-          keyboard
-          dragging
-          zoomControl
+          scrollWheelZoom={false}
+          doubleClickZoom={false}
+          touchZoom={false}
+          boxZoom={false}
+          keyboard={false}
+          dragging={false}
+          zoomControl={false}
         >
           <TileLayer url={TILE_URL} attribution={TILE_ATTRIBUTION} maxZoom={TILE_MAX_ZOOM} />
-          <FlyTo province={province} />
+          <KeepTurkey />
           <ProvincePaint province={province} onSelect={onSelectProvince} />
         </MapContainer>
       )}

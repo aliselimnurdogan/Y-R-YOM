@@ -140,6 +140,14 @@ Klasör: `adim-17`
 
 İller solda, A–Z, üstte ara. Pin yok. İl seçilince kapak, kısa yazı, yer isimleri; solda yorum, sağda sohbet. Parkur ve Kamp üstte.
 
+## 18. adım — Ana sayfa, sabit harita
+
+Klasör: `adim-18`
+
+`adim-18/index.html` dosyasına çift tıkla.
+
+Ana sayfada sitenin ne olduğu yazılır. Yanda Geziyorum görüyorum, Kamp, Yürüyüş. Türkiye haritası sabit durur.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -161,5 +169,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 15. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-15/
 - 16. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-16/
 - 17. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-17/
+- 18. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-18/
 
 Harita ve fotoğraf için internet açık olsun.

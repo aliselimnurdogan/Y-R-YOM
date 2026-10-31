@@ -1,0 +1,13 @@
+﻿Yürüyom — 18. adım
+
+1) Bu klasörü aç.
+2) index.html dosyasına çift tıkla.
+3) İnternet açık olsun.
+
+Üstte dört sekme: Ana sayfa, Geziyorum görüyorum, Kamp, Yürüyüş.
+
+Ana sayfada sitemiz nedir, ne yapıyor, ne amaçla çalışıyor yazar. Yanda üç giriş durur.
+
+Geziyorum görüyorum’da Türkiye haritası sabit durur; sürüklenmez, uçmaz. İle tıklayınca il kırmızı olur, yer isimleri altta çıkar.
+
+Pin izin değildir. 3D model yok.
