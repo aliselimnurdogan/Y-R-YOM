@@ -1,13 +1,14 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 import bundledCamps from './data/camps.json'
 import bundledCatalog from './data/catalog.json'
+import bundledGezi from './data/gezi-yerler.json'
 import bundledPlaces from './data/places.json'
 import { seedDiscoverPlaces } from './data/seed-discover'
 import { highlightPlaces } from './highlights'
 import { ALL_PLACE_KINDS } from './labels'
 import { mergePlaces } from './overpass'
 import { ALLOWED_YOUTUBE, isAllowedMedia } from './media'
-import { APP_STEP, HAS_CATALOG, HAS_LIVE, HAS_POLISH, HAS_TOUR } from './step'
+import { APP_STEP, HAS_CATALOG, HAS_GEZI, HAS_LIVE, HAS_POLISH, HAS_TOUR } from './step'
 import type {
   CampGuide,
   FacilityFlag,
@@ -104,6 +105,14 @@ function normalizePlace(raw: unknown): PlaceItem | null {
     feeTent: feeTent === null && feeRaw !== null ? undefined : feeTent,
     statusLabel: typeof record.statusLabel === 'string' ? record.statusLabel : undefined,
     district: typeof record.district === 'string' ? record.district : typeof record.city === 'string' ? record.city : undefined,
+    intent:
+      record.intent === 'tarih' ||
+      record.intent === 'piknik' ||
+      record.intent === 'yayla' ||
+      record.intent === 'su' ||
+      record.intent === 'gol'
+        ? record.intent
+        : undefined,
     guide: parseGuide(record.guide),
     pano: parsePano(record.pano),
   }
@@ -189,6 +198,10 @@ export function PlacesProvider({ children }: { children: ReactNode }) {
       }
       if (HAS_TOUR) {
         parsed = mergePlaces(parsed, seedDiscoverPlaces())
+      }
+      if (HAS_GEZI) {
+        const gezi = bundledGezi.map(normalizePlace).filter((place): place is PlaceItem => place !== null)
+        parsed = mergePlaces(parsed, gezi)
       }
       if (parsed.length === 0) throw new Error('empty')
       setPlaces(parsed)

@@ -2,12 +2,13 @@ import { useEffect, useId, useState, type FormEvent } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { compressPhoto, loadComments, saveComment } from '../community'
 import { formatDate, formatFee, formatInt, initials, placeCover } from '../format'
+import { GEZI_NOTE, isGeziPlace } from '../gezi'
 import { LEGAL_CAMP_NOTE, PLACE_KIND_COLORS, PLACE_KIND_LABELS } from '../labels'
 import { srcSet, sharpUrl } from '../media'
 import { appleDir, googleDir, googlePano, yandexDir } from '../nav'
 import { usePlaces } from '../places-context'
 import { useSearch } from '../search-context'
-import { APP_STEP, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_POLISH, HAS_SOCIAL } from '../step'
+import { APP_STEP, HAS_CATALOG, HAS_FEEL, HAS_GATE, HAS_LIVE, HAS_POLISH, HAS_SOCIAL, TOUR_PATH } from '../step'
 import type { PlaceComment, PlaceItem, PlaceScores } from '../types'
 import { fetchWeather, type PlaceWeather } from '../weather'
 import { TrailThumb } from './Brand'
@@ -22,8 +23,9 @@ export function DetailPage() {
   const { setQuery } = useSearch()
   const place = places.find((item) => item.id === id) ?? null
   const [photoIndex, setPhotoIndex] = useState(0)
-  const homePath = APP_STEP === '2' ? '/' : '/kamp'
-  const homeLabel = APP_STEP === '2' ? 'Kahramanmaraş' : 'Kamp alanları'
+  const gezi = place ? isGeziPlace(place) : id.startsWith('gezi-')
+  const homePath = gezi && HAS_GATE ? TOUR_PATH : APP_STEP === '2' ? '/' : '/kamp'
+  const homeLabel = gezi && HAS_GATE ? 'Geziyorum görüyorum' : APP_STEP === '2' ? 'Kahramanmaraş' : 'Kamp alanları'
 
   useEffect(() => {
     setPhotoIndex(0)
@@ -98,8 +100,8 @@ export function DetailPage() {
           {place.statusLabel ?? PLACE_KIND_LABELS[place.kind]}
         </span>
         <span className="act-name">{place.city}</span>
-        <span className="chip">{formatInt(place.elevationM)} m</span>
-        {HAS_CATALOG && <span className="chip">{formatFee(place.feeTent)}</span>}
+        {!gezi && place.elevationM > 0 && <span className="chip">{formatInt(place.elevationM)} m</span>}
+        {HAS_CATALOG && !gezi && <span className="chip">{formatFee(place.feeTent)}</span>}
         <div className="actions">
           <Link className="btn-ghost" to={homePath}>
             Geri
@@ -107,7 +109,7 @@ export function DetailPage() {
         </div>
       </div>
       <p className="lede place-lede">{place.summary}</p>
-      {HAS_FEEL && <FeelThereBlock place={place} />}
+      {HAS_FEEL && !gezi && <FeelThereBlock place={place} />}
       {HAS_LIVE && <WeatherNavBlock place={place} />}
       {HAS_CATALOG && place.guide && <CampGuideBlock place={place} />}
       {HAS_CATALOG && (
@@ -127,18 +129,22 @@ export function DetailPage() {
             <dt>Bölge</dt>
             <dd>{place.zone ?? '—'}</dd>
           </div>
-          <div>
-            <dt>Rakım</dt>
-            <dd>{formatInt(place.elevationM)} m</dd>
-          </div>
-          <div>
-            <dt>Alan</dt>
-            <dd>{place.areaHa && place.areaHa > 0 ? `${formatInt(place.areaHa)} ha` : '—'}</dd>
-          </div>
-          <div>
-            <dt>2026 çadır</dt>
-            <dd>{place.feeTent == null ? 'Tarife eşleşmedi' : `${formatFee(place.feeTent)} / gece, 4 kişilik`}</dd>
-          </div>
+          {!gezi && (
+            <>
+              <div>
+                <dt>Rakım</dt>
+                <dd>{formatInt(place.elevationM)} m</dd>
+              </div>
+              <div>
+                <dt>Alan</dt>
+                <dd>{place.areaHa && place.areaHa > 0 ? `${formatInt(place.areaHa)} ha` : '—'}</dd>
+              </div>
+              <div>
+                <dt>2026 çadır</dt>
+                <dd>{place.feeTent == null ? 'Tarife eşleşmedi' : `${formatFee(place.feeTent)} / gece, 4 kişilik`}</dd>
+              </div>
+            </>
+          )}
         </dl>
       )}
       {currentImage ? (
@@ -209,7 +215,7 @@ export function DetailPage() {
         </section>
       )}
       <DetailMap place={place} />
-      {HAS_CATALOG && <p className="legal-note">{LEGAL_CAMP_NOTE}</p>}
+      {gezi ? <p className="legal-note">{GEZI_NOTE}</p> : HAS_CATALOG && <p className="legal-note">{LEGAL_CAMP_NOTE}</p>}
       {HAS_SOCIAL && <Comments place={place} />}
     </article>
   )

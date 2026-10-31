@@ -1,4 +1,4 @@
-﻿Yürüyom — 18. adım
+﻿Yürüyom — 19. adım
 
 1) Bu klasörü aç.
 2) index.html dosyasına çift tıkla.
@@ -6,8 +6,6 @@
 
 Üstte dört sekme: Ana sayfa, Geziyorum görüyorum, Kamp, Yürüyüş.
 
-Ana sayfada sitemiz nedir, ne yapıyor, ne amaçla çalışıyor yazar. Yanda üç giriş durur.
+Geziyorum görüyorum’da 445 elle yazılmış yer var: tarihî yer, müze, tiyatro, doğal alan. İlçeye göre gruplanır. 80 il; Kırıkkale boş.
 
-Geziyorum görüyorum’da Türkiye haritası sabit durur; sürüklenmez, uçmaz. İle tıklayınca il kırmızı olur, yer isimleri altta çıkar.
-
-Pin izin değildir. 3D model yok.
+Konum yaklaşık. Yeni yerlerde fotoğraf yok. Pin izin değildir.

@@ -18,6 +18,7 @@ import {
   ZONE_SHORT,
   type PlaceSortKey,
 } from '../labels'
+import { isGeziPlace } from '../gezi'
 import { fetchOsmCamps, fetchWikiGeo, mergePlaces } from '../overpass'
 import { isWaterPlace, PROVINCES, zoneOfProvince } from '../provinces'
 import { APP_STEP, HAS_ATLAS, HAS_BLOOM, HAS_CATALOG, HAS_FEEL, HAS_LIVE, HAS_LOOK, HAS_POLISH, HAS_TOUR } from '../step'
@@ -132,7 +133,8 @@ export function ExplorePage() {
     }
   }, [province, district])
 
-  const merged = useMemo(() => (HAS_LIVE ? mergePlaces(places, osm) : places), [places, osm])
+  const campPlaces = useMemo(() => places.filter((place) => !isGeziPlace(place)), [places])
+  const merged = useMemo(() => (HAS_LIVE ? mergePlaces(campPlaces, osm) : campPlaces), [campPlaces, osm])
 
   const provinceOptions = useMemo(
     () => (zone ? PROVINCES.filter((item) => item.zone === zone) : PROVINCES),

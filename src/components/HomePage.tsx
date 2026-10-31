@@ -7,7 +7,8 @@ import { PROVINCES } from '../provinces'
 import { usePlaces } from '../places-context'
 import { useRoutes } from '../routes-context'
 import { useSearch } from '../search-context'
-import { HAS_GATE, HAS_LAND, HAS_TOUR, TOUR_PATH } from '../step'
+import { GEZI_COUNT, GEZI_IL_COUNT } from '../gezi'
+import { HAS_GATE, HAS_GEZI, HAS_LAND, HAS_TOUR, TOUR_PATH } from '../step'
 import { TrailThumb } from './Brand'
 import { TourPage } from './TourPage'
 
@@ -73,9 +74,9 @@ export function HomePage() {
             <div className="gate-block">
               <h2>Ne yapıyor</h2>
               <p>
-                İl il bakılır: o ilde mesire, orman, sahil, müze ve gezilecek kayıt durur. Kamp sayfasında milli park
-                ve OSM yerleri; yürüyüşte GPS parkurlar. Kapaklar Wikimedia Commons, harita OpenStreetMap. Stok
-                Unsplash ve uydurma yorum yok.
+                {HAS_GEZI
+                  ? `${GEZI_COUNT} elle yazılmış tarihî yer, müze, tiyatro ve doğal alan ${GEZI_IL_COUNT} ilde durur. Kamp sayfasında milli park ve OSM; yürüyüşte GPS parkurlar. Kapaklar Wikimedia Commons, harita OpenStreetMap. Stok Unsplash ve uydurma yorum yok.`
+                  : 'İl il bakılır: o ilde mesire, orman, sahil, müze ve gezilecek kayıt durur. Kamp sayfasında milli park ve OSM yerleri; yürüyüşte GPS parkurlar. Kapaklar Wikimedia Commons, harita OpenStreetMap. Stok Unsplash ve uydurma yorum yok.'}
               </p>
             </div>
             <div className="gate-block">
@@ -90,7 +91,11 @@ export function HomePage() {
           <aside className="gate-side" aria-label="Bölümler">
             <Link className="gate-card" to={TOUR_PATH}>
               <strong>Geziyorum görüyorum</strong>
-              <span>81 il, sabit Türkiye. İle tıkla; yer isimleri altta.</span>
+              <span>
+                {HAS_GEZI
+                  ? `${GEZI_COUNT} gezilecek yer, ${GEZI_IL_COUNT} il. Tarihî yer, müze, tiyatro, doğal alan; ilçeye göre.`
+                  : '81 il, sabit Türkiye. İle tıkla; yer isimleri altta.'}
+              </span>
             </Link>
             <Link className="gate-card" to="/kamp">
               <strong>Kamp</strong>

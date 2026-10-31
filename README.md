@@ -148,6 +148,14 @@ Klasör: `adim-18`
 
 Ana sayfada sitenin ne olduğu yazılır. Yanda Geziyorum görüyorum, Kamp, Yürüyüş. Türkiye haritası sabit durur.
 
+## 19. adım — 445 gezilecek yer
+
+Klasör: `adim-19`
+
+`adim-19/index.html` dosyasına çift tıkla.
+
+Geziyorum görüyorum’a 445 elle yazılmış tarihî yer, müze, tiyatro ve doğal alan girdi. 80 il, ilçeye göre gruplu. Kırıkkale boş; OSM gelirse isim orada durur. Yeni yerlerde fotoğraf yok.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -170,5 +178,6 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 16. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-16/
 - 17. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-17/
 - 18. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-18/
+- 19. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-19/
 
 Harita ve fotoğraf için internet açık olsun.
