@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
+import { Link } from 'react-router-dom'
+import { spotsForPlace } from '../camp-spots'
 import { MARAS_CENTER, MARAS_ZOOM, PLACE_KIND_COLORS } from '../labels'
-import { HAS_LIVE } from '../step'
+import { HAS_LIVE, HAS_SPOTS } from '../step'
 import { BASEMAPS, TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL, type BasemapId } from '../tiles'
 import type { PlaceItem } from '../types'
 
@@ -15,7 +17,7 @@ function DetailController({ place }: { place: PlaceItem }) {
   useEffect(() => {
     const handle = window.setTimeout(() => {
       map.invalidateSize()
-      map.setView([place.lat, place.lng], 12)
+      map.setView([place.lat, place.lng], HAS_SPOTS ? 14 : 12)
     }, 40)
     return () => window.clearTimeout(handle)
   }, [map, place.id, place.lat, place.lng])
@@ -27,6 +29,7 @@ export function DetailMap({ place }: { place: PlaceItem }) {
   const color = PLACE_KIND_COLORS[place.kind]
   const [basemap, setBasemap] = useState<BasemapId>('topo')
   const layer = HAS_LIVE ? BASEMAPS[basemap] : { url: TILE_URL, attribution: TILE_ATTRIBUTION }
+  const spots = HAS_SPOTS ? spotsForPlace(place) : []
 
   return (
     <div className="detail-map" role="region" aria-label="Yer haritası">
@@ -49,6 +52,21 @@ export function DetailMap({ place }: { place: PlaceItem }) {
             <div className="popup-title">{place.title}</div>
           </Popup>
         </CircleMarker>
+        {spots.map((spot) => (
+          <CircleMarker
+            key={spot.id}
+            center={[spot.lat, spot.lng]}
+            radius={6}
+            pathOptions={{ color: '#24382e', weight: 2, fillColor: '#e2c57a', fillOpacity: 1 }}
+          >
+            <Popup className="route-popup">
+              <div className="popup-title">{spot.title}</div>
+              <Link className="popup-link" to={`?spot=${spot.id}`}>
+                Bakış
+              </Link>
+            </Popup>
+          </CircleMarker>
+        ))}
       </MapContainer>
       {HAS_LIVE && (
         <div className="basemap-switch on-detail" role="group" aria-label="Harita katmanı">

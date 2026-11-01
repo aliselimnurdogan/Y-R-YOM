@@ -7,7 +7,8 @@ import { regionById, turkeyRegionCollection } from '../data/turkey-regions'
 import { formatInt } from '../format'
 import { PLACE_KIND_COLORS, PLACE_KIND_LABELS, type CatalogZone } from '../labels'
 import { zoneOfProvince } from '../provinces'
-import { HAS_ATLAS, HAS_LIVE, HAS_TOUR } from '../step'
+import { spotsForPlace } from '../camp-spots'
+import { HAS_ATLAS, HAS_LIVE, HAS_SPOTS, HAS_TOUR } from '../step'
 import { MapBrand } from './Brand'
 import { BASEMAPS, TILE_ATTRIBUTION, TILE_MAX_ZOOM, TILE_URL, type BasemapId } from '../tiles'
 import type { PlaceItem } from '../types'
@@ -277,9 +278,12 @@ export function ExploreMap({
   const [basemap, setBasemap] = useState<BasemapId>('topo')
   const [zoomLevel, setZoomLevel] = useState(zoom)
   const [frame, setFrame] = useState({ w: 0, h: 0 })
+  const [openExploreId, setOpenExploreId] = useState<string | null>(null)
   const locked = HAS_ATLAS && !HAS_TOUR
   const layer = HAS_LIVE ? BASEMAPS[basemap] : { url: TILE_URL, attribution: TILE_ATTRIBUTION }
   const clusters = useMemo(() => clusterPlaces(places, zoomLevel), [places, zoomLevel])
+  const openPlace = openExploreId ? places.find((item) => item.id === openExploreId) : undefined
+  const openSpots = HAS_SPOTS && openPlace ? spotsForPlace(openPlace) : []
   const sized = frame.w >= 180 && frame.h >= 180
   const mapKey = `${Math.round(frame.w / 60)}x${Math.round(frame.h / 60)}`
 
@@ -363,18 +367,29 @@ export function ExploreMap({
           }
           const place = cluster.items[0]
           const color = PLACE_KIND_COLORS[place.kind]
-          const selected = hoveredId === place.id
+          const selected = hoveredId === place.id || openExploreId === place.id
+          const inner = HAS_SPOTS ? spotsForPlace(place) : []
           return (
             <CircleMarker
               key={place.id}
               center={[place.lat, place.lng]}
-              radius={selected ? 10 : place.pano ? 9 : 7}
+              radius={selected ? 10 : place.pano || inner.length > 1 ? 9 : 7}
               pathOptions={{
-                color: place.pano ? '#14b8a6' : '#ffffff',
-                weight: place.pano ? 3 : 2,
+                color: inner.length > 1 ? '#e2c57a' : place.pano ? '#14b8a6' : '#ffffff',
+                weight: place.pano || inner.length > 1 ? 3 : 2,
                 fillColor: selected ? '#c43121' : color,
                 fillOpacity: 1,
                 opacity: 1,
+              }}
+              eventHandlers={{
+                click: () => {
+                  if (!HAS_SPOTS || inner.length < 2) return
+                  setOpenExploreId((current) => {
+                    const next = current === place.id ? null : place.id
+                    if (next) mapRef.current?.flyTo([place.lat, place.lng], Math.max(zoomLevel, 13), { duration: 0.6 })
+                    return next
+                  })
+                },
               }}
             >
               <Popup className="route-popup" maxWidth={240}>
@@ -382,6 +397,7 @@ export function ExploreMap({
                 <div className="popup-meta">
                   {place.statusLabel ?? PLACE_KIND_LABELS[place.kind]} · {place.city} · {formatInt(place.elevationM)} m
                   {place.pano ? ' · 360°' : ''}
+                  {inner.length > 1 ? ` · ${inner.length} iç nokta` : ''}
                 </div>
                 <Link className="popup-link" to={`${basePath}/${place.id}`}>
                   Yeri aç
@@ -390,6 +406,30 @@ export function ExploreMap({
             </CircleMarker>
           )
         })}
+        {openPlace &&
+          openSpots.map((spot) => (
+            <CircleMarker
+              key={`${openPlace.id}-${spot.id}`}
+              center={[spot.lat, spot.lng]}
+              radius={6}
+              pathOptions={{
+                color: '#24382e',
+                weight: 2,
+                fillColor: '#e2c57a',
+                fillOpacity: 1,
+              }}
+            >
+              <Popup className="route-popup" maxWidth={220}>
+                <div className="popup-title">{spot.title}</div>
+                <div className="popup-meta">
+                  {openPlace.title} · {spot.kind === 'street' ? 'sokak bakışı' : spot.kind === 'pano' ? '360°' : 'fotoğraf'}
+                </div>
+                <Link className="popup-link" to={`${basePath}/${openPlace.id}?spot=${spot.id}`}>
+                  Bakış
+                </Link>
+              </Popup>
+            </CircleMarker>
+          ))}
       </MapContainer>
       )}
       {HAS_LIVE && !locked && (

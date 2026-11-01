@@ -1,0 +1,19 @@
+﻿Yürüyom — 22. adım
+
+1) Bu klasörü aç.
+2) index.html dosyasına çift tıkla.
+3) İnternet açık olsun.
+
+Üstte yedi sekme: Ana sayfa, Geziyorum görüyorum, Kamp, Yürüyüş, Tur rehberleri, Yemek nerede yenir, Outdoor.
+
+Tur rehberleri: rehber veya tur şirketi kayıt olur, giriş yapar. Ay ay turlarını, duyurularını ve yürüyüş fotoğraflarını buradan paylaşır. Gezmek isteyen rehberi bulur, arar. Kayıt ücretlidir; kart henüz çekilmez.
+
+Yemek nerede yenir: üstte ana sponsorlar. 81 il ve harita. İle tıklayınca ünlü lezzetler çıkar; o ilin sponsorları yanda durur.
+
+Outdoor: kamp malzemesi, nerede ne giyilir, nasıl giyilir. Altta mağaza sponsorları.
+
+Geziyorum’da il seçince de sponsorlar yanda çıkar. Sponsor ol sayfasında yemek, mağaza, uygulama, her şey ilan verilebilir.
+
+Kayıt ve paylaşımlar şimdilik yalnızca bu tarayıcıda saklanır; sunucu henüz yok. “Örnek” yazanlar örnektir, gerçek rehber, sponsor veya mekân değildir.
+
+Pin izin değildir.

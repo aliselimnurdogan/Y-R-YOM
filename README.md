@@ -172,6 +172,22 @@ Klasör: `adim-21`
 
 Rehberde manken; kıyafet üstüne asılı. Yemek masada oturan çizim. Geziyorum’da ana sponsor haritanın üstünde. İl tıklayınca yanda Sponsor ve Yemek önerisi. Rehber ayrı sekmede.
 
+## 22. adım — Tur rehberleri, yemek, outdoor
+
+Klasör: `adim-22`
+
+`adim-22/index.html` dosyasına çift tıkla.
+
+Rehber sekmesi kalktı. Tur rehberleri, Yemek nerede yenir, Outdoor. Kayıt tarayıcıda kalır; kart henüz çekilmez.
+
+## 23. adım — Kamp keşif noktaları
+
+Klasör: `adim-23`
+
+`adim-23/index.html` dosyasına çift tıkla.
+
+Orada gibi hisset: Kahramanmaraş kampında göl kenarı, çadır, giriş. Haritada pine tıklayınca iç noktalar çıkar. Özel 360 çekim yok.
+
 ## İnternet
 
 Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
@@ -197,5 +213,7 @@ Giriş: https://aliselimnurdogan.github.io/Y-R-YOM/
 - 19. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-19/
 - 20. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-20/
 - 21. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-21/
+- 22. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-22/
+- 23. adım: https://aliselimnurdogan.github.io/Y-R-YOM/adim-23/
 
 Harita ve fotoğraf için internet açık olsun.

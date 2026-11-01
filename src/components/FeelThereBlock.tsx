@@ -1,9 +1,11 @@
-import { useEffect, useRef, useState, type PointerEvent } from 'react'
+import { useEffect, useMemo, useRef, useState, type PointerEvent } from 'react'
 import { createPortal } from 'react-dom'
+import { useSearchParams } from 'react-router-dom'
+import { spotsForPlace, spotKindLabel, streetEmbed, type CampSpot } from '../camp-spots'
 import { placeCover } from '../format'
 import { sameMedia, sharpUrl } from '../media'
 import { startPlaceAmbience, type AmbienceHandle } from '../place-ambience'
-import { HAS_FEEL } from '../step'
+import { HAS_FEEL, HAS_SPOTS } from '../step'
 import type { PlaceItem, PlacePano, PlaceVideo } from '../types'
 import { EyeIcon } from './Icons'
 
@@ -81,12 +83,26 @@ function viewerConfig(pano: PlacePano) {
 }
 
 export function FeelThereBlock({ place }: { place: PlaceItem }) {
+  const [params] = useSearchParams()
   const pano = place.pano
   const clip = firstClip(place.videos)
+  const spots = useMemo(() => (HAS_SPOTS ? spotsForPlace(place) : []), [place])
   const [open, setOpen] = useState(false)
+  const [spotId, setSpotId] = useState(spots[0]?.id ?? '')
+
+  useEffect(() => {
+    if (!HAS_SPOTS) return
+    const wanted = params.get('spot')
+    if (!wanted) return
+    if (spots.some((item) => item.id === wanted)) {
+      setSpotId(wanted)
+      setOpen(true)
+    }
+  }, [params, spots])
+
   if (!HAS_FEEL) return null
   const cover = placeCover(place)
-  const cardPhoto = cover ? sharpUrl(cover, 1920) : ''
+  const cardPhoto = cover ? sharpUrl(cover, 1920) : spots.find((item) => item.photo)?.photo || ''
   const livePhotos = (place.images.length > 0 ? place.images : cover ? [cover] : []).map((item) =>
     sharpUrl(item, 1920),
   )
@@ -94,13 +110,31 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
     pano?.kind === '360' &&
     Boolean(cover) &&
     (sameMedia(pano.url, cover) || (pano.preview ? sameMedia(pano.preview, cover) : false))
-  const canOpen = Boolean(cover || pano || clip)
-  const badge = sameSphere ? '360°' : cover ? 'Bakış' : clip ? 'Video' : 'Bakış'
+  const canOpen = HAS_SPOTS ? spots.length > 0 : Boolean(cover || pano || clip)
+  const badge = HAS_SPOTS
+    ? spots.length > 1
+      ? `${spots.length} nokta`
+      : spotKindLabel(spots[0]?.kind ?? 'photo')
+    : sameSphere
+      ? '360°'
+      : cover
+        ? 'Bakış'
+        : clip
+          ? 'Video'
+          : 'Bakış'
   const embed = clip ? clipSrc(clip) : undefined
 
   return (
     <section className="feel-block">
-      <button type="button" className="feel-card" onClick={() => setOpen(true)} disabled={!canOpen}>
+      <button
+        type="button"
+        className="feel-card"
+        onClick={() => {
+          setSpotId(params.get('spot') || spots[0]?.id || '')
+          setOpen(true)
+        }}
+        disabled={!canOpen}
+      >
         {cardPhoto ? (
           <img className="feel-pan" src={cardPhoto} alt="" referrerPolicy="no-referrer" />
         ) : embed && clip?.src ? (
@@ -113,9 +147,11 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
           <span className="feel-badge">{canOpen ? badge : 'Yakında'}</span>
           <span className="feel-title">Orada gibi hisset</span>
           <span className="feel-sub">
-            {canOpen
-              ? 'İçeri gir: aynı karede dur, bakışın hafif kayar. Alttan sessiz bir akustik gelir.'
-              : 'Bu parkta henüz yerinde bakış yok; uydurma görüntü konmadı.'}
+            {HAS_SPOTS && spots.length > 1
+              ? 'İçeri gir: göl kenarı, çadır, giriş. Özel 360 çekim yok; sokak bakışı veya yerinde fotoğraf.'
+              : canOpen
+                ? 'İçeri gir: aynı karede dur, bakışın hafif kayar. Alttan sessiz bir akustik gelir.'
+                : 'Bu parkta henüz yerinde bakış yok; uydurma görüntü konmadı.'}
           </span>
           {canOpen && (
             <span className="feel-cta">
@@ -134,6 +170,9 @@ export function FeelThereBlock({ place }: { place: PlaceItem }) {
           photos={livePhotos}
           pano={sameSphere ? pano : undefined}
           clip={cover ? undefined : clip}
+          spots={HAS_SPOTS ? spots : []}
+          spotId={spotId}
+          onSpot={setSpotId}
           onClose={() => setOpen(false)}
         />
       )}
@@ -149,6 +188,9 @@ function FeelViewer({
   photos,
   pano,
   clip,
+  spots,
+  spotId,
+  onSpot,
   onClose,
 }: {
   placeTitle: string
@@ -158,15 +200,21 @@ function FeelViewer({
   photos: string[]
   pano?: PlacePano
   clip?: PlaceVideo
+  spots: CampSpot[]
+  spotId: string
+  onSpot: (id: string) => void
   onClose: () => void
 }) {
-  const useSphere = pano?.kind === '360'
+  const spot = spots.find((item) => item.id === spotId) ?? spots[0]
+  const useSphere = (spot?.kind === 'pano' && spot.pano?.kind === '360') || (!spot && pano?.kind === '360')
+  const sphere = spot?.pano ?? pano
   const hostRef = useRef<HTMLDivElement>(null)
   const overlayRef = useRef<HTMLDivElement>(null)
   const viewerRef = useRef<ViewerHandle | null>(null)
   const toneRef = useRef<AmbienceHandle | null>(null)
   const [muted, setMuted] = useState(false)
   const [status, setStatus] = useState(useSphere ? 'Görüntü hazırlanıyor…' : '')
+  const [fade, setFade] = useState(false)
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow
@@ -177,23 +225,8 @@ function FeelViewer({
     const onFs = () => viewerRef.current?.resize?.()
     document.addEventListener('keydown', onKey)
     document.addEventListener('fullscreenchange', onFs)
-    let alive = true
-    if (useSphere && pano) {
-      void loadPannellum()
-        .then(() => {
-          if (!alive || !hostRef.current || !window.pannellum) return
-          const viewer = window.pannellum.viewer(hostRef.current, viewerConfig(pano))
-          viewerRef.current = viewer
-          viewer.startAutoRotate?.(0.7)
-          setStatus('')
-        })
-        .catch(() => {
-          if (alive) setStatus('360 görüntü yüklenemedi. İnterneti kontrol et.')
-        })
-    }
     toneRef.current = startPlaceAmbience(placeKind)
     return () => {
-      alive = false
       document.removeEventListener('keydown', onKey)
       document.removeEventListener('fullscreenchange', onFs)
       document.body.style.overflow = previousOverflow
@@ -202,7 +235,40 @@ function FeelViewer({
       toneRef.current?.stop()
       toneRef.current = null
     }
-  }, [onClose, pano, useSphere, placeKind])
+  }, [onClose, placeKind])
+
+  useEffect(() => {
+    setFade(true)
+    const wait = window.setTimeout(() => setFade(false), 180)
+    return () => window.clearTimeout(wait)
+  }, [spotId])
+
+  useEffect(() => {
+    viewerRef.current?.destroy()
+    viewerRef.current = null
+    if (!useSphere || !sphere) {
+      setStatus('')
+      return
+    }
+    let alive = true
+    setStatus('Görüntü hazırlanıyor…')
+    void loadPannellum()
+      .then(() => {
+        if (!alive || !hostRef.current || !window.pannellum) return
+        const viewer = window.pannellum.viewer(hostRef.current, viewerConfig(sphere))
+        viewerRef.current = viewer
+        viewer.startAutoRotate?.(0.7)
+        setStatus('')
+      })
+      .catch(() => {
+        if (alive) setStatus('360 görüntü yüklenemedi. İnterneti kontrol et.')
+      })
+    return () => {
+      alive = false
+      viewerRef.current?.destroy()
+      viewerRef.current = null
+    }
+  }, [sphere, useSphere, spotId])
 
   async function goFullscreen() {
     const node = overlayRef.current
@@ -229,6 +295,9 @@ function FeelViewer({
     }
   }
 
+  const stageKind = spot?.kind
+  const pipClip = !spots.length && pano && clip ? clip : undefined
+
   return createPortal(
     <div
       className="feel-overlay"
@@ -237,18 +306,73 @@ function FeelViewer({
       aria-modal="true"
       aria-label={`${placeTitle} bakış`}
     >
-      {useSphere ? (
-        <div ref={hostRef} className="feel-stage" />
-      ) : (
-        <LookPan cover={cover} photos={photos} clip={clip} />
-      )}
+      <div className={fade ? 'feel-stage is-fade' : 'feel-stage'}>
+        {useSphere ? (
+          <div ref={hostRef} className="feel-sphere" />
+        ) : stageKind === 'street' && spot ? (
+          <iframe
+            key={spot.id}
+            className="feel-frame"
+            src={streetEmbed(spot.lat, spot.lng, spot.heading)}
+            title={spot.title}
+            allow="accelerometer; gyroscope; fullscreen"
+            allowFullScreen
+          />
+        ) : stageKind === 'video' && spot?.video ? (
+          <VideoStage clip={spot.video} />
+        ) : (
+          <LookPan
+            cover={spot?.photo || cover}
+            photos={spot?.photo ? [spot.photo] : photos}
+            clip={stageKind === 'video' ? spot?.video : clip}
+          />
+        )}
+      </div>
       {status && <p className="feel-status">{status}</p>}
-      {pano && clip && <ClipPip clip={clip} />}
+      {pipClip && <ClipPip clip={pipClip} />}
+      {spots.length > 1 && (
+        <aside className="feel-pip is-spots" aria-label="Kamp içi noktalar">
+          <p>Noktalar</p>
+          {spots.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              className={item.id === spot?.id ? 'is-on' : undefined}
+              onClick={() => onSpot(item.id)}
+            >
+              <strong>{item.title}</strong>
+              <span>{spotKindLabel(item.kind)}</span>
+            </button>
+          ))}
+        </aside>
+      )}
       <div className="feel-bar">
         <p>
-          <strong>{placeTitle}</strong>
-          <span>{placeCity} · bakışın duruyor, gözün geziyor</span>
+          <strong>
+            {placeTitle}
+            {spot ? ` · ${spot.title}` : ''}
+          </strong>
+          <span>
+            {placeCity}
+            {spots.length > 1 ? ' · nokta seç, sahne değişir' : ' · bakışın duruyor, gözün geziyor'}
+          </span>
         </p>
+        {spots.length > 1 && (
+          <div className="feel-spots" role="tablist" aria-label="Alt noktalar">
+            {spots.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                role="tab"
+                aria-selected={item.id === spot?.id}
+                className={item.id === spot?.id ? 'is-on' : undefined}
+                onClick={() => onSpot(item.id)}
+              >
+                {item.title}
+              </button>
+            ))}
+          </div>
+        )}
         <div className="feel-bar-actions">
           <button
             type="button"
@@ -276,9 +400,25 @@ function FeelViewer({
           </button>
         </div>
       </div>
-      <p className="feel-credit">{pano?.credit || clip?.title || ''}</p>
+      <p className="feel-credit">{spot?.credit || pano?.credit || clip?.title || ''}</p>
     </div>,
     document.body,
+  )
+}
+
+function VideoStage({ clip }: { clip: PlaceVideo }) {
+  if (clip.src) {
+    return <video src={clip.src} muted loop autoPlay playsInline controls />
+  }
+  if (!clip.youtubeId) return <span className="feel-empty-bg" />
+  return (
+    <iframe
+      className="feel-frame"
+      src={`https://www.youtube-nocookie.com/embed/${clip.youtubeId}?autoplay=1&mute=1&rel=0`}
+      title={clip.title}
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowFullScreen
+    />
   )
 }
 
@@ -305,7 +445,7 @@ function LookPan({ cover, photos, clip }: { cover: string; photos: string[]; cli
   const aimRef = useRef({ x: 50, y: 46, until: 0 })
   const dragRef = useRef<{ x: number; y: number; startX: number; startY: number; pausedUntil: number } | null>(null)
   const [shift, setShift] = useState({ x: 50, y: 46 })
-  const photo = (photos[0] || (cover ? sharpUrl(cover, 1920) : '')) 
+  const photo = photos[0] || (cover ? sharpUrl(cover, 1920) : '')
 
   useEffect(() => {
     const onOrient = (event: DeviceOrientationEvent) => {

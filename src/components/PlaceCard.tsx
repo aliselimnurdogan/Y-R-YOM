@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import { formatFee, formatInt, placeCover } from '../format'
 import { PLACE_KIND_LABELS } from '../labels'
 import { srcSet, sharpUrl } from '../media'
-import { HAS_CATALOG, HAS_FEEL } from '../step'
+import { spotsForPlace } from '../camp-spots'
+import { HAS_CATALOG, HAS_FEEL, HAS_SPOTS } from '../step'
 import type { PlaceItem } from '../types'
 import { TrailThumb } from './Brand'
 
@@ -70,8 +71,11 @@ export function PlaceCard({
             seed={place.id}
             onFail={onPhotoFail ? () => onPhotoFail(place.id) : undefined}
           />
-          {HAS_FEEL && place.pano && (
-            <span className="pano-badge">{place.pano.kind === '360' ? '360°' : 'Bakış'}</span>
+          {HAS_SPOTS && spotsForPlace(place).length > 1 ? (
+            <span className="pano-badge">Keşif</span>
+          ) : (
+            HAS_FEEL &&
+            place.pano && <span className="pano-badge">{place.pano.kind === '360' ? '360°' : 'Bakış'}</span>
           )}
         </div>
         <div className="card-body">

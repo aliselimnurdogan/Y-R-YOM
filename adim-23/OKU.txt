@@ -1,0 +1,11 @@
+﻿Yürüyom — 23. adım
+
+1) Bu klasörü aç.
+2) index.html dosyasına çift tıkla.
+3) İnternet açık olsun.
+
+Kamp detayında “Orada gibi hisset” kartına tıkla. Kahramanmaraş yerlerinde göl kenarı, çadır, giriş çıkar. Noktaya basınca sahne değişir.
+
+Haritada altın kenarlı kamp pine tıkla; iç noktalar marker olarak açılır. “Bakış” yeri açar.
+
+Özel 360 çekim yok. Sokak bakışı kapsama yoksa fotoğraf durur. Pin izin değildir.
